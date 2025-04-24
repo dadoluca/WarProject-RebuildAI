@@ -6,7 +6,6 @@ from openai import OpenAI
 import pandas as pd
 from IPython.display import Markdown, display
 from db.VectorDBManager import VectorDBManager  
-from pinecone import Pinecone, ServerlessSpec
 
 # Load environment variables
 load_dotenv()
