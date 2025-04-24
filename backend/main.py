@@ -538,8 +538,9 @@ def run_example():
     report = analyzer.process_query(query)
     
     # Display the report
-    display(Markdown(report))
-    
+    with open("report.md", "w") as f:
+        f.write(report)
+        
     return report
 
 
