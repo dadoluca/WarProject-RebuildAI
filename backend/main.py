@@ -1,0 +1,661 @@
+import os
+from typing import List, Dict, Any
+import uuid
+from dotenv import load_dotenv
+from openai import OpenAI
+import pandas as pd
+from IPython.display import Markdown, display
+
+from pinecone import Pinecone, ServerlessSpec
+
+# Load environment variables
+load_dotenv()
+
+class VectorDBManager:
+    """
+    A class to manage interactions with Pinecone and OpenAI for embedding-based searches and knowledge base management.
+    """
+    
+    def __init__(self, pinecone_api: str, openai_api: str, index_name: str, namespace: str=None):
+        """
+        Initializes the VectorDBManager with the provided Pinecone API key, OpenAI API key, and the desired index name.
+
+        Args:
+        - pinecone_api (str): The Pinecone API key.
+        - openai_api (str): The OpenAI API key.
+        - index_name (str): The name of the Pinecone index to be used.
+        - namespace (str, optional): The namespace within the index. Defaults to None.
+        """
+        self.pc = Pinecone(pinecone_api)
+        self.index_name = index_name
+        self.openai_api = OpenAI(api_key=openai_api)
+        self.create_index_if_not_exists(index_name)
+        self.index = self.pc.Index(index_name)
+        self.namespace = namespace
+
+    def search_kb(self, question: str, top_k: int = 3, filters: dict = None):
+        """
+        Searches the knowledge base for the most similar documents to the given question.
+
+        Args:
+        - question (str): The question to search for.
+        - top_k (int, optional): The number of results to return. Defaults to 3.
+        - filters (dict, optional): A dictionary of filters to narrow down the search. Defaults to None.
+
+        Returns:
+        - dict: The search results from Pinecone.
+        """
+        result = self.index.query(
+            vector=self._get_embedding(question),
+            top_k=top_k,
+            filter=filters,
+            include_values=False,
+            include_metadata=True,
+            namespace=self.namespace
+        )
+        return result
+
+    def add_data(self, data: List[Dict]):
+        """
+        Adds the provided data to the Pinecone knowledge base.
+
+        Args:
+        - data (List[Dict]): A list of dictionaries, each containing "to_embedd" (the text to be embedded) and "metadata"
+          (a dictionary of metadata for each document).
+
+        Returns:
+        - dict: The response from the Pinecone upsert operation.
+        """
+        to_insert = []
+
+        for item in data:
+            embedding = self._get_embedding(item["to_embedd"])
+            metadata = item["metadata"]
+            to_insert.append((str(uuid.uuid4()), embedding, metadata))
+
+        print(f"VectorDBManager: Adding data to the index... (namespace: {self.namespace})")
+        response = self.index.upsert(vectors=to_insert, namespace=self.namespace)
+        return response
+
+    def _get_embedding(self, text: str):
+        """
+        Retrieves the embedding of the given text from OpenAI.
+
+        Args:
+        - text (str): The text to embed.
+
+        Returns:
+        - list: The embedding of the text.
+
+        Raises:
+        - Exception: If there is an error during the embedding retrieval.
+        """
+        try:
+            response = self.openai_api.embeddings.create(
+                model=os.getenv("EMBEDDING_MODEL", "text-embedding-3-small"), 
+                input=text
+            )
+            return response.data[0].embedding
+        except Exception as e:
+            print(f"Error getting embedding: {e}")
+            raise
+
+    def create_index_if_not_exists(self, index_name: str):
+        """
+        Creates a Pinecone index if it does not already exist.
+
+        Args:
+        - index_name (str): The name of the index to check or create.
+        """
+        print(f"Checking if Index with name '{index_name}' exists...")
+        existing_indexes = self.pc.list_indexes()
+
+        if index_name in [x["name"] for x in existing_indexes.to_dict()["indexes"]]:
+            print(f"Index '{index_name}' already exists.")
+            return
+        
+        self.pc.create_index(
+            name=index_name,
+            dimension=1536,  # Dependent on embedding model size
+            metric="cosine",
+            spec=ServerlessSpec(cloud="aws", region="us-east-1"),
+        )
+        print(f"Index '{index_name}' created")
+
+
+class WarUseCaseAnalyzer:
+    """
+    A class that analyzes war-related use cases, their risks, benefits, and mitigations
+    using RAG (Retrieval Augmented Generation) with Pinecone and an LLM.
+    """
+    
+    def __init__(self):
+        """Initialize the analyzer with necessary components."""
+        # Load API keys from environment variables
+        pinecone_api = os.getenv("PINECONE_API_KEY")
+        openai_api = os.getenv("OPENAI_API_KEY")
+        
+        if not pinecone_api or not openai_api:
+            raise ValueError("Missing required API keys in environment variables")
+        
+        self.index_name = os.getenv("PINECONE_INDEX_NAME", "war-use-cases")
+        self.llm_model = os.getenv("LLM_MODEL", "gpt-4-turbo")
+        
+        # Initialize OpenAI client
+        self.client = OpenAI(api_key=openai_api)
+        
+        # Initialize vector DB managers for different collections
+        self.use_cases_db = VectorDBManager(
+            pinecone_api=pinecone_api,
+            openai_api=openai_api,
+            index_name=self.index_name,
+            namespace="use_cases"
+        )
+        
+        self.risks_benefits_db = VectorDBManager(
+            pinecone_api=pinecone_api,
+            openai_api=openai_api,
+            index_name=self.index_name,
+            namespace="risks_benefits"
+        )
+        
+        self.mitigations_db = VectorDBManager(
+            pinecone_api=pinecone_api,
+            openai_api=openai_api,
+            index_name=self.index_name,
+            namespace="mitigations"
+        )
+    
+    def _query_llm(self, prompt: str, messages: List[Dict[str, str]] = None, temperature: float = 0.7):
+        """
+        Query the LLM with a given prompt.
+        
+        Args:
+            prompt: The prompt to send to the LLM
+            messages: Optional message history
+            temperature: Control randomness (0.0 = deterministic, 1.0 = creative)
+            
+        Returns:
+            The LLM's response text
+        """
+        if messages is None:
+            messages = [{"role": "user", "content": prompt}]
+        else:
+            messages.append({"role": "user", "content": prompt})
+        
+        completion = self.client.chat.completions.create(
+            model=self.llm_model,
+            messages=messages,
+            temperature=temperature
+        )
+        
+        return completion.choices[0].message.content
+    
+    def find_use_cases(self, query: str, top_k: int = 3):
+        """
+        Find relevant use cases based on the user query.
+        
+        Args:
+            query: User's query about a war-related AI use case
+            top_k: Number of use cases to retrieve
+            
+        Returns:
+            Dictionary of use cases with their details
+        """
+        print(f"Finding use cases for: '{query}'")
+        results = self.use_cases_db.search_kb(query, top_k=top_k)
+        
+        use_cases = {}
+        for match in results.matches:
+            use_case_id = match.metadata.get("id", str(uuid.uuid4()))
+            use_cases[use_case_id] = {
+                "title": match.metadata.get("title", "Unnamed Use Case"),
+                "description": match.metadata.get("description", "No description available"),
+                "context": match.metadata.get("context", "No context available"),
+                "score": match.score
+            }
+        
+        # If no use cases found, provide a message
+        if not use_cases:
+            print("No relevant use cases found. Generating a generic response with the LLM.")
+            llm_prompt = f"""
+            No specific use cases were found in our database for the query: "{query}".
+            Please generate a thoughtful analysis of potential AI applications in this context,
+            focusing on how AI might be used in war or post-war scenarios related to this query.
+            Format as a list of 2-3 potential use cases with titles and descriptions.
+            """
+            llm_response = self._query_llm(llm_prompt)
+            
+            # Creating a generic use case from LLM response
+            use_cases["generic_response"] = {
+                "title": f"AI Applications for: {query}",
+                "description": llm_response,
+                "context": "Generated by AI due to lack of specific database entries",
+                "score": 1.0  # Default score
+            }
+        
+        return use_cases
+    
+    def analyze_use_cases(self, query: str, use_cases: Dict[str, Dict[str, Any]]):
+        """
+        Analyze the retrieved use cases using the LLM.
+        
+        Args:
+            query: Original user query
+            use_cases: Dictionary of use cases to analyze
+            
+        Returns:
+            Analysis of the use cases
+        """
+        use_cases_text = "\n\n".join([
+            f"Use Case {idx+1}: {uc['title']}\n{uc['description']}\nContext: {uc['context']}"
+            for idx, uc in enumerate(use_cases.values())
+        ])
+        
+        prompt = f"""
+        The user is interested in: "{query}"
+        
+        I've retrieved the following relevant use cases:
+        
+        {use_cases_text}
+        
+        Please analyze these use cases in relation to the user's query. Provide:
+        1. A brief summary of how these use cases relate to the user's query
+        2. Key insights from these use cases
+        3. Potential applications or implementations
+        
+        Format your response as a structured analysis that helps the user understand the relevance and implications.
+        """
+        
+        return self._query_llm(prompt)
+    
+    def find_risks_benefits(self, use_case: Dict[str, Any], top_k: int = 3):
+        """
+        Find risks and benefits for a specific use case.
+        
+        Args:
+            use_case: The use case to analyze
+            top_k: Number of risks/benefits entries to retrieve
+            
+        Returns:
+            Dictionary containing risks and benefits
+        """
+        search_query = f"risks and benefits of {use_case['title']} in war or post-war context"
+        results = self.risks_benefits_db.search_kb(search_query, top_k=top_k)
+        
+        risks_benefits = {
+            "risks": [],
+            "benefits": []
+        }
+        
+        for match in results.matches:
+            if "risks" in match.metadata:
+                risks_benefits["risks"].extend(match.metadata["risks"].split(";"))
+            if "benefits" in match.metadata:
+                risks_benefits["benefits"].extend(match.metadata["benefits"].split(";"))
+        
+        # Remove duplicates and empty entries
+        risks_benefits["risks"] = list(set(filter(None, risks_benefits["risks"])))
+        risks_benefits["benefits"] = list(set(filter(None, risks_benefits["benefits"])))
+        
+        # If no risks or benefits found, generate with LLM
+        if not risks_benefits["risks"] or not risks_benefits["benefits"]:
+            print(f"Generating risks and benefits for '{use_case['title']}' with LLM.")
+            llm_prompt = f"""
+            For the following AI use case in a war or post-war context:
+            
+            Title: {use_case['title']}
+            Description: {use_case['description']}
+            
+            Please identify:
+            1. The top potential risks of this application (ethical, social, technical, security)
+            2. The top potential benefits of this application (humanitarian, social, technical, security)
+            
+            Format your response with clearly separated 'RISKS:' and 'BENEFITS:' sections.
+            """
+            llm_response = self._query_llm(llm_prompt)
+            
+            # Simple parsing of LLM response
+            if "RISKS:" in llm_response and "BENEFITS:" in llm_response:
+                parts = llm_response.split("BENEFITS:")
+                risks_part = parts[0].replace("RISKS:", "").strip()
+                benefits_part = parts[1].strip()
+                
+                risks_benefits["risks"] = [r.strip() for r in risks_part.split("\n-") if r.strip()]
+                risks_benefits["benefits"] = [b.strip() for b in benefits_part.split("\n-") if b.strip()]
+            else:
+                # Fallback if format wasn't followed
+                risks_benefits["risks"] = ["Risk assessment required"]
+                risks_benefits["benefits"] = ["Benefit assessment required"]
+        
+        return risks_benefits
+    
+    def find_mitigations(self, risk: str, top_k: int = 2):
+        """
+        Find mitigations for a specific risk.
+        
+        Args:
+            risk: The risk to find mitigations for
+            top_k: Number of mitigation entries to retrieve
+            
+        Returns:
+            List of mitigations
+        """
+        search_query = f"mitigations for {risk} in war or post-war context"
+        results = self.mitigations_db.search_kb(search_query, top_k=top_k)
+        
+        mitigations = []
+        for match in results.matches:
+            if "mitigations" in match.metadata:
+                mitigations.extend(match.metadata["mitigations"].split(";"))
+        
+        # Remove duplicates and empty entries
+        mitigations = list(set(filter(None, mitigations)))
+        
+        # If no mitigations found, generate with LLM
+        if not mitigations:
+            print(f"Generating mitigations for risk '{risk}' with LLM.")
+            llm_prompt = f"""
+            For the following risk in using AI in a war or post-war context:
+            
+            Risk: {risk}
+            
+            Please provide 2-3 specific mitigation strategies that could help address this risk.
+            Focus on practical, ethical, and implementable solutions.
+            """
+            llm_response = self._query_llm(llm_prompt)
+            
+            # Simple parsing: assume each line is a mitigation
+            mitigations = [m.strip() for m in llm_response.split("\n") if m.strip()]
+            
+            # Filter out lines that are likely not mitigations
+            mitigations = [m for m in mitigations if len(m) > 20 and not m.startswith("Mitigation")]
+            
+            # If still empty, use a fallback
+            if not mitigations:
+                mitigations = ["Mitigation assessment required"]
+        
+        return mitigations
+    
+    def generate_report(self, query: str, use_cases: Dict[str, Dict], use_cases_analysis: str, 
+                        all_risks_benefits: Dict[str, Dict], all_mitigations: Dict[str, List[str]]):
+        """
+        Generate a comprehensive report based on all the collected information.
+        
+        Args:
+            query: Original user query
+            use_cases: Dictionary of use cases
+            use_cases_analysis: Analysis of the use cases
+            all_risks_benefits: Risks and benefits for each use case
+            all_mitigations: Mitigations for each risk
+            
+        Returns:
+            A formatted report
+        """
+        # Prepare the report content
+        report_sections = []
+        
+        # Introduction section
+        report_sections.append(f"""
+        # AI War Use Case Analysis: {query}
+        
+        ## Executive Summary
+        
+        This report provides an analysis of AI applications related to "{query}" in war or post-war contexts.
+        It examines relevant use cases, their risks and benefits, and potential mitigation strategies.
+        
+        ## Overview
+        
+        {use_cases_analysis}
+        """)
+        
+        # Use cases section
+        report_sections.append("## Detailed Analysis of Use Cases\n")
+        
+        for uc_id, use_case in use_cases.items():
+            report_sections.append(f"""
+            ### {use_case['title']}
+            
+            **Description:** {use_case['description']}
+            
+            **Context:** {use_case['context']}
+            
+            #### Benefits:
+            """)
+            
+            # Add benefits
+            benefits = all_risks_benefits.get(uc_id, {}).get("benefits", [])
+            if benefits:
+                for benefit in benefits:
+                    report_sections.append(f"- {benefit}")
+            else:
+                report_sections.append("- No specific benefits identified")
+            
+            report_sections.append("\n#### Risks:")
+            
+            # Add risks and their mitigations
+            risks = all_risks_benefits.get(uc_id, {}).get("risks", [])
+            if risks:
+                for risk_idx, risk in enumerate(risks):
+                    report_sections.append(f"- **{risk}**")
+                    
+                    # Add mitigations for this risk
+                    mitigations = all_mitigations.get(f"{uc_id}_{risk_idx}", [])
+                    if mitigations:
+                        report_sections.append("  *Potential mitigations:*")
+                        for mitigation in mitigations:
+                            report_sections.append(f"  - {mitigation}")
+                    else:
+                        report_sections.append("  *Mitigations not identified*")
+            else:
+                report_sections.append("- No specific risks identified")
+        
+        # Conclusion section
+        report_sections.append("""
+        ## Conclusion
+        
+        This analysis provides a framework for understanding how AI can be applied in this context, 
+        what risks should be considered, and how these risks might be mitigated. Ethical considerations 
+        should always be prioritized when implementing AI solutions in sensitive contexts like war 
+        or post-war scenarios.
+        
+        It's recommended that any implementation be subjected to ongoing ethical review and 
+        stakeholder consultation throughout development and deployment phases.
+        """)
+        
+        # Join all sections
+        return "\n".join(report_sections)
+    
+    def process_query(self, query: str):
+        """
+        Process a user query through the entire RAG + LLM pipeline.
+        
+        Args:
+            query: User's query about a war-related AI use case
+            
+        Returns:
+            A comprehensive report
+        """
+        print(f"Processing query: '{query}'")
+        
+        # Step 1: Find relevant use cases
+        use_cases = self.find_use_cases(query)
+        print(f"Found {len(use_cases)} use cases")
+        
+        # Step 2: Analyze use cases with LLM
+        use_cases_analysis = self.analyze_use_cases(query, use_cases)
+        print("Completed use case analysis")
+        
+        # Step 3-4: Find risks, benefits for each use case
+        all_risks_benefits = {}
+        for uc_id, use_case in use_cases.items():
+            all_risks_benefits[uc_id] = self.find_risks_benefits(use_case)
+        print("Retrieved risks and benefits")
+        
+        # Step 5-6: Find mitigations for each risk
+        all_mitigations = {}
+        for uc_id, rb in all_risks_benefits.items():
+            for risk_idx, risk in enumerate(rb["risks"]):
+                all_mitigations[f"{uc_id}_{risk_idx}"] = self.find_mitigations(risk)
+        print("Retrieved mitigations")
+        
+        # Step 7-8: Generate final report
+        report = self.generate_report(
+            query, 
+            use_cases, 
+            use_cases_analysis, 
+            all_risks_benefits, 
+            all_mitigations
+        )
+        print("Generated report")
+        
+        return report
+
+
+# Example of populating the database with sample data
+def populate_sample_data(analyzer):
+    """Populate the database with sample data for testing"""
+    
+    # Sample use cases data
+    use_cases = [
+        {
+            "to_embedd": "AI in humanitarian assistance during war, including chatbots for psychological support and route planning for aid delivery",
+            "metadata": {
+                "id": "uc1",
+                "title": "AI Chatbots for Psychological Support",
+                "description": "Using AI-powered chatbots to provide basic psychological support to war victims who have limited access to mental health professionals.",
+                "context": "Post-conflict zones with damaged infrastructure and limited humanitarian workers"
+            }
+        },
+        {
+            "to_embedd": "AI for conflict prediction and prevention using satellite imagery and social media monitoring",
+            "metadata": {
+                "id": "uc2",
+                "title": "AI-Based Conflict Early Warning System",
+                "description": "Using machine learning algorithms to analyze satellite imagery, social media patterns, and other data sources to predict potential conflict escalation.",
+                "context": "Pre-conflict or ongoing conflict zones where early intervention could prevent escalation"
+            }
+        },
+        {
+            "to_embedd": "AI for detecting unexploded ordnance using drone imagery and computer vision",
+            "metadata": {
+                "id": "uc3",
+                "title": "AI-Powered UXO Detection",
+                "description": "Using computer vision and machine learning with drone imagery to detect and map unexploded ordnance (UXO) in post-conflict areas.",
+                "context": "Post-conflict areas with potential landmines and unexploded bombs"
+            }
+        },
+        {
+            "to_embedd": "AI for facial recognition to reunite displaced families in refugee camps",
+            "metadata": {
+                "id": "uc4",
+                "title": "Facial Recognition for Family Reunification",
+                "description": "Using facial recognition technology to help reunite family members separated during conflict and displacement.",
+                "context": "Refugee camps and displacement centers"
+            }
+        }
+    ]
+    
+    # Sample risks and benefits data
+    risks_benefits = [
+        {
+            "to_embedd": "risks and benefits of AI Chatbots for Psychological Support in war zones",
+            "metadata": {
+                "id": "rb1",
+                "risks": "Privacy concerns with sensitive personal data; Inadequate support for severe trauma cases; Overreliance on AI instead of human therapists",
+                "benefits": "24/7 availability; Scalability to reach more victims; No language barriers with multilingual models; Reduced stigma compared to in-person therapy"
+            }
+        },
+        {
+            "to_embedd": "risks and benefits of AI-Based Conflict Early Warning System in conflict zones",
+            "metadata": {
+                "id": "rb2",
+                "risks": "False alarms causing unnecessary panic; Ethical issues with surveillance; Dependency on technology for critical decisions",
+                "benefits": "Early intervention opportunities; Data-driven policy decisions; Reduced human bias in conflict assessment"
+            }
+        },
+        {
+            "to_embedd": "risks and benefits of AI-Powered UXO Detection in post-conflict areas",
+            "metadata": {
+                "id": "rb3",
+                "risks": "False negatives leaving dangerous areas unmarked; Technical limitations in difficult terrain; High implementation costs",
+                "benefits": "Faster clearance of contaminated areas; Reduced risk to human deminers; More efficient resource allocation"
+            }
+        },
+        {
+            "to_embedd": "risks and benefits of Facial Recognition for Family Reunification in refugee contexts",
+            "metadata": {
+                "id": "rb4",
+                "risks": "Privacy and consent issues; Potential misuse of collected biometric data; Algorithmic bias affecting certain ethnic groups",
+                "benefits": "Speed of family reunification; Scale of operations possible; Reduced administrative burden"
+            }
+        }
+    ]
+    
+    # Sample mitigations data
+    mitigations = [
+        {
+            "to_embedd": "mitigations for Privacy concerns with sensitive personal data in AI Chatbots",
+            "metadata": {
+                "id": "m1",
+                "mitigations": "Implement end-to-end encryption; Establish clear data retention policies; Use anonymization techniques; Obtain informed consent; Regular security audits"
+            }
+        },
+        {
+            "to_embedd": "mitigations for Inadequate support for severe trauma cases in AI mental health support",
+            "metadata": {
+                "id": "m2",
+                "mitigations": "Implement robust triage system to escalate severe cases to human professionals; Clear disclosure of AI limitations; Integration with existing mental health services"
+            }
+        },
+        {
+            "to_embedd": "mitigations for False alarms in conflict prediction systems",
+            "metadata": {
+                "id": "m3",
+                "mitigations": "Implement multi-factor verification protocols; Human-in-the-loop review process; Continuous model retraining with feedback; Transparency about confidence levels"
+            }
+        },
+        {
+            "to_embedd": "mitigations for Algorithmic bias in facial recognition systems",
+            "metadata": {
+                "id": "m4",
+                "mitigations": "Diverse training data from all represented populations; Regular bias audits; Alternative identification methods available; Explainable AI approaches"
+            }
+        }
+    ]
+    
+    # Add data to respective namespaces
+    print("Populating use cases database...")
+    analyzer.use_cases_db.add_data(use_cases)
+    
+    print("Populating risks and benefits database...")
+    analyzer.risks_benefits_db.add_data(risks_benefits)
+    
+    print("Populating mitigations database...")
+    analyzer.mitigations_db.add_data(mitigations)
+    
+    print("Sample data population complete")
+
+
+# Example usage in a notebook
+def run_example():
+    """Run an example query through the system"""
+    # Initialize the analyzer
+    analyzer = WarUseCaseAnalyzer()
+    
+    # Uncomment to populate with sample data
+    # populate_sample_data(analyzer)
+    
+    # Process a sample query
+    query = "AI in humanitarian assistance during war"
+    report = analyzer.process_query(query)
+    
+    # Display the report
+    display(Markdown(report))
+    
+    return report
+
+
+# When running the notebook directly
+if __name__ == "__main__":
+    run_example()
