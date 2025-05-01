@@ -19,12 +19,15 @@ class UseCase(BaseModel):
 class RiskModel(BaseModel):
     title: str = Field(description="Title of the risk")
     description: str = Field(description="Detailed description of the risk")
+    severity: str = Field(description="Severity of the risk: Low, Medium, or High")
+    likelihood: str = Field(description="Likelihood of the risk: Low, Medium, or High")
     context: Optional[str] = Field(description="Context where this risk applies")
     source: Optional[str] = Field(description="Source of the risk information")
 
 class BenefitModel(BaseModel):
     title: str = Field(description="Title of the benefit")
     description: str = Field(description="Detailed description of the benefit")
+    impact: str = Field(description="Impact of the benefit: Low, Medium, or High")
     context: Optional[str] = Field(description="Context where this benefit applies")
     source: Optional[str] = Field(description="Source of the benefit information")
 
@@ -32,6 +35,7 @@ class MitigationModel(BaseModel):
     title: str = Field(description="Title of the mitigation strategy")
     description: str = Field(description="Detailed description of the mitigation strategy")
     effectiveness: str = Field(description="Effectiveness of the mitigation: Low, Medium, or High")
+    implementation_difficulty: str = Field(description="Difficulty to implement: Low, Medium, or High")
     context: Optional[str] = Field(description="Context where this mitigation applies")
     source: Optional[str] = Field(description="Source of the mitigation information")
 
@@ -40,7 +44,7 @@ class AnalysisReport(BaseModel):
     summary: str = Field(description="Executive summary of the analysis")
     use_cases: List[UseCase] = Field(description="List of relevant use cases")
     analysis_by_use_case: str = Field(description="Detailed analysis for each use case including risks, benefits, and mitigations")
-    #recommendations: str = Field(description="Overall recommendations based on the analysis")
+    recommendations: str = Field(description="Overall recommendations based on the analysis")
     considerations: Optional[str] = Field(None, description="Additional considerations or limitations")
 
 
