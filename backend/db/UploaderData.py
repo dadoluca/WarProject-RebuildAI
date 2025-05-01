@@ -63,7 +63,7 @@ class UploaderData:
         # Sample use cases data
         use_cases = [
             {
-                "to_embedd": "AI in humanitarian assistance during war, including chatbots for psychological support and route planning for aid delivery",
+                "to_embed": "AI in humanitarian assistance during war, including chatbots for psychological support and route planning for aid delivery",
                 "metadata": {
                     "id": "uc1",
                     "title": "AI Chatbots for Psychological Support",
@@ -72,7 +72,7 @@ class UploaderData:
                 }
             },
             {
-                "to_embedd": "AI for conflict prediction and prevention using satellite imagery and social media monitoring",
+                "to_embed": "AI for conflict prediction and prevention using satellite imagery and social media monitoring",
                 "metadata": {
                     "id": "uc2",
                     "title": "AI-Based Conflict Early Warning System",
@@ -81,7 +81,7 @@ class UploaderData:
                 }
             },
             {
-                "to_embedd": "AI for detecting unexploded ordnance using drone imagery and computer vision",
+                "to_embed": "AI for detecting unexploded ordnance using drone imagery and computer vision",
                 "metadata": {
                     "id": "uc3",
                     "title": "AI-Powered UXO Detection",
@@ -90,7 +90,7 @@ class UploaderData:
                 }
             },
             {
-                "to_embedd": "AI for facial recognition to reunite displaced families in refugee camps",
+                "to_embed": "AI for facial recognition to reunite displaced families in refugee camps",
                 "metadata": {
                     "id": "uc4",
                     "title": "Facial Recognition for Family Reunification",
@@ -103,7 +103,7 @@ class UploaderData:
         # Sample risks and benefits data
         risks = [
             {
-                "to_embedd": "risks and benefits of AI Chatbots for Psychological Support in war zones",
+                "to_embed": "risks and benefits of AI Chatbots for Psychological Support in war zones",
                 "metadata": {
                     "id": "rb1",
                     "risks": "Privacy concerns with sensitive personal data; Inadequate support for severe trauma cases; Overreliance on AI instead of human therapists",
@@ -111,7 +111,7 @@ class UploaderData:
                 }
             },
             {
-                "to_embedd": "risks and benefits of AI-Based Conflict Early Warning System in conflict zones",
+                "to_embed": "risks and benefits of AI-Based Conflict Early Warning System in conflict zones",
                 "metadata": {
                     "id": "rb2",
                     "risks": "False alarms causing unnecessary panic; Ethical issues with surveillance; Dependency on technology for critical decisions",
@@ -119,7 +119,7 @@ class UploaderData:
                 }
             },
             {
-                "to_embedd": "risks and benefits of AI-Powered UXO Detection in post-conflict areas",
+                "to_embed": "risks and benefits of AI-Powered UXO Detection in post-conflict areas",
                 "metadata": {
                     "id": "rb3",
                     "risks": "False negatives leaving dangerous areas unmarked; Technical limitations in difficult terrain; High implementation costs",
@@ -127,7 +127,7 @@ class UploaderData:
                 }
             },
             {
-                "to_embedd": "risks and benefits of Facial Recognition for Family Reunification in refugee contexts",
+                "to_embed": "risks and benefits of Facial Recognition for Family Reunification in refugee contexts",
                 "metadata": {
                     "id": "rb4",
                     "risks": "Privacy and consent issues; Potential misuse of collected biometric data; Algorithmic bias affecting certain ethnic groups",
@@ -139,28 +139,28 @@ class UploaderData:
         # Sample mitigations data
         mitigations = [
             {
-                "to_embedd": "mitigations for Privacy concerns with sensitive personal data in AI Chatbots",
+                "to_embed": "mitigations for Privacy concerns with sensitive personal data in AI Chatbots",
                 "metadata": {
                     "id": "m1",
                     "mitigations": "Implement end-to-end encryption; Establish clear data retention policies; Use anonymization techniques; Obtain informed consent; Regular security audits"
                 }
             },
             {
-                "to_embedd": "mitigations for Inadequate support for severe trauma cases in AI mental health support",
+                "to_embed": "mitigations for Inadequate support for severe trauma cases in AI mental health support",
                 "metadata": {
                     "id": "m2",
                     "mitigations": "Implement robust triage system to escalate severe cases to human professionals; Clear disclosure of AI limitations; Integration with existing mental health services"
                 }
             },
             {
-                "to_embedd": "mitigations for False alarms in conflict prediction systems",
+                "to_embed": "mitigations for False alarms in conflict prediction systems",
                 "metadata": {
                     "id": "m3",
                     "mitigations": "Implement multi-factor verification protocols; Human-in-the-loop review process; Continuous model retraining with feedback; Transparency about confidence levels"
                 }
             },
             {
-                "to_embedd": "mitigations for Algorithmic bias in facial recognition systems",
+                "to_embed": "mitigations for Algorithmic bias in facial recognition systems",
                 "metadata": {
                     "id": "m4",
                     "mitigations": "Diverse training data from all represented populations; Regular bias audits; Alternative identification methods available; Explainable AI approaches"
@@ -200,3 +200,18 @@ class UploaderData:
         self.mitigations_db.delete_all_chunks()
         self.benefits_db.delete_all_chunks()
         print("All data deleted successfully.")
+        
+    def populate_from_paper(self):
+        from db.data_sources import BridgingAIandHumanitarianism as BAH
+        from db.data_sources import whenTechnologyMeetsHumanity as WTMH
+
+        # Unisci i dati da entrambe le fonti
+        combined_use_cases = BAH.use_cases + WTMH.use_cases
+        combined_risks = BAH.risks + WTMH.risks
+        combined_mitigations = WTMH.mitigations
+        combined_benefits = BAH.benefits + WTMH.benefits
+
+        self.populate_use_cases_data(combined_use_cases)
+        self.populate_risks_data(combined_risks)
+        self.populate_mitigations_data(combined_mitigations)
+        self.populate_benefits_data(combined_benefits)

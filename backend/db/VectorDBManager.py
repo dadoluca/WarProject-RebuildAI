@@ -68,7 +68,7 @@ class VectorDBManager:
         to_insert = []
 
         for item in data:
-            embedding = self._get_embedding(item["to_embedd"])
+            embedding = self._get_embedding(item["to_embed"])
             metadata = item["metadata"]
             to_insert.append((item["metadata"]["id"] if "id" in item else str(uuid.uuid4()), embedding, metadata))
 

@@ -425,8 +425,10 @@ class WarUseCaseAnalyzer:
 def run_example_with_sample_data():
     """Run an example query through the system"""
     uploader = UploaderData()
+    #uploader.delete_all_data()
 
-    uploader.populate_sample_data()
+    #uploader.populate_from_paper()
+    
     
     # Initialize the analyzer
     analyzer = WarUseCaseAnalyzer()
@@ -439,7 +441,7 @@ def run_example_with_sample_data():
     with open("report.md", "w") as f:
         f.write(report)
         
-    uploader.delete_all_data()
+    #uploader.delete_all_data()
         
     return report
 
