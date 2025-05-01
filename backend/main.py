@@ -1,451 +1,505 @@
 import os
-from typing import List, Dict, Any
-import uuid
-from dotenv import load_dotenv
+from typing import List, Dict, Optional, Any
+from pydantic import BaseModel, Field
 from openai import OpenAI
-import pandas as pd
-from IPython.display import Markdown, display
-from db.VectorDBManager import VectorDBManager  
-from db.UploaderData import UploaderData
-
+from dotenv import load_dotenv
+from db.VectorDBManager import VectorDBManager
 
 # Load environment variables
 load_dotenv()
 
+# Define Pydantic models for structured data
+class UseCase(BaseModel):
+    title: str = Field(description="Title of the use case")
+    description: str = Field(description="Detailed description of the use case")
+    context: str = Field(description="Context where the use case applies")
+    relevance_score: float = Field(description="Relevance score to the query (0-1)")
+    source: Optional[str] = Field(description="Source of the use case information")
+
+class RiskModel(BaseModel):
+    title: str = Field(description="Title of the risk")
+    description: str = Field(description="Detailed description of the risk")
+    context: Optional[str] = Field(description="Context where this risk applies")
+    source: Optional[str] = Field(description="Source of the risk information")
+
+class BenefitModel(BaseModel):
+    title: str = Field(description="Title of the benefit")
+    description: str = Field(description="Detailed description of the benefit")
+    context: Optional[str] = Field(description="Context where this benefit applies")
+    source: Optional[str] = Field(description="Source of the benefit information")
+
+class MitigationModel(BaseModel):
+    title: str = Field(description="Title of the mitigation strategy")
+    description: str = Field(description="Detailed description of the mitigation strategy")
+    effectiveness: str = Field(description="Effectiveness of the mitigation: Low, Medium, or High")
+    context: Optional[str] = Field(description="Context where this mitigation applies")
+    source: Optional[str] = Field(description="Source of the mitigation information")
+
+class AnalysisReport(BaseModel):
+    query: str = Field(description="Original query that initiated the analysis")
+    summary: str = Field(description="Executive summary of the analysis")
+    use_cases: List[UseCase] = Field(description="List of relevant use cases")
+    analysis_by_use_case: str = Field(description="Detailed analysis for each use case including risks, benefits, and mitigations")
+    #recommendations: str = Field(description="Overall recommendations based on the analysis")
+    considerations: Optional[str] = Field(None, description="Additional considerations or limitations")
+
+
 class WarUseCaseAnalyzer:
     """
-    A class that analyzes war-related use cases, their risks, benefits, and mitigations
-    using RAG (Retrieval Augmented Generation) with Pinecone and an LLM.
+    A class for analyzing war-related use cases using RAG and LLMs.
+    Implements a pipeline that retrieves relevant use cases, associated risks, benefits, 
+    and mitigation strategies to generate a comprehensive analysis report.
     """
     
     def __init__(self):
-        """Initialize the analyzer with necessary components."""
+        """
+        Initialize the WarUseCaseAnalyzer with necessary connections to Vector DBs and LLM.
+        """
         # Load API keys from environment variables
-        pinecone_api = os.getenv("PINECONE_API_KEY")
-        openai_api = os.getenv("OPENAI_API_KEY")
+        self.openai_api_key = os.getenv("OPENAI_API_KEY")
+        self.pinecone_api_key = os.getenv("PINECONE_API_KEY")
         
-        if not pinecone_api or not openai_api:
+        if not self.openai_api_key or not self.pinecone_api_key:
             raise ValueError("Missing required API keys in environment variables")
         
-        self.index_name = os.getenv("PINECONE_INDEX_NAME", "war-use-cases")
-        self.llm_model = os.getenv("LLM_MODEL", "gpt-4o-mini")
-        
         # Initialize OpenAI client
-        self.client = OpenAI(api_key=openai_api)
+        self.openai_client = OpenAI(api_key=self.openai_api_key)
         
-        # Initialize vector DB managers for different collections
+        # Initialize VectorDBManager instances for different data types
+        self.index_name = os.getenv("PINECONE_INDEX_NAME", "war-use-cases")
+        
         self.use_cases_db = VectorDBManager(
-            pinecone_api=pinecone_api,
-            openai_api=openai_api,
+            pinecone_api=self.pinecone_api_key,
+            openai_api=self.openai_api_key,
             index_name=self.index_name,
             namespace="use_cases"
         )
         
-        # Separate namespaces for risks and benefits
         self.risks_db = VectorDBManager(
-            pinecone_api=pinecone_api,
-            openai_api=openai_api,
+            pinecone_api=self.pinecone_api_key,
+            openai_api=self.openai_api_key,
             index_name=self.index_name,
             namespace="risks"
         )
         
         self.benefits_db = VectorDBManager(
-            pinecone_api=pinecone_api,
-            openai_api=openai_api,
+            pinecone_api=self.pinecone_api_key,
+            openai_api=self.openai_api_key,
             index_name=self.index_name,
             namespace="benefits"
         )
         
         self.mitigations_db = VectorDBManager(
-            pinecone_api=pinecone_api,
-            openai_api=openai_api,
+            pinecone_api=self.pinecone_api_key,
+            openai_api=self.openai_api_key,
             index_name=self.index_name,
             namespace="mitigations"
         )
-    
-    def _query_llm(self, prompt: str, messages: List[Dict[str, str]] = None, temperature: float = 0.7):
+        
+        # Default LLM model
+        self.default_model = os.getenv("LLM_MODEL", "gpt-4o-mini")
+
+    def _query_llm(self, messages: List[Dict[str, str]], response_model=None, temperature: float = 0.3):
         """
-        Query the LLM with a given prompt.
+        Helper function to query an OpenAI-compatible chat model.
         
         Args:
-            prompt: The prompt to send to the LLM
-            messages: Optional message history
-            temperature: Control randomness (0.0 = deterministic, 1.0 = creative)
+            messages: List of message dictionaries with role and content.
+            response_model: Optional Pydantic model for structured output.
+            temperature: Controls randomness in generation (0.0-1.0).
             
         Returns:
-            The LLM's response text
+            Either parsed structured data or raw completion text.
         """
-        if messages is None:
-            messages = [{"role": "user", "content": prompt}]
-        else:
-            messages.append({"role": "user", "content": prompt})
-        
-        completion = self.client.chat.completions.create(
-            model=self.llm_model,
-            messages=messages,
-            temperature=temperature
-        )
-        
-        return completion.choices[0].message.content
-    
-    def find_use_cases(self, query: str, top_k: int = 3):
+        try:
+            if response_model:
+                completion = self.openai_client.beta.chat.completions.parse(
+                    model=self.default_model,
+                    messages=messages,
+                    response_format=response_model,
+                    temperature=temperature
+                )
+                return completion.choices[0].message.parsed
+            else:
+                completion = self.openai_client.chat.completions.create(
+                    model=self.default_model,
+                    messages=messages,
+                    temperature=temperature
+                )
+                return completion.choices[0].message.content
+        except Exception as e:
+            print(f"Error querying LLM: {e}")
+            raise
+
+    def retrieve_use_cases(self, query: str, top_k: int = 3):
         """
-        Find relevant use cases based on the user query.
+        Retrieves relevant use cases from the vector database based on the query.
         
         Args:
-            query: User's query about a war-related AI use case
-            top_k: Number of use cases to retrieve
+            query: The user's input query.
+            top_k: Number of use cases to retrieve.
             
         Returns:
-            Dictionary of use cases with their details
+            List of retrieved use cases with metadata.
         """
-        print(f"Finding use cases for: '{query}'")
         results = self.use_cases_db.search_kb(query, top_k=top_k)
-        
-        use_cases = {}
-        for match in results.matches:
-            use_case_id = match.metadata.get("id", str(uuid.uuid4()))
-            use_cases[use_case_id] = {
-                "title": match.metadata.get("title", "Unnamed Use Case"),
-                "description": match.metadata.get("description", "No description available"),
-                "context": match.metadata.get("context", "No context available"),
-                "score": match.score
-            }
-        
-        # If no use cases found, provide a message
-        if not use_cases:
-            print("No relevant use cases found. Generating a generic response with the LLM.")
-            llm_prompt = f"""
-            No specific use cases were found in our database for the query: "{query}".
-            Please generate a thoughtful analysis of potential AI applications in this context,
-            focusing on how AI might be used in war or post-war scenarios related to this query.
-            Format as a list of 2-3 potential use cases with titles and descriptions.
-            """
-            llm_response = self._query_llm(llm_prompt)
-            
-            # Creating a generic use case from LLM response
-            use_cases["generic_response"] = {
-                "title": f"AI Applications for: {query}",
-                "description": llm_response,
-                "context": "Generated by AI due to lack of specific database entries",
-                "score": 1.0  # Default score
-            }
-        
-        return use_cases
-    
-    def analyze_use_cases(self, query: str, use_cases: Dict[str, Dict[str, Any]]):
+        return results
+
+    def analyze_use_cases(self, query: str, search_results):
         """
-        Analyze the retrieved use cases using the LLM.
+        Analyzes retrieved use cases to determine relevance and generate structured data.
         
         Args:
-            query: Original user query
-            use_cases: Dictionary of use cases to analyze
+            query: The original user query.
+            search_results: Results from vector DB search.
             
         Returns:
-            Analysis of the use cases
+            List of UseCase objects.
         """
-        use_cases_text = "\n\n".join([
-            f"Use Case {idx+1}: {uc['title']}\n{uc['description']}\nContext: {uc['context']}"
-            for idx, uc in enumerate(use_cases.values())
-        ])
+        # Prepare context from search results
+        context_items = []
+        for match in search_results.matches:
+            metadata = match.metadata
+            context_items.append(f"Title: {metadata.get('title', 'N/A')}\n"
+                                f"Description: {metadata.get('description', 'N/A')}\n"
+                                f"Context: {metadata.get('context', 'N/A')}\n"
+                                f"Source: {metadata.get('source', 'N/A')}\n"
+                                f"Score: {match.score}")
         
-        prompt = f"""
-        The user is interested in: "{query}"
+        context_text = "\n\n".join(context_items)
         
-        I've retrieved the following relevant use cases:
+        # Prepare prompt for LLM
+        messages = [
+            {"role": "system", "content": 
+             "You are an expert in analyzing technology use cases for post-conflict and humanitarian contexts. "
+             "Based on the retrieved use cases and the user's query, analyze each use case for relevance, appropriateness, "
+             "and potential application. Format the information into structured use case entries."},
+            {"role": "user", "content": 
+             f"Query: {query}\n\nRetrieved use cases:\n\n{context_text}\n\n"
+             f"Analyze these use cases in relation to the query. For each use case, assess its relevance to the query "
+             f"on a scale of 0-1, where 1 is highly relevant. Structure the information according to the provided model."}
+        ]
         
-        {use_cases_text}
+        # Define the structure for multiple use cases
+        class UseCaseList(BaseModel):
+            use_cases: List[UseCase] = Field(description="List of analyzed use cases")
         
-        Please analyze these use cases in relation to the user's query. Provide:
-        1. A brief summary of how these use cases relate to the user's query
-        2. Key insights from these use cases
-        3. Potential applications or implementations
-        
-        Format your response as a structured analysis that helps the user understand the relevance and implications.
+        # Query LLM for structured analysis
+        result = self._query_llm(messages, response_model=UseCaseList)
+        return result.use_cases
+
+    def retrieve_risks_and_benefits(self, use_case: UseCase, top_k: int = 3):
         """
-        
-        return self._query_llm(prompt)
-    
-    def find_risks_benefits(self, use_case: Dict[str, Any], top_k: int = 3):
-        """
-        Find risks and benefits for a specific use case using separate databases.
+        Retrieves risks and benefits associated with a use case.
         
         Args:
-            use_case: The use case to analyze
-            top_k: Number of risks/benefits entries to retrieve
+            use_case: The UseCase object to find risks and benefits for.
+            top_k: Number of items to retrieve for each category.
             
         Returns:
-            Dictionary containing risks and benefits
+            Tuple of (risks_results, benefits_results).
         """
-        risks_benefits = {
-            "risks": [],
-            "benefits": []
-        }
+        # Create a search query based on the use case title and description
+        search_query = f"{use_case.title} {use_case.description}"
         
-        # Query for risks
-        risks_query = f"risks of {use_case['title']} in war or post-war context"
-        risks_results = self.risks_db.search_kb(risks_query, top_k=top_k)
+        # Retrieve risks and benefits
+        risks_results = self.risks_db.search_kb(search_query, top_k=top_k)
+        benefits_results = self.benefits_db.search_kb(search_query, top_k=top_k)
         
+        return risks_results, benefits_results
+
+    def analyze_risks_and_benefits(self, use_case: UseCase, risks_results, benefits_results):
+        """
+        Analyzes retrieved risks and benefits to generate structured assessments.
+        
+        Args:
+            use_case: The use case being analyzed.
+            risks_results: Results from risks vector DB search.
+            benefits_results: Results from benefits vector DB search.
+            
+        Returns:
+            Tuple of (List[RiskModel], List[BenefitModel]).
+        """
+        # Prepare context from risk results
+        risk_items = []
         for match in risks_results.matches:
-            if "risks" in match.metadata:
-                risks_benefits["risks"].extend(match.metadata["risks"].split(";"))
+            metadata = match.metadata
+            risk_items.append(f"Title: {metadata.get('title', 'N/A')}\n"
+                            f"Description: {metadata.get('description', 'N/A')}\n"
+                            f"Context: {metadata.get('context', 'N/A')}\n"
+                            f"Source: {metadata.get('source', 'N/A')}\n"
+                            f"Score: {match.score}")
         
-        # Query for benefits
-        benefits_query = f"benefits of {use_case['title']} in war or post-war context"
-        benefits_results = self.benefits_db.search_kb(benefits_query, top_k=top_k)
+        risk_context = "\n\n".join(risk_items)
         
+        # Prepare context from benefit results
+        benefit_items = []
         for match in benefits_results.matches:
-            if "benefits" in match.metadata:
-                risks_benefits["benefits"].extend(match.metadata["benefits"].split(";"))
+            metadata = match.metadata
+            benefit_items.append(f"Title: {metadata.get('title', 'N/A')}\n"
+                               f"Description: {metadata.get('description', 'N/A')}\n"
+                               f"Context: {metadata.get('context', 'N/A')}\n"
+                               f"Source: {metadata.get('source', 'N/A')}\n"
+                               f"Score: {match.score}")
         
-        # Remove duplicates and empty entries
-        risks_benefits["risks"] = list(set(filter(None, risks_benefits["risks"])))
-        risks_benefits["benefits"] = list(set(filter(None, risks_benefits["benefits"])))
+        benefit_context = "\n\n".join(benefit_items)
         
-        # If no risks or benefits found, generate with LLM
-        if not risks_benefits["risks"] or not risks_benefits["benefits"]:
-            print(f"Generating risks and benefits for '{use_case['title']}' with LLM.")
-            llm_prompt = f"""
-            For the following AI use case in a war or post-war context:
-            
-            Title: {use_case['title']}
-            Description: {use_case['description']}
-            
-            Please identify:
-            1. The top potential risks of this application (ethical, social, technical, security)
-            2. The top potential benefits of this application (humanitarian, social, technical, security)
-            
-            Format your response with clearly separated 'RISKS:' and 'BENEFITS:' sections.
-            """
-            llm_response = self._query_llm(llm_prompt)
-            
-            # Simple parsing of LLM response
-            if "RISKS:" in llm_response and "BENEFITS:" in llm_response:
-                parts = llm_response.split("BENEFITS:")
-                risks_part = parts[0].replace("RISKS:", "").strip()
-                benefits_part = parts[1].strip()
-                
-                # Fill in any missing risks or benefits
-                if not risks_benefits["risks"]:
-                    risks_benefits["risks"] = [r.strip() for r in risks_part.split("\n-") if r.strip()]
-                
-                if not risks_benefits["benefits"]:
-                    risks_benefits["benefits"] = [b.strip() for b in benefits_part.split("\n-") if b.strip()]
-            else:
-                # Fallback if format wasn't followed
-                if not risks_benefits["risks"]:
-                    risks_benefits["risks"] = ["Risk assessment required"]
-                
-                if not risks_benefits["benefits"]:
-                    risks_benefits["benefits"] = ["Benefit assessment required"]
+        # Prepare prompt for risks analysis
+        risk_messages = [
+            {"role": "system", "content": 
+             "You are an expert in risk assessment for technologies used in post-conflict and humanitarian contexts. "
+             "Analyze the risks associated with the given use case based on the retrieved information."},
+            {"role": "user", "content": 
+             f"Use Case: {use_case.title}\n\nDescription: {use_case.description}\n\n"
+             f"Retrieved risks:\n\n{risk_context}\n\n"
+             f"Analyze these risks in relation to the use case. Assess severity and likelihood for each risk. "
+             f"Structure your analysis according to the provided model."}
+        ]
         
-        return risks_benefits
-    
-    def find_mitigations(self, risk: str, top_k: int = 2):
+        # Prepare prompt for benefits analysis
+        benefit_messages = [
+            {"role": "system", "content": 
+             "You are an expert in benefit assessment for technologies used in post-conflict and humanitarian contexts. "
+             "Analyze the benefits associated with the given use case based on the retrieved information."},
+            {"role": "user", "content": 
+             f"Use Case: {use_case.title}\n\nDescription: {use_case.description}\n\n"
+             f"Retrieved benefits:\n\n{benefit_context}\n\n"
+             f"Analyze these benefits in relation to the use case. Assess impact for each benefit. "
+             f"Structure your analysis according to the provided model."}
+        ]
+        
+        # Define the structure for multiple risks and benefits
+        class RiskList(BaseModel):
+            risks: List[RiskModel] = Field(description="List of analyzed risks")
+            
+        class BenefitList(BaseModel):
+            benefits: List[BenefitModel] = Field(description="List of analyzed benefits")
+        
+        # Query LLM for structured analysis
+        risks = self._query_llm(risk_messages, response_model=RiskList).risks
+        benefits = self._query_llm(benefit_messages, response_model=BenefitList).benefits
+        
+        return risks, benefits
+
+    def retrieve_mitigations(self, risk: RiskModel, top_k: int = 3):
         """
-        Find mitigations for a specific risk.
+        Retrieves mitigations for a specific risk.
         
         Args:
-            risk: The risk to find mitigations for
-            top_k: Number of mitigation entries to retrieve
+            risk: The risk to find mitigations for.
+            top_k: Number of mitigations to retrieve.
             
         Returns:
-            List of mitigations
+            Mitigation search results.
         """
-        search_query = f"mitigations for {risk} in war or post-war context"
-        results = self.mitigations_db.search_kb(search_query, top_k=top_k)
+        # Create a search query based on the risk title and description
+        search_query = f"{risk.title} {risk.description}"
         
-        mitigations = []
-        for match in results.matches:
-            if "mitigations" in match.metadata:
-                mitigations.extend(match.metadata["mitigations"].split(";"))
+        # Retrieve mitigations
+        mitigations_results = self.mitigations_db.search_kb(search_query, top_k=top_k)
         
-        # Remove duplicates and empty entries
-        mitigations = list(set(filter(None, mitigations)))
-        
-        # If no mitigations found, generate with LLM
-        if not mitigations:
-            print(f"Generating mitigations for risk '{risk}' with LLM.")
-            llm_prompt = f"""
-            For the following risk in using AI in a war or post-war context:
-            
-            Risk: {risk}
-            
-            Please provide 2-3 specific mitigation strategies that could help address this risk.
-            Focus on practical, ethical, and implementable solutions.
-            """
-            llm_response = self._query_llm(llm_prompt)
-            
-            # Simple parsing: assume each line is a mitigation
-            mitigations = [m.strip() for m in llm_response.split("\n") if m.strip()]
-            
-            # Filter out lines that are likely not mitigations
-            mitigations = [m for m in mitigations if len(m) > 20 and not m.startswith("Mitigation")]
-            
-            # If still empty, use a fallback
-            if not mitigations:
-                mitigations = ["Mitigation assessment required"]
-        
-        return mitigations
-    
-    def generate_report(self, query: str, use_cases: Dict[str, Dict], use_cases_analysis: str, 
-                        all_risks_benefits: Dict[str, Dict], all_mitigations: Dict[str, List[str]]):
+        return mitigations_results
+
+    def analyze_mitigations(self, risk: RiskModel, mitigations_results):
         """
-        Generate a comprehensive report based on all the collected information.
+        Analyzes retrieved mitigations to generate structured strategies.
         
         Args:
-            query: Original user query
-            use_cases: Dictionary of use cases
-            use_cases_analysis: Analysis of the use cases
-            all_risks_benefits: Risks and benefits for each use case
-            all_mitigations: Mitigations for each risk
+            risk: The risk being mitigated.
+            mitigations_results: Results from mitigations vector DB search.
             
         Returns:
-            A formatted report
+            List of MitigationModel objects.
         """
-        # Prepare the report content
-        report_sections = []
+        # Prepare context from mitigation results
+        mitigation_items = []
+        for match in mitigations_results.matches:
+            metadata = match.metadata
+            mitigation_items.append(f"Title: {metadata.get('title', 'N/A')}\n"
+                                  f"Description: {metadata.get('description', 'N/A')}\n"
+                                  f"Context: {metadata.get('context', 'N/A')}\n"
+                                  f"Source: {metadata.get('source', 'N/A')}\n"
+                                  f"Score: {match.score}")
         
-        # Introduction section
-        report_sections.append(f"""
-        # AI War Use Case Analysis: {query}
+        mitigation_context = "\n\n".join(mitigation_items)
         
-        ## Executive Summary
+        # Prepare prompt for mitigation analysis
+        messages = [
+            {"role": "system", "content": 
+             "You are an expert in developing mitigation strategies for risks in post-conflict and humanitarian technology use. "
+             "Analyze the mitigations for the given risk based on the retrieved information."},
+            {"role": "user", "content": 
+             f"Risk: {risk.title}\n\nDescription: {risk.description}\n\n"
+             f"Retrieved mitigations:\n\n{mitigation_context}\n\n"
+             f"Analyze these mitigations in relation to the risk. Assess effectiveness and implementation difficulty for each. "
+             f"Structure your analysis according to the provided model."}
+        ]
         
-        This report provides an analysis of AI applications related to "{query}" in war or post-war contexts.
-        It examines relevant use cases, their risks and benefits, and potential mitigation strategies.
+        # Define the structure for multiple mitigations
+        class MitigationList(BaseModel):
+            mitigations: List[MitigationModel] = Field(description="List of analyzed mitigations")
         
-        ## Overview
-        
-        {use_cases_analysis}
-        """)
-        
-        # Use cases section
-        report_sections.append("## Detailed Analysis of Use Cases\n")
-        
-        for uc_id, use_case in use_cases.items():
-            report_sections.append(f"""
-            ### {use_case['title']}
-            
-            **Description:** {use_case['description']}
-            
-            **Context:** {use_case['context']}
-            
-            #### Benefits:
-            """)
-            
-            # Add benefits
-            benefits = all_risks_benefits.get(uc_id, {}).get("benefits", [])
-            if benefits:
-                for benefit in benefits:
-                    report_sections.append(f"- {benefit}")
-            else:
-                report_sections.append("- No specific benefits identified")
-            
-            report_sections.append("\n#### Risks:")
-            
-            # Add risks and their mitigations
-            risks = all_risks_benefits.get(uc_id, {}).get("risks", [])
-            if risks:
-                for risk_idx, risk in enumerate(risks):
-                    report_sections.append(f"- **{risk}**")
-                    
-                    # Add mitigations for this risk
-                    mitigations = all_mitigations.get(f"{uc_id}_{risk_idx}", [])
-                    if mitigations:
-                        report_sections.append("  *Potential mitigations:*")
-                        for mitigation in mitigations:
-                            report_sections.append(f"  - {mitigation}")
-                    else:
-                        report_sections.append("  *Mitigations not identified*")
-            else:
-                report_sections.append("- No specific risks identified")
-        
-        # Conclusion section
-        report_sections.append("""
-        ## Conclusion
-        
-        This analysis provides a framework for understanding how AI can be applied in this context, 
-        what risks should be considered, and how these risks might be mitigated. Ethical considerations 
-        should always be prioritized when implementing AI solutions in sensitive contexts like war 
-        or post-war scenarios.
-        
-        It's recommended that any implementation be subjected to ongoing ethical review and 
-        stakeholder consultation throughout development and deployment phases.
-        """)
-        
-        # Join all sections
-        return "\n".join(report_sections)
-    
-    def process_query(self, query: str):
+        # Query LLM for structured analysis
+        result = self._query_llm(messages, response_model=MitigationList)
+        return result.mitigations
+
+    def generate_report(self, query: str, use_cases: List[UseCase], use_case_analyses: List[Dict]):
         """
-        Process a user query through the entire RAG + LLM pipeline.
+        Generates a final comprehensive report based on all analyses.
         
         Args:
-            query: User's query about a war-related AI use case
+            query: The original user query.
+            use_cases: List of analyzed use cases.
+            use_case_analyses: List of dictionaries containing risks, benefits, and mitigations for each use case.
             
         Returns:
-            A comprehensive report
+            AnalysisReport object.
         """
-        print(f"Processing query: '{query}'")
+        # Prepare context with all analyses
+        context_items = []
         
-        # Step 1: Find relevant use cases
-        use_cases = self.find_use_cases(query)
-        print(f"Found {len(use_cases)} use cases")
+        # Add use cases overview
+        context_items.append("## Use Cases Overview")
+        for uc in use_cases:
+            context_items.append(f"- {uc.title} (Relevance: {uc.relevance_score})")
         
-        # Step 2: Analyze use cases with LLM
-        use_cases_analysis = self.analyze_use_cases(query, use_cases)
-        print("Completed use case analysis")
+        # Add detailed analysis for each use case
+        for i, uc in enumerate(use_cases):
+            analysis = use_case_analyses[i]
+            
+            context_items.append(f"\n## Use Case: {uc.title}")
+            context_items.append(f"Description: {uc.description}")
+            context_items.append(f"Context: {uc.context}")
+            
+            # Risks
+            context_items.append("\n### Risks")
+            for risk in analysis["risks"]:
+                context_items.append(f"- {risk.title} (Severity: {risk.severity}, Likelihood: {risk.likelihood})")
+            
+            # Benefits
+            context_items.append("\n### Benefits")
+            for benefit in analysis["benefits"]:
+                context_items.append(f"- {benefit.title} (Impact: {benefit.impact})")
+            
+            # Mitigations (grouped by risk)
+            context_items.append("\n### Mitigation Strategies")
+            for risk_idx, risk in enumerate(analysis["risks"]):
+                context_items.append(f"\nFor risk '{risk.title}':")
+                if "mitigations" in analysis and risk_idx < len(analysis["mitigations"]):
+                    for mitigation in analysis["mitigations"][risk_idx]:
+                        context_items.append(f"- {mitigation.title} (Effectiveness: {mitigation.effectiveness}, "
+                                           f"Implementation Difficulty: {mitigation.implementation_difficulty})")
+                else:
+                    context_items.append("- No specific mitigations found")
         
-        # Step 3-4: Find risks, benefits for each use case
-        all_risks_benefits = {}
-        for uc_id, use_case in use_cases.items():
-            all_risks_benefits[uc_id] = self.find_risks_benefits(use_case)
-        print("Retrieved risks and benefits")
+        context_text = "\n".join(context_items)
         
-        # Step 5-6: Find mitigations for each risk
-        all_mitigations = {}
-        for uc_id, rb in all_risks_benefits.items():
-            for risk_idx, risk in enumerate(rb["risks"]):
-                all_mitigations[f"{uc_id}_{risk_idx}"] = self.find_mitigations(risk)
-        print("Retrieved mitigations")
+        # Prepare prompt for report generation
+        messages = [
+            {"role": "system", "content": 
+            "You are an expert analyst specializing in humanitarian technology applications for post-conflict zones. "
+            "Generate a comprehensive analysis report based on the provided information about use cases, risks, benefits, "
+            "and mitigation strategies. The report should include an executive summary, analysis of each use case, "
+            "and overall recommendations."},
+            {"role": "user", "content": 
+            f"Original Query: {query}\n\n"
+            f"Analysis Information:\n\n{context_text}\n\n"
+            f"Generate a comprehensive analysis report structured according to the provided model. "
+            f"Include a concise executive summary, analysis of the use cases with their associated risks, benefits, "
+            f"and mitigations in the 'analysis_by_use_case' field, overall recommendations, and any additional considerations or limitations."}
+        ]
         
-        # Step 7-8: Generate final report
-        report = self.generate_report(
-            query, 
-            use_cases, 
-            use_cases_analysis, 
-            all_risks_benefits, 
-            all_mitigations
-        )
-        print("Generated report")
-        
+        # Query LLM for structured report
+        report = self._query_llm(messages, response_model=AnalysisReport)
         return report
 
-def run_example_with_sample_data():
-    """Run an example query through the system"""
-    uploader = UploaderData()
-    #uploader.delete_all_data()
+    def analyze(self, query: str, top_k_use_cases: int = 3, top_k_risks_benefits: int = 3, top_k_mitigations: int = 3):
+        """
+        Main pipeline function that executes the entire analysis process.
+        
+        Args:
+            query: The user's query about a post-conflict challenge.
+            top_k_use_cases: Number of use cases to retrieve.
+            top_k_risks_benefits: Number of risks and benefits to retrieve for each use case.
+            top_k_mitigations: Number of mitigations to retrieve for each risk.
+            
+        Returns:
+            AnalysisReport object with the complete analysis.
+        """
+        print(f"Starting analysis for query: '{query}'")
+        
+        # Step 1: Retrieve relevant use cases
+        print("Step 1: Retrieving relevant use cases...")
+        use_case_results = self.retrieve_use_cases(query, top_k=top_k_use_cases)
+        
+        # Step 2: Analyze use cases with LLM
+        print("Step 2: Analyzing use cases...")
+        use_cases = self.analyze_use_cases(query, use_case_results)
+        
+        # Steps 3-7: For each use case, retrieve and analyze risks, benefits, and mitigations
+        use_case_analyses = []
+        for use_case in use_cases:
+            print(f"Processing use case: {use_case.title}")
+            
+            # Step 3-4: Retrieve and analyze risks and benefits
+            print("Retrieving risks and benefits...")
+            risks_results, benefits_results = self.retrieve_risks_and_benefits(use_case, top_k=top_k_risks_benefits)
+            
+            print("Analyzing risks and benefits...")
+            risks, benefits = self.analyze_risks_and_benefits(use_case, risks_results, benefits_results)
+            
+            # Steps 5-6: For each risk, retrieve and analyze mitigations
+            all_mitigations = []
+            for risk in risks:
+                print(f"Processing risk: {risk.title}")
+                
+                print("Retrieving mitigations...")
+                mitigations_results = self.retrieve_mitigations(risk, top_k=top_k_mitigations)
+                
+                print("Analyzing mitigations...")
+                mitigations = self.analyze_mitigations(risk, mitigations_results)
+                all_mitigations.append(mitigations)
+            
+            # Store analysis for this use case
+            use_case_analyses.append({
+                "risks": risks,
+                "benefits": benefits,
+                "mitigations": all_mitigations
+            })
+        
+        # Step 8: Generate final report
+        print("Step 8: Generating final analysis report...")
+        report = self.generate_report(query, use_cases, use_case_analyses)
 
-    #uploader.populate_from_paper()
-    
-    
-    # Initialize the analyzer
+        return report
+
+
+# Example usage
+if __name__ == "__main__":
     analyzer = WarUseCaseAnalyzer()
     
-    # Process a sample query
-    query = "AI in humanitarian assistance during war"
-    report = analyzer.process_query(query)
+    # Example query
+    query = "lack of clean water in Sudan after conflict"
     
-    # Display the report
-    with open("report.md", "w") as f:
-        f.write(report)
-        
-    #uploader.delete_all_data()
-        
-    return report
+    # Run analysis
+    report = analyzer.analyze(query)
+    
+    # Print report
+    print("\n=== ANALYSIS REPORT ===\n")
+    print(f"QUERY: {report.query}\n")
+    print(f"SUMMARY: {report.summary}\n")
+    print("USE CASES:")
+    for uc in report.use_cases:
+        print(f"- {uc.title} (Relevance: {uc.relevance_score})")
 
+    print("\nANALYSIS BY USE CASE:")
+    print(report.analysis_by_use_case)
 
-# When running the notebook directly
-if __name__ == "__main__":
-    run_example_with_sample_data()
+    print("\nRECOMMENDATIONS:")
+    print(report.recommendations)
+
+    if report.considerations:
+        print("\nADDITIONAL CONSIDERATIONS:")
+        print(report.considerations)
+
+    print("Analysis complete.")

@@ -1,4 +1,5 @@
 from pydantic import BaseModel, Field
+from typing import List
 
 class UseCase(BaseModel):
     title: str = Field(description="Title of the use case")
