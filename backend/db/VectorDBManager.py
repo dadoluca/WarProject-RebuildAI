@@ -70,7 +70,7 @@ class VectorDBManager:
         for item in data:
             embedding = self._get_embedding(item["to_embedd"])
             metadata = item["metadata"]
-            to_insert.append((str(uuid.uuid4()), embedding, metadata))
+            to_insert.append((item["metadata"]["id"] if "id" in item else str(uuid.uuid4()), embedding, metadata))
 
         print("VectorDBManager: Adding data to the index...", self.namespace)
         response = self.index.upsert(vectors=to_insert, namespace=self.namespace)
@@ -164,3 +164,45 @@ class VectorDBManager:
         except Exception as e:
             print(f"Error during delete operation: {str(e)}")
             raise
+
+    def delete_all_chunks(self):
+        """
+        Deletes all chunks in the Pinecone index.
+        
+        Returns:
+        - dict: A dictionary with the total count of deleted chunks.
+        """
+        try:
+            # Query all vectors without filters
+            query_response = self.index.query(
+                vector=[0.0] * 1536,  # Dummy vector for querying all
+                top_k=10000,
+                include_metadata=True,
+                namespace=self.namespace
+            )
+
+            if not query_response.matches:
+                print("No vectors found to delete")
+                return {"deleted": 0}
+
+            vector_ids = [match.id for match in query_response.matches]
+            print(f"Found {len(vector_ids)} vectors to delete")
+
+            batch_size = 1000
+            deleted_count = 0
+
+            for i in range(0, len(vector_ids), batch_size):
+                batch = vector_ids[i:i + batch_size]
+                delete_response = self.index.delete(ids=batch, namespace=self.namespace)
+                print("delete_response", delete_response)
+                deleted_count += len(batch)
+                print(f"Deleted batch of {len(batch)} vectors")
+
+            result = {"deleted": deleted_count}
+            print(f"Total chunks deleted: {deleted_count}")
+            return result
+
+        except Exception as e:
+            print(f"Error during delete operation: {str(e)}")
+            raise
+

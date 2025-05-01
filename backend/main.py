@@ -6,6 +6,8 @@ from openai import OpenAI
 import pandas as pd
 from IPython.display import Markdown, display
 from db.VectorDBManager import VectorDBManager  
+from db.UploaderData import UploaderData
+
 
 # Load environment variables
 load_dotenv()
@@ -26,7 +28,7 @@ class WarUseCaseAnalyzer:
             raise ValueError("Missing required API keys in environment variables")
         
         self.index_name = os.getenv("PINECONE_INDEX_NAME", "war-use-cases")
-        self.llm_model = os.getenv("LLM_MODEL", "gpt-4-turbo")
+        self.llm_model = os.getenv("LLM_MODEL", "gpt-4o-mini")
         
         # Initialize OpenAI client
         self.client = OpenAI(api_key=openai_api)
@@ -39,11 +41,19 @@ class WarUseCaseAnalyzer:
             namespace="use_cases"
         )
         
-        self.risks_benefits_db = VectorDBManager(
+        # Separate namespaces for risks and benefits
+        self.risks_db = VectorDBManager(
             pinecone_api=pinecone_api,
             openai_api=openai_api,
             index_name=self.index_name,
-            namespace="risks_benefits"
+            namespace="risks"
+        )
+        
+        self.benefits_db = VectorDBManager(
+            pinecone_api=pinecone_api,
+            openai_api=openai_api,
+            index_name=self.index_name,
+            namespace="benefits"
         )
         
         self.mitigations_db = VectorDBManager(
@@ -158,7 +168,7 @@ class WarUseCaseAnalyzer:
     
     def find_risks_benefits(self, use_case: Dict[str, Any], top_k: int = 3):
         """
-        Find risks and benefits for a specific use case.
+        Find risks and benefits for a specific use case using separate databases.
         
         Args:
             use_case: The use case to analyze
@@ -167,17 +177,24 @@ class WarUseCaseAnalyzer:
         Returns:
             Dictionary containing risks and benefits
         """
-        search_query = f"risks and benefits of {use_case['title']} in war or post-war context"
-        results = self.risks_benefits_db.search_kb(search_query, top_k=top_k)
-        
         risks_benefits = {
             "risks": [],
             "benefits": []
         }
         
-        for match in results.matches:
+        # Query for risks
+        risks_query = f"risks of {use_case['title']} in war or post-war context"
+        risks_results = self.risks_db.search_kb(risks_query, top_k=top_k)
+        
+        for match in risks_results.matches:
             if "risks" in match.metadata:
                 risks_benefits["risks"].extend(match.metadata["risks"].split(";"))
+        
+        # Query for benefits
+        benefits_query = f"benefits of {use_case['title']} in war or post-war context"
+        benefits_results = self.benefits_db.search_kb(benefits_query, top_k=top_k)
+        
+        for match in benefits_results.matches:
             if "benefits" in match.metadata:
                 risks_benefits["benefits"].extend(match.metadata["benefits"].split(";"))
         
@@ -208,12 +225,19 @@ class WarUseCaseAnalyzer:
                 risks_part = parts[0].replace("RISKS:", "").strip()
                 benefits_part = parts[1].strip()
                 
-                risks_benefits["risks"] = [r.strip() for r in risks_part.split("\n-") if r.strip()]
-                risks_benefits["benefits"] = [b.strip() for b in benefits_part.split("\n-") if b.strip()]
+                # Fill in any missing risks or benefits
+                if not risks_benefits["risks"]:
+                    risks_benefits["risks"] = [r.strip() for r in risks_part.split("\n-") if r.strip()]
+                
+                if not risks_benefits["benefits"]:
+                    risks_benefits["benefits"] = [b.strip() for b in benefits_part.split("\n-") if b.strip()]
             else:
                 # Fallback if format wasn't followed
-                risks_benefits["risks"] = ["Risk assessment required"]
-                risks_benefits["benefits"] = ["Benefit assessment required"]
+                if not risks_benefits["risks"]:
+                    risks_benefits["risks"] = ["Risk assessment required"]
+                
+                if not risks_benefits["benefits"]:
+                    risks_benefits["benefits"] = ["Benefit assessment required"]
         
         return risks_benefits
     
@@ -398,140 +422,14 @@ class WarUseCaseAnalyzer:
         
         return report
 
-
-# Example of populating the database with sample data
-def populate_sample_data(analyzer):
-    """Populate the database with sample data for testing"""
-    
-    # Sample use cases data
-    use_cases = [
-        {
-            "to_embedd": "AI in humanitarian assistance during war, including chatbots for psychological support and route planning for aid delivery",
-            "metadata": {
-                "id": "uc1",
-                "title": "AI Chatbots for Psychological Support",
-                "description": "Using AI-powered chatbots to provide basic psychological support to war victims who have limited access to mental health professionals.",
-                "context": "Post-conflict zones with damaged infrastructure and limited humanitarian workers"
-            }
-        },
-        {
-            "to_embedd": "AI for conflict prediction and prevention using satellite imagery and social media monitoring",
-            "metadata": {
-                "id": "uc2",
-                "title": "AI-Based Conflict Early Warning System",
-                "description": "Using machine learning algorithms to analyze satellite imagery, social media patterns, and other data sources to predict potential conflict escalation.",
-                "context": "Pre-conflict or ongoing conflict zones where early intervention could prevent escalation"
-            }
-        },
-        {
-            "to_embedd": "AI for detecting unexploded ordnance using drone imagery and computer vision",
-            "metadata": {
-                "id": "uc3",
-                "title": "AI-Powered UXO Detection",
-                "description": "Using computer vision and machine learning with drone imagery to detect and map unexploded ordnance (UXO) in post-conflict areas.",
-                "context": "Post-conflict areas with potential landmines and unexploded bombs"
-            }
-        },
-        {
-            "to_embedd": "AI for facial recognition to reunite displaced families in refugee camps",
-            "metadata": {
-                "id": "uc4",
-                "title": "Facial Recognition for Family Reunification",
-                "description": "Using facial recognition technology to help reunite family members separated during conflict and displacement.",
-                "context": "Refugee camps and displacement centers"
-            }
-        }
-    ]
-    
-    # Sample risks and benefits data
-    risks_benefits = [
-        {
-            "to_embedd": "risks and benefits of AI Chatbots for Psychological Support in war zones",
-            "metadata": {
-                "id": "rb1",
-                "risks": "Privacy concerns with sensitive personal data; Inadequate support for severe trauma cases; Overreliance on AI instead of human therapists",
-                "benefits": "24/7 availability; Scalability to reach more victims; No language barriers with multilingual models; Reduced stigma compared to in-person therapy"
-            }
-        },
-        {
-            "to_embedd": "risks and benefits of AI-Based Conflict Early Warning System in conflict zones",
-            "metadata": {
-                "id": "rb2",
-                "risks": "False alarms causing unnecessary panic; Ethical issues with surveillance; Dependency on technology for critical decisions",
-                "benefits": "Early intervention opportunities; Data-driven policy decisions; Reduced human bias in conflict assessment"
-            }
-        },
-        {
-            "to_embedd": "risks and benefits of AI-Powered UXO Detection in post-conflict areas",
-            "metadata": {
-                "id": "rb3",
-                "risks": "False negatives leaving dangerous areas unmarked; Technical limitations in difficult terrain; High implementation costs",
-                "benefits": "Faster clearance of contaminated areas; Reduced risk to human deminers; More efficient resource allocation"
-            }
-        },
-        {
-            "to_embedd": "risks and benefits of Facial Recognition for Family Reunification in refugee contexts",
-            "metadata": {
-                "id": "rb4",
-                "risks": "Privacy and consent issues; Potential misuse of collected biometric data; Algorithmic bias affecting certain ethnic groups",
-                "benefits": "Speed of family reunification; Scale of operations possible; Reduced administrative burden"
-            }
-        }
-    ]
-    
-    # Sample mitigations data
-    mitigations = [
-        {
-            "to_embedd": "mitigations for Privacy concerns with sensitive personal data in AI Chatbots",
-            "metadata": {
-                "id": "m1",
-                "mitigations": "Implement end-to-end encryption; Establish clear data retention policies; Use anonymization techniques; Obtain informed consent; Regular security audits"
-            }
-        },
-        {
-            "to_embedd": "mitigations for Inadequate support for severe trauma cases in AI mental health support",
-            "metadata": {
-                "id": "m2",
-                "mitigations": "Implement robust triage system to escalate severe cases to human professionals; Clear disclosure of AI limitations; Integration with existing mental health services"
-            }
-        },
-        {
-            "to_embedd": "mitigations for False alarms in conflict prediction systems",
-            "metadata": {
-                "id": "m3",
-                "mitigations": "Implement multi-factor verification protocols; Human-in-the-loop review process; Continuous model retraining with feedback; Transparency about confidence levels"
-            }
-        },
-        {
-            "to_embedd": "mitigations for Algorithmic bias in facial recognition systems",
-            "metadata": {
-                "id": "m4",
-                "mitigations": "Diverse training data from all represented populations; Regular bias audits; Alternative identification methods available; Explainable AI approaches"
-            }
-        }
-    ]
-    
-    # Add data to respective namespaces
-    print("Populating use cases database...")
-    analyzer.use_cases_db.add_data(use_cases)
-    
-    print("Populating risks and benefits database...")
-    analyzer.risks_benefits_db.add_data(risks_benefits)
-    
-    print("Populating mitigations database...")
-    analyzer.mitigations_db.add_data(mitigations)
-    
-    print("Sample data population complete")
-
-
-# Example usage in a notebook
-def run_example():
+def run_example_with_sample_data():
     """Run an example query through the system"""
+    uploader = UploaderData()
+
+    uploader.populate_sample_data()
+    
     # Initialize the analyzer
     analyzer = WarUseCaseAnalyzer()
-    
-    # Uncomment to populate with sample data
-    # populate_sample_data(analyzer)
     
     # Process a sample query
     query = "AI in humanitarian assistance during war"
@@ -541,9 +439,11 @@ def run_example():
     with open("report.md", "w") as f:
         f.write(report)
         
+    uploader.delete_all_data()
+        
     return report
 
 
 # When running the notebook directly
 if __name__ == "__main__":
-    run_example()
+    run_example_with_sample_data()
