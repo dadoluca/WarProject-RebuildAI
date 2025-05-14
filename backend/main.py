@@ -5,6 +5,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 from db.VectorDBManager import VectorDBManager
 import json
+from flask import Flask, request, Response, jsonify
 
 # Load environment variables
 load_dotenv()
@@ -33,16 +34,16 @@ class BenefitModel(BaseModel):
     title: str = Field(description="Title of the benefit")
     description: str = Field(description="Detailed description of the benefit")
     context: Optional[str] = Field(description="Context where this benefit applies")
-    source: Optional[str] = Field(description="Source of the benefit information, from the retrived file. Write th name of paper if possible")
+    source: Optional[str] = Field(description="Source of the benefit information, from the retrived file. Write the name of paper if possible")
 
 # New models for JSON card output
 class RiskMitigationCard(BaseModel):
     risk_title: str = Field(description="Title of the risk")
     risk_description: str = Field(description="Description of the risk")
-    risk_source: Optional[str] = Field(description="Source of the risk information, from the retrived file. Write th name of paper if possible")
+    risk_source: Optional[str] = Field(description="Source of the risk information, from the retrived file. Write the name of paper if possible")
     risk_context: Optional[str] = Field(description="Context where this risk applies")
     mitigation_title: str = Field(description="Title of the mitigation")
-    mitigation_source: Optional[str] = Field(description="Source of the mitigation information, from the retrived file. Write th name of paper if possible")
+    mitigation_source: Optional[str] = Field(description="Source of the mitigation information, from the retrived file. Write the name of paper if possible")
     mitigation_context: Optional[str] = Field(description="Context where this mitigation applies")
     mitigation_description: str = Field(description="Description of the mitigation")
 
@@ -555,26 +556,39 @@ class WarUseCaseAnalyzer:
         )
         
         # Convert to JSON
-        return json.dumps(card_response.model_dump(), indent=2)
+        return card_response.model_dump()
 
-# Example usage
+app = Flask(__name__)
+
+analyzer = WarUseCaseAnalyzer()
+
+@app.route('/analyze', methods=['POST'])
+def analyze_endpoint():
+    try:
+        data = request.json
+        
+        query = data.get('query', '')
+        limit_use_cases = data.get('limit_use_cases', 1)
+        limit_risks = data.get('limit_risks', 1)
+        limit_benefits = data.get('limit_benefits', 1)
+        limit_mitigations = data.get('limit_mitigations', 1)
+        top_k_retrieve = data.get('top_k_retrieve', 5)
+        
+        result = analyzer.analyze(
+            query=query,
+            limit_use_cases=limit_use_cases,
+            limit_risks=limit_risks,
+            limit_benefits=limit_benefits,
+            limit_mitigations=limit_mitigations,
+            top_k_retrieve=top_k_retrieve
+        )
+        
+        return jsonify(result)
+    
+    except Exception as e:
+        error = {"error": str(e)}
+        return jsonify(error)
+
 if __name__ == "__main__":
-    analyzer = WarUseCaseAnalyzer()
+    app.run(debug=True, host='0.0.0.0', port=5000)
     
-    # Example query
-    query = "lack of clean water in Sudan after conflict"
-    
-    # Run analysis with simplified parameters
-    json_cards = analyzer.analyze(
-        query,
-        limit_use_cases=1,
-        limit_risks=1,
-        limit_benefits=1,
-        limit_mitigations=1,
-        top_k_retrieve=5
-    )
-    
-    # Print JSON cards
-    print("\n=== JSON CARDS ===\n")
-    print(json_cards)
-    print("\nAnalysis complete.")
