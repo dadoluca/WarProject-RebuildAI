@@ -4,6 +4,7 @@ from pydantic import BaseModel, Field
 from openai import OpenAI
 from dotenv import load_dotenv
 from db.VectorDBManager import VectorDBManager
+import json
 
 # Load environment variables
 load_dotenv()
@@ -24,13 +25,6 @@ class RiskModel(BaseModel):
     context: Optional[str] = Field(description="Context where this risk applies")
     source: Optional[str] = Field(description="Source of the risk information")
 
-class BenefitModel(BaseModel):
-    title: str = Field(description="Title of the benefit")
-    description: str = Field(description="Detailed description of the benefit")
-    impact: str = Field(description="Impact of the benefit: Low, Medium, or High")
-    context: Optional[str] = Field(description="Context where this benefit applies")
-    source: Optional[str] = Field(description="Source of the benefit information")
-
 class MitigationModel(BaseModel):
     title: str = Field(description="Title of the mitigation strategy")
     description: str = Field(description="Detailed description of the mitigation strategy")
@@ -39,20 +33,45 @@ class MitigationModel(BaseModel):
     context: Optional[str] = Field(description="Context where this mitigation applies")
     source: Optional[str] = Field(description="Source of the mitigation information")
 
-class AnalysisReport(BaseModel):
+class BenefitModel(BaseModel):
+    title: str = Field(description="Title of the benefit")
+    description: str = Field(description="Detailed description of the benefit")
+    impact: str = Field(description="Impact of the benefit: Low, Medium, or High")
+    context: Optional[str] = Field(description="Context where this benefit applies")
+    source: Optional[str] = Field(description="Source of the benefit information")
+
+# New models for JSON card output
+class RiskMitigationCard(BaseModel):
+    risk_title: str = Field(description="Title of the risk")
+    risk_description: str = Field(description="Description of the risk")
+    risk_severity: str = Field(description="Severity: Low, Medium, or High")
+    risk_likelihood: str = Field(description="Likelihood: Low, Medium, or High")
+    risk_source: Optional[str] = Field(description="Source of the risk information")
+    risk_context: Optional[str] = Field(description="Context where this risk applies")
+    mitigation_title: str = Field(description="Title of the mitigation")
+    mitigation_source: Optional[str] = Field(description="Source of the mitigation information")
+    mitigation_context: Optional[str] = Field(description="Context where this mitigation applies")
+    mitigation_description: str = Field(description="Description of the mitigation")
+    mitigation_effectiveness: str = Field(description="Effectiveness: Low, Medium, or High")
+    mitigation_difficulty: str = Field(description="Implementation difficulty: Low, Medium, or High")
+
+class UseCaseCard(BaseModel):
+    title: str = Field(description="Title of the use case")
+    description: str = Field(description="Description of the use case")
+    context: str = Field(description="Context where the use case applies")
+    risks_mitigations: List[RiskMitigationCard] = Field(description="List of risks and their mitigations")
+    benefits: List[Dict[str, str]] = Field(description="List of benefits with title, description, and impact")
+    relevance_score: float = Field(description="Relevance score to the query (0-1)")
+
+class CardResponse(BaseModel):
     query: str = Field(description="Original query that initiated the analysis")
-    summary: str = Field(description="Executive summary of the analysis")
-    use_cases: List[UseCase] = Field(description="List of relevant use cases")
-    analysis_by_use_case: str = Field(description="Detailed analysis for each use case including risks, benefits, and mitigations")
-    recommendations: str = Field(description="Overall recommendations based on the analysis")
-    considerations: Optional[str] = Field(None, description="Additional considerations or limitations")
+    cards: List[UseCaseCard] = Field(description="List of use case cards with risks, mitigations, and benefits")
 
 
 class WarUseCaseAnalyzer:
     """
     A class for analyzing war-related use cases using RAG and LLMs.
-    Implements a pipeline that retrieves relevant use cases, associated risks, benefits, 
-    and mitigation strategies to generate a comprehensive analysis report.
+    Creates JSON cards for use cases with associated risks, mitigations, and benefits.
     """
     
     def __init__(self):
@@ -149,9 +168,10 @@ class WarUseCaseAnalyzer:
         results = self.use_cases_db.search_kb(query, top_k=top_k)
         return results
 
-    def analyze_use_cases(self, query: str, search_results):
+    def generate_use_cases(self, query: str, search_results):
         """
-        Analyzes retrieved use cases to determine relevance and generate structured data.
+        Generates use cases based on retrieved information, but synthesizes 
+        and adapts them to be more relevant to the specific query.
         
         Args:
             query: The original user query.
@@ -176,17 +196,19 @@ class WarUseCaseAnalyzer:
         messages = [
             {"role": "system", "content": 
              "You are an expert in analyzing technology use cases for post-conflict and humanitarian contexts. "
-             "Based on the retrieved use cases and the user's query, analyze each use case for relevance, appropriateness, "
-             "and potential application. Format the information into structured use case entries."},
+             "Based on the retrieved use cases and the user's query, generate tailored use cases that are specifically relevant "
+             "to the query context. Don't just analyze the retrieved use cases - use them as inspiration to generate "
+             "highly relevant use cases that would be most applicable to the specific query. Be creative but practical."},
             {"role": "user", "content": 
              f"Query: {query}\n\nRetrieved use cases:\n\n{context_text}\n\n"
-             f"Analyze these use cases in relation to the query. For each use case, assess its relevance to the query "
-             f"on a scale of 0-1, where 1 is highly relevant. Structure the information according to the provided model."}
+             f"Generate tailored use cases that are highly relevant to this specific query. Use the retrieved information "
+             f"as inspiration but create use cases that directly address the query. For each use case, assign a relevance score "
+             f"to the query on a scale of 0-1, where 1 is highly relevant. Structure the information according to the provided model."}
         ]
         
         # Define the structure for multiple use cases
         class UseCaseList(BaseModel):
-            use_cases: List[UseCase] = Field(description="List of analyzed use cases")
+            use_cases: List[UseCase] = Field(description="List of generated use cases")
         
         # Query LLM for structured analysis
         result = self._query_llm(messages, response_model=UseCaseList)
@@ -212,11 +234,13 @@ class WarUseCaseAnalyzer:
         
         return risks_results, benefits_results
 
-    def analyze_risks_and_benefits(self, use_case: UseCase, risks_results, benefits_results):
+    def generate_risks_and_benefits(self, query: str, use_case: UseCase, risks_results, benefits_results):
         """
-        Analyzes retrieved risks and benefits to generate structured assessments.
+        Generates risks and benefits that are specifically tailored to the use case and query,
+        using the retrieved information as inspiration.
         
         Args:
+            query: The original user query.
             use_case: The use case being analyzed.
             risks_results: Results from risks vector DB search.
             benefits_results: Results from benefits vector DB search.
@@ -248,38 +272,44 @@ class WarUseCaseAnalyzer:
         
         benefit_context = "\n\n".join(benefit_items)
         
-        # Prepare prompt for risks analysis
+        # Prepare prompt for risks generation
         risk_messages = [
             {"role": "system", "content": 
              "You are an expert in risk assessment for technologies used in post-conflict and humanitarian contexts. "
-             "Analyze the risks associated with the given use case based on the retrieved information."},
+             "Using the retrieved information as inspiration, generate tailored risks that are specifically relevant "
+             "to the given use case and query context. Be creative but realistic in identifying potential risks."},
             {"role": "user", "content": 
+             f"Original Query: {query}\n\n"
              f"Use Case: {use_case.title}\n\nDescription: {use_case.description}\n\n"
              f"Retrieved risks:\n\n{risk_context}\n\n"
-             f"Analyze these risks in relation to the use case. Assess severity and likelihood for each risk. "
-             f"Structure your analysis according to the provided model."}
+             f"Generate tailored risks that are specific to this use case in the context of the original query. "
+             f"Use the retrieved information as inspiration, but create risks that directly address the specific use case "
+             f"and query context. Assess severity and likelihood for each risk. Structure according to the provided model."}
         ]
         
-        # Prepare prompt for benefits analysis
+        # Prepare prompt for benefits generation
         benefit_messages = [
             {"role": "system", "content": 
              "You are an expert in benefit assessment for technologies used in post-conflict and humanitarian contexts. "
-             "Analyze the benefits associated with the given use case based on the retrieved information."},
+             "Using the retrieved information as inspiration, generate tailored benefits that are specifically relevant "
+             "to the given use case and query context. Be creative but realistic in identifying potential benefits."},
             {"role": "user", "content": 
+             f"Original Query: {query}\n\n"
              f"Use Case: {use_case.title}\n\nDescription: {use_case.description}\n\n"
              f"Retrieved benefits:\n\n{benefit_context}\n\n"
-             f"Analyze these benefits in relation to the use case. Assess impact for each benefit. "
-             f"Structure your analysis according to the provided model."}
+             f"Generate tailored benefits that are specific to this use case in the context of the original query. "
+             f"Use the retrieved information as inspiration, but create benefits that directly address the specific use case "
+             f"and query context. Assess impact for each benefit. Structure according to the provided model."}
         ]
         
         # Define the structure for multiple risks and benefits
         class RiskList(BaseModel):
-            risks: List[RiskModel] = Field(description="List of analyzed risks")
+            risks: List[RiskModel] = Field(description="List of generated risks")
             
         class BenefitList(BaseModel):
-            benefits: List[BenefitModel] = Field(description="List of analyzed benefits")
+            benefits: List[BenefitModel] = Field(description="List of generated benefits")
         
-        # Query LLM for structured analysis
+        # Query LLM for structured generation
         risks = self._query_llm(risk_messages, response_model=RiskList).risks
         benefits = self._query_llm(benefit_messages, response_model=BenefitList).benefits
         
@@ -304,11 +334,14 @@ class WarUseCaseAnalyzer:
         
         return mitigations_results
 
-    def analyze_mitigations(self, risk: RiskModel, mitigations_results):
+    def generate_mitigations(self, query: str, use_case: UseCase, risk: RiskModel, mitigations_results):
         """
-        Analyzes retrieved mitigations to generate structured strategies.
+        Generates mitigations for a specific risk, tailored to the use case and query context,
+        using the retrieved information as inspiration.
         
         Args:
+            query: The original user query.
+            use_case: The use case context.
             risk: The risk being mitigated.
             mitigations_results: Results from mitigations vector DB search.
             
@@ -327,29 +360,34 @@ class WarUseCaseAnalyzer:
         
         mitigation_context = "\n\n".join(mitigation_items)
         
-        # Prepare prompt for mitigation analysis
+        # Prepare prompt for mitigation generation
         messages = [
             {"role": "system", "content": 
              "You are an expert in developing mitigation strategies for risks in post-conflict and humanitarian technology use. "
-             "Analyze the mitigations for the given risk based on the retrieved information."},
+             "Using the retrieved information as inspiration, generate tailored mitigation strategies that are specifically "
+             "relevant to the given risk, use case, and query context. Be creative but practical."},
             {"role": "user", "content": 
+             f"Original Query: {query}\n\n"
+             f"Use Case: {use_case.title}\n\nDescription: {use_case.description}\n\n"
              f"Risk: {risk.title}\n\nDescription: {risk.description}\n\n"
              f"Retrieved mitigations:\n\n{mitigation_context}\n\n"
-             f"Analyze these mitigations in relation to the risk. Assess effectiveness and implementation difficulty for each. "
-             f"Structure your analysis according to the provided model."}
+             f"Generate tailored mitigation strategies that are specific to this risk in the context of the use case and "
+             f"original query. Use the retrieved information as inspiration, but create mitigations that directly address "
+             f"the specific risk, use case, and query context. Assess effectiveness and implementation difficulty for each. "
+             f"Structure according to the provided model."}
         ]
         
         # Define the structure for multiple mitigations
         class MitigationList(BaseModel):
-            mitigations: List[MitigationModel] = Field(description="List of analyzed mitigations")
+            mitigations: List[MitigationModel] = Field(description="List of generated mitigations")
         
-        # Query LLM for structured analysis
+        # Query LLM for structured generation
         result = self._query_llm(messages, response_model=MitigationList)
         return result.mitigations
 
-    def generate_report(self, query: str, use_cases: List[UseCase], use_case_analyses: List[Dict]):
+    def create_cards(self, query: str, use_cases: List[UseCase], use_case_analyses: List[Dict]):
         """
-        Generates a final comprehensive report based on all analyses.
+        Creates JSON cards for each use case with its risks, mitigations, and benefits.
         
         Args:
             query: The original user query.
@@ -357,69 +395,73 @@ class WarUseCaseAnalyzer:
             use_case_analyses: List of dictionaries containing risks, benefits, and mitigations for each use case.
             
         Returns:
-            AnalysisReport object.
+            CardResponse object containing the list of cards.
         """
-        # Prepare context with all analyses
-        context_items = []
+        # Prepare list to hold all cards
+        cards = []
         
-        # Add use cases overview
-        context_items.append("## Use Cases Overview")
-        for uc in use_cases:
-            context_items.append(f"- {uc.title} (Relevance: {uc.relevance_score})")
-        
-        # Add detailed analysis for each use case
-        for i, uc in enumerate(use_cases):
+        # Create a card for each use case
+        for i, use_case in enumerate(use_cases):
             analysis = use_case_analyses[i]
+            risks = analysis["risks"]
+            benefits = analysis["benefits"]
             
-            context_items.append(f"\n## Use Case: {uc.title}")
-            context_items.append(f"Description: {uc.description}")
-            context_items.append(f"Context: {uc.context}")
+            # Create a list of risk-mitigation pairs
+            risks_mitigations = []
+            for risk_idx, risk in enumerate(risks):
+                if "mitigations" in analysis and risk_idx < len(analysis["mitigations"]) and analysis["mitigations"][risk_idx]:
+                    # For each risk, use the first mitigation (most effective one)
+                    mitigation = analysis["mitigations"][risk_idx][0]
+                    
+                    risk_mitigation = RiskMitigationCard(
+                        risk_title=risk.title,
+                        risk_description=risk.description,
+                        risk_severity=risk.severity,
+                        risk_likelihood=risk.likelihood,
+                        risk_source=risk.source,
+                        risk_context=risk.context,
+                        mitigation_source=mitigation.source,
+                        mitigation_context=mitigation.context,
+                        mitigation_title=mitigation.title,
+                        mitigation_description=mitigation.description,
+                        mitigation_effectiveness=mitigation.effectiveness,
+                        mitigation_difficulty=mitigation.implementation_difficulty
+                    )
+                    risks_mitigations.append(risk_mitigation)
             
-            # Risks
-            context_items.append("\n### Risks")
-            for risk in analysis["risks"]:
-                context_items.append(f"- {risk.title} (Severity: {risk.severity}, Likelihood: {risk.likelihood})")
+            # Create simplified benefit objects
+            benefit_objects = [
+                {
+                    "title": benefit.title,
+                    "description": benefit.description,
+                    "impact": benefit.impact
+                }
+                for benefit in benefits
+            ]
             
-            # Benefits
-            context_items.append("\n### Benefits")
-            for benefit in analysis["benefits"]:
-                context_items.append(f"- {benefit.title} (Impact: {benefit.impact})")
+            # Create the use case card
+            card = UseCaseCard(
+                title=use_case.title,
+                description=use_case.description,
+                context=use_case.context,
+                risks_mitigations=risks_mitigations,
+                benefits=benefit_objects,
+                relevance_score=use_case.relevance_score
+            )
             
-            # Mitigations (grouped by risk)
-            context_items.append("\n### Mitigation Strategies")
-            for risk_idx, risk in enumerate(analysis["risks"]):
-                context_items.append(f"\nFor risk '{risk.title}':")
-                if "mitigations" in analysis and risk_idx < len(analysis["mitigations"]):
-                    for mitigation in analysis["mitigations"][risk_idx]:
-                        context_items.append(f"- {mitigation.title} (Effectiveness: {mitigation.effectiveness}, "
-                                           f"Implementation Difficulty: {mitigation.implementation_difficulty})")
-                else:
-                    context_items.append("- No specific mitigations found")
+            cards.append(card)
         
-        context_text = "\n".join(context_items)
+        # Create the final card response
+        card_response = CardResponse(
+            query=query,
+            cards=cards
+        )
         
-        # Prepare prompt for report generation
-        messages = [
-            {"role": "system", "content": 
-            "You are an expert analyst specializing in humanitarian technology applications for post-conflict zones. "
-            "Generate a comprehensive analysis report based on the provided information about use cases, risks, benefits, "
-            "and mitigation strategies. The report should include an executive summary, analysis of each use case, "
-            "and overall recommendations."},
-            {"role": "user", "content": 
-            f"Original Query: {query}\n\n"
-            f"Analysis Information:\n\n{context_text}\n\n"
-            f"Generate a comprehensive analysis report structured according to the provided model. "
-            f"Include a concise executive summary, analysis of the use cases with their associated risks, benefits, "
-            f"and mitigations in the 'analysis_by_use_case' field, overall recommendations, and any additional considerations or limitations."}
-        ]
-        
-        # Query LLM for structured report
-        report = self._query_llm(messages, response_model=AnalysisReport)
-        return report
+        return card_response
 
     def analyze(self, query: str, top_k_use_cases: int = 3, top_k_risks_benefits: int = 3, top_k_mitigations: int = 3):
         """
-        Main pipeline function that executes the entire analysis process.
+        Main pipeline function that executes the entire analysis process and creates JSON cards.
         
         Args:
             query: The user's query about a post-conflict challenge.
@@ -428,7 +470,7 @@ class WarUseCaseAnalyzer:
             top_k_mitigations: Number of mitigations to retrieve for each risk.
             
         Returns:
-            AnalysisReport object with the complete analysis.
+            JSON string containing the cards with use cases, risks, mitigations, and benefits.
         """
         print(f"Starting analysis for query: '{query}'")
         
@@ -436,23 +478,23 @@ class WarUseCaseAnalyzer:
         print("Step 1: Retrieving relevant use cases...")
         use_case_results = self.retrieve_use_cases(query, top_k=top_k_use_cases)
         
-        # Step 2: Analyze use cases with LLM
-        print("Step 2: Analyzing use cases...")
-        use_cases = self.analyze_use_cases(query, use_case_results)
+        # Step 2: Generate tailored use cases
+        print("Step 2: Generating tailored use cases...")
+        use_cases = self.generate_use_cases(query, use_case_results)
         
-        # Steps 3-7: For each use case, retrieve and analyze risks, benefits, and mitigations
+        # Steps 3-7: For each use case, retrieve and generate risks, benefits, and mitigations
         use_case_analyses = []
         for use_case in use_cases:
             print(f"Processing use case: {use_case.title}")
             
-            # Step 3-4: Retrieve and analyze risks and benefits
+            # Step 3-4: Retrieve and generate risks and benefits
             print("Retrieving risks and benefits...")
             risks_results, benefits_results = self.retrieve_risks_and_benefits(use_case, top_k=top_k_risks_benefits)
             
-            print("Analyzing risks and benefits...")
-            risks, benefits = self.analyze_risks_and_benefits(use_case, risks_results, benefits_results)
+            print("Generating tailored risks and benefits...")
+            risks, benefits = self.generate_risks_and_benefits(query, use_case, risks_results, benefits_results)
             
-            # Steps 5-6: For each risk, retrieve and analyze mitigations
+            # Steps 5-6: For each risk, retrieve and generate mitigations
             all_mitigations = []
             for risk in risks:
                 print(f"Processing risk: {risk.title}")
@@ -460,8 +502,8 @@ class WarUseCaseAnalyzer:
                 print("Retrieving mitigations...")
                 mitigations_results = self.retrieve_mitigations(risk, top_k=top_k_mitigations)
                 
-                print("Analyzing mitigations...")
-                mitigations = self.analyze_mitigations(risk, mitigations_results)
+                print("Generating tailored mitigations...")
+                mitigations = self.generate_mitigations(query, use_case, risk, mitigations_results)
                 all_mitigations.append(mitigations)
             
             # Store analysis for this use case
@@ -471,11 +513,12 @@ class WarUseCaseAnalyzer:
                 "mitigations": all_mitigations
             })
         
-        # Step 8: Generate final report
-        print("Step 8: Generating final analysis report...")
-        report = self.generate_report(query, use_cases, use_case_analyses)
-
-        return report
+        # Step 8: Create JSON cards
+        print("Step 8: Creating JSON cards...")
+        card_response = self.create_cards(query, use_cases, use_case_analyses)
+        
+        # Convert to JSON
+        return json.dumps(card_response.dict(), indent=2)
 
 
 # Example usage
@@ -486,24 +529,9 @@ if __name__ == "__main__":
     query = "lack of clean water in Sudan after conflict"
     
     # Run analysis
-    report = analyzer.analyze(query)
+    json_cards = analyzer.analyze(query)
     
-    # Print report
-    print("\n=== ANALYSIS REPORT ===\n")
-    print(f"QUERY: {report.query}\n")
-    print(f"SUMMARY: {report.summary}\n")
-    print("USE CASES:")
-    for uc in report.use_cases:
-        print(f"- {uc.title} (Relevance: {uc.relevance_score})")
-
-    print("\nANALYSIS BY USE CASE:")
-    print(report.analysis_by_use_case)
-
-    print("\nRECOMMENDATIONS:")
-    print(report.recommendations)
-
-    if report.considerations:
-        print("\nADDITIONAL CONSIDERATIONS:")
-        print(report.considerations)
-
-    print("Analysis complete.")
+    # Print JSON cards
+    print("\n=== JSON CARDS ===\n")
+    print(json_cards)
+    print("\nAnalysis complete.")
