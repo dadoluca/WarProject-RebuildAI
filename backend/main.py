@@ -20,23 +20,18 @@ class UseCase(BaseModel):
 class RiskModel(BaseModel):
     title: str = Field(description="Title of the risk")
     description: str = Field(description="Detailed description of the risk")
-    # severity: str = Field(description="Severity of the risk: Low, Medium, or High")
-    # likelihood: str = Field(description="Likelihood of the risk: Low, Medium, or High")
     context: Optional[str] = Field(description="Context where this risk applies")
     source: Optional[str] = Field(description="Source of the risk information, from the retrived file. Write th name of paper if possible")
 
 class MitigationModel(BaseModel):
     title: str = Field(description="Title of the mitigation strategy")
     description: str = Field(description="Detailed description of the mitigation strategy")
-    # effectiveness: str = Field(description="Effectiveness of the mitigation: Low, Medium, or High")
-    # implementation_difficulty: str = Field(description="Difficulty to implement: Low, Medium, or High")
     context: Optional[str] = Field(description="Context where this mitigation applies")
     source: Optional[str] = Field(description="Source of the mitigation information, from the retrived file. Write th name of paper if possible")
 
 class BenefitModel(BaseModel):
     title: str = Field(description="Title of the benefit")
     description: str = Field(description="Detailed description of the benefit")
-    # impact: str = Field(description="Impact of the benefit: Low, Medium, or High")
     context: Optional[str] = Field(description="Context where this benefit applies")
     source: Optional[str] = Field(description="Source of the benefit information, from the retrived file. Write th name of paper if possible")
 
@@ -44,16 +39,12 @@ class BenefitModel(BaseModel):
 class RiskMitigationCard(BaseModel):
     risk_title: str = Field(description="Title of the risk")
     risk_description: str = Field(description="Description of the risk")
-    # risk_severity: str = Field(description="Severity: Low, Medium, or High")
-    # risk_likelihood: str = Field(description="Likelihood: Low, Medium, or High")
     risk_source: Optional[str] = Field(description="Source of the risk information, from the retrived file. Write th name of paper if possible")
     risk_context: Optional[str] = Field(description="Context where this risk applies")
     mitigation_title: str = Field(description="Title of the mitigation")
     mitigation_source: Optional[str] = Field(description="Source of the mitigation information, from the retrived file. Write th name of paper if possible")
     mitigation_context: Optional[str] = Field(description="Context where this mitigation applies")
     mitigation_description: str = Field(description="Description of the mitigation")
-    # mitigation_effectiveness: str = Field(description="Effectiveness: Low, Medium, or High")
-    # mitigation_difficulty: str = Field(description="Implementation difficulty: Low, Medium, or High")
 
 class UseCaseCard(BaseModel):
     title: str = Field(description="Title of the use case")
@@ -65,6 +56,7 @@ class UseCaseCard(BaseModel):
         description="List of benefits with title, description, context, and source"
     )
     relevance_score: float = Field(description="Relevance score to the query (0-1)")
+    
 class CardResponse(BaseModel):
     query: str = Field(description="Original query that initiated the analysis")
     cards: List[UseCaseCard] = Field(description="List of use case cards with risks, mitigations, and benefits")
@@ -170,7 +162,7 @@ class WarUseCaseAnalyzer:
         results = self.use_cases_db.search_kb(query, top_k=top_k)
         return results
 
-    def generate_use_cases(self, query: str, search_results, limit_use_cases: int = None):
+    def generate_use_cases(self, query: str, search_results, limit_use_cases: int = 3):
         """
         Generates use cases based on retrieved information, but synthesizes 
         and adapts them to be more relevant to the specific query.
@@ -178,7 +170,7 @@ class WarUseCaseAnalyzer:
         Args:
             query: The original user query.
             search_results: Results from vector DB search.
-            limit_use_cases: Optional limit on the number of use cases to generate.
+            limit_use_cases: Number of use cases to generate.
             
         Returns:
             List of UseCase objects.
@@ -206,12 +198,9 @@ class WarUseCaseAnalyzer:
              f"Query: {query}\n\nRetrieved use cases:\n\n{context_text}\n\n"
              f"Generate tailored use cases that are highly relevant to this specific query. Use the retrieved information "
              f"as inspiration but create use cases that directly address the query. For each use case, assign a relevance score "
-             f"to the query on a scale of 0-1, where 1 is highly relevant. Structure the information according to the provided model."}
+             f"to the query on a scale of 0-1, where 1 is highly relevant. Structure the information according to the provided model."
+             f" Generate exactly {limit_use_cases} use cases."}
         ]
-        
-        # Add limit to the prompt if specified
-        if limit_use_cases:
-            messages[1]["content"] += f" Generate exactly {limit_use_cases} use cases."
         
         # Define the structure for multiple use cases
         class UseCaseList(BaseModel):
@@ -221,8 +210,8 @@ class WarUseCaseAnalyzer:
         result = self._query_llm(messages, response_model=UseCaseList)
         use_cases = result.use_cases
         
-        # Apply limit if specified
-        if limit_use_cases and len(use_cases) > limit_use_cases:
+        # Apply limit if necessary
+        if len(use_cases) > limit_use_cases:
             use_cases = use_cases[:limit_use_cases]
             
         return use_cases
@@ -248,7 +237,7 @@ class WarUseCaseAnalyzer:
         return risks_results, benefits_results
 
     def generate_risks_and_benefits(self, query: str, use_case: UseCase, risks_results, benefits_results, 
-                                   limit_risks: int = None, limit_benefits: int = None):
+                                   limit_risks: int = 3, limit_benefits: int = 3):
         """
         Generates risks and benefits that are specifically tailored to the use case and query,
         using the retrieved information as inspiration.
@@ -258,8 +247,8 @@ class WarUseCaseAnalyzer:
             use_case: The use case being analyzed.
             risks_results: Results from risks vector DB search.
             benefits_results: Results from benefits vector DB search.
-            limit_risks: Optional limit on the number of risks to generate.
-            limit_benefits: Optional limit on the number of benefits to generate.
+            limit_risks: Number of risks to generate.
+            limit_benefits: Number of benefits to generate.
             
         Returns:
             Tuple of (List[RiskModel], List[BenefitModel]).
@@ -300,12 +289,8 @@ class WarUseCaseAnalyzer:
              f"Retrieved risks:\n\n{risk_context}\n\n"
              f"Generate tailored risks that are specific to this use case in the context of the original query. "
              f"Use the retrieved information as inspiration, but create risks that directly address the specific use case "
-             f"and query context. Assess severity and likelihood for each risk. Structure according to the provided model."}
+             f"and query context. Structure according to the provided model. Generate exactly {limit_risks} risks."}
         ]
-        
-        # Add limit to the risk prompt if specified
-        if limit_risks:
-            risk_messages[1]["content"] += f" Generate exactly {limit_risks} risks."
         
         # Prepare prompt for benefits generation
         benefit_messages = [
@@ -319,12 +304,8 @@ class WarUseCaseAnalyzer:
              f"Retrieved benefits:\n\n{benefit_context}\n\n"
              f"Generate tailored benefits that are specific to this use case in the context of the original query. "
              f"Use the retrieved information as inspiration, but create benefits that directly address the specific use case "
-             f"and query context. Structure according to the provided model."}
+             f"and query context. Structure according to the provided model. Generate exactly {limit_benefits} benefits."}
         ]
-        
-        # Add limit to the benefit prompt if specified
-        if limit_benefits:
-            benefit_messages[1]["content"] += f" Generate exactly {limit_benefits} benefits."
         
         # Define the structure for multiple risks and benefits
         class RiskList(BaseModel):
@@ -337,11 +318,11 @@ class WarUseCaseAnalyzer:
         risks = self._query_llm(risk_messages, response_model=RiskList).risks
         benefits = self._query_llm(benefit_messages, response_model=BenefitList).benefits
         
-        # Apply limits if specified
-        if limit_risks and len(risks) > limit_risks:
+        # Apply limits if necessary
+        if len(risks) > limit_risks:
             risks = risks[:limit_risks]
         
-        if limit_benefits and len(benefits) > limit_benefits:
+        if len(benefits) > limit_benefits:
             benefits = benefits[:limit_benefits]
         
         return risks, benefits
@@ -366,7 +347,7 @@ class WarUseCaseAnalyzer:
         return mitigations_results
 
     def generate_mitigations(self, query: str, use_case: UseCase, risk: RiskModel, mitigations_results, 
-                           limit_mitigations: int = None):
+                           limit_mitigations: int = 1):
         """
         Generates mitigations for a specific risk, tailored to the use case and query context,
         using the retrieved information as inspiration.
@@ -376,7 +357,7 @@ class WarUseCaseAnalyzer:
             use_case: The use case context.
             risk: The risk being mitigated.
             mitigations_results: Results from mitigations vector DB search.
-            limit_mitigations: Optional limit on the number of mitigations to generate.
+            limit_mitigations: Number of mitigations to generate per risk.
             
         Returns:
             List of MitigationModel objects.
@@ -406,13 +387,9 @@ class WarUseCaseAnalyzer:
              f"Retrieved mitigations:\n\n{mitigation_context}\n\n"
              f"Generate tailored mitigation strategies that are specific to this risk in the context of the use case and "
              f"original query. Use the retrieved information as inspiration, but create mitigations that directly address "
-             f"the specific risk, use case, and query context. Assess effectiveness and implementation difficulty for each. "
-             f"Structure according to the provided model."}
+             f"the specific risk, use case, and query context. Structure according to the provided model. "
+             f"Generate exactly {limit_mitigations} mitigations."}
         ]
-        
-        # Add limit to the prompt if specified
-        if limit_mitigations:
-            messages[1]["content"] += f" Generate exactly {limit_mitigations} mitigations."
         
         # Define the structure for multiple mitigations
         class MitigationList(BaseModel):
@@ -422,23 +399,20 @@ class WarUseCaseAnalyzer:
         result = self._query_llm(messages, response_model=MitigationList)
         mitigations = result.mitigations
         
-        # Apply limit if specified
-        if limit_mitigations and len(mitigations) > limit_mitigations:
+        # Apply limit if necessary
+        if len(mitigations) > limit_mitigations:
             mitigations = mitigations[:limit_mitigations]
         
         return mitigations
 
-    def create_cards(self, query: str, use_cases: List[UseCase], use_case_analyses: List[Dict], 
-                    max_risks: int = 3, max_benefits: int = 3):
+    def create_cards(self, query: str, use_cases: List[UseCase], use_case_analyses: List[Dict]):
         """
-        Creates JSON cards for each use case with a fixed number of risks, mitigations, and benefits.
+        Creates JSON cards for each use case with risks, mitigations, and benefits.
         
         Args:
             query: The original user query.
             use_cases: List of analyzed use cases.
             use_case_analyses: List of dictionaries containing risks, benefits, and mitigations.
-            max_risks: Maximum number of risks (with mitigations) per use case.
-            max_benefits: Maximum number of benefits per use case.
             
         Returns:
             CardResponse object containing the list of cards.
@@ -448,14 +422,14 @@ class WarUseCaseAnalyzer:
         # Create a card for each use case
         for i, use_case in enumerate(use_cases):
             analysis = use_case_analyses[i]
-            risks = analysis["risks"][:max_risks]  # Limit risks to max_risks
-            benefits = analysis["benefits"][:max_benefits]  # Limit benefits to max_benefits
+            risks = analysis["risks"]
+            benefits = analysis["benefits"]
             
             # Create a list of risk-mitigation pairs
             risks_mitigations = []
             for risk_idx, risk in enumerate(risks):
                 if "mitigations" in analysis and risk_idx < len(analysis["mitigations"]) and analysis["mitigations"][risk_idx]:
-                    # For each risk, use the first mitigation (most effective one)
+                    # For each risk, use the first mitigation
                     mitigation = analysis["mitigations"][risk_idx][0]
                     
                     # Create risk-mitigation pair with complete context and source information
@@ -463,15 +437,11 @@ class WarUseCaseAnalyzer:
                         # Risk information
                         risk_title=risk.title,
                         risk_description=risk.description,
-                        # risk_severity=risk.severity,
-                        # risk_likelihood=risk.likelihood,
                         risk_source=risk.source or "Not specified",
                         risk_context=risk.context or "General context",
                         # Mitigation information
                         mitigation_title=mitigation.title,
                         mitigation_description=mitigation.description,
-                        # mitigation_effectiveness=mitigation.effectiveness,
-                        # mitigation_difficulty=mitigation.implementation_difficulty,
                         mitigation_source=mitigation.source or "Not specified",
                         mitigation_context=mitigation.context or "General context"
                     )
@@ -482,7 +452,6 @@ class WarUseCaseAnalyzer:
                 {
                     "title": benefit.title,
                     "description": benefit.description,
-                    # "impact": benefit.impact,
                     "context": benefit.context or "General context",
                     "source": benefit.source or "Not specified"
                 }
@@ -510,23 +479,22 @@ class WarUseCaseAnalyzer:
         
         return card_response
 
-    def analyze(self, query: str, top_k_use_cases: int = 3, 
-               max_risks: int = 3, max_benefits: int = 3, top_k_mitigations: int = 3, top_k_risks_benefits: int = 3,
-               limit_use_cases: int = None, limit_risks: int = None, limit_benefits: int = None, limit_mitigations: int = None):
+    def analyze(self, query: str, 
+                limit_use_cases: int = 3, 
+                limit_risks: int = 3, 
+                limit_benefits: int = 3, 
+                limit_mitigations: int = 1, 
+                top_k_retrieve: int = 5):
         """
         Main pipeline function that executes the entire analysis process and creates JSON cards.
         
         Args:
             query: The user's query about a post-conflict challenge.
-            top_k_use_cases: Number of use cases to retrieve.
-            max_risks: Maximum number of risks per use case.
-            max_benefits: Maximum number of benefits per use case.
-            top_k_mitigations: Number of mitigations to retrieve for each risk.
-            top_k_risks_benefits: Number of risks and benefits to retrieve for each use case.
-            limit_use_cases: Optional limit on the number of use cases to generate.
-            limit_risks: Optional limit on the number of risks to generate per use case.
-            limit_benefits: Optional limit on the number of benefits to generate per use case.
-            limit_mitigations: Optional limit on the number of mitigations to generate per risk.
+            limit_use_cases: Number of use cases to generate.
+            limit_risks: Number of risks to generate per use case.
+            limit_benefits: Number of benefits to generate per use case.
+            limit_mitigations: Number of mitigations to generate per risk.
+            top_k_retrieve: Number of items to retrieve from the vector database (applies to all retrieval operations).
             
         Returns:
             JSON string containing the cards with use cases, risks, mitigations, and benefits.
@@ -535,7 +503,7 @@ class WarUseCaseAnalyzer:
         
         # Step 1: Retrieve relevant use cases
         print("Step 1: Retrieving relevant use cases...")
-        use_case_results = self.retrieve_use_cases(query, top_k=top_k_use_cases)
+        use_case_results = self.retrieve_use_cases(query, top_k=top_k_retrieve)
         
         # Step 2: Generate tailored use cases
         print("Step 2: Generating tailored use cases...")
@@ -548,7 +516,7 @@ class WarUseCaseAnalyzer:
             
             # Step 3-4: Retrieve and generate risks and benefits
             print("Retrieving risks and benefits...")
-            risks_results, benefits_results = self.retrieve_risks_and_benefits(use_case, top_k=top_k_risks_benefits)
+            risks_results, benefits_results = self.retrieve_risks_and_benefits(use_case, top_k=top_k_retrieve)
             
             print("Generating tailored risks and benefits...")
             risks, benefits = self.generate_risks_and_benefits(
@@ -562,7 +530,7 @@ class WarUseCaseAnalyzer:
                 print(f"Processing risk: {risk.title}")
                 
                 print("Retrieving mitigations...")
-                mitigations_results = self.retrieve_mitigations(risk, top_k=top_k_mitigations)
+                mitigations_results = self.retrieve_mitigations(risk, top_k=top_k_retrieve)
                 
                 print("Generating tailored mitigations...")
                 mitigations = self.generate_mitigations(
@@ -578,14 +546,12 @@ class WarUseCaseAnalyzer:
                 "mitigations": all_mitigations
             })
         
-        # Step 8: Create JSON cards
-        print("Step 8: Creating JSON cards...")
+        # Step 7: Create JSON cards
+        print("Step 7: Creating JSON cards...")
         card_response = self.create_cards(
             query, 
             use_cases, 
-            use_case_analyses,
-            max_risks=max_risks,
-            max_benefits=max_benefits
+            use_case_analyses
         )
         
         # Convert to JSON
@@ -598,18 +564,14 @@ if __name__ == "__main__":
     # Example query
     query = "lack of clean water in Sudan after conflict"
     
-    # Run analysis with control parameters
+    # Run analysis with simplified parameters
     json_cards = analyzer.analyze(
         query,
-        top_k_use_cases=3,
-        max_risks=3,
-        max_benefits=3,
-        top_k_mitigations=3,
-        top_k_risks_benefits=3,
-        limit_use_cases=1,      # Generate only 2 use cases
-        limit_risks=1,          # Generate only 2 risks per use case
-        limit_benefits=1,       # Generate only 2 benefits per use case
-        limit_mitigations=1     # Generate only 1 mitigation per risk
+        limit_use_cases=1,
+        limit_risks=1,
+        limit_benefits=1,
+        limit_mitigations=1,
+        top_k_retrieve=5
     )
     
     # Print JSON cards
