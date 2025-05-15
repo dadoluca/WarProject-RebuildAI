@@ -1,0 +1,46 @@
+.header {
+  padding: 1.5rem 2rem;
+  background-color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.rebuild {
+  color: white;
+}
+
+.ai {
+  color: #ff247a;
+  margin-left: 2px;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+}
