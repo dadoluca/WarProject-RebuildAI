@@ -1,0 +1,2972 @@
+[
+  {
+    "to_embed": "AI-Enhanced Team Problem Solving",
+    "metadata": {
+      "id": "r1",
+      "title": "Bias in AI Analysis",
+      "description": "AI algorithms may introduce bias in problem analysis, leading to skewed decision-making and overlooking crucial perspectives from team members.",
+      "context": "()",
+      "source": "Team Problem Solving, 1994.0"
+    }
+  },
+  {
+    "to_embed": "AI for Real-Time Crisis Management",
+    "metadata": {
+      "id": "r2",
+      "title": "Data Security Vulnerabilities",
+      "description": "Increased risk of data breaches and cyberattacks due to reliance on interconnected systems (GCS, IoT), potentially compromising sensitive information and hindering rescue operations.",
+      "context": "()",
+      "source": "Možnosti krízového manažmentu v priestore Industry 4.0, 2018.0"
+    }
+  },
+  {
+    "to_embed": "AI for Real-Time Crisis Management",
+    "metadata": {
+      "id": "r3",
+      "title": "Algorithmic Bias",
+      "description": "AI algorithms may exhibit biases, leading to unequal or unfair resource allocation and rescue efforts in crisis situations, potentially exacerbating existing inequalities.",
+      "context": "()",
+      "source": "Možnosti krízového manažmentu v priestore Industry 4.0, 2018.0"
+    }
+  },
+  {
+    "to_embed": "Robotic Systems for Military Operations in Iraq",
+    "metadata": {
+      "id": "r4",
+      "title": "Erosion of Warrior Ethos",
+      "description": "Replacing human soldiers with machines can erode the 'warrior ethos' and lower psychological barriers to killing, potentially dehumanizing warfare.",
+      "context": "(More than seven thousand robotic systems are now in Iraq.)",
+      "source": "Wired for war : the robotics revolution and conflict in the twenty-first century, 2009.0"
+    }
+  },
+  {
+    "to_embed": "Remote-Controlled Aircraft for Counterterrorism",
+    "metadata": {
+      "id": "r5",
+      "title": "Moral Distance",
+      "description": "Remote warfare can create moral distance between the operator and the consequences of their actions, potentially leading to a decrease in accountability and ethical considerations.",
+      "context": "(Pilots in Nevada are remotely killing terrorists in Afghanistan.)",
+      "source": "Wired for war : the robotics revolution and conflict in the twenty-first century, 2009.0"
+    }
+  },
+  {
+    "to_embed": "Science Fiction Consultation for Military Tech",
+    "metadata": {
+      "id": "r6",
+      "title": "Unforeseen Consequences",
+      "description": "Developing advanced military technologies based on speculative fiction may lead to unforeseen and potentially harmful consequences due to lack of real-world testing and ethical considerations.",
+      "context": "()",
+      "source": "Wired for war : the robotics revolution and conflict in the twenty-first century, 2009.0"
+    }
+  },
+  {
+    "to_embed": "Philosophical Software Verification",
+    "metadata": {
+      "id": "r7",
+      "title": "Potential for Bias",
+      "description": "The user's philosophy may introduce biases into the software design, reflecting personal preferences or potentially harmful viewpoints. Lack of objectivity is a risk.",
+      "context": "()",
+      "source": "One Man's Meat: Part I - The Uses of Adversity, 1966.0"
+    }
+  },
+  {
+    "to_embed": "AI for Disaster Alert Reach Prediction",
+    "metadata": {
+      "id": "r8",
+      "title": "Inaccurate Prediction",
+      "description": "Mathematical model inaccuracies could lead to underestimation of reach time or overestimation of personnel notified, delaying or hindering adequate disaster response efforts.",
+      "context": "()",
+      "source": "An alarm procedure., 1985.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Military Risk Management",
+    "metadata": {
+      "id": "r9",
+      "title": "Over-Reliance on Models",
+      "description": "Over-reliance on mathematical models may lead to neglecting crucial contextual factors or unforeseen circumstances, potentially resulting in flawed decisions and increased risk in dynamic military environments.",
+      "context": "()",
+      "source": "On Risk: Risk and Decision Making in Military Combat and Training Environments, 2012.0"
+    }
+  },
+  {
+    "to_embed": "HRI Education via Disaster Scenarios",
+    "metadata": {
+      "id": "r10",
+      "title": "Unrealistic Expectations",
+      "description": "Students may develop unrealistic expectations about robot capabilities in real disaster scenarios due to simplified models and lack of real-world constraints.",
+      "context": "()",
+      "source": "Robot rescue! An HRI engineering outreach activity, 2010.0"
+    }
+  },
+  {
+    "to_embed": "Critical Transaction Database Recovery",
+    "metadata": {
+      "id": "r11",
+      "title": "Reputational Risk",
+      "description": "Failure to fully recover data could lead to reputational damage for both XYZ and its client, causing loss of customer trust and future business opportunities.",
+      "context": "()",
+      "source": "Soft Issues in the Software Industry (a), 2017.0"
+    }
+  },
+  {
+    "to_embed": "Conflict Resolution in Manufacturing via Case-Based Reasoning",
+    "metadata": {
+      "id": "r12",
+      "title": "Knowledge Bias",
+      "description": "Over-reliance on past cases may lead to biases and failure to adapt to new or unique conflict scenarios in the manufacturing system.",
+      "context": "()",
+      "source": "Co-operation via conflicts in manufacturing systems, 2013.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Military Intelligence for Peacekeeping",
+    "metadata": {
+      "id": "r13",
+      "title": "Bias in Data Analysis",
+      "description": "AI systems can perpetuate biases present in the data they are trained on, leading to unfair or discriminatory outcomes in peacekeeping operations. This impacts human rights and impartiality.",
+      "context": "(en este contexto tan peculiar, el de las operaciones de apoyo a la paz (OAP))",
+      "source": "Inteligencia militar en las operaciones de Naciones Unidas.: soluciones adaptadas para lograr el éxito, 2012.0"
+    }
+  },
+  {
+    "to_embed": "Over-Reliance on Algorithms in Complex Value Judgements",
+    "metadata": {
+      "id": "r14",
+      "title": "Algorithmic Bias & Over-Reliance",
+      "description": "Over-reliance on algorithms may lead to neglecting crucial contextual factors and human intuition, particularly in situations requiring complex value judgments, potentially resulting in suboptimal or unethical decisions.",
+      "context": "()",
+      "source": "A progress report on project CONSIM, 1973.0"
+    }
+  },
+  {
+    "to_embed": "Potential for Bias Amplification via Heuristic Procedures",
+    "metadata": {
+      "id": "r15",
+      "title": "Heuristic Bias Amplification",
+      "description": "Heuristic procedures, while efficient, can amplify existing biases if not carefully designed and validated, leading to unfair or discriminatory outcomes in decision-making processes.",
+      "context": "()",
+      "source": "A progress report on project CONSIM, 1973.0"
+    }
+  },
+  {
+    "to_embed": "AI for Strategic Decision Making",
+    "metadata": {
+      "id": "r16",
+      "title": "Bias Amplification",
+      "description": "The AI system may amplify existing biases present in social media data or textual content, leading to skewed insights and potentially unfair or discriminatory decisions.",
+      "context": "()",
+      "source": "A game theory model for situation awareness and management, 2013.0"
+    }
+  },
+  {
+    "to_embed": "IJAHP for Crisis Decision-Making",
+    "metadata": {
+      "id": "r17",
+      "title": "Bias Amplification",
+      "description": "The application of IJAHP during crisis situations could amplify existing biases in data or stakeholder priorities, leading to inequitable outcomes if not carefully managed.",
+      "context": "()",
+      "source": "Making Decisions in the New Normal, 2020.0"
+    }
+  },
+  {
+    "to_embed": "Tech4SocialChange for Migrant Issue Resolution",
+    "metadata": {
+      "id": "r18",
+      "title": "Data Privacy",
+      "description": "Automated data collection for measuring migrant isolation could lead to privacy violations and potential misuse of sensitive personal information, harming individuals and communities.",
+      "context": "Humanitarian, Data Collection(How to measure the isolation of migrants in an automated way?)",
+      "source": "Tech4SocialChange: Crowd-sourcing to bring migrants' experiences to the academics: Humanitarian challenges and opportunities, connectivity & communication, 2016.0"
+    }
+  },
+  {
+    "to_embed": "AI in Military Transition",
+    "metadata": {
+      "id": "r19",
+      "title": "Increased Risk of Miscalculation",
+      "description": "Reliance on AI in military decision-making increases the risk of miscalculation due to algorithmic bias, data errors, or unforeseen circumstances, potentially leading to unintended escalations or strategic failures.",
+      "context": "()",
+      "source": "The social wave-front analysis and the altering character of war: An overview, 2011.0"
+    }
+  },
+  {
+    "to_embed": "AI for Collaborative Emergency Response",
+    "metadata": {
+      "id": "r20",
+      "title": "Data Overload",
+      "description": "Potential for information overload and cognitive biases leading to errors in judgment and decision-making during emergency responses, hindering effective action.",
+      "context": "()",
+      "source": "Collective learning and collective memory for coping with dynamic complexity: co-tech workshop at ECSCW 95, 1996.0"
+    }
+  },
+  {
+    "to_embed": "AI for Collaborative Emergency Response",
+    "metadata": {
+      "id": "r21",
+      "title": "Over-Reliance",
+      "description": "Over-reliance on AI systems can diminish human skills and intuition, leading to decreased effectiveness in situations where AI fails or provides incorrect information.",
+      "context": "()",
+      "source": "Collective learning and collective memory for coping with dynamic complexity: co-tech workshop at ECSCW 95, 1996.0"
+    }
+  },
+  {
+    "to_embed": "AI Network Problem Prevention: Risk of incorrect problem diagnosis and inappropriate solutions.",
+    "metadata": {
+      "id": "r22",
+      "title": "Incorrect Diagnosis Risk",
+      "description": "Potential for the AI to misdiagnose problems based on incomplete or inaccurate data, leading to the application of inappropriate solutions that could worsen the situation.",
+      "context": "()",
+      "source": "Problem prevention on computer system in service network of computer systems, 1991.0"
+    }
+  },
+  {
+    "to_embed": "Scalable Emergency Response System Design",
+    "metadata": {
+      "id": "r23",
+      "title": "Data Misinterpretation Risk",
+      "description": "Incorrect encoding or interpretation of qualitative data in the abstraction hierarchy can lead to flawed system design and inappropriate responses during emergencies.",
+      "context": "()",
+      "source": "Cognitive Fieldwork in Emergency Crisis Management: Developing the I-T-P Abstraction Hierarchy, 2006.0"
+    }
+  },
+  {
+    "to_embed": "AI Agents for Self-Synchronization in Netted Warfare",
+    "metadata": {
+      "id": "r24",
+      "title": "Psychological Resistance",
+      "description": "Potential psychological and cultural challenges to implementing agent-based computing in a networked military environment, leading to resistance and underutilization.",
+      "context": "()",
+      "source": "Agent Based Computing and Effective Self-Synchronization in Netted Warfare, 2003.0"
+    }
+  },
+  {
+    "to_embed": "AI Agents for Self-Synchronization in Netted Warfare",
+    "metadata": {
+      "id": "r25",
+      "title": "Over-Reliance on AI",
+      "description": "Over-dependence on AI agents can lead to decreased human oversight, potentially resulting in errors, biases, and vulnerabilities exploited by adversaries.",
+      "context": "()",
+      "source": "Agent Based Computing and Effective Self-Synchronization in Netted Warfare, 2003.0"
+    }
+  },
+  {
+    "to_embed": "AI for Military Operational Decision Making",
+    "metadata": {
+      "id": "r26",
+      "title": "Over-Reliance on Technology Risk",
+      "description": "Over-reliance on technology can lead to vulnerabilities if systems fail or are compromised, creating potential for strategic disadvantage and increased risk to personnel.",
+      "context": "()",
+      "source": "Leveraging Technology: Using the Practical Essence of Operational Art to Translate Information into Decisions., 1995.0"
+    }
+  },
+  {
+    "to_embed": "Algorithmic Analysis of Military-Media Technology Exchange",
+    "metadata": {
+      "id": "r27",
+      "title": "Potential for Civilian Control Erosion",
+      "description": "The blurring of lines between military and civilian applications of algorithmic technologies could lead to the erosion of civilian oversight and control over powerful technologies.",
+      "context": "()",
+      "source": "Real wars on virtual battlefields: the convergence of programmable media at the military civilian margin, 2009.0"
+    }
+  },
+  {
+    "to_embed": "AI for Social Problem Solving",
+    "metadata": {
+      "id": "r28",
+      "title": "Bias Amplification",
+      "description": "AI models trained on biased historical data may perpetuate and amplify existing societal inequalities, leading to unfair or discriminatory policies and solutions.",
+      "context": "()",
+      "source": "Social Engineering Program to promote civilization process, 2008.0"
+    }
+  },
+  {
+    "to_embed": "AI for Social Problem Solving",
+    "metadata": {
+      "id": "r29",
+      "title": "Lack of Transparency",
+      "description": "The complexity of AI algorithms can make it difficult to understand how decisions are made, hindering accountability and potentially leading to unintended negative consequences for individuals and communities.",
+      "context": "()",
+      "source": "Social Engineering Program to promote civilization process, 2008.0"
+    }
+  },
+  {
+    "to_embed": "AI for Social Problem Solving",
+    "metadata": {
+      "id": "r30",
+      "title": "Job Displacement",
+      "description": "Automation driven by AI could lead to job displacement in sectors related to policy, design, and planning, increasing unemployment and social unrest.",
+      "context": "()",
+      "source": "Social Engineering Program to promote civilization process, 2008.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Team Building for Cooperation",
+    "metadata": {
+      "id": "r31",
+      "title": "Algorithmic Bias in Team Selection",
+      "description": "AI algorithms could perpetuate existing biases if trained on non-representative data, leading to unfair or discriminatory team selections that undermine diversity.",
+      "context": "()",
+      "source": "Team Work Dan Kinerja Perusahaan, 2005.0"
+    }
+  },
+  {
+    "to_embed": "AI in Joint Air Campaign Command",
+    "metadata": {
+      "id": "r32",
+      "title": "Algorithmic Bias Risk",
+      "description": "AI algorithms may incorporate biases present in training data, leading to unfair or discriminatory outcomes in targeting and resource allocation during air campaigns.",
+      "context": "()",
+      "source": "A Hierarchical, Distributed Architecture of Command and Control, 2001.0"
+    }
+  },
+  {
+    "to_embed": "Optimized Dispatch for Mass Casualty Incidents",
+    "metadata": {
+      "id": "r33",
+      "title": "Data Privacy Breach",
+      "description": "Collection and storage of personal data (medical conditions, location) can lead to privacy breaches if the system is not properly secured.",
+      "context": "()",
+      "source": "Using a Business Rule Management System to Improve Disposition of Traumatized Patients, 2010.0"
+    }
+  },
+  {
+    "to_embed": "Optimized Dispatch for Mass Casualty Incidents",
+    "metadata": {
+      "id": "r34",
+      "title": "Algorithmic Bias",
+      "description": "The rules used by the system might inadvertently prioritize certain groups over others, leading to unequal access to care.",
+      "context": "()",
+      "source": "Using a Business Rule Management System to Improve Disposition of Traumatized Patients, 2010.0"
+    }
+  },
+  {
+    "to_embed": "AI-Powered Military Simulation Training",
+    "metadata": {
+      "id": "r35",
+      "title": "Desensitization",
+      "description": "Over-reliance on AI-driven simulations may desensitize soldiers to the realities of war, potentially leading to moral compromises and detachment from the consequences of violence in Afghanistan.",
+      "context": "(the unforgiving and hostile battlefield conditions of Afghanistan)",
+      "source": "game mechanics, 2010.0"
+    }
+  },
+  {
+    "to_embed": "CBR for Residential Valuation",
+    "metadata": {
+      "id": "r36",
+      "title": "Potential Valuation Bias",
+      "description": "Reliance on past cases may perpetuate existing biases in residential valuation, leading to unfair or discriminatory outcomes.",
+      "context": "()",
+      "source": "Progress in case-based reasoning : first United Kingdom workshop, Salford, UK, January 12, 1995 : proceedings, 1995.0"
+    }
+  },
+  {
+    "to_embed": "CBR for Divorce Asset Division",
+    "metadata": {
+      "id": "r37",
+      "title": "Privacy Breach Risk",
+      "description": "The use of sensitive personal and financial data in divorce cases raises concerns about data privacy and security breaches.",
+      "context": "()",
+      "source": "Progress in case-based reasoning : first United Kingdom workshop, Salford, UK, January 12, 1995 : proceedings, 1995.0"
+    }
+  },
+  {
+    "to_embed": "CBR for Software Reuse",
+    "metadata": {
+      "id": "r38",
+      "title": "Intellectual Property Issues",
+      "description": "Reusing software components based on past cases may lead to intellectual property infringements if proper licensing and attribution are not ensured.",
+      "context": "()",
+      "source": "Progress in case-based reasoning : first United Kingdom workshop, Salford, UK, January 12, 1995 : proceedings, 1995.0"
+    }
+  },
+  {
+    "to_embed": "CBR for Steam Turbine Diagnosis",
+    "metadata": {
+      "id": "r39",
+      "title": "Over-reliance on System",
+      "description": "Over-reliance on CBR for fault diagnosis may lead to a decline in human expertise and the neglect of critical factors not captured in the case base.",
+      "context": "()",
+      "source": "Progress in case-based reasoning : first United Kingdom workshop, Salford, UK, January 12, 1995 : proceedings, 1995.0"
+    }
+  },
+  {
+    "to_embed": "Nirmani: CBR for Strategic Design",
+    "metadata": {
+      "id": "r40",
+      "title": "Limited Creativity",
+      "description": "The reliance on past cases in strategic design might limit creativity and innovation, preventing the exploration of novel solutions.",
+      "context": "()",
+      "source": "Progress in case-based reasoning : first United Kingdom workshop, Salford, UK, January 12, 1995 : proceedings, 1995.0"
+    }
+  },
+  {
+    "to_embed": "CBR for Computer-Aided Learning",
+    "metadata": {
+      "id": "r41",
+      "title": "Data Privacy Violations",
+      "description": "Collecting and analyzing student data for personalized learning raises concerns about data privacy and potential misuse of personal information.",
+      "context": "()",
+      "source": "Progress in case-based reasoning : first United Kingdom workshop, Salford, UK, January 12, 1995 : proceedings, 1995.0"
+    }
+  },
+  {
+    "to_embed": "CBR for Object Retrieval",
+    "metadata": {
+      "id": "r42",
+      "title": "Inaccurate Matching",
+      "description": "CBR may produce inaccurate results if the case base is incomplete or poorly indexed, leading to irrelevant or incorrect data retrieval.",
+      "context": "()",
+      "source": "Progress in case-based reasoning : first United Kingdom workshop, Salford, UK, January 12, 1995 : proceedings, 1995.0"
+    }
+  },
+  {
+    "to_embed": "Aquaculture Information System for ASDEC",
+    "metadata": {
+      "id": "r43",
+      "title": "Data Security Risks",
+      "description": "Data breaches or unauthorized access could compromise sensitive information about ASDEC's operations, impacting its competitive advantage and cooperative relationships.",
+      "context": "()",
+      "source": "Sistema de información de apoyo al proceso de la acuicultura para la Asociación Salvadoreña de Desarrollo Campesino ASDEC, 2009.0"
+    }
+  },
+  {
+    "to_embed": "Aquaculture Information System for ASDEC",
+    "metadata": {
+      "id": "r44",
+      "title": "System Failure Risks",
+      "description": "System downtime or failures could disrupt aquaculture operations, leading to financial losses and delays in production for ASDEC and its partner cooperatives.",
+      "context": "()",
+      "source": "Sistema de información de apoyo al proceso de la acuicultura para la Asociación Salvadoreña de Desarrollo Campesino ASDEC, 2009.0"
+    }
+  },
+  {
+    "to_embed": "AI-Powered Educational Resource Filtering",
+    "metadata": {
+      "id": "r45",
+      "title": "Censorship/Bias",
+      "description": "Potential risk involves censorship or bias in filtering, where legitimate educational resources are unintentionally blocked, limiting access to diverse perspectives or crucial information.",
+      "context": "()",
+      "source": "The Meaning Of Things Applying Philosophy To Life, 2016.0"
+    }
+  },
+  {
+    "to_embed": "Case-Based Reasoning for Problem Solving",
+    "metadata": {
+      "id": "r46",
+      "title": "Over-Reliance on Past Cases",
+      "description": "Over-reliance on past cases might lead to suboptimal solutions if the new problem has unique aspects not adequately represented in the existing case base. This can result in ineffective or even harmful outcomes.",
+      "context": "()",
+      "source": "Special Issue on Case Based Reasoning, 2017.0"
+    }
+  },
+  {
+    "to_embed": "Knowledge-Based Image Processing Systems",
+    "metadata": {
+      "id": "r47",
+      "title": "Expertise Bottleneck Risk",
+      "description": "Reliance on specific expertise may create bottlenecks if experts are unavailable or their knowledge is inadequately captured within the system.",
+      "context": "()",
+      "source": "A Software Workbench for Knowledge Acquisition and Integration in Image processing, 1995.0"
+    }
+  },
+  {
+    "to_embed": "AI in Intelligence Analysis Research",
+    "metadata": {
+      "id": "r48",
+      "title": "Bias in Analysis",
+      "description": "AI algorithms used in intelligence analysis may perpetuate existing biases, leading to skewed interpretations and potentially harmful policy recommendations.",
+      "context": "()",
+      "source": "Sensemaking: A Structure for an Intelligence Revolution, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Java-based Negotiation DSS",
+    "metadata": {
+      "id": "r49",
+      "title": "Model Bias",
+      "description": "The models used (decision making, problem solving, creative thinking, and negotiation) could embed biases, leading to unfair or suboptimal negotiation outcomes.",
+      "context": "()",
+      "source": "Support decision and negotiation in an internet environment : an experience with negotiator/I, 1997.0"
+    }
+  },
+  {
+    "to_embed": "Emergency Response System using Multi-Agent Information System",
+    "metadata": {
+      "id": "r50",
+      "title": "Data Security Breach",
+      "description": "Sensitive patient or location data in the system could be vulnerable to breaches, violating patient privacy and potentially compromising emergency operations.",
+      "context": "()",
+      "source": "Improving Emergency Response Systems Through the Use of Intelligent Information Systems, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Emergency Response System using Multi-Agent Information System",
+    "metadata": {
+      "id": "r51",
+      "title": "System Failure",
+      "description": "Reliance on a complex multi-agent system creates the risk of system failure during a critical emergency, disrupting response efforts and endangering lives.",
+      "context": "()",
+      "source": "Improving Emergency Response Systems Through the Use of Intelligent Information Systems, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Emergency Response System using Multi-Agent Information System",
+    "metadata": {
+      "id": "r52",
+      "title": "Information Overload",
+      "description": "The system might present too much real-time information, overwhelming users and hindering their ability to make timely, informed decisions.",
+      "context": "()",
+      "source": "Improving Emergency Response Systems Through the Use of Intelligent Information Systems, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Ethical AI Agent for Sustainable Success",
+    "metadata": {
+      "id": "r53",
+      "title": "Manipulation Risk",
+      "description": "Potential for subtle manipulation through motivational techniques, leading beneficiaries towards goals that may not align with their best interests or values, despite appearing ethical.",
+      "context": "()",
+      "source": "Ethical agent Implentation Towards Situation Oriented Analysis, 2012.0"
+    }
+  },
+  {
+    "to_embed": "Reasoning Query for Improved Understanding",
+    "metadata": {
+      "id": "r54",
+      "title": "Potential for Bias",
+      "description": "The 'internal matrix of human existence' and 'reality of assumptions matrix' may contain inherent biases, leading to skewed self-assessments and potentially reinforcing harmful beliefs.",
+      "context": "()",
+      "source": "Reasoning query methods, 2000.0"
+    }
+  },
+  {
+    "to_embed": "Anticipatory Planning Support System (APSS) for Military",
+    "metadata": {
+      "id": "r55",
+      "title": "Data Overload/Bias",
+      "description": "The system's reliance on voluminous data could lead to information overload or biased analysis, potentially resulting in flawed decisions or overlooking critical insights.",
+      "context": "()",
+      "source": "Anticipatory planning in information operations, 2000.0"
+    }
+  },
+  {
+    "to_embed": "AI for Military Training Simulation",
+    "metadata": {
+      "id": "r56",
+      "title": "Unintended Bias Amplification",
+      "description": "AI agents (ASC-MEs) might amplify existing biases in military doctrine or training data, leading to unfair or unethical outcomes in simulated and real-world scenarios.",
+      "context": "()",
+      "source": "Theoretical foundations for rational agency in third-generation wargames, 2004.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Problem Solving",
+    "metadata": {
+      "id": "r57",
+      "title": "Bias in Solutions",
+      "description": "AI models can perpetuate biases present in the data they are trained on, leading to unfair or discriminatory solutions that reinforce existing inequalities.",
+      "context": "()",
+      "source": "TRUTH AND ERROR., 1899.0"
+    }
+  },
+  {
+    "to_embed": "AI Dispute Support for Child Well-being",
+    "metadata": {
+      "id": "r58",
+      "title": "Bias and Fairness Risk",
+      "description": "The risk of bias exists if the factors and dimensions used in the CBR system reflect societal biases, leading to unfair or discriminatory outcomes for the child.",
+      "context": "()",
+      "source": "Factor-based parent plan support system, 2013.0"
+    }
+  },
+  {
+    "to_embed": "Case-Based Reasoning for Automation of Manual Decisions",
+    "metadata": {
+      "id": "r59",
+      "title": "Potential for Bias",
+      "description": "Risk involves perpetuating biases present in historical case data, leading to unfair or discriminatory outcomes if the Case Based Reasoning system is not carefully designed and monitored for bias.",
+      "context": "()",
+      "source": "Case Based Reasoning A reliable technique to automate manually controlled situations, 2006.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Joint Command Decision Support",
+    "metadata": {
+      "id": "r60",
+      "title": "Data Bias Risk",
+      "description": "Potential for biased data to skew decision support, leading to unfair or ineffective plans and actions, especially in complex scenarios.",
+      "context": "()",
+      "source": "Joint Command Decision Support System, 2011.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Rehabilitation System for Military Personnel",
+    "metadata": {
+      "id": "r61",
+      "title": "Data Privacy Risks",
+      "description": "Collection and analysis of sensitive health data raise concerns about privacy breaches, unauthorized access, and potential misuse of personal information of military personnel.",
+      "context": "(The paper discusses the features of building a system for managing the recovery of military personnel (SUOVS), including combatants who have been diagnosed with PTSD)",
+      "source": "ДЕЯКІ ПИТАННЯ СТВОРЕННЯ КОНЦЕПТУАЛЬНОЇ МОДЕЛІ ІНФОРМАЦІЙНОЇ СИСТЕМИ УПРАВЛІННЯ ОЗДОРОВЛЕННЯМ ВІЙСЬКОВОСЛУЖБОВЦІВ, 2019.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Rehabilitation System for Military Personnel",
+    "metadata": {
+      "id": "r62",
+      "title": "Algorithmic Bias",
+      "description": "Machine learning algorithms may perpetuate or amplify existing biases, leading to unfair or discriminatory rehabilitation recommendations for certain groups of military personnel.",
+      "context": "(The paper discusses the features of building a system for managing the recovery of military personnel (SUOVS), including combatants who have been diagnosed with PTSD)",
+      "source": "ДЕЯКІ ПИТАННЯ СТВОРЕННЯ КОНЦЕПТУАЛЬНОЇ МОДЕЛІ ІНФОРМАЦІЙНОЇ СИСТЕМИ УПРАВЛІННЯ ОЗДОРОВЛЕННЯМ ВІЙСЬКОВОСЛУЖБОВЦІВ, 2019.0"
+    }
+  },
+  {
+    "to_embed": "Optimal Incentive Value Estimation",
+    "metadata": {
+      "id": "r63",
+      "title": "Bias in data collection",
+      "description": "Biases in the data used for AI training may lead to skewed incentive values, disproportionately affecting certain demographic groups within the program.",
+      "context": "()",
+      "source": "Segundo informe: Propuesta de implementación del proyecto PRAF/BID: Fase 2, 2000.0"
+    }
+  },
+  {
+    "to_embed": "Optimizing Learning Incentive Values",
+    "metadata": {
+      "id": "r64",
+      "title": "Algorithmic opacity",
+      "description": "Lack of transparency in the AI algorithms could make it difficult to understand why certain IDA and ICS values are recommended, hindering accountability.",
+      "context": "()",
+      "source": "Segundo informe: Propuesta de implementación del proyecto PRAF/BID: Fase 2, 2000.0"
+    }
+  },
+  {
+    "to_embed": "Multi-Agent Algorithmic Recourse",
+    "metadata": {
+      "id": "r65",
+      "title": "Unintended Consequences",
+      "description": "Algorithmic recourse designed for a single agent may have unintended negative consequences in multi-agent settings, creating imbalances or unfair advantages among agents.",
+      "context": "()",
+      "source": "Toward Multi-Agent Algorithmic Recourse Challenges From a Game-Theoretic Perspective, 2022.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Network Problem Root Cause Analysis",
+    "metadata": {
+      "id": "r66",
+      "title": "Potential for Bias",
+      "description": "The feature selection method might inadvertently introduce bias if the stored data reflects existing biases in network configuration or monitoring, leading to incorrect root cause identification.",
+      "context": "()",
+      "source": "Network management involving cross-checking identified possible root causes of events in different data subsets of events, 2009.0"
+    }
+  },
+  {
+    "to_embed": "Fair Linear Production Allocation",
+    "metadata": {
+      "id": "r67",
+      "title": "Bias in Allocation",
+      "description": "Risk of unintentional biases in the allocation process, potentially favoring certain agents or resources unfairly. This can lead to disputes and inefficiencies.",
+      "context": "()",
+      "source": "Análisis cooperativo de cadenas de distribución, 2007.0"
+    }
+  },
+  {
+    "to_embed": "Supply Chain Cooperative Game",
+    "metadata": {
+      "id": "r68",
+      "title": "Coordination Complexity",
+      "description": "Increased complexity in coordinating cooperative strategies across the supply chain can lead to delays, errors, and reduced overall efficiency, affecting network performance.",
+      "context": "()",
+      "source": "Análisis cooperativo de cadenas de distribución, 2007.0"
+    }
+  },
+  {
+    "to_embed": "Efficient Resource Allocation via Diameter Games",
+    "metadata": {
+      "id": "r69",
+      "title": "Manipulation Vulnerability",
+      "description": "Susceptibility to manipulation by agents seeking to disproportionately benefit from resource allocation, potentially undermining fairness and optimal distribution.",
+      "context": "()",
+      "source": "Análisis cooperativo de cadenas de distribución, 2007.0"
+    }
+  },
+  {
+    "to_embed": "Optimal Multidimensional Assignment Games",
+    "metadata": {
+      "id": "r70",
+      "title": "Algorithmic Inefficiency",
+      "description": "Approximation algorithms might lead to suboptimal solutions, creating inefficiencies in resource distribution and failing to achieve the best possible outcome for all participants.",
+      "context": "()",
+      "source": "Análisis cooperativo de cadenas de distribución, 2007.0"
+    }
+  },
+  {
+    "to_embed": "BB-SR for Self-Reflection in Problem Solving",
+    "metadata": {
+      "id": "r71",
+      "title": "Complexity Overload",
+      "description": "The sophisticated environment might introduce unnecessary complexity, making the system difficult to understand, maintain, and debug.",
+      "context": "()",
+      "source": "The BB-SR system, 1987.0"
+    }
+  },
+  {
+    "to_embed": "Improved HMI Reliability via Error/Interruption Analysis",
+    "metadata": {
+      "id": "r72",
+      "title": "Model Inaccuracy",
+      "description": "The models of human error and interruptions may not fully capture the complexity of real-world scenarios, leading to incomplete or inaccurate risk assessments and potentially ineffective mitigation strategies.",
+      "context": "()",
+      "source": "Erreurs et interruptions du point de vue de l'ingénierie de l'interaction homme-machine. (Errors and Interruptions in Computer Human Interaction from the Software Engineering Perspective), 1996.0"
+    }
+  },
+  {
+    "to_embed": "Improved HMI Reliability via Error/Interruption Analysis",
+    "metadata": {
+      "id": "r73",
+      "title": "Formalism Limitations",
+      "description": "The chosen formalisms (MAD, UAN, Petri nets) may have inherent limitations in expressing certain types of errors or interruptions, potentially overlooking critical vulnerabilities in the system design.",
+      "context": "()",
+      "source": "Erreurs et interruptions du point de vue de l'ingénierie de l'interaction homme-machine. (Errors and Interruptions in Computer Human Interaction from the Software Engineering Perspective), 1996.0"
+    }
+  },
+  {
+    "to_embed": "AI for Knowledge Operations Analysis",
+    "metadata": {
+      "id": "r74",
+      "title": "Misinterpretation of Thoughts",
+      "description": "Incorrect interpretation of thoughts and thinking processes could lead to flawed strategic decisions and unintended negative consequences in Knowledge Operations.",
+      "context": "()",
+      "source": "Knowledge Operations: above and beyond Information Operations, nan"
+    }
+  },
+  {
+    "to_embed": "Human Error Simulation for HCI Design",
+    "metadata": {
+      "id": "r75",
+      "title": "Model Inaccuracy",
+      "description": "The ACT-R model may not fully capture the complexity of human cognition, leading to inaccurate error simulations and potentially flawed HCI designs, failing to address real-world human errors.",
+      "context": "()",
+      "source": "Human error simulation as an aid to HCI design for critical systems, 2006.0"
+    }
+  },
+  {
+    "to_embed": "Network Science Application in Military Scenario Analysis",
+    "metadata": {
+      "id": "r76",
+      "title": "Data Interpretation Bias",
+      "description": "Over-reliance on network analysis could lead to biased interpretations of complex social or military situations, potentially overlooking critical non-networked factors, creating flawed strategies.",
+      "context": "()",
+      "source": "Military scenarios and solutions from a network science perspective, 2009.0"
+    }
+  },
+  {
+    "to_embed": "MR Game for MCI Training and System Testing",
+    "metadata": {
+      "id": "r77",
+      "title": "Inaccurate Simulation",
+      "description": "Simulations may not accurately reflect real-world complexities, leading to inadequate training and poor decision-making during actual MCI events.",
+      "context": "()",
+      "source": "MiRTE: Mixed Reality Triage and Evacuation game for Mass Casualty information systems design, testing and training, 2011.0"
+    }
+  },
+  {
+    "to_embed": "MR Game for MCI Training and System Testing",
+    "metadata": {
+      "id": "r78",
+      "title": "System Bias",
+      "description": "The game and its interface with external systems (e.g., DIORAMA) may contain biases that favor certain response strategies, potentially overlooking others.",
+      "context": "()",
+      "source": "MiRTE: Mixed Reality Triage and Evacuation game for Mass Casualty information systems design, testing and training, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Delphi Method for Aviation Safety",
+    "metadata": {
+      "id": "r79",
+      "title": "Bias in Expert Opinions",
+      "description": "Expert opinions used in the Delphi method may be subject to biases, potentially leading to inaccurate risk assessments and ineffective safety measures. This can compromise the objectivity of the SGDP.",
+      "context": "()",
+      "source": "Knowledge Management in 2016, 2019.0"
+    }
+  },
+  {
+    "to_embed": "Enhanced Warfare through Information Technology",
+    "metadata": {
+      "id": "r80",
+      "title": "Vulnerability from Information Differential",
+      "description": "A significant information differential between opposing forces can create a critical vulnerability, allowing one side to exploit the other's weaknesses through superior information.",
+      "context": "()",
+      "source": "The Role of Information Warfare: Truth and Myths., 1996.0"
+    }
+  },
+  {
+    "to_embed": "Impact of IT on Mission Planning",
+    "metadata": {
+      "id": "r81",
+      "title": "Over-Reliance on Technology",
+      "description": "Over-reliance on information technologies can limit a commander's ability to execute a mission in a decentralized manner, potentially hindering adaptability in dynamic situations.",
+      "context": "()",
+      "source": "The Role of Information Warfare: Truth and Myths., 1996.0"
+    }
+  },
+  {
+    "to_embed": "AI Expert Systems could encode biases, leading to unfair or discriminatory decisions.",
+    "metadata": {
+      "id": "r82",
+      "title": "Encoded Biases in AI",
+      "description": "Biases in training data or expert knowledge can lead to unfair or discriminatory outcomes. This can negatively impact individuals or groups.",
+      "context": "()",
+      "source": "Parallel Implementations 1, 1993.0"
+    }
+  },
+  {
+    "to_embed": "AI Deductive Databases might lead to data privacy breaches if not properly secured.",
+    "metadata": {
+      "id": "r83",
+      "title": "Data Privacy Breaches",
+      "description": "Sensitive data in deductive databases can be vulnerable to privacy breaches if access is not properly controlled. This exposes private information to unauthorized parties.",
+      "context": "()",
+      "source": "Parallel Implementations 1, 1993.0"
+    }
+  },
+  {
+    "to_embed": "AI in CAM may displace human workers through automation of manufacturing tasks.",
+    "metadata": {
+      "id": "r84",
+      "title": "Job Displacement",
+      "description": "The automation of manufacturing tasks can result in job displacement. This can lead to economic hardship for affected workers and communities.",
+      "context": "()",
+      "source": "Parallel Implementations 1, 1993.0"
+    }
+  },
+  {
+    "to_embed": "AI for Future Event Forecasting",
+    "metadata": {
+      "id": "r85",
+      "title": "Bias Amplification",
+      "description": "The 'Orientism' paradigm, if biased, could lead to skewed AI predictions, reinforcing existing prejudices in policy decisions and potentially exacerbating social inequalities or misinterpreting complex situations.",
+      "context": "()",
+      "source": "Cognitive Science, Orientism Management (OM), and Intelligence Analysis, 2021.0"
+    }
+  },
+  {
+    "to_embed": "Enhanced Commander Vision through MDMP",
+    "metadata": {
+      "id": "r86",
+      "title": "Information Overload Bias",
+      "description": "The MDMP process, if not managed correctly, could lead to information overload, potentially biasing the commander's vision due to excessive or poorly filtered data.",
+      "context": "()",
+      "source": "The Staff Responsibility to Help the Commander Develop His Vision, 2000.0"
+    }
+  },
+  {
+    "to_embed": "CBR and TOC for Epidemic Problem Solving",
+    "metadata": {
+      "id": "r87",
+      "title": "Data Bias and Inaccuracy",
+      "description": "Reliance on past cases may introduce bias if the current epidemic differs significantly from SARS. Inaccurate or incomplete data can also lead to flawed simulations and inappropriate strategies.",
+      "context": "()",
+      "source": "EBOLA VIRUS DISEASE PREVENTION-A PROBLEM SOLVING STRATEGY BASED ON SARS CASE STUDY FROM TAIWAN, 2015.0"
+    }
+  },
+  {
+    "to_embed": "AI for Strategic Narrative Analysis",
+    "metadata": {
+      "id": "r88",
+      "title": "Bias Amplification",
+      "description": "AI algorithms may amplify existing biases in narratives, leading to skewed strategic decisions that disproportionately favor certain groups or perspectives.",
+      "context": "()",
+      "source": "Anatomy of Strategy: Fighting for the Future Through Narrative, Logic and Grammar, 2012.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Reflection of Feeling Analysis",
+    "metadata": {
+      "id": "r89",
+      "title": "Data Misinterpretation",
+      "description": "AI may misinterpret subtle emotional cues, leading to inaccurate reflection analysis and potentially damaging communication by reinforcing incorrect assumptions.",
+      "context": "()",
+      "source": "Close the Loop with Reflection of Feeling, 2013.0"
+    }
+  },
+  {
+    "to_embed": "AI-driven media analysis reinforces existing biases and echo chambers.",
+    "metadata": {
+      "id": "r90",
+      "title": "Reinforcement of Biases",
+      "description": "AI analysis can inadvertently amplify existing biases in media reporting, leading to further polarization and misrepresentation of scientific issues if not properly designed.",
+      "context": "()",
+      "source": "Media, risk, and science, 2002.0"
+    }
+  },
+  {
+    "to_embed": "Enhanced Decision-Making via Mobile PIT",
+    "metadata": {
+      "id": "r91",
+      "title": "Data Overload Risk",
+      "description": "Excessive information could overwhelm warfighters, impairing decision-making due to cognitive overload and potential for errors.",
+      "context": "()",
+      "source": "The Use of Personal Information Technology in Military Area of Operations, 2013.0"
+    }
+  },
+  {
+    "to_embed": "Ethics Integration in Education",
+    "metadata": {
+      "id": "r92",
+      "title": "Bias in Curriculum",
+      "description": "The integration might reflect biases of the lecturers/researchers at Liverpool Hope University and their particular approach.",
+      "context": "()",
+      "source": "Dilemmas of ambulance professionals in attending an emergency within eight minutes: the ethics of target setting, 2011.0"
+    }
+  },
+  {
+    "to_embed": "AI for Adaptive Problem-Solving Skill Acquisition",
+    "metadata": {
+      "id": "r93",
+      "title": "Over-Reliance on AI",
+      "description": "Users may become overly dependent on AI-driven solutions, hindering the development of their own problem-solving skills and critical thinking abilities.",
+      "context": "()",
+      "source": "Nourishing Problem Solving Skills by Performing HCI Tasks - Relationships between the Methods of Problem Solving (Retrieval, Discovery, or Search) and the Kinds of Acquired Problem Solving Skills, 2018.0"
+    }
+  },
+  {
+    "to_embed": "AI Coalition Formation for Disaster Relief",
+    "metadata": {
+      "id": "r94",
+      "title": "Misinterpretation of Models",
+      "description": "Inaccurate or incomplete shared models can lead to misinterpretation of the situation and ineffective or even harmful actions.",
+      "context": "()",
+      "source": "I-Rescue : A Coalition-Based Approach to Support Disaster Relief Operations, 2003.0"
+    }
+  },
+  {
+    "to_embed": "AI Coalition Formation for Disaster Relief",
+    "metadata": {
+      "id": "r95",
+      "title": "Data Security Vulnerabilities",
+      "description": "Shared models may contain sensitive information that, if compromised, could lead to privacy violations or security breaches.",
+      "context": "()",
+      "source": "I-Rescue : A Coalition-Based Approach to Support Disaster Relief Operations, 2003.0"
+    }
+  },
+  {
+    "to_embed": "GSS for Military Decision-Making",
+    "metadata": {
+      "id": "r96",
+      "title": "Over-Reliance on System",
+      "description": "Over-dependence on the GSS could make the decision-making process vulnerable to system failures or manipulation, potentially leading to flawed strategies.",
+      "context": "()",
+      "source": "Improving operational situational awareness with collaborative technologies, 2000.0"
+    }
+  },
+  {
+    "to_embed": "GSS for Military Decision-Making",
+    "metadata": {
+      "id": "r97",
+      "title": "Data Bias and Errors",
+      "description": "Biases or errors in the GSS data could skew decision-making processes, potentially leading to unfair or ineffective military actions.",
+      "context": "()",
+      "source": "Improving operational situational awareness with collaborative technologies, 2000.0"
+    }
+  },
+  {
+    "to_embed": "GSS for Military Decision-Making",
+    "metadata": {
+      "id": "r98",
+      "title": "Security Breaches",
+      "description": "Compromised GSS security can expose sensitive information, potentially giving adversaries insight into military plans and strategies, which harm national security.",
+      "context": "()",
+      "source": "Improving operational situational awareness with collaborative technologies, 2000.0"
+    }
+  },
+  {
+    "to_embed": "Unified Programming Education",
+    "metadata": {
+      "id": "r99",
+      "title": "Over-Simplification",
+      "description": "Abstraction may oversimplify complex real-world scenarios, potentially leading to a lack of nuanced understanding and ineffective solutions in practical programming tasks.",
+      "context": "()",
+      "source": "General Computation Models, 2004.0"
+    }
+  },
+  {
+    "to_embed": "Cloud Case Management for Customer Service",
+    "metadata": {
+      "id": "r100",
+      "title": "Data Security Risks",
+      "description": "Storing sensitive case data in the cloud introduces potential risks of data breaches, unauthorized access, and compliance violations.",
+      "context": "()",
+      "source": "Jadu launches Case Management in the cloud to enable collaborative customer service and retention on the web, 2015.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Urban Security Platform",
+    "metadata": {
+      "id": "r101",
+      "title": "Privacy Violations",
+      "description": "Excessive surveillance can lead to privacy violations and the potential for misuse of personal data collected through cameras and sensors, impacting individual liberties.",
+      "context": "()",
+      "source": "Plataforma abierta de gestión de cámaras IP y aplicaciones móviles para la seguridad civil ciudadana, 2016.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Urban Security Platform",
+    "metadata": {
+      "id": "r102",
+      "title": "Algorithmic Bias",
+      "description": "Automated analysis may exhibit bias, leading to discriminatory practices in identifying and responding to potential threats, disproportionately affecting certain demographic groups.",
+      "context": "()",
+      "source": "Plataforma abierta de gestión de cámaras IP y aplicaciones móviles para la seguridad civil ciudadana, 2016.0"
+    }
+  },
+  {
+    "to_embed": "Collective Intelligence for SI/TIC Client Needs",
+    "metadata": {
+      "id": "r103",
+      "title": "Data Misinterpretation",
+      "description": "Risk of misinterpreting organizational context or stakeholder references, leading to incorrect requirements analysis and ultimately flawed system design or implementation.",
+      "context": "()",
+      "source": "L'intelligence collective comme dispositif d'aide à l'interprétation des besoins : démarche et système de médiation., 2012.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Dynamic Encounters in Online Games",
+    "metadata": {
+      "id": "r104",
+      "title": "Unintended Bias",
+      "description": "AI algorithms may unintentionally introduce bias, leading to unfair or discriminatory encounters based on player data, which could negatively affect certain player groups or gameplay styles.",
+      "context": "()",
+      "source": "System and method for self-evident multiuser content, 2009.0"
+    }
+  },
+  {
+    "to_embed": "AI for Adaptability Training in Defense",
+    "metadata": {
+      "id": "r105",
+      "title": "Bias in Training Data",
+      "description": "If the training data used to develop the AI-driven adaptability strategy is biased, it could lead to unfair or ineffective training outcomes. This could negatively impact certain groups or situations.",
+      "context": "()",
+      "source": "Developing an Adaptability Training Strategy and Policy for the DoD, 2008.0"
+    }
+  },
+  {
+    "to_embed": "Enhanced Training via COTS and HPC Games",
+    "metadata": {
+      "id": "r106",
+      "title": "Accessibility limitations",
+      "description": "Reliance on COTS games might limit customization, accessibility, and relevance to specific training needs, potentially excluding certain learners or failing to address critical skills.",
+      "context": "()",
+      "source": "Overview of Military Wargaming, 2008.0"
+    }
+  },
+  {
+    "to_embed": "AI in Education for Industry 4.0",
+    "metadata": {
+      "id": "r107",
+      "title": "Job Displacement Risk",
+      "description": "Increased automation and technological advancements might lead to job displacement, requiring proactive measures to reskill and upskill the workforce to adapt to new roles and industries.",
+      "context": "()",
+      "source": "Asesmen Complex Problem Solving: Apa dan Bagaimana?, 2019.0"
+    }
+  },
+  {
+    "to_embed": "AI for Traffic Offender Sentencing Support",
+    "metadata": {
+      "id": "r108",
+      "title": "Bias Amplification",
+      "description": "The AI system may amplify existing biases in the data it is trained on, leading to unfair or discriminatory sentencing outcomes for certain groups.",
+      "context": "()",
+      "source": "Legal and Negotiation Decision Support Systems (LDSS 2009), 2009.0"
+    }
+  },
+  {
+    "to_embed": "AI for Traffic Offender Sentencing Support",
+    "metadata": {
+      "id": "r109",
+      "title": "Lack of Transparency",
+      "description": "The decision-making process of the AI system may not be fully transparent, making it difficult to understand why a particular sentence was recommended.",
+      "context": "()",
+      "source": "Legal and Negotiation Decision Support Systems (LDSS 2009), 2009.0"
+    }
+  },
+  {
+    "to_embed": "AI for Traffic Offender Sentencing Support",
+    "metadata": {
+      "id": "r110",
+      "title": "Over-Reliance on AI",
+      "description": "Judges might over-rely on the AI's suggestions and fail to exercise their own judgment, leading to inflexible and unjust sentencing.",
+      "context": "()",
+      "source": "Legal and Negotiation Decision Support Systems (LDSS 2009), 2009.0"
+    }
+  },
+  {
+    "to_embed": "Technology Collaboration Conference",
+    "metadata": {
+      "id": "r111",
+      "title": "Limited Participation",
+      "description": "The conference might exclude smaller organizations or individuals, limiting diverse perspectives and opportunities for broader knowledge sharing.",
+      "context": "()",
+      "source": "Online Tutorials: Just in Case, Just in Time, 2005.0"
+    }
+  },
+  {
+    "to_embed": "AI for Multi-Agent Information Fusion",
+    "metadata": {
+      "id": "r112",
+      "title": "Bias Amplification",
+      "description": "Improperly weighted information fusion can amplify biases present in individual agents' beliefs, leading to skewed or unfair collective decisions.",
+      "context": "()",
+      "source": "Bases de conocimiento en sistemas multi-agente, 2008.0"
+    }
+  },
+  {
+    "to_embed": "Strategic intelligence may lead to biased or incomplete information influencing project design.",
+    "metadata": {
+      "id": "r113",
+      "title": "Information Bias",
+      "description": "The use of strategic intelligence could result in reliance on biased or incomplete information, negatively impacting project design and potentially leading to misinformed decisions.",
+      "context": "()",
+      "source": "Informe de vigilancia e inteligencia estratégica - Maestría y especialización en transmedia, 2020.0"
+    }
+  },
+  {
+    "to_embed": "Copyright enforcement potentially limits access to information for reconstruction efforts and other humanitarian purposes.",
+    "metadata": {
+      "id": "r114",
+      "title": "Limited Access to Information",
+      "description": "Strict copyright enforcement could potentially hinder access to crucial building codes and safety information for reconstruction efforts or other humanitarian activities in resource-constrained environments.",
+      "context": "()",
+      "source": "INTERNATIONAL CODE COUNCIL, 2009.0"
+    }
+  },
+  {
+    "to_embed": "AI in Counterinsurgency War Strategy",
+    "metadata": {
+      "id": "r115",
+      "title": "Algorithmic Bias Risk",
+      "description": "AI algorithms trained on biased data or flawed theories could lead to poor decisions and ineffective strategies in counterinsurgency operations. Perpetuates existing biases and reinforces flawed logic.",
+      "context": "()",
+      "source": "A Working Theory of Operational Art in Modern War, 1989.0"
+    }
+  },
+  {
+    "to_embed": "AI for Intel in Low-Intensity Conflict",
+    "metadata": {
+      "id": "r116",
+      "title": "Bias in Data Collection",
+      "description": "AI algorithms trained on biased HUMINT data may perpetuate existing prejudices, leading to unfair or discriminatory targeting during low-intensity conflict operations, potentially harming civilian populations.",
+      "context": "()",
+      "source": "LIGHT Divisional Cavalry and Low-Intensity Conflict Reconnaissance, 1991.0"
+    }
+  },
+  {
+    "to_embed": "RMA/NCW for Information Dominance",
+    "metadata": {
+      "id": "r117",
+      "title": "Over-reliance on Technology",
+      "description": "Excessive dependence on technology without sufficient intellectual capital can lead to inflexibility and vulnerability to unforeseen circumstances or technological failures.",
+      "context": "()",
+      "source": "Can We Get There From Here? RMAs, Network-Centric Warfare and the Process of Transformation, 1999.0"
+    }
+  },
+  {
+    "to_embed": "Hardware Defect Avoidance and Processor Reset",
+    "metadata": {
+      "id": "r118",
+      "title": "Potential for False Positives",
+      "description": "The defect detection system may generate false positives, leading to unnecessary resets and potentially disrupting normal operations, causing inconvenience.",
+      "context": "()",
+      "source": "Avoid dealing with defective computer processor hardware event trigger in a predetermined sequence, 2013.0"
+    }
+  },
+  {
+    "to_embed": "AI for Malicious Download Detection",
+    "metadata": {
+      "id": "r119",
+      "title": "False Positives",
+      "description": "The risk exists of falsely identifying safe files as malicious, which could disrupt user workflows and limit access to legitimate software or content, causing inconvenience and frustration.",
+      "context": "()",
+      "source": "How To Talk With People A Program For Preventing Troubles That Come When People Talk Together, 2016.0"
+    }
+  },
+  {
+    "to_embed": "Predictive Battlespace Awareness",
+    "metadata": {
+      "id": "r120",
+      "title": "Bias and Inaccuracy",
+      "description": "Models may contain biases or inaccuracies, leading to flawed predictions and poor decision-making, potentially harming operational effectiveness and civilian populations.",
+      "context": "()",
+      "source": "Visualization of the Battlespace: A Cornerstone of Modeling for Anticipatory Behavior, 2006.0"
+    }
+  },
+  {
+    "to_embed": "Predictive Battlespace Awareness",
+    "metadata": {
+      "id": "r121",
+      "title": "Over-Reliance on Models",
+      "description": "Decision-makers may over-rely on model predictions, neglecting other crucial factors and intuition, leading to inflexible strategies and potential mission failures.",
+      "context": "()",
+      "source": "Visualization of the Battlespace: A Cornerstone of Modeling for Anticipatory Behavior, 2006.0"
+    }
+  },
+  {
+    "to_embed": "Predictive Battlespace Awareness",
+    "metadata": {
+      "id": "r122",
+      "title": "Ethical Concerns",
+      "description": "Predictive capabilities could raise ethical concerns regarding targeting, proportionality, and discrimination, potentially violating international humanitarian law and norms.",
+      "context": "()",
+      "source": "Visualization of the Battlespace: A Cornerstone of Modeling for Anticipatory Behavior, 2006.0"
+    }
+  },
+  {
+    "to_embed": "Incentivized Societal Design through Technology",
+    "metadata": {
+      "id": "r123",
+      "title": "Manipulation of Choices",
+      "description": "The risk lies in the potential for manipulation of individual choices to align with pre-defined 'desired outcomes,' which could compromise autonomy and free will.",
+      "context": "()",
+      "source": "Purpose and goals, 2015.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Wargaming for Strategic Decision-Making",
+    "metadata": {
+      "id": "r124",
+      "title": "Bias Amplification",
+      "description": "AI models may amplify existing biases in human factors data, leading to skewed or unfair strategic decisions.",
+      "context": "()",
+      "source": "The road ahead for wargaming: the why and how of achieving the next generation of wargaming, 2004.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Wargaming for Strategic Decision-Making",
+    "metadata": {
+      "id": "r125",
+      "title": "Over-reliance on Models",
+      "description": "Decision-makers might over-rely on the AI-enhanced wargame, neglecting real-world factors or intuition, leading to suboptimal outcomes.",
+      "context": "()",
+      "source": "The road ahead for wargaming: the why and how of achieving the next generation of wargaming, 2004.0"
+    }
+  },
+  {
+    "to_embed": "Digital Book Distribution Platform",
+    "metadata": {
+      "id": "r126",
+      "title": "Copyright Infringement",
+      "description": "Easy distribution of digital books could facilitate unauthorized copying and distribution, potentially infringing on copyright and damaging the author's income.",
+      "context": "()",
+      "source": "The Outline of Sanity, nan"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Emergency Response with Location Data",
+    "metadata": {
+      "id": "r127",
+      "title": "Privacy Risk: Location Data",
+      "description": "The transmission of precise location data raises privacy concerns about potential misuse or unauthorized access to sensitive personal information, which can lead to stalking and physical harm.",
+      "context": "()",
+      "source": "Method for transmission of non-voice information to improve the efficiency of rescue centers., 2005.0"
+    }
+  },
+  {
+    "to_embed": "System Analysis for Management",
+    "metadata": {
+      "id": "r128",
+      "title": "Oversimplification Risk",
+      "description": "Simplifying complex systems can lead to overlooking critical interdependencies, causing negative impacts on the organization as a whole, despite localized benefits.",
+      "context": "()",
+      "source": "APPLICATION OF SYSTEM ANALYSIS METHODS FOR EFFECTIVE MANAGEMENT OF INFORMATION SECURITY OF AN ECONOMIC ENTITY, 2023.0"
+    }
+  },
+  {
+    "to_embed": "AI-Powered Disaster Relief Management",
+    "metadata": {
+      "id": "r129",
+      "title": "Dependency on Technology",
+      "description": "System reliance on global servers can cause delays or failures during network disruptions, hindering aid delivery and potentially endangering vulnerable populations.",
+      "context": "(State, Non-governmental and Media organizations in Sri Lanka initiate much needed relief to people affected by floods and landslides across the country by organizing donation campaigns.)",
+      "source": "Donate.lk: A Smart Donation Handling System, 2018.0"
+    }
+  },
+  {
+    "to_embed": "AI-Powered Disaster Relief Management",
+    "metadata": {
+      "id": "r130",
+      "title": "Data Privacy Risks",
+      "description": "Collecting and managing personal data of disaster victims poses privacy risks if data is compromised, leading to potential misuse or exploitation.",
+      "context": "(State, Non-governmental and Media organizations in Sri Lanka initiate much needed relief to people affected by floods and landslides across the country by organizing donation campaigns.)",
+      "source": "Donate.lk: A Smart Donation Handling System, 2018.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced War Simulations",
+    "metadata": {
+      "id": "r131",
+      "title": "Bias in Simulation Outcomes",
+      "description": "AI models trained on incomplete or biased data may produce skewed simulation outcomes, leading to flawed strategic decisions and potentially escalating conflicts.",
+      "context": "()",
+      "source": "Entropy-Based Warfare: Modeling the Revolution in Military Affairs (Joint Force Quarterly, Autumn/Winter, 1998-1999), 1999.0"
+    }
+  },
+  {
+    "to_embed": "AI-Optimized C4ISR",
+    "metadata": {
+      "id": "r132",
+      "title": "Over-Reliance on AI",
+      "description": "Excessive reliance on AI-optimized C4ISR systems can lead to vulnerabilities if the AI is compromised or fails, potentially resulting in strategic disadvantages.",
+      "context": "()",
+      "source": "Entropy-Based Warfare: Modeling the Revolution in Military Affairs (Joint Force Quarterly, Autumn/Winter, 1998-1999), 1999.0"
+    }
+  },
+  {
+    "to_embed": "AI for Military-Industrial Problem Solving",
+    "metadata": {
+      "id": "r133",
+      "title": "Potential for Misuse",
+      "description": "The use of AI in the military-industrial sector carries the risk of misuse, leading to unintended harm, escalation of conflicts, or violations of human rights.",
+      "context": "()",
+      "source": "OR Forum - The Keynote Speech, 1989.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Military Intelligence",
+    "metadata": {
+      "id": "r134",
+      "title": "Over-Reliance on Tech",
+      "description": "Over-dependence on computerized systems could lead to vulnerabilities if these systems are compromised or fail, potentially negating the advantage gained.",
+      "context": "()",
+      "source": "Inside risks: Computers as substitute soldiers?, 1995.0"
+    }
+  },
+  {
+    "to_embed": "Crisis Action Executive Training System",
+    "metadata": {
+      "id": "r135",
+      "title": "Over-Reliance on Simulations",
+      "description": "Trainees might become overly reliant on the simulated environment and struggle to adapt to unexpected situations in real-world crisis scenarios.",
+      "context": "()",
+      "source": "PACEXTRA: Pacific Air Forces Crisis Action System Executive Training System, 1992.0"
+    }
+  },
+  {
+    "to_embed": "Problem-Type Driven IS Design",
+    "metadata": {
+      "id": "r136",
+      "title": "Potential Oversimplification",
+      "description": "Over-reliance on the framework could lead to oversimplification of complex problems, neglecting nuances and potentially causing inadequate solutions.",
+      "context": "()",
+      "source": "Why we Need to Distinguish between Problem Solving Types in Information Systems Design, 1999.0"
+    }
+  },
+  {
+    "to_embed": "AI for Intelligence Analysis",
+    "metadata": {
+      "id": "r137",
+      "title": "Bias in Analysis",
+      "description": "AI algorithms may perpetuate biases present in the training data, leading to skewed intelligence assessments and potentially flawed policy recommendations. It might cause unintended consequences.",
+      "context": "()",
+      "source": "About the Contributors, 2008.0"
+    }
+  },
+  {
+    "to_embed": "AI for Reflective Equilibrium in Moral Reasoning",
+    "metadata": {
+      "id": "r138",
+      "title": "Bias Amplification",
+      "description": "AI models might amplify existing biases in training data, leading to skewed or unfair moral judgments, especially if data reflects societal prejudices.",
+      "context": "()",
+      "source": "Notes on practical reasoning, 2011.0"
+    }
+  },
+  {
+    "to_embed": "AI for Unconscious Reasoning Analysis",
+    "metadata": {
+      "id": "r139",
+      "title": "Over-Interpretation of Data",
+      "description": "AI may incorrectly interpret data patterns, leading to flawed understanding of unconscious reasoning and potentially harmful interventions.",
+      "context": "()",
+      "source": "Notes on practical reasoning, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Knowledge Evaluation in VirtualECare Group Decision Support System",
+    "metadata": {
+      "id": "r140",
+      "title": "Inaccurate Knowledge Evaluation",
+      "description": "The risk involves potential inaccuracies in knowledge evaluation due to the complexity of Multi-valued Extended Logic Programming, potentially leading to incorrect decisions and adverse patient outcomes, affecting human rights to proper care.",
+      "context": "()",
+      "source": "Quality of Knowledge in Group Decision Support Systems, 2009.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Communication Media Classifier",
+    "metadata": {
+      "id": "r269",
+      "title": "Over-reliance on Metrics",
+      "description": "Risk of over-simplifying complex communication dynamics by relying too heavily on the defined dimensions, potentially overlooking nuances critical for effective coordination.",
+      "context": "()",
+      "source": "Means of Coordination, nan"
+    }
+  },
+  {
+    "to_embed": "AI for WASH in Fragile States",
+    "metadata": {
+      "id": "r270",
+      "title": "Data Bias and Inaccuracy",
+      "description": "AI algorithms may perpetuate existing biases in limited data, leading to ineffective or inequitable WASH programs that fail to address the needs of vulnerable populations.",
+      "context": "(Least income Fragile and Conflict Affected States in Africa currently remain the areas of most concern.)",
+      "source": "Research alternatives for the knowledge gap, 2017.0"
+    }
+  },
+  {
+    "to_embed": "IRIS: Global Blindness Research Information Service",
+    "metadata": {
+      "id": "r271",
+      "title": "Information Overload Risk",
+      "description": "The increased volume of information disseminated by IRIS might overwhelm researchers, making it difficult to identify the most relevant and reliable data, potentially hindering progress.",
+      "context": "()",
+      "source": "A New Attack on an Old Problem, 1963.0"
+    }
+  },
+  {
+    "to_embed": "AI for Military Strategic Analysis",
+    "metadata": {
+      "id": "r272",
+      "title": "Bias Amplification",
+      "description": "If the AI is trained on biased data or reflects the cognitive biases of its creators, it may amplify existing strategic misunderstandings, leading to flawed conclusions.",
+      "context": "()",
+      "source": "The Operational Calculus: It's Not Art, 2012.0"
+    }
+  },
+  {
+    "to_embed": "Real-time Intrusion Detection with Intent Encapsulation",
+    "metadata": {
+      "id": "r273",
+      "title": "False Positives/Negatives",
+      "description": "Potential for inaccurate intrusion detection, leading to false positives (unnecessary alerts) or false negatives (missed intrusions), impacting trust and security.",
+      "context": "()",
+      "source": "An Analytical Framework for Reasoning About Intrusions 1, 2001.0"
+    }
+  },
+  {
+    "to_embed": "Accountable Multiagent System Design",
+    "metadata": {
+      "id": "r274",
+      "title": "Bias in Accountability",
+      "description": "The designed framework may encode biases present in the developers' understanding of accountability and responsibility, leading to unfair or discriminatory outcomes in the multiagent system.",
+      "context": "()",
+      "source": "Computational Accountability and Responsibility in the MAS Domain, 2018.0"
+    }
+  },
+  {
+    "to_embed": "Drone-based Disaster Response System",
+    "metadata": {
+      "id": "r275",
+      "title": "Data Security Vulnerabilities",
+      "description": "The system could be vulnerable to data breaches or cyberattacks, compromising sensitive information about victims or rescue operations, leading to potential misuse or disruption.",
+      "context": "()",
+      "source": "A multi-agent framework for cloud-based management of collaborative robots, 2018.0"
+    }
+  },
+  {
+    "to_embed": "Drone-based Disaster Response System",
+    "metadata": {
+      "id": "r276",
+      "title": "Bias in Data Collection",
+      "description": "Potential bias in data collection and analysis could lead to uneven resource allocation, disadvantaging certain populations or areas within the disaster zone, thus raising ethical concerns.",
+      "context": "()",
+      "source": "A multi-agent framework for cloud-based management of collaborative robots, 2018.0"
+    }
+  },
+  {
+    "to_embed": "AI-Powered Book Recommendation & Borrowing System",
+    "metadata": {
+      "id": "r277",
+      "title": "Privacy Violation",
+      "description": "User reading preferences and borrowing history could be tracked, creating privacy concerns and potential misuse of personal information.",
+      "context": "()",
+      "source": "Wife Battering: A Systems Theory Approach, 1984.0"
+    }
+  },
+  {
+    "to_embed": "AI Book Recommendation System",
+    "metadata": {
+      "id": "r278",
+      "title": "Information Bias",
+      "description": "Algorithmic bias in recommendations can limit exposure to diverse perspectives and reinforce existing intellectual silos, reducing independent thinking.",
+      "context": "()",
+      "source": "Toward a unity of knowledge, 1969.0"
+    }
+  },
+  {
+    "to_embed": "AI for Knowledgebase Integrity in Defence",
+    "metadata": {
+      "id": "r279",
+      "title": "Data Bias and Errors",
+      "description": "The risk of flawed or biased data within the knowledgebase could lead to incorrect or unfair conclusions, affecting defence strategies and resource allocation within the Netherlands.",
+      "context": "()",
+      "source": "Kwaliteit van Expertsystemen: Algoritmen voor Integriteits-Controle (Quality of Expert Systems: Algorithms for Integrity Control), 1990.0"
+    }
+  },
+  {
+    "to_embed": "AI in Knowledge-Centered Service (KCS)",
+    "metadata": {
+      "id": "r280",
+      "title": "Data Bias in Knowledge",
+      "description": "AI algorithms within KCS might perpetuate biases present in the knowledge base, leading to unfair or inaccurate solutions for certain customer groups or issues.",
+      "context": "()",
+      "source": "Solve and Evolve: Practical Applications for Knowledge-Centered Service, 2019.0"
+    }
+  },
+  {
+    "to_embed": "AI in Knowledge-Centered Service (KCS)",
+    "metadata": {
+      "id": "r281",
+      "title": "Knowledge Over-Reliance",
+      "description": "Over-reliance on AI-driven KCS can stifle critical thinking and problem-solving skills of IT staff, making them less adaptable to novel or complex situations.",
+      "context": "()",
+      "source": "Solve and Evolve: Practical Applications for Knowledge-Centered Service, 2019.0"
+    }
+  },
+  {
+    "to_embed": "AI-Powered Human Resource Allocation Optimization",
+    "metadata": {
+      "id": "r282",
+      "title": "Bias in Allocation",
+      "description": "The AI algorithm might perpetuate existing biases in skill assessment, leading to unfair allocation of resources and opportunities.",
+      "context": "()",
+      "source": "UNE APPROCHE DE GESTION DES RESSOURCES HUMAINES GUIDEE PAR LES COMPETENCES, 2003.0"
+    }
+  },
+  {
+    "to_embed": "AI-Powered Human Resource Allocation Optimization",
+    "metadata": {
+      "id": "r283",
+      "title": "Oversimplification",
+      "description": "Reducing HR allocation to an algorithmic process may oversimplify complex human factors, potentially overlooking crucial qualitative aspects.",
+      "context": "()",
+      "source": "UNE APPROCHE DE GESTION DES RESSOURCES HUMAINES GUIDEE PAR LES COMPETENCES, 2003.0"
+    }
+  },
+  {
+    "to_embed": "Autonomous AI retaliation in information warfare could escalate conflicts unpredictably.",
+    "metadata": {
+      "id": "r284",
+      "title": "Escalation Risk",
+      "description": "Autonomous AI retaliation may escalate conflicts due to misidentification of threats or disproportionate responses, leading to unintended consequences and broader engagements.",
+      "context": "()",
+      "source": "Building a Basis for Information Warfare Rules of Engagement., 1997.0"
+    }
+  },
+  {
+    "to_embed": "AI for Healthcare Resource Optimization",
+    "metadata": {
+      "id": "r285",
+      "title": "Data Bias and Inequity",
+      "description": "AI algorithms trained on biased data may perpetuate and amplify existing healthcare inequities, leading to unfair or discriminatory outcomes for certain patient populations.",
+      "context": "()",
+      "source": "Resolving the care crisis: technology in action, 2008.0"
+    }
+  },
+  {
+    "to_embed": "Stuxnet-informed Cybersecurity Design",
+    "metadata": {
+      "id": "r286",
+      "title": "Cyberattack Vulnerability",
+      "description": "Failure to adapt cybersecurity measures can lead to vulnerabilities in critical infrastructure, making it susceptible to attacks that cause power outages, water shortages, and societal instability.",
+      "context": "()",
+      "source": "Internet Science Risk , Risk Perception , and Cyberwar, 2013.0"
+    }
+  },
+  {
+    "to_embed": "AI for Social Domain Analysis in Military Intelligence",
+    "metadata": {
+      "id": "r287",
+      "title": "Data Misinterpretation",
+      "description": "Risk of misinterpreting social data, leading to flawed conclusions and biased decisions in military intelligence, potentially exacerbating existing inter-personal issues or creating new ones.",
+      "context": "()",
+      "source": "A Historic Failure in the Social Domain, 2005.0"
+    }
+  },
+  {
+    "to_embed": "Coordination Analysis via Communication Dimensions",
+    "metadata": {
+      "id": "r288",
+      "title": "Oversimplification",
+      "description": "Reducing complex coordination processes to a few dimensions may oversimplify the reality and lead to inaccurate or incomplete analyses, hindering effective collaboration.",
+      "context": "()",
+      "source": "1 Dimensions of Coordination, 2000.0"
+    }
+  },
+  {
+    "to_embed": "Social Procedure Verification via Formal Frameworks",
+    "metadata": {
+      "id": "r289",
+      "title": "Unintended Consequences",
+      "description": "Formal models might oversimplify complex social interactions, leading to unintended negative consequences when implemented in real-world scenarios with unpredictable human behavior.",
+      "context": "()",
+      "source": "Topics in social software: information in strategic situations, 2005.0"
+    }
+  },
+  {
+    "to_embed": "Crowd Simulation for Military Mission Planning",
+    "metadata": {
+      "id": "r290",
+      "title": "Inaccurate Crowd Behavior",
+      "description": "The fidelity of crowd behavior representation may not accurately reflect real-world actions, leading to skewed mission analysis and potentially flawed strategic decisions.",
+      "context": "(recreated to some extent a portion of the Blackhawk Down incident in Mogadishu, Somalia)",
+      "source": "Mogadishu Terrain Generation and Correlation for Crowd Modeling, 2004.0"
+    }
+  },
+  {
+    "to_embed": "AI for Crime Pattern Analysis",
+    "metadata": {
+      "id": "r291",
+      "title": "Bias Amplification",
+      "description": "AI algorithms may perpetuate and amplify existing biases in crime data, leading to discriminatory policing practices and disproportionate targeting of certain communities.",
+      "context": "()",
+      "source": "Mapping and analysing crime data, 2001.0"
+    }
+  },
+  {
+    "to_embed": "Predictive Failure Analysis",
+    "metadata": {
+      "id": "r292",
+      "title": "Bias amplification",
+      "description": "If the historical data used to train the AI is biased, the AI may perpetuate and amplify these biases, leading to unfair or inaccurate predictions.",
+      "context": "()",
+      "source": "A sad story with a fairytale ending, 1990.0"
+    }
+  },
+  {
+    "to_embed": "MOUT Sensor Deployment Envisioning",
+    "metadata": {
+      "id": "r293",
+      "title": "Bias in Scenario Design",
+      "description": "Scenario-based design may introduce biases reflecting the perspectives of the involved communities (sensor developers, military operations), potentially overlooking other critical factors.",
+      "context": "()",
+      "source": "Scenarios As A Tool For Collaborative Envisioning : Using The Case of New Sensor Technologies for Military Urban Operations, 2005.0"
+    }
+  },
+  {
+    "to_embed": "Network Warfare Human Factors Analysis via Go*Team",
+    "metadata": {
+      "id": "r294",
+      "title": "Over-reliance on Simulation",
+      "description": "Over-reliance on simulation results might lead to inaccurate predictions of human behavior in real-world network warfare scenarios due to the simplification inherent in game-based simulations.",
+      "context": "()",
+      "source": "Technical Description of the Go*Team User Interface, 2009.0"
+    }
+  },
+  {
+    "to_embed": "ALOHA Software for Emergency Response Planning",
+    "metadata": {
+      "id": "r295",
+      "title": "Inaccurate Prediction",
+      "description": "Reliance on ALOHA software could lead to inaccurate predictions of affected areas, potentially resulting in insufficient or misdirected evacuation efforts and inadequate resource allocation.",
+      "context": "()",
+      "source": "Application of ALOHA in Emergency Response for Hazardous Chemicals Accidents, 2014.0"
+    }
+  },
+  {
+    "to_embed": "ALOHA Software for Emergency Response Planning",
+    "metadata": {
+      "id": "r296",
+      "title": "Data Input Errors",
+      "description": "Incorrect or incomplete data input into ALOHA software can lead to flawed predictions, compromising the effectiveness of emergency response and evacuation plans.",
+      "context": "()",
+      "source": "Application of ALOHA in Emergency Response for Hazardous Chemicals Accidents, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Combat Strategy Simulation",
+    "metadata": {
+      "id": "r297",
+      "title": "Over-Reliance on Simulation",
+      "description": "Excessive dependence on simulations could lead to neglecting real-world factors and unforeseen variables, potentially causing inaccurate strategies.",
+      "context": "()",
+      "source": "Models of conflict, with explicit representation of command and control capabilities and vulnerabilities, 1981.0"
+    }
+  },
+  {
+    "to_embed": "Uncertainty Management in Social Systems",
+    "metadata": {
+      "id": "r298",
+      "title": "Model Inaccuracy",
+      "description": "The qualitative model might not accurately represent the complexities of the social system, leading to flawed predictions and potentially harmful interventions.",
+      "context": "()",
+      "source": "COMMON - SENSE LOGIC FOR MANAGING UNCERTAINTY, 2004.0"
+    }
+  },
+  {
+    "to_embed": "Intelligent Disaster Prevention System",
+    "metadata": {
+      "id": "r299",
+      "title": "Privacy Violation",
+      "description": "Continuous monitoring via sensors (cameras, microphones) can lead to privacy violations, especially if data is not securely stored or used.",
+      "context": "()",
+      "source": "Life and property intelligent disaster-preventing protection hedging care management system, 2012.0"
+    }
+  },
+  {
+    "to_embed": "Intelligent Disaster Prevention System",
+    "metadata": {
+      "id": "r300",
+      "title": "False Alarms",
+      "description": "Sensor inaccuracies or misinterpretations of data can lead to frequent false alarms, causing user fatigue and distrust in the system.",
+      "context": "()",
+      "source": "Life and property intelligent disaster-preventing protection hedging care management system, 2012.0"
+    }
+  },
+  {
+    "to_embed": "Intelligent Disaster Prevention System",
+    "metadata": {
+      "id": "r301",
+      "title": "System Failure",
+      "description": "Reliance on the system can create vulnerability; system failures due to power outages, network issues, or device malfunctions can compromise safety.",
+      "context": "()",
+      "source": "Life and property intelligent disaster-preventing protection hedging care management system, 2012.0"
+    }
+  },
+  {
+    "to_embed": "Ethical Implications of Facial Recognition & Contact Tracing",
+    "metadata": {
+      "id": "r302",
+      "title": "Privacy Violation",
+      "description": "Facial recognition and contact tracing technologies can lead to privacy violations through mass surveillance and potential misuse of personal data, impacting civil liberties and individual freedoms.",
+      "context": "()",
+      "source": "Collective Organizing and Social Responsibility at CSCW, 2020.0"
+    }
+  },
+  {
+    "to_embed": "Info Warfare & Assurance Analysis",
+    "metadata": {
+      "id": "r303",
+      "title": "Misinformation Risk",
+      "description": "Analysis may be exploited to spread misinformation, manipulate public opinion, or develop more effective offensive information warfare tactics, leading to increased social and political instability.",
+      "context": "()",
+      "source": "Survey of Information Warfare, Information Operations and Information Assurance, 1999.0"
+    }
+  },
+  {
+    "to_embed": "AI for Population Density Management",
+    "metadata": {
+      "id": "r304",
+      "title": "Potential for misuse of control.",
+      "description": "The developed control systems may not be applied to the right problems or may be misused, leading to unintended negative consequences and social control.",
+      "context": "()",
+      "source": "New in Degree, But Not in Kind, 2016.0"
+    }
+  },
+  {
+    "to_embed": "AI for Enhanced Legislative Responsiveness",
+    "metadata": {
+      "id": "r305",
+      "title": "Data Bias Risk",
+      "description": "AI models trained on biased legislative data may perpetuate inequalities in occupational therapy services, disadvantaging certain consumer groups.",
+      "context": "()",
+      "source": "Collaborating for political action., 1991.0"
+    }
+  },
+  {
+    "to_embed": "AI-driven Wargaming Simulation",
+    "metadata": {
+      "id": "r306",
+      "title": "Over-reliance on Simulation",
+      "description": "Over-reliance on the AI simulation could lead to neglecting other crucial factors in real-world conflicts or misinterpreting the model's output as definitive predictions.",
+      "context": "()",
+      "source": "Models of defeat, 2002.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Information Warfare",
+    "metadata": {
+      "id": "r307",
+      "title": "Increased Manipulation Risk",
+      "description": "Risk of increased manipulation and disinformation campaigns due to AI's ability to generate and disseminate convincing but false information, potentially destabilizing societies.",
+      "context": "()",
+      "source": "Information Warfare: Cyberattacks on Sony, 2015.0"
+    }
+  },
+  {
+    "to_embed": "Multi-agent Training for Disaster Incident Command",
+    "metadata": {
+      "id": "r308",
+      "title": "Over-Reliance on Simulation",
+      "description": "Incident commanders may become overly reliant on the simulated environment, leading to a potential disconnect from the realities and complexities of actual disaster scenarios.",
+      "context": "()",
+      "source": "Using multiagent teams to improve the training of incident commanders, 2006.0"
+    }
+  },
+  {
+    "to_embed": "Multi-agent Training for Disaster Incident Command",
+    "metadata": {
+      "id": "r309",
+      "title": "Data Privacy Concerns",
+      "description": "Collection and storage of trainee performance data could raise privacy concerns, especially if sensitive personal or operational information is involved, requiring robust data protection measures.",
+      "context": "()",
+      "source": "Using multiagent teams to improve the training of incident commanders, 2006.0"
+    }
+  },
+  {
+    "to_embed": "AI for Efficient IP Arbitration",
+    "metadata": {
+      "id": "r310",
+      "title": "Bias and Fairness Concerns",
+      "description": "AI algorithms in arbitration may exhibit bias, leading to unfair outcomes. Lack of transparency in AI decision-making processes can erode trust and undermine the legitimacy of arbitration.",
+      "context": "()",
+      "source": "Arbitraje y propiedad intelectual: consideraciones procesales y desafíos para un arbitraje eficiente, 2018.0"
+    }
+  },
+  {
+    "to_embed": "AI for Improved Conflict Intelligence",
+    "metadata": {
+      "id": "r311",
+      "title": "Information Distortion Risk",
+      "description": "AI analysis could lead to information distortion or suppression of uncertainty, resulting in commander overconfidence or underconfidence and flawed strategic decisions.",
+      "context": "(Under-confidence: the intelligence officer communicates the uncertainty, and the commander disregards the information because it is uncertain; and Over- confidence: the intelligence officer suppresses the uncertainty, and the commander takes the information at face value.)",
+      "source": "Pitfalls in the Use of Imperfect Information, 1988.0"
+    }
+  },
+  {
+    "to_embed": "Cloud Computing Integrated Strategy",
+    "metadata": {
+      "id": "r312",
+      "title": "Data Security Risks",
+      "description": "The risk of data breaches and unauthorized access when sensitive government or corporate information is stored and processed in the cloud environment.",
+      "context": "()",
+      "source": "Integrated Solving Strategy for Cloud Computing, 2010.0"
+    }
+  },
+  {
+    "to_embed": "Forecasting Displacement with Agent-Based Social Simulation",
+    "metadata": {
+      "id": "r313",
+      "title": "Ethical Data Use Concerns",
+      "description": "Potential for misuse of predictive data to justify discriminatory policies or restrict the movement of vulnerable populations based on modeled predictions.",
+      "context": "Humanitarian crisis, Accountability(With over 79 million people forcibly displaced, forced human migration becomes a common issue in the modern world and a serious challenge for the global community.)",
+      "source": "P-Flee: An Efficient Parallel Algorithm for Simulating Human Migration, 2021.0"
+    }
+  },
+  {
+    "to_embed": "IT Investment & Skills Development",
+    "metadata": {
+      "id": "r314",
+      "title": "Skills Gaps Risk",
+      "description": "Without adequate skills development, IT investments may not yield the desired results, leading to inefficient resource allocation and missed opportunities.",
+      "context": "()",
+      "source": "IT-satsing - kompetanseutvikling i framtiden, 2006.0"
+    }
+  },
+  {
+    "to_embed": "AI for Collaborative Problem Solving Enhancement",
+    "metadata": {
+      "id": "r315",
+      "title": "Bias Amplification",
+      "description": "AI algorithms may inadvertently reinforce existing biases within the collaborative group, leading to unfair or suboptimal solutions that reflect skewed perspectives.",
+      "context": "()",
+      "source": "On Being Responsible, 1992.0"
+    }
+  },
+  {
+    "to_embed": "Causality & Personal Experience Analysis",
+    "metadata": {
+      "id": "r316",
+      "title": "Misinterpretation Risk",
+      "description": "The AI might misinterpret nuanced personal experiences leading to flawed conclusions about causal relationships and reinforcing existing biases.",
+      "context": "()",
+      "source": "The Explanation of Social Action, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Authority & Experience Data Analysis",
+    "metadata": {
+      "id": "r317",
+      "title": "Authority Bias",
+      "description": "AI could over-rely on 'authority' sources, ignoring valid but less-authoritative experiential data, leading to a biased or incomplete picture.",
+      "context": "()",
+      "source": "The Explanation of Social Action, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Perceptual Bias Analysis",
+    "metadata": {
+      "id": "r318",
+      "title": "Reinforced Stereotypes",
+      "description": "If not carefully designed, AI analysis of perceptual biases could inadvertently reinforce existing stereotypes or create new, unintended forms of discrimination.",
+      "context": "()",
+      "source": "The Explanation of Social Action, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Action-World Interaction Analysis",
+    "metadata": {
+      "id": "r319",
+      "title": "Oversimplification Risk",
+      "description": "AI models may oversimplify complex interactions, failing to account for unforeseen factors, leading to inaccurate predictions about action consequences.",
+      "context": "()",
+      "source": "The Explanation of Social Action, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Social Aesthetics Framework Generation",
+    "metadata": {
+      "id": "r320",
+      "title": "Cultural Homogenization",
+      "description": "The AI framework could promote cultural homogenization by emphasizing certain shared values over others, potentially marginalizing minority or dissenting viewpoints.",
+      "context": "()",
+      "source": "The Explanation of Social Action, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Valence & Habit Analysis",
+    "metadata": {
+      "id": "r321",
+      "title": "Manipulation Risk",
+      "description": "Understanding valence and habit formation could be used to manipulate individuals by exploiting their preferences and habits, raising ethical concerns.",
+      "context": "()",
+      "source": "The Explanation of Social Action, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Social Field & Game Modeling",
+    "metadata": {
+      "id": "r322",
+      "title": "Strategic Exploitation",
+      "description": "AI modeling of social fields and games could be used to exploit strategic advantages, potentially leading to unfair or harmful outcomes for certain groups.",
+      "context": "()",
+      "source": "The Explanation of Social Action, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Emergency Response Virtual Environment (ERVE)",
+    "metadata": {
+      "id": "r323",
+      "title": "Data Security Risk",
+      "description": "The system's integration of sensitive facility data and live camera feeds presents a risk of unauthorized access, potentially compromising security and privacy.",
+      "context": "()",
+      "source": "The Application and Impact of Data Conversion Research and Analysis Techniques in Support of Homeland Security, 2007.0"
+    }
+  },
+  {
+    "to_embed": "Emergency Response Virtual Environment (ERVE)",
+    "metadata": {
+      "id": "r324",
+      "title": "System Failure",
+      "description": "Reliance on a complex technological system could lead to failure during a critical event, hindering response efforts if the system malfunctions or becomes inaccessible.",
+      "context": "()",
+      "source": "The Application and Impact of Data Conversion Research and Analysis Techniques in Support of Homeland Security, 2007.0"
+    }
+  },
+  {
+    "to_embed": "Ethical IT Management & Security",
+    "metadata": {
+      "id": "r325",
+      "title": "Data misuse",
+      "description": "Lack of ethical guidelines can lead to data misuse, privacy violations, and exploitation of vulnerable populations.",
+      "context": "()",
+      "source": "Current Security Management & Ethical Issues of Information Technology, 2003.0"
+    }
+  },
+  {
+    "to_embed": "Robotics in Urban Search and Rescue",
+    "metadata": {
+      "id": "r326",
+      "title": "Limited Robot Integration",
+      "description": "Operators may struggle to integrate the robot's perspective, leading to incomplete understanding and reliance on team communication to compensate for this lack of situation awareness.",
+      "context": "()",
+      "source": "Moonlight in Miami: Field Study of Human-Robot Interaction in the Context of an Urban Search and Rescue Disaster Response Training Exercise, 2004.0"
+    }
+  },
+  {
+    "to_embed": "Robust Game Theory Solutions",
+    "metadata": {
+      "id": "r327",
+      "title": "Model Oversimplification",
+      "description": "Reliance on computationally complex or overly simplified models may misrepresent reality, leading to flawed conclusions and ineffective solutions in practice.",
+      "context": "()",
+      "source": "Beyond nash equilibrium: solution concepts for the 21st century, 2008.0"
+    }
+  },
+  {
+    "to_embed": "Simulation for Military Decision-Making",
+    "metadata": {
+      "id": "r328",
+      "title": "Over-Reliance on Model",
+      "description": "Over-reliance on the simulation may lead to neglecting real-world factors not captured in the model, resulting in flawed decisions.",
+      "context": "()",
+      "source": "A simulation study of organizational decision making under conditions of uncertainty and ambiguity ., 1983.0"
+    }
+  },
+  {
+    "to_embed": "AI Book Recommendation System",
+    "metadata": {
+      "id": "r329",
+      "title": "Algorithmic Bias",
+      "description": "Biased training data can lead to skewed recommendations, limiting exposure to diverse perspectives and reinforcing existing stereotypes, hindering intellectual growth.",
+      "context": "()",
+      "source": "The New Improved Big6 Workshop Handbook. Professional Growth Series., 1999.0"
+    }
+  },
+  {
+    "to_embed": "AI for Medication Prescribing Communication Analysis",
+    "metadata": {
+      "id": "r330",
+      "title": "Misinterpretation Risk",
+      "description": "The linguistic model might misinterpret nuances in communication, leading to incorrect diagnoses of communication failures and potentially flawed interventions.",
+      "context": "()",
+      "source": "A Language Based Model for Analysis of Communication Intensive Processes in Health Care, 2016.0"
+    }
+  },
+  {
+    "to_embed": "AI for Medication Prescribing Communication Analysis",
+    "metadata": {
+      "id": "r331",
+      "title": "Data Bias Risk",
+      "description": "The model may be trained on biased data, leading to inaccurate results, particularly when used with diverse populations.",
+      "context": "()",
+      "source": "A Language Based Model for Analysis of Communication Intensive Processes in Health Care, 2016.0"
+    }
+  },
+  {
+    "to_embed": "Ethical Technology Management Education",
+    "metadata": {
+      "id": "r332",
+      "title": "Insufficient Practical Application",
+      "description": "Education may remain theoretical without sufficient practical application, potentially failing to translate into tangible improvements in ethical technology management in real-world scenarios.",
+      "context": "()",
+      "source": "Ethics and Engineering: 1. Introduction to Ethics and Engineering, 2012.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Dynamic SCM Collaboration",
+    "metadata": {
+      "id": "r333",
+      "title": "Over-Reliance on Data",
+      "description": "Excessive reliance on ubiquitous data collection may lead to vulnerabilities if the data streams are compromised or manipulated, causing instability and incorrect decision-making.",
+      "context": "()",
+      "source": "Dynamic collaboration from Scientists' Eyes, 2004.0"
+    }
+  },
+  {
+    "to_embed": "Human Factors for Enhanced Homeland Security",
+    "metadata": {
+      "id": "r334",
+      "title": "Performance Variability",
+      "description": "Over-reliance on human performance metrics without considering individual variability may lead to unfair assessments or inadequate training, compromising security.",
+      "context": "()",
+      "source": "Human Factors of Homeland Security, 2007.0"
+    }
+  },
+  {
+    "to_embed": "AI for Infantry Squad Leader Support",
+    "metadata": {
+      "id": "r335",
+      "title": "Bias in Target Identification",
+      "description": "AI systems may exhibit biases in target identification, leading to unfair or discriminatory targeting practices, potentially harming civilian populations.",
+      "context": "()",
+      "source": "CRITICAL COMBAT PERFORMANCES, KNOWLEDGES, AND SKILLS REQUIRED OF THE INFANTRY RIFLE SQUAD LEADER: OBSERVATION, COMBAT INTELLIGENCE AND REPORTING, 1968.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Personalized Learning",
+    "metadata": {
+      "id": "r336",
+      "title": "Bias Amplification",
+      "description": "Recommendation algorithms may reinforce existing biases if the training data is skewed, leading to limited exposure to diverse perspectives and knowledge.",
+      "context": "()",
+      "source": "The dynamics of prejudice., 1982.0"
+    }
+  },
+  {
+    "to_embed": "AI for Enhanced Inter-Team Communication",
+    "metadata": {
+      "id": "r337",
+      "title": "Misinterpretation Risk",
+      "description": "Reliance on AI-driven communication tools may lead to misinterpretation of nuances, context, and intent, potentially causing critical errors in high-stakes environments like space missions or military operations.",
+      "context": "()",
+      "source": "Communicating Medical Needs to Non-Medical Managers, 2004.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Problem-Solving Education",
+    "metadata": {
+      "id": "r338",
+      "title": "Bias Amplification",
+      "description": "If AI tools are trained on biased data, they may amplify existing inequalities in problem-solving education, disadvantaging certain groups and perpetuating unfair outcomes.",
+      "context": "()",
+      "source": "Solving Complex Problems Requires Good People, Good Processes, 1992.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Veteran IS Program Recruitment",
+    "metadata": {
+      "id": "r339",
+      "title": "Skill Mismatch Risk",
+      "description": "AI algorithms might misinterpret or undervalue certain veteran skills, leading to inaccurate program recommendations and potentially excluding qualified individuals from IS programs.",
+      "context": "()",
+      "source": "The Challenges and Opportunities of IS Programs in Addressing Societal Challenge of Military Veteran Undergraduate Education & Integration, 2020.0"
+    }
+  },
+  {
+    "to_embed": "Adaptive Cooperative Engineering Applications",
+    "metadata": {
+      "id": "r340",
+      "title": "Semantic Error Risks",
+      "description": "Risk of semantic errors in transactions despite correction mechanisms, especially with dynamic application nature, potentially leading to data inconsistencies and incorrect outputs.",
+      "context": "()",
+      "source": "Des mecanismes du support adaptatif pour l'ingenierie cooperative : une approche basee sur les systemes multi-agents, 1996.0"
+    }
+  },
+  {
+    "to_embed": "AI for Human-Centric Product Design",
+    "metadata": {
+      "id": "r341",
+      "title": "Data Bias",
+      "description": "AI models trained on biased data can perpetuate existing inequalities, leading to products that are not inclusive or equitable for all users.",
+      "context": "()",
+      "source": "Regulars columnist: Back story, 2021.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Military Decision-Making",
+    "metadata": {
+      "id": "r342",
+      "title": "Bias Amplification",
+      "description": "Risk of biased algorithms leading to unfair or discriminatory outcomes in military operations, potentially harming civilian populations.",
+      "context": "()",
+      "source": "Methods and techniques most usually applied as aids in decision-making and researches in military organization systems, 1997.0"
+    }
+  },
+  {
+    "to_embed": "Web-Based Helpdesk for IT Support Improvement",
+    "metadata": {
+      "id": "r343",
+      "title": "Data Privacy Risk",
+      "description": "Sensitive IT problem details could be exposed if the web application lacks adequate security measures, potentially violating employee privacy.",
+      "context": "()",
+      "source": "Helpdesk System At PT Himalaya Everest Jaya Jakarta, 2019.0"
+    }
+  },
+  {
+    "to_embed": "AI for Social System Awareness & Participation",
+    "metadata": {
+      "id": "r344",
+      "title": "Manipulation & Bias",
+      "description": "AI could be used to subtly manipulate participants' understanding of social systems, leading to biased choices and unintended consequences within the group dynamics.",
+      "context": "()",
+      "source": "Awareness and Social Systems, 2001.0"
+    }
+  },
+  {
+    "to_embed": "Charter-based Legal Reasoning AI",
+    "metadata": {
+      "id": "r345",
+      "title": "Bias and Misinterpretation",
+      "description": "AI may exhibit bias in its analysis of Charter cases, leading to misinterpretations and unfair legal outcomes. This can harm individuals whose rights are at stake.",
+      "context": "()",
+      "source": "Reasoning with the Charter, 1992.0"
+    }
+  },
+  {
+    "to_embed": "Land Rehabilitation via Machinery",
+    "metadata": {
+      "id": "r346",
+      "title": "Ecosystem destruction",
+      "description": "Heavy machinery can destroy existing ecosystems by uprooting trees and compacting soil, leading to habitat loss and decreased biodiversity.",
+      "context": "(Two people stood in the midst of what looked like a war zone.)",
+      "source": "Range management and image., 1992.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Novel Recommendation and Safe Downloads",
+    "metadata": {
+      "id": "r347",
+      "title": "Filter Bubble Risk",
+      "description": "The system may over-personalize recommendations, creating filter bubbles and limiting exposure to diverse literature. This can reinforce existing biases and narrow user interests.",
+      "context": "()",
+      "source": "A Bone to Pick, 1999.0"
+    }
+  },
+  {
+    "to_embed": "AI Understanding Creative Experience",
+    "metadata": {
+      "id": "r348",
+      "title": "Misinterpretation of Creativity",
+      "description": "AI could misinterpret creative signals, leading to suppression of unconventional ideas, or undue influence on creative processes.",
+      "context": "()",
+      "source": "On the Troublesome \"X\", 1937.0"
+    }
+  },
+  {
+    "to_embed": "Safe Online Book Access",
+    "metadata": {
+      "id": "r349",
+      "title": "Copyright Infringement",
+      "description": "The risk involves potential copyright infringement and unauthorized distribution of copyrighted material if not properly managed.",
+      "context": "()",
+      "source": "Power Of Reinforcement The, 2016.0"
+    }
+  },
+  {
+    "to_embed": "Insurgency Reporting Mobile App",
+    "metadata": {
+      "id": "r350",
+      "title": "Misinformation Risk",
+      "description": "Potential for false or misleading reports, leading to wasted resources, misdirected efforts, and erosion of public trust in the reporting system.",
+      "context": "(Insurgency has bedeviled our national economy and human peaceful existence in Nigeria.)",
+      "source": "Tackling Boko Haram insurgency through intelligent reporting system, 2020.0"
+    }
+  },
+  {
+    "to_embed": "Insurgency Reporting Mobile App",
+    "metadata": {
+      "id": "r351",
+      "title": "Privacy Violations",
+      "description": "Risk of exposing reporters to danger if their identities are compromised, potentially leading to retaliation from insurgents or misuse of personal data.",
+      "context": "(Insurgency has bedeviled our national economy and human peaceful existence in Nigeria.)",
+      "source": "Tackling Boko Haram insurgency through intelligent reporting system, 2020.0"
+    }
+  },
+  {
+    "to_embed": "CBR-Argumentation for Organ Transplant Decisions",
+    "metadata": {
+      "id": "r352",
+      "title": "Bias in Case Evaluation",
+      "description": "The CBR component may introduce bias if past cases used for evaluating arguments reflect existing inequalities or prejudices in organ allocation, leading to unfair or discriminatory decisions.",
+      "context": "()",
+      "source": "CBR and Argument Schemes for Collaborative Decision Making, 2006.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Education for African Development",
+    "metadata": {
+      "id": "r353",
+      "title": "Data Bias",
+      "description": "AI models trained on biased data may perpetuate inequalities, leading to inaccurate assessment of cognitive abilities and reinforcing existing stereotypes in Africa.",
+      "context": "()",
+      "source": "Images and Imagination in the Actualization of Potentials., 2008.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Education for African Development",
+    "metadata": {
+      "id": "r354",
+      "title": "Limited Access",
+      "description": "Unequal access to technology and infrastructure may limit the reach of AI-driven educational programs, exacerbating existing disparities in educational opportunities across Africa.",
+      "context": "()",
+      "source": "Images and Imagination in the Actualization of Potentials., 2008.0"
+    }
+  },
+  {
+    "to_embed": "AI-Assisted Website Development for Nonprofits",
+    "metadata": {
+      "id": "r355",
+      "title": "Data Security Risks",
+      "description": "The websites created may be vulnerable to data breaches or misuse of user data, potentially exposing sensitive information and harming the reputation of the nonprofits and the library.",
+      "context": "()",
+      "source": "LIBRARIE$ + NONPROFIT$ = Add Up to Profitable COMMUNITY PARTNERSHIP$, 2005.0"
+    }
+  },
+  {
+    "to_embed": "AI for Crisis Communication Education",
+    "metadata": {
+      "id": "r356",
+      "title": "Skill Gaps",
+      "description": "Lack of adequately trained personnel may hinder the successful implementation of the AI-driven info-communication system, reducing its efficiency during critical events.",
+      "context": "()",
+      "source": "Analysis of Possibilities in Postgraduate Specialisation Programmes Summarising Government Aimed Info-communication Systems and Services: Fundaments of theTraining, Abilities, and Requirements, 2019.0"
+    }
+  },
+  {
+    "to_embed": "File Maintenance and Updating Programs",
+    "metadata": {
+      "id": "r357",
+      "title": "Data Integrity Risk",
+      "description": "Potential for data corruption or loss if the programs are not implemented or used correctly, especially during file updates and maintenance.",
+      "context": "()",
+      "source": "File maintenance using a line editor, 1979.0"
+    }
+  },
+  {
+    "to_embed": "Analyzing Glass Ceiling Effects on Teacher Empowerment",
+    "metadata": {
+      "id": "r358",
+      "title": "Potential Bias in Data Interpretation",
+      "description": "SPSS 22, like any statistical tool, can be misused, leading to misinterpretations of the relationship between the 'glass ceiling' and teacher empowerment if statistical assumptions are not properly checked.",
+      "context": "()",
+      "source": "Kariyer Engeli Olarak Cam Tavanin Okullarda Personel Güçlendirmeye Etkisi, 2021.0"
+    }
+  },
+  {
+    "to_embed": "Decision Making Noise Reduction",
+    "metadata": {
+      "id": "r359",
+      "title": "Potential for Bias Amplification",
+      "description": "If not designed carefully, the process of reducing noise in decisions could inadvertently amplify existing biases present in the input data or the decision-makers themselves.",
+      "context": "()",
+      "source": "Reducing Noise in Decision Making: Interaction, 2016.0"
+    }
+  },
+  {
+    "to_embed": "Web-Based Insurance Data Processing Automation",
+    "metadata": {
+      "id": "r360",
+      "title": "Data Security Risks",
+      "description": "Centralized data processing can increase the risk of data breaches and unauthorized access, compromising sensitive insurance information.",
+      "context": "()",
+      "source": "A web-based task-tracking collaboration system for the Florida Public Hurricane Loss Model, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Web-Based Insurance Data Processing Automation",
+    "metadata": {
+      "id": "r361",
+      "title": "System Dependence",
+      "description": "Over-reliance on the automated system can disrupt operations if the system fails, causing delays and potential data loss.",
+      "context": "()",
+      "source": "A web-based task-tracking collaboration system for the Florida Public Hurricane Loss Model, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Mobile-Enterprise Data Synchronization and Conflict Resolution",
+    "metadata": {
+      "id": "r362",
+      "title": "Data Integrity Risks",
+      "description": "Risk of data corruption or loss during synchronization, particularly if conflict resolution mechanisms are not robust, leading to inaccurate information.",
+      "context": "()",
+      "source": "Systeme et procede de mise a jour de logiciel et de donnees mobiles, 2004.0"
+    }
+  },
+  {
+    "to_embed": "AI for Information Management",
+    "metadata": {
+      "id": "r363",
+      "title": "Bias in AI results",
+      "description": "AI algorithms may perpetuate existing biases in data, leading to skewed search results or recommendations that disadvantage certain groups or perspectives within the organization.",
+      "context": "()",
+      "source": "The Onus of Explanation, 2021.0"
+    }
+  },
+  {
+    "to_embed": "Digital Library for Philosophy Books",
+    "metadata": {
+      "id": "r364",
+      "title": "Malware Risk",
+      "description": "Downloading books from untrusted sources exposes users to malware infections, potentially damaging devices and compromising personal data.",
+      "context": "()",
+      "source": "Philosophy A Beginner S Guide, 2016.0"
+    }
+  },
+  {
+    "to_embed": "Crowdsourced Infrastructure Assessment WebGIS",
+    "metadata": {
+      "id": "r365",
+      "title": "Data Accuracy Risk",
+      "description": "Crowdsourced data may be inaccurate or biased, leading to incorrect shortest path calculations and potentially hindering emergency response efforts, thus creating safety risks.",
+      "context": "()",
+      "source": "GOOGLE MAPS FOR CROWDSOURCED EMERGENCY ROUTING, 2012.0"
+    }
+  },
+  {
+    "to_embed": "AI for Conceptual Framework Analysis",
+    "metadata": {
+      "id": "r366",
+      "title": "Bias Reinforcement",
+      "description": "AI analysis might reinforce existing biases within the data used to evaluate the frameworks, leading to the perpetuation of inadequate or harmful perspectives.",
+      "context": "()",
+      "source": "Kan Gud existera, 2006.0"
+    }
+  },
+  {
+    "to_embed": "Bayesian Model for Pandemic Cause Analysis",
+    "metadata": {
+      "id": "r367",
+      "title": "Data Bias Risk",
+      "description": "The Bayesian model may be susceptible to biases in the data used, leading to inaccurate or skewed conclusions about the pandemic's causes.",
+      "context": "()",
+      "source": "What Would Say to the Reverend Thomas Bayes About the Emergence of the Epidemic-2020?, 2020.0"
+    }
+  },
+  {
+    "to_embed": "Living System Model: Risk of oversimplification leading to flawed situation assessment and predictions.",
+    "metadata": {
+      "id": "r368",
+      "title": "Oversimplification Risk",
+      "description": "The living system model may oversimplify complex adversarial interactions, leading to flawed situation assessment and inaccurate predictions, potentially resulting in suboptimal decisions and strategic missteps.",
+      "context": "()",
+      "source": "Effects-Based Operations at the Operational Level of War: Exploring the Living System Alternative, 2008.0"
+    }
+  },
+  {
+    "to_embed": "Automatic Clutch Emergency Control System",
+    "metadata": {
+      "id": "r369",
+      "title": "System Malfunction",
+      "description": "Failure of the control system may lead to unexpected clutch engagement or disengagement, potentially causing a loss of control or sudden deceleration, especially at high speeds.",
+      "context": "()",
+      "source": "Control very particular control device for an automatic clutch, 1997.0"
+    }
+  },
+  {
+    "to_embed": "Online Conversation Monitoring and Management System",
+    "metadata": {
+      "id": "r370",
+      "title": "Privacy Violation Risk",
+      "description": "Aggregating and scoring online conversations could expose private data and opinions, leading to privacy violations and potential reputational damage to individuals.",
+      "context": "()",
+      "source": "Systems and methods for measuring and managing distributed online conversations, 2009.0"
+    }
+  },
+  {
+    "to_embed": "Online Conversation Monitoring and Management System",
+    "metadata": {
+      "id": "r371",
+      "title": "Bias Amplification Risk",
+      "description": "The scoring metrics used could inadvertently amplify existing biases in online conversations, leading to unfair or discriminatory outcomes for certain entities or individuals.",
+      "context": "()",
+      "source": "Systems and methods for measuring and managing distributed online conversations, 2009.0"
+    }
+  },
+  {
+    "to_embed": "Argument Maps for ATM Liability Assessment",
+    "metadata": {
+      "id": "r372",
+      "title": "Potential Misinterpretation",
+      "description": "Argument maps could oversimplify complex legal concepts, potentially leading to misinterpretations or incorrect application of liability principles in ATM.",
+      "context": "()",
+      "source": "Assessing Liability with Argumentation Maps: An Application in Aviation Law, 2013.0"
+    }
+  },
+  {
+    "to_embed": "Enhancing CS Curricula with CSG-Ed Integration",
+    "metadata": {
+      "id": "r373",
+      "title": "Bias in CSG Implementation",
+      "description": "The selection and implementation of CSG examples may reflect biases, leading to a skewed understanding of social good and potentially reinforcing inequalities.",
+      "context": "()",
+      "source": "Community Input into CS2023 Addendum Article on Computing for Social Good Education, 2022.0"
+    }
+  },
+  {
+    "to_embed": "Data Analysis Environment Management risks loss of analysis context if environments aren't adequately documented.",
+    "metadata": {
+      "id": "r374",
+      "title": "Loss of Context",
+      "description": "Without proper documentation and metadata, restoring an analysis environment may lead to a loss of context, hindering understanding and reproducibility of the analysis.",
+      "context": "()",
+      "source": "Role of environments in managing data analysis, 1984.0"
+    }
+  },
+  {
+    "to_embed": "AI for Psychology Student Problem-Solving Analysis",
+    "metadata": {
+      "id": "r375",
+      "title": "Data Privacy Risks",
+      "description": "The use of AI to analyze student data poses risks to privacy and confidentiality, especially if data security measures are inadequate or data is used for unintended purposes.",
+      "context": "()",
+      "source": "LA SOLUCIÓN DE PROBLEMAS COGNITIVOS EN ESTUDIANTES DE PSICOLOGÍA, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Insurance Data Management System",
+    "metadata": {
+      "id": "r376",
+      "title": "Limited Scalability",
+      "description": "Constraints in scaling database structures may restrict adapting to unforeseen data requirements, potentially disrupting operational programs and management system.",
+      "context": "()",
+      "source": "OMNIBUS: a large data base management system, 1899.0"
+    }
+  },
+  {
+    "to_embed": "Insurance Data Management System",
+    "metadata": {
+      "id": "r377",
+      "title": "Data Corruption",
+      "description": "Improper attempts to alter data, incorrect updates, or system failures could corrupt data, leading to inaccurate reporting and flawed decision-making.",
+      "context": "()",
+      "source": "OMNIBUS: a large data base management system, 1899.0"
+    }
+  },
+  {
+    "to_embed": "AI for Public Security Rapid Response Enhancement",
+    "metadata": {
+      "id": "r378",
+      "title": "Data Privacy Risks",
+      "description": "Potential for misuse of personal data collected by AI systems, leading to privacy violations and erosion of public trust if not handled ethically and securely.",
+      "context": "()",
+      "source": "Constructing Public Security Organs' Rapid Response Mechanism, 2010.0"
+    }
+  },
+  {
+    "to_embed": "AI for Public Security Rapid Response Enhancement",
+    "metadata": {
+      "id": "r379",
+      "title": "Bias Amplification",
+      "description": "Risk of biased AI algorithms perpetuating existing inequalities and discriminatory practices in law enforcement, leading to unfair targeting of specific communities.",
+      "context": "()",
+      "source": "Constructing Public Security Organs' Rapid Response Mechanism, 2010.0"
+    }
+  },
+  {
+    "to_embed": "Communication Process Modeling Software",
+    "metadata": {
+      "id": "r380",
+      "title": "Model Oversimplification",
+      "description": "The model's simplification of complex real-world communication processes could lead to inaccurate predictions or inappropriate adaptations in sensitive situations.",
+      "context": "()",
+      "source": "Информационные равновесия в коммуникационных системах, 2009.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Emergency Device Control",
+    "metadata": {
+      "id": "r381",
+      "title": "False Positives/Negatives",
+      "description": "Potential for incorrect emergency detection or failure to detect a genuine emergency, leading to inappropriate device actions or inaction, which could endanger the user.",
+      "context": "()",
+      "source": "ETERN DEGREE OF EVERGENCY, 2017.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Emergency Device Control",
+    "metadata": {
+      "id": "r382",
+      "title": "Privacy Breach",
+      "description": "Collection and analysis of sensitive sensor data (location, health metrics) creates a risk of privacy violations if the data is compromised, misused, or accessed without proper authorization.",
+      "context": "()",
+      "source": "ETERN DEGREE OF EVERGENCY, 2017.0"
+    }
+  },
+  {
+    "to_embed": "AI for Event Planning & Logistics",
+    "metadata": {
+      "id": "r383",
+      "title": "Data Privacy Risks",
+      "description": "Collection and analysis of event attendee data may raise privacy concerns if not handled securely and transparently by Logevent S.A.S.",
+      "context": "()",
+      "source": "Logevent S.A.S, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Restbus Simulation Framework for Vehicle Networks",
+    "metadata": {
+      "id": "r384",
+      "title": "Simulation Inaccuracy",
+      "description": "The simulation might not perfectly reflect real-world vehicle network behavior, leading to inaccurate test results and potential issues in the actual vehicle system.",
+      "context": "()",
+      "source": "Erstellung eines intelligenten Systems zur Generierung von Komponenten für formal beschriebene Fahrzeug-Netzwerke, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Restbus Simulation Framework for Vehicle Networks",
+    "metadata": {
+      "id": "r385",
+      "title": "Limited Scope of Simulation",
+      "description": "The framework might not cover all possible scenarios or edge cases, resulting in overlooking potential vulnerabilities or performance bottlenecks in the vehicle network.",
+      "context": "()",
+      "source": "Erstellung eines intelligenten Systems zur Generierung von Komponenten für formal beschriebene Fahrzeug-Netzwerke, 2011.0"
+    }
+  },
+  {
+    "to_embed": "AI-Powered Decision Support System",
+    "metadata": {
+      "id": "r386",
+      "title": "Model Bias",
+      "description": "The AI may introduce bias in solver selection, leading to suboptimal or unfair decisions if the AI's logic is flawed or trained on biased data.",
+      "context": "()",
+      "source": "의사결정지원시스템에서 직관적이고 사용자 친숙한 모델 해결을 위한 모델과 솔버의 유연한 통합에 대한 연구, 2005.0"
+    }
+  },
+  {
+    "to_embed": "AI-Powered Decision Support System",
+    "metadata": {
+      "id": "r387",
+      "title": "Over-Reliance on Automation",
+      "description": "Users may become overly reliant on the automated system, neglecting to critically evaluate the model solutions or understand the underlying assumptions.",
+      "context": "()",
+      "source": "의사결정지원시스템에서 직관적이고 사용자 친숙한 모델 해결을 위한 모델과 솔버의 유연한 통합에 대한 연구, 2005.0"
+    }
+  },
+  {
+    "to_embed": "Robots for Disaster Assessment and Recovery",
+    "metadata": {
+      "id": "r388",
+      "title": "Data interpretation bias",
+      "description": "Potential misinterpretation of sensor data from robots (e.g., ROVs, UAVs) could lead to inaccurate assessments and flawed decision-making during critical recovery phases.",
+      "context": "()",
+      "source": "Spatial hearing issues in sound reproduction, 2012.0"
+    }
+  },
+  {
+    "to_embed": "Robots for Disaster Assessment and Recovery",
+    "metadata": {
+      "id": "r389",
+      "title": "Operational failure risk",
+      "description": "Malfunctions or failures of the robots (ground, aerial, marine) in harsh post-disaster conditions could impede search efforts, potentially delaying assistance to victims.",
+      "context": "()",
+      "source": "Spatial hearing issues in sound reproduction, 2012.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced E-commerce Personalization",
+    "metadata": {
+      "id": "r390",
+      "title": "Data Privacy Risks",
+      "description": "Extensive data collection for personalization can lead to privacy violations and potential misuse of consumer data by e-commerce platforms.",
+      "context": "()",
+      "source": "YEM BİN YILA GİRERKEN TİCARETİN DEĞİŞEN YÜZÜ: E-TİCARET, 2001.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Problem-Oriented Patient Records",
+    "metadata": {
+      "id": "r391",
+      "title": "Enhanced Data Privacy",
+      "description": "The knowledge-based system's access to sensitive patient data increases the risk of privacy breaches and unauthorized access, potentially compromising patient confidentiality.",
+      "context": "()",
+      "source": "A problem-oriented, knowledge-based patient record system., 2002.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Problem-Oriented Patient Records",
+    "metadata": {
+      "id": "r392",
+      "title": "Algorithmic Bias",
+      "description": "AI algorithms may perpetuate existing biases in medical data, leading to unequal or discriminatory treatment of patients from certain demographics.",
+      "context": "()",
+      "source": "A problem-oriented, knowledge-based patient record system., 2002.0"
+    }
+  },
+  {
+    "to_embed": "AI-powered Cybersecurity Operations Center Deployment",
+    "metadata": {
+      "id": "r393",
+      "title": "False Positives & Negatives",
+      "description": "AI systems may generate false positives or negatives, leading to inefficient resource allocation or missed threats, thereby jeopardizing cyber investment protection.",
+      "context": "()",
+      "source": "Security operations centre: Situation awareness, threat intelligence and cybercrime, 2017.0"
+    }
+  },
+  {
+    "to_embed": "AI-powered Cybersecurity Operations Center Deployment",
+    "metadata": {
+      "id": "r394",
+      "title": "Over-Reliance on Automation",
+      "description": "Over-reliance on AI-driven automation may reduce human expertise and adaptability, hindering responses to novel or complex cyber-attacks that require nuanced analysis.",
+      "context": "()",
+      "source": "Security operations centre: Situation awareness, threat intelligence and cybercrime, 2017.0"
+    }
+  },
+  {
+    "to_embed": "AI-powered Cybersecurity Operations Center Deployment",
+    "metadata": {
+      "id": "r395",
+      "title": "Bias in AI Algorithms",
+      "description": "AI algorithms trained on biased data may exhibit prejudice in threat detection, leading to inadequate protection for certain systems or organizations and discriminatory security practices.",
+      "context": "()",
+      "source": "Security operations centre: Situation awareness, threat intelligence and cybercrime, 2017.0"
+    }
+  },
+  {
+    "to_embed": "Case-Mix Management Software",
+    "metadata": {
+      "id": "r396",
+      "title": "Data Errors",
+      "description": "Inaccurate data input or flawed software algorithms can lead to mismanaged case mixes, resulting in improper resource allocation and potential harm to patients.",
+      "context": "()",
+      "source": "Software reference guide: case-mix management., 1987.0"
+    }
+  },
+  {
+    "to_embed": "STPA-Sec for Cyber Security Risk Analysis",
+    "metadata": {
+      "id": "r397",
+      "title": "Incomplete Analysis",
+      "description": "If the multidisciplinary team lacks expertise or overlooks critical system aspects, the STPA-Sec analysis may be incomplete, leaving vulnerabilities undiscovered and potentially exploited.",
+      "context": "()",
+      "source": "Systems thinking for safety and security, 2013.0"
+    }
+  },
+  {
+    "to_embed": "STPA-Sec for Cyber Security Risk Analysis",
+    "metadata": {
+      "id": "r398",
+      "title": "Misinterpretation of Results",
+      "description": "Incorrect interpretation of STPA-Sec findings could lead to flawed security measures, failing to protect the system from disruptions, and resulting in financial or operational losses.",
+      "context": "()",
+      "source": "Systems thinking for safety and security, 2013.0"
+    }
+  },
+  {
+    "to_embed": "AI-driven Epidemic Data Integration",
+    "metadata": {
+      "id": "r399",
+      "title": "Data Privacy Risks",
+      "description": "AI integration of diverse data sources may lead to privacy breaches and misuse of sensitive health information if not properly secured and anonymized.",
+      "context": "()",
+      "source": "Digital Transformation of the Health Sector During the Covid-19 Pandemic in Saudi Arabia, 2022.0"
+    }
+  },
+  {
+    "to_embed": "Digital Health Platform Proliferation",
+    "metadata": {
+      "id": "r400",
+      "title": "Platform Redundancy",
+      "description": "Having 19 separate applications may lead to redundancy, confusion, and inefficient resource allocation, potentially hindering user adoption and overall effectiveness.",
+      "context": "()",
+      "source": "Digital Transformation of the Health Sector During the Covid-19 Pandemic in Saudi Arabia, 2022.0"
+    }
+  },
+  {
+    "to_embed": "Special Tool for Nut/Gasket Assembly",
+    "metadata": {
+      "id": "r401",
+      "title": "Tool Malfunction",
+      "description": "The tool may malfunction due to wear and tear or manufacturing defects, potentially leading to delays in assembly/disassembly processes and safety hazards for the user.",
+      "context": "()",
+      "source": "Special tool for assembling and disassembling nut and gasket in depth of slit, 2009.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Curriculum Personalization",
+    "metadata": {
+      "id": "r402",
+      "title": "Bias Amplification",
+      "description": "AI algorithms might amplify existing societal biases in curriculum design, leading to unequal educational opportunities and reinforcing social inequalities if the algorithm is not trained fairly.",
+      "context": "()",
+      "source": "and Design : Prec . sors and Futures . Proceedings of the Annual North American Meeting of the Society for General Systems, 2007.0"
+    }
+  },
+  {
+    "to_embed": "Automated Translation Post-Editing",
+    "metadata": {
+      "id": "r403",
+      "title": "Data Bias Risk",
+      "description": "The training data (sentence aligned parallel corpus) might contain biases, leading to skewed or unfair translations, perpetuating stereotypes or misrepresenting certain groups.",
+      "context": "()",
+      "source": "Post-Editing in the Current Translation Work Flow Information, 2017.0"
+    }
+  },
+  {
+    "to_embed": "Copyright Infringement Detection",
+    "metadata": {
+      "id": "r404",
+      "title": "False Positives",
+      "description": "The AI system may generate false positives, incorrectly identifying legitimate uses of copyrighted material (e.g., fair use, citations) as infringements. This could lead to unwarranted take-down requests.",
+      "context": "()",
+      "source": "AgentcitiesUK.net Challenge Day 2: e-Government and e-Democracy, 2005.0"
+    }
+  },
+  {
+    "to_embed": "Predictive Enemy Behavior Analysis",
+    "metadata": {
+      "id": "r405",
+      "title": "Data Bias & Misinterpretation",
+      "description": "Bias in initial data from the Worldwide Equipment Guide, or misinterpretation of patterns, could lead to inaccurate predictions and flawed operational decisions.",
+      "context": "()",
+      "source": "DETERMINATION OF THREATS AND RISKS IN CONDITIONS OF COMBAT OPER-ATIONS BY USING GEOSPATIAL ANALYSIS AND TIME ANALYSIS, 2019.0"
+    }
+  },
+  {
+    "to_embed": "Predictive Enemy Behavior Analysis",
+    "metadata": {
+      "id": "r406",
+      "title": "Over-Reliance on Predictions",
+      "description": "Over-reliance on predictive models may lead to neglecting other critical intelligence sources, creating vulnerabilities and hindering adaptability in dynamic combat situations.",
+      "context": "()",
+      "source": "DETERMINATION OF THREATS AND RISKS IN CONDITIONS OF COMBAT OPER-ATIONS BY USING GEOSPATIAL ANALYSIS AND TIME ANALYSIS, 2019.0"
+    }
+  },
+  {
+    "to_embed": "Predictive Enemy Behavior Analysis",
+    "metadata": {
+      "id": "r407",
+      "title": "Adversarial Adaptation",
+      "description": "The enemy may adapt its tactics upon realizing that its actions are being predicted, rendering the patterns identified through geospatial and time analysis obsolete.",
+      "context": "()",
+      "source": "DETERMINATION OF THREATS AND RISKS IN CONDITIONS OF COMBAT OPER-ATIONS BY USING GEOSPATIAL ANALYSIS AND TIME ANALYSIS, 2019.0"
+    }
+  },
+  {
+    "to_embed": "AI for Intelligence Analysis & Dissemination",
+    "metadata": {
+      "id": "r408",
+      "title": "Data Bias and Misinterpretation",
+      "description": "AI algorithms may perpetuate biases present in training data, leading to misinterpretations and potentially flawed intelligence assessments affecting tactical decisions.",
+      "context": "()",
+      "source": "Transforming the Intelligence Community, 2002.0"
+    }
+  },
+  {
+    "to_embed": "AI for Intelligence Reorganization",
+    "metadata": {
+      "id": "r409",
+      "title": "Over-Reliance on Automation",
+      "description": "Excessive automation may reduce human oversight, potentially overlooking critical nuances or contextual factors, which can lead to inaccurate intelligence assessments and strategic missteps.",
+      "context": "()",
+      "source": "Transforming the Intelligence Community, 2002.0"
+    }
+  },
+  {
+    "to_embed": "AI for Cultural Interaction Analysis",
+    "metadata": {
+      "id": "r410",
+      "title": "Bias Amplification",
+      "description": "AI models trained on biased historical data may perpetuate or amplify existing prejudices, leading to unjust or discriminatory outcomes.",
+      "context": "()",
+      "source": "Micro Essays [From the Editor], 2010.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Distance Learning for Social Sciences",
+    "metadata": {
+      "id": "r411",
+      "title": "Data Bias",
+      "description": "Potential for biased AI algorithms to perpetuate societal inequalities within the social humanitarian disciplines' educational content and assessment.",
+      "context": "()",
+      "source": "On the issue of practice-oriented education in distance learning, 2021.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Distance Learning for Social Sciences",
+    "metadata": {
+      "id": "r412",
+      "title": "Job Displacement",
+      "description": "Risk of diminishing human interaction and job displacement for educators due to increased automation in distance learning environments, impacting the teaching workforce.",
+      "context": "()",
+      "source": "On the issue of practice-oriented education in distance learning, 2021.0"
+    }
+  },
+  {
+    "to_embed": "Open Learning for Professionals",
+    "metadata": {
+      "id": "r413",
+      "title": "Bias Amplification",
+      "description": "Debates may amplify existing biases or inequalities if participants are not diverse or if the reification process doesn't address power dynamics.",
+      "context": "()",
+      "source": "The process of knowledge reification in human-human interaction, 1992.0"
+    }
+  },
+  {
+    "to_embed": "Information Ethics in Reverse Engineering Conflicts",
+    "metadata": {
+      "id": "r414",
+      "title": "Privacy Violations",
+      "description": "Reverse engineering can lead to privacy breaches through unauthorized access and misuse of sensitive data, potentially violating individual rights and corporate responsibility.",
+      "context": "()",
+      "source": "The Conflict in the Reverse Engineering of Software: Corporations and Information Ethics, 2006.0"
+    }
+  },
+  {
+    "to_embed": "Distributed Situation Detection with SCENE",
+    "metadata": {
+      "id": "r415",
+      "title": "Communication Overhead",
+      "description": "Introducing distributed communication can create overhead, potentially impacting performance if not properly managed or if communication costs outweigh processing gains.",
+      "context": "()",
+      "source": "An infrastructure for distributed rule-based situation management, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Aramis's Risk: High development costs and uncertain technological feasibility leading to project abandonment.",
+    "metadata": {
+      "id": "r416",
+      "title": "Technological and Economic Risks",
+      "description": "Aramis faced risks related to high development costs, technological challenges, and uncertain feasibility, which ultimately contributed to the project's abandonment despite significant investment.",
+      "context": "()",
+      "source": "Aramis, or the Love of Technology, 1993.0"
+    }
+  },
+  {
+    "to_embed": "Object Relations Analysis for Trauma Sense-Making",
+    "metadata": {
+      "id": "r417",
+      "title": "Subjective Interpretation Bias",
+      "description": "Risk of subjective interpretation and bias in analysis, potentially leading to inaccurate or incomplete understanding of trauma experiences and hindering effective therapeutic interventions.",
+      "context": "()",
+      "source": "Les objets de relation, 2002.0"
+    }
+  },
+  {
+    "to_embed": "Linear Amplifier Design with Logarithmic Compensation",
+    "metadata": {
+      "id": "r418",
+      "title": "Complexity Risks",
+      "description": "Increased complexity in circuit design and manufacturing might lead to potential errors and higher costs associated with implementation and maintenance of logarithmic compensation circuits.",
+      "context": "()",
+      "source": "The Need for Psychology in Research on Computer Supported Cooperative Work, 1998.0"
+    }
+  },
+  {
+    "to_embed": "Schematic Mapping for Incident Reporting",
+    "metadata": {
+      "id": "r419",
+      "title": "Misinterpretation Risk",
+      "description": "The schematic mapping tool's structured approach could lead to misinterpretation or oversimplification of complex events, potentially obscuring critical nuances and context.",
+      "context": "()",
+      "source": "THE USE OF SCHEMATIC AIDS TO FACILITATE THE INCIDENT REPORTING OF CRITICAL EVENTS, 2004.0"
+    }
+  },
+  {
+    "to_embed": "Automated Container Sorting: Inefficient sorting may disrupt production flow, reducing overall throughput efficiency.",
+    "metadata": {
+      "id": "r420",
+      "title": "Disruption of Production Flow",
+      "description": "Malfunctions or errors in the sorting process can lead to disruptions in the regular progression of containers, reducing overall throughput and efficiency of the conveyor line.",
+      "context": "()",
+      "source": "E.JECTOR MECHANISM AND CONTROL DEVICE, 2017.0"
+    }
+  },
+  {
+    "to_embed": "Game Day Education for Multiagent Systems",
+    "metadata": {
+      "id": "r421",
+      "title": "Over-Simplification",
+      "description": "The simulated scenarios in Game Days may oversimplify real-world complexities of multiagent systems, potentially leading to a skewed understanding.",
+      "context": "()",
+      "source": "Teaching a Multiagent Systems Class with Game Days: Designs and Lessons Learned, 2003.0"
+    }
+  },
+  {
+    "to_embed": "Game Day Education for Multiagent Systems",
+    "metadata": {
+      "id": "r422",
+      "title": "Unequal Participation",
+      "description": "Some students may dominate discussions and decision-making in group activities, while others might be passive, hindering equitable learning.",
+      "context": "()",
+      "source": "Teaching a Multiagent Systems Class with Game Days: Designs and Lessons Learned, 2003.0"
+    }
+  },
+  {
+    "to_embed": "AI for Malicious Download Detection",
+    "metadata": {
+      "id": "r423",
+      "title": "False Positives",
+      "description": "The AI may misidentify safe files as malicious, leading to disruption and preventing users from accessing legitimate content and hindering productivity.",
+      "context": "()",
+      "source": "Evaluating Psychological Information Sharpening Your Critical Thinking Skills, 2016.0"
+    }
+  },
+  {
+    "to_embed": "AI-powered Library Policy Exchange",
+    "metadata": {
+      "id": "r424",
+      "title": "Bias in Policy Recommendations",
+      "description": "AI algorithms may perpetuate biases present in the training data, leading to unfair or discriminatory policy recommendations that disadvantage certain groups.",
+      "context": "()",
+      "source": "News, 1896.0"
+    }
+  },
+  {
+    "to_embed": "Online Community Building via Autoethnography",
+    "metadata": {
+      "id": "r425",
+      "title": "Exclusion and Digital Divide",
+      "description": "Lack of access to technology or digital literacy may exclude individuals from participating in online communities, creating a digital divide.",
+      "context": "()",
+      "source": "Creating #team turner: an autoethnography of connection within social work education, 2014.0"
+    }
+  }
+]

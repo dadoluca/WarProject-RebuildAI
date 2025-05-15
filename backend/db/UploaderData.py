@@ -1,6 +1,8 @@
-from db.VectorDBManager import VectorDBManager  
+from VectorDBManager import VectorDBManager  
 from dotenv import load_dotenv
 import os
+import json
+from pathlib import Path
 
 
 load_dotenv()
@@ -37,7 +39,6 @@ class UploaderData:
             namespace="mitigations"
         )
         
-        
         self.benefits_db = VectorDBManager(
             pinecone_api=pinecone_api,
             openai_api=openai_api,
@@ -56,6 +57,41 @@ class UploaderData:
     
     def populate_benefits_data(self, data):
         self.benefits_db.add_data(data)
+    
+    def load_from_json_files(self, json_dir='./'):
+        """
+        Carica i dati dai file JSON separati per tipo di ID
+        
+        Args:
+            json_dir (str): Directory contenente i file JSON
+        """
+        json_dir = Path(json_dir)
+        
+        file_mappings = {
+            'UC.json': self.populate_use_cases_data,
+            'R.json': self.populate_risks_data,
+            'B.json': self.populate_benefits_data,
+            'M.json': self.populate_mitigations_data
+        }
+        
+        for filename, populate_func in file_mappings.items():
+            file_path = json_dir / filename
+            if file_path.exists():
+                try:
+                    print(f"Caricamento dati da {filename}...")
+                    with open(file_path, 'r', encoding='utf-8') as file:
+                        data = json.load(file)
+                        if data:
+                            populate_func(data)
+                            print(f"Added {len(data)} elements from {filename}")
+                        else:
+                            print(f"Nessun dato trovato in {filename}")
+                except Exception as e:
+                    print(f"Errore durante il caricamento di {filename}: {e}")
+            else:
+                print(f"File {filename} non trovato in {json_dir}")
+        
+        print("Caricamento dati completato")
     
     def populate_sample_data(self):
         """Populate the database with sample data for testing"""
@@ -215,3 +251,9 @@ class UploaderData:
         self.populate_risks_data(combined_risks)
         self.populate_mitigations_data(combined_mitigations)
         self.populate_benefits_data(combined_benefits)
+
+if __name__ == "__main__":
+    uploader = UploaderData()
+    
+    uploader.load_from_json_files("./data_sources/output")
+    

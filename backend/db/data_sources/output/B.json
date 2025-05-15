@@ -1,0 +1,2782 @@
+[
+  {
+    "to_embed": "AI-Enhanced Team Problem Solving",
+    "metadata": {
+      "id": "b1",
+      "title": "Improved Team Efficiency",
+      "description": "AI-driven tools streamline problem-solving processes, improving team efficiency and effectiveness in identifying, analyzing, and resolving issues collaboratively.",
+      "context": "()",
+      "source": "Team Problem Solving, 1994.0"
+    }
+  },
+  {
+    "to_embed": "AI for Real-Time Crisis Management",
+    "metadata": {
+      "id": "b2",
+      "title": "Faster Response Times",
+      "description": "Enables quicker identification and analysis of crisis situations, facilitating faster and more effective responses from rescue teams and emergency services.",
+      "context": "()",
+      "source": "Možnosti krízového manažmentu v priestore Industry 4.0, 2018.0"
+    }
+  },
+  {
+    "to_embed": "AI for Real-Time Crisis Management",
+    "metadata": {
+      "id": "b3",
+      "title": "Improved Resource Allocation",
+      "description": "Optimizes the allocation of resources by providing real-time insights into the needs and demands of the affected areas, ensuring efficient distribution of aid and support.",
+      "context": "()",
+      "source": "Možnosti krízového manažmentu v priestore Industry 4.0, 2018.0"
+    }
+  },
+  {
+    "to_embed": "Robotic Systems for Military Operations in Iraq",
+    "metadata": {
+      "id": "b4",
+      "title": "Reduced Casualties",
+      "description": "Robotic systems reduce human casualties by performing dangerous tasks such as bomb disposal and reconnaissance, minimizing soldiers' exposure to hazardous environments.",
+      "context": "(More than seven thousand robotic systems are now in Iraq.)",
+      "source": "Wired for war : the robotics revolution and conflict in the twenty-first century, 2009.0"
+    }
+  },
+  {
+    "to_embed": "Remote-Controlled Aircraft for Counterterrorism",
+    "metadata": {
+      "id": "b5",
+      "title": "Precision Targeting",
+      "description": "Remote-controlled aircraft allow for more precise targeting, reducing collateral damage and civilian casualties in counterterrorism operations.",
+      "context": "(Pilots in Nevada are remotely killing terrorists in Afghanistan.)",
+      "source": "Wired for war : the robotics revolution and conflict in the twenty-first century, 2009.0"
+    }
+  },
+  {
+    "to_embed": "Science Fiction Consultation for Military Tech",
+    "metadata": {
+      "id": "b6",
+      "title": "Strategic Foresight",
+      "description": "Consultation with science fiction authors enhances strategic foresight, enabling the military to anticipate future technological advancements and potential threats.",
+      "context": "()",
+      "source": "Wired for war : the robotics revolution and conflict in the twenty-first century, 2009.0"
+    }
+  },
+  {
+    "to_embed": "Philosophical Software Verification",
+    "metadata": {
+      "id": "b7",
+      "title": "Increased Self-Awareness",
+      "description": "By explicitly linking software creation to a personal philosophy, users may gain increased self-awareness and reflection on their actions and beliefs.",
+      "context": "()",
+      "source": "One Man's Meat: Part I - The Uses of Adversity, 1966.0"
+    }
+  },
+  {
+    "to_embed": "AI for Disaster Alert Reach Prediction",
+    "metadata": {
+      "id": "b8",
+      "title": "Rapid Disaster Response",
+      "description": "Ensures faster dissemination of information during disasters, enabling quicker response times and potentially saving lives by reaching more people rapidly.",
+      "context": "()",
+      "source": "An alarm procedure., 1985.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Military Risk Management",
+    "metadata": {
+      "id": "b9",
+      "title": "Improved Decision Quality",
+      "description": "The AI-driven system allows for more objective and data-driven decision-making, reducing the impact of emotional biases and leading to more responsible execution of duty by military leaders.",
+      "context": "()",
+      "source": "On Risk: Risk and Decision Making in Military Combat and Training Environments, 2012.0"
+    }
+  },
+  {
+    "to_embed": "HRI Education via Disaster Scenarios",
+    "metadata": {
+      "id": "b10",
+      "title": "Enhanced Problem-Solving",
+      "description": "Students develop enhanced problem-solving skills by designing robot behaviors and communication strategies for complex disaster scenarios.",
+      "context": "()",
+      "source": "Robot rescue! An HRI engineering outreach activity, 2010.0"
+    }
+  },
+  {
+    "to_embed": "Critical Transaction Database Recovery",
+    "metadata": {
+      "id": "b11",
+      "title": "Data Integrity",
+      "description": "Ensures the reliability and accuracy of transactional data, which is crucial for maintaining trust and operational efficiency within the online supply-chain.",
+      "context": "()",
+      "source": "Soft Issues in the Software Industry (a), 2017.0"
+    }
+  },
+  {
+    "to_embed": "Conflict Resolution in Manufacturing via Case-Based Reasoning",
+    "metadata": {
+      "id": "b12",
+      "title": "Improved System Efficiency",
+      "description": "By leveraging past conflict resolutions, the manufacturing system can adapt and optimize its processes, leading to more efficient and effective overall performance.",
+      "context": "()",
+      "source": "Co-operation via conflicts in manufacturing systems, 2013.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Military Intelligence for Peacekeeping",
+    "metadata": {
+      "id": "b13",
+      "title": "Improved Situational Awareness",
+      "description": "AI enhances situational awareness for military intelligence by rapidly processing and analyzing large datasets, providing timely insights for informed decision-making in peacekeeping operations.",
+      "context": "(en este contexto tan peculiar, el de las operaciones de apoyo a la paz (OAP))",
+      "source": "Inteligencia militar en las operaciones de Naciones Unidas.: soluciones adaptadas para lograr el éxito, 2012.0"
+    }
+  },
+  {
+    "to_embed": "Improved Decision-Making using Computer Decision Aid",
+    "metadata": {
+      "id": "b14",
+      "title": "Enhancing Decision-Making",
+      "description": "The computer decision aid improves decision-making by providing a prescriptive model based on mathematical and statistical techniques, potentially avoiding flaws present in human decision-making processes.",
+      "context": "()",
+      "source": "A progress report on project CONSIM, 1973.0"
+    }
+  },
+  {
+    "to_embed": "AI for Strategic Decision Making",
+    "metadata": {
+      "id": "b15",
+      "title": "Informed Decisions",
+      "description": "Enables decision makers to make better informed and more effective decisions by providing greater knowledge about the state of the world and predicting likely reactions to events.",
+      "context": "()",
+      "source": "A game theory model for situation awareness and management, 2013.0"
+    }
+  },
+  {
+    "to_embed": "IJAHP for Crisis Decision-Making",
+    "metadata": {
+      "id": "b16",
+      "title": "Improved Rationality",
+      "description": "Enables more rational and balanced decisions by considering multiple conflicting objectives (e.g., legal, health, economic) during times of crisis.",
+      "context": "()",
+      "source": "Making Decisions in the New Normal, 2020.0"
+    }
+  },
+  {
+    "to_embed": "Tech4SocialChange for Migrant Issue Resolution",
+    "metadata": {
+      "id": "b17",
+      "title": "Targeted Solutions",
+      "description": "Addresses specific social challenges faced by migrants, providing concrete, actionable solutions instead of general awareness campaigns, leading to improved safety and well-being.",
+      "context": "Humanitarian, Refugee(How to stop the attacks on women in refugee camps?)",
+      "source": "Tech4SocialChange: Crowd-sourcing to bring migrants' experiences to the academics: Humanitarian challenges and opportunities, connectivity & communication, 2016.0"
+    }
+  },
+  {
+    "to_embed": "AI in Military Transition",
+    "metadata": {
+      "id": "b18",
+      "title": "Enhanced Strategic Capabilities",
+      "description": "AI provides enhanced strategic capabilities by enabling faster and more accurate analysis of complex situations, leading to better informed decisions and improved resource allocation in military operations.",
+      "context": "()",
+      "source": "The social wave-front analysis and the altering character of war: An overview, 2011.0"
+    }
+  },
+  {
+    "to_embed": "AI for Collaborative Emergency Response",
+    "metadata": {
+      "id": "b19",
+      "title": "Enhanced Efficiency",
+      "description": "Improved efficiency in emergency response through faster and more accurate decision-making, leading to better outcomes in critical situations.",
+      "context": "()",
+      "source": "Collective learning and collective memory for coping with dynamic complexity: co-tech workshop at ECSCW 95, 1996.0"
+    }
+  },
+  {
+    "to_embed": "AI for Collaborative Emergency Response",
+    "metadata": {
+      "id": "b20",
+      "title": "Increased Creativity",
+      "description": "Facilitates creative problem-solving and innovative solutions in dynamic situations, improving adaptability and resilience in emergency response.",
+      "context": "()",
+      "source": "Collective learning and collective memory for coping with dynamic complexity: co-tech workshop at ECSCW 95, 1996.0"
+    }
+  },
+  {
+    "to_embed": "AI Network Problem Prevention: Faster problem resolution and reduced system downtime.",
+    "metadata": {
+      "id": "b21",
+      "title": "Faster Problem Resolution",
+      "description": "Enables quicker identification and resolution of problems by leveraging the network of service requesters and providers, minimizing system downtime and improving overall performance.",
+      "context": "()",
+      "source": "Problem prevention on computer system in service network of computer systems, 1991.0"
+    }
+  },
+  {
+    "to_embed": "Scalable Emergency Response System Design",
+    "metadata": {
+      "id": "b22",
+      "title": "Improved System Adaptability",
+      "description": "Enhanced adaptability of emergency response systems ensures effective operation during both routine tasks and atypical, high-stress events, improving overall resilience.",
+      "context": "()",
+      "source": "Cognitive Fieldwork in Emergency Crisis Management: Developing the I-T-P Abstraction Hierarchy, 2006.0"
+    }
+  },
+  {
+    "to_embed": "AI Agents for Self-Synchronization in Netted Warfare",
+    "metadata": {
+      "id": "b23",
+      "title": "Enhanced Coordination",
+      "description": "Improved coordination and synchronization among disparate military units, leading to more effective operations and reduced risk of friendly fire.",
+      "context": "()",
+      "source": "Agent Based Computing and Effective Self-Synchronization in Netted Warfare, 2003.0"
+    }
+  },
+  {
+    "to_embed": "AI for Military Operational Decision Making",
+    "metadata": {
+      "id": "b24",
+      "title": "Improved Strategic Resource Management",
+      "description": "Enables more effective management of time, resources, and risks by leveraging quantum leaps in information availability, facilitating orchestrated and coherent operational strategies.",
+      "context": "()",
+      "source": "Leveraging Technology: Using the Practical Essence of Operational Art to Translate Information into Decisions., 1995.0"
+    }
+  },
+  {
+    "to_embed": "Algorithmic Analysis of Military-Media Technology Exchange",
+    "metadata": {
+      "id": "b25",
+      "title": "Improved Understanding of Algorithmic Impact",
+      "description": "Enhances understanding of how algorithmic logic influences the military-civilian continuum, leading to potentially better informed policies and practices in related sectors.",
+      "context": "()",
+      "source": "Real wars on virtual battlefields: the convergence of programmable media at the military civilian margin, 2009.0"
+    }
+  },
+  {
+    "to_embed": "AI for Social Problem Solving",
+    "metadata": {
+      "id": "b26",
+      "title": "Improved Social Solutions",
+      "description": "The AI program aims to develop integrated theories and methods for solving complex social problems like environmental issues, overpopulation, and urban challenges, leading to more effective policies.",
+      "context": "()",
+      "source": "Social Engineering Program to promote civilization process, 2008.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Team Building for Cooperation",
+    "metadata": {
+      "id": "b27",
+      "title": "Enhanced Goal Achievement",
+      "description": "By optimizing team composition based on individual strengths and weaknesses, AI facilitates more efficient goal achievement and problem-solving within collaborative efforts.",
+      "context": "()",
+      "source": "Team Work Dan Kinerja Perusahaan, 2005.0"
+    }
+  },
+  {
+    "to_embed": "AI in Joint Air Campaign Command",
+    "metadata": {
+      "id": "b28",
+      "title": "Improved Crisis Response",
+      "description": "AI-driven command and control can lead to faster and more effective crisis response by enabling rapid analysis of complex situations and optimized deployment of resources.",
+      "context": "()",
+      "source": "A Hierarchical, Distributed Architecture of Command and Control, 2001.0"
+    }
+  },
+  {
+    "to_embed": "Optimized Dispatch for Mass Casualty Incidents",
+    "metadata": {
+      "id": "b29",
+      "title": "Faster Response Times",
+      "description": "Optimized dispatch leads to faster response times for injured persons, increasing their chances of survival and reducing the severity of their injuries.",
+      "context": "()",
+      "source": "Using a Business Rule Management System to Improve Disposition of Traumatized Patients, 2010.0"
+    }
+  },
+  {
+    "to_embed": "Optimized Dispatch for Mass Casualty Incidents",
+    "metadata": {
+      "id": "b30",
+      "title": "Efficient Resource Allocation",
+      "description": "Efficient resource allocation ensures that ambulances and rescue helicopters are deployed to the most critical cases, maximizing the impact of available resources.",
+      "context": "()",
+      "source": "Using a Business Rule Management System to Improve Disposition of Traumatized Patients, 2010.0"
+    }
+  },
+  {
+    "to_embed": "AI-Powered Military Simulation Training",
+    "metadata": {
+      "id": "b31",
+      "title": "Improved Training",
+      "description": "Realistic AI-driven simulations provide better training for soldiers, improving their skills and decision-making in high-pressure situations in Afghanistan.",
+      "context": "(the unforgiving and hostile battlefield conditions of Afghanistan)",
+      "source": "game mechanics, 2010.0"
+    }
+  },
+  {
+    "to_embed": "CBR improves decision-making in residential valuation by providing relevant past case comparisons.",
+    "metadata": {
+      "id": "b32",
+      "title": "Improved Valuation Accuracy",
+      "description": "Case-Based Reasoning improves the accuracy and consistency of residential property valuations by referencing similar past transactions.",
+      "context": "()",
+      "source": "Progress in case-based reasoning : first United Kingdom workshop, Salford, UK, January 12, 1995 : proceedings, 1995.0"
+    }
+  },
+  {
+    "to_embed": "CBR for Divorce Asset Division",
+    "metadata": {
+      "id": "b33",
+      "title": "Fairer Asset Division",
+      "description": "CBR provides a more consistent and equitable approach to asset division in divorce cases by considering precedent and relevant case law.",
+      "context": "()",
+      "source": "Progress in case-based reasoning : first United Kingdom workshop, Salford, UK, January 12, 1995 : proceedings, 1995.0"
+    }
+  },
+  {
+    "to_embed": "CBR for Software Reuse",
+    "metadata": {
+      "id": "b34",
+      "title": "Reduced Development Time",
+      "description": "CBR reduces software development time and costs by facilitating the reuse of existing code and design patterns from previous projects.",
+      "context": "()",
+      "source": "Progress in case-based reasoning : first United Kingdom workshop, Salford, UK, January 12, 1995 : proceedings, 1995.0"
+    }
+  },
+  {
+    "to_embed": "CBR for Steam Turbine Diagnosis",
+    "metadata": {
+      "id": "b35",
+      "title": "Faster Fault Identification",
+      "description": "CBR enables faster and more accurate fault diagnosis in steam turbines, minimizing downtime and maintenance costs.",
+      "context": "()",
+      "source": "Progress in case-based reasoning : first United Kingdom workshop, Salford, UK, January 12, 1995 : proceedings, 1995.0"
+    }
+  },
+  {
+    "to_embed": "Nirmani: CBR for Strategic Design",
+    "metadata": {
+      "id": "b36",
+      "title": "Enhanced Design Efficiency",
+      "description": "Nirmani streamlines the strategic design and estimating process, leading to more efficient and cost-effective engineering project planning.",
+      "context": "()",
+      "source": "Progress in case-based reasoning : first United Kingdom workshop, Salford, UK, January 12, 1995 : proceedings, 1995.0"
+    }
+  },
+  {
+    "to_embed": "CBR for Computer-Aided Learning",
+    "metadata": {
+      "id": "b37",
+      "title": "Personalized Learning Paths",
+      "description": "CBR facilitates personalized learning experiences by adapting to individual student needs and learning styles, improving educational outcomes.",
+      "context": "()",
+      "source": "Progress in case-based reasoning : first United Kingdom workshop, Salford, UK, January 12, 1995 : proceedings, 1995.0"
+    }
+  },
+  {
+    "to_embed": "CBR for Object Retrieval",
+    "metadata": {
+      "id": "b38",
+      "title": "Improved Data Accessibility",
+      "description": "CBR enhances data accessibility in object-oriented databases by providing more intelligent and context-aware retrieval mechanisms.",
+      "context": "()",
+      "source": "Progress in case-based reasoning : first United Kingdom workshop, Salford, UK, January 12, 1995 : proceedings, 1995.0"
+    }
+  },
+  {
+    "to_embed": "Aquaculture Information System for ASDEC",
+    "metadata": {
+      "id": "b39",
+      "title": "Improved Efficiency",
+      "description": "The information system streamlines aquaculture processes, leading to more efficient operations and better resource management for ASDEC and associated cooperatives.",
+      "context": "()",
+      "source": "Sistema de información de apoyo al proceso de la acuicultura para la Asociación Salvadoreña de Desarrollo Campesino ASDEC, 2009.0"
+    }
+  },
+  {
+    "to_embed": "Aquaculture Information System for ASDEC",
+    "metadata": {
+      "id": "b40",
+      "title": "Enhanced Decision-Making",
+      "description": "The system provides data-driven insights, enabling ASDEC to make more informed decisions regarding aquaculture practices and resource allocation.",
+      "context": "()",
+      "source": "Sistema de información de apoyo al proceso de la acuicultura para la Asociación Salvadoreña de Desarrollo Campesino ASDEC, 2009.0"
+    }
+  },
+  {
+    "to_embed": "AI-Powered Educational Resource Filtering",
+    "metadata": {
+      "id": "b41",
+      "title": "Safe Information Access",
+      "description": "The benefit is providing users with safer and more reliable access to educational materials, preventing malware infections and promoting trustworthy information access.",
+      "context": "()",
+      "source": "The Meaning Of Things Applying Philosophy To Life, 2016.0"
+    }
+  },
+  {
+    "to_embed": "Case-Based Reasoning for Problem Solving",
+    "metadata": {
+      "id": "b42",
+      "title": "Efficient Problem Solving",
+      "description": "CBR enables efficient problem-solving by leveraging past experiences, reducing the need for novel solutions in every instance. It enhances adaptability and speeds up decision-making processes.",
+      "context": "()",
+      "source": "Special Issue on Case Based Reasoning, 2017.0"
+    }
+  },
+  {
+    "to_embed": "Knowledge-Based Image Processing Systems",
+    "metadata": {
+      "id": "b43",
+      "title": "Improved Application Design",
+      "description": "Integrating diverse expertise (domain, image processing, computer design) leads to more comprehensive and effective application designs tailored to specific needs.",
+      "context": "()",
+      "source": "A Software Workbench for Knowledge Acquisition and Integration in Image processing, 1995.0"
+    }
+  },
+  {
+    "to_embed": "AI in Intelligence Analysis Research",
+    "metadata": {
+      "id": "b44",
+      "title": "Enhanced Strategic Insights",
+      "description": "AI-driven analysis provides more nuanced and comprehensive strategic insights, enabling better-informed decisions by intelligence professionals and government leaders.",
+      "context": "()",
+      "source": "Sensemaking: A Structure for an Intelligence Revolution, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Java-based Negotiation DSS",
+    "metadata": {
+      "id": "b45",
+      "title": "Improved Negotiation Outcomes",
+      "description": "The system enhances the quality of negotiation outcomes by providing structured decision-making support and incorporating various models of decision making.",
+      "context": "()",
+      "source": "Support decision and negotiation in an internet environment : an experience with negotiator/I, 1997.0"
+    }
+  },
+  {
+    "to_embed": "Emergency Response System using Multi-Agent Information System",
+    "metadata": {
+      "id": "b46",
+      "title": "Improved Information Access",
+      "description": "Enhanced availability and accessibility of crucial emergency management information, facilitating quicker and more informed decision-making during crises.",
+      "context": "()",
+      "source": "Improving Emergency Response Systems Through the Use of Intelligent Information Systems, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Emergency Response System using Multi-Agent Information System",
+    "metadata": {
+      "id": "b47",
+      "title": "Better Stakeholder Engagement",
+      "description": "Increased engagement of all relevant stakeholders in the emergency response process, promoting collaboration and a unified approach to crisis management.",
+      "context": "()",
+      "source": "Improving Emergency Response Systems Through the Use of Intelligent Information Systems, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Emergency Response System using Multi-Agent Information System",
+    "metadata": {
+      "id": "b48",
+      "title": "Operational Harmonization",
+      "description": "Harmonization of emergency response operations, leading to more efficient and coordinated actions in critical situations, reducing duplication of effort.",
+      "context": "()",
+      "source": "Improving Emergency Response Systems Through the Use of Intelligent Information Systems, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Ethical AI Agent for Sustainable Success",
+    "metadata": {
+      "id": "b49",
+      "title": "Sustainable Development",
+      "description": "Promotes long-term sustainability by prioritizing ethical considerations, convincing beneficiaries, and respecting humanity and nature, leading to more durable and positive outcomes.",
+      "context": "()",
+      "source": "Ethical agent Implentation Towards Situation Oriented Analysis, 2012.0"
+    }
+  },
+  {
+    "to_embed": "Reasoning Query for Improved Understanding",
+    "metadata": {
+      "id": "b50",
+      "title": "Enhanced Self-Awareness",
+      "description": "Individuals become more fully aware of restrictions imposed by their beliefs, leading to a reduction in internal conflict and a more integrated sense of self.",
+      "context": "()",
+      "source": "Reasoning query methods, 2000.0"
+    }
+  },
+  {
+    "to_embed": "Anticipatory Planning Support System (APSS) for Military",
+    "metadata": {
+      "id": "b51",
+      "title": "Improved Decision Making",
+      "description": "Military decision-makers benefit from in-depth analysis of voluminous data, facilitating better-informed decisions and more effective anticipatory planning during operations.",
+      "context": "()",
+      "source": "Anticipatory planning in information operations, 2000.0"
+    }
+  },
+  {
+    "to_embed": "AI for Military Training Simulation",
+    "metadata": {
+      "id": "b52",
+      "title": "Improved Warfighter Preparedness",
+      "description": "Realistic AI-driven simulations enhance warfighter preparedness by providing immersive training environments, improving decision-making skills and response effectiveness in high-stakes conflict situations.",
+      "context": "()",
+      "source": "Theoretical foundations for rational agency in third-generation wargames, 2004.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Problem Solving",
+    "metadata": {
+      "id": "b53",
+      "title": "Improved Decision-Making",
+      "description": "AI assists in understanding complex issues and proposing solutions leading to better and more informed decision-making in personal and professional contexts.",
+      "context": "()",
+      "source": "TRUTH AND ERROR., 1899.0"
+    }
+  },
+  {
+    "to_embed": "AI Dispute Support for Child Well-being",
+    "metadata": {
+      "id": "b54",
+      "title": "Improved Child Welfare",
+      "description": "The system aims to improve a child's well-being by facilitating the reconciliation of conflicting interests between parties through a structured and reasoned approach.",
+      "context": "()",
+      "source": "Factor-based parent plan support system, 2013.0"
+    }
+  },
+  {
+    "to_embed": "Case-Based Reasoning for Automation of Manual Decisions",
+    "metadata": {
+      "id": "b55",
+      "title": "Increased Efficiency",
+      "description": "The primary benefit is increased efficiency through automation, reducing the reliance on manual labor for repetitive decision-making tasks, streamlining processes, and improving overall productivity.",
+      "context": "()",
+      "source": "Case Based Reasoning A reliable technique to automate manually controlled situations, 2006.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Joint Command Decision Support",
+    "metadata": {
+      "id": "b56",
+      "title": "Improved Situation Awareness",
+      "description": "Enhances individual and collective situation awareness by providing timely and tailored information, crucial for effective decision-making in dynamic environments.",
+      "context": "()",
+      "source": "Joint Command Decision Support System, 2011.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Rehabilitation System for Military Personnel",
+    "metadata": {
+      "id": "b57",
+      "title": "Improved Rehabilitation Outcomes",
+      "description": "Personalized rehabilitation programs based on comprehensive health data analysis can lead to improved physical, psychological, and social well-being for military personnel recovering from trauma.",
+      "context": "(The paper discusses the features of building a system for managing the recovery of military personnel (SUOVS), including combatants who have been diagnosed with PTSD)",
+      "source": "ДЕЯКІ ПИТАННЯ СТВОРЕННЯ КОНЦЕПТУАЛЬНОЇ МОДЕЛІ ІНФОРМАЦІЙНОЇ СИСТЕМИ УПРАВЛІННЯ ОЗДОРОВЛЕННЯМ ВІЙСЬКОВОСЛУЖБОВЦІВ, 2019.0"
+    }
+  },
+  {
+    "to_embed": "Optimal Incentive Value Estimation",
+    "metadata": {
+      "id": "b58",
+      "title": "Improved resource allocation",
+      "description": "Optimal incentive values lead to better resource allocation within the PRAF/BID II project, maximizing the impact of educational and health interventions.",
+      "context": "()",
+      "source": "Segundo informe: Propuesta de implementación del proyecto PRAF/BID: Fase 2, 2000.0"
+    }
+  },
+  {
+    "to_embed": "Optimizing Learning Incentive Values",
+    "metadata": {
+      "id": "b59",
+      "title": "Enhanced learning outcomes",
+      "description": "Optimized IDA and ICS values result in enhanced learning outcomes and healthcare quality, boosting the long-term benefits of the program.",
+      "context": "()",
+      "source": "Segundo informe: Propuesta de implementación del proyecto PRAF/BID: Fase 2, 2000.0"
+    }
+  },
+  {
+    "to_embed": "Multi-Agent Algorithmic Recourse",
+    "metadata": {
+      "id": "b60",
+      "title": "Fairer Decisions",
+      "description": "Provides negatively impacted agents with ways to change decisions made by machine learning models, promoting fairness in algorithmic outcomes within multi-agent systems.",
+      "context": "()",
+      "source": "Toward Multi-Agent Algorithmic Recourse Challenges From a Game-Theoretic Perspective, 2022.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Network Problem Root Cause Analysis",
+    "metadata": {
+      "id": "b61",
+      "title": "Improved Network Stability",
+      "description": "Faster identification of root causes leads to quicker resolution of network problems, resulting in improved stability and reduced downtime for users.",
+      "context": "()",
+      "source": "Network management involving cross-checking identified possible root causes of events in different data subsets of events, 2009.0"
+    }
+  },
+  {
+    "to_embed": "Fair Linear Production Allocation",
+    "metadata": {
+      "id": "b62",
+      "title": "Equitable Resource Distribution",
+      "description": "Ensures a more just and equitable distribution of resources in linear production scenarios, benefiting all involved agents.",
+      "context": "()",
+      "source": "Análisis cooperativo de cadenas de distribución, 2007.0"
+    }
+  },
+  {
+    "to_embed": "Supply Chain Cooperative Game",
+    "metadata": {
+      "id": "b63",
+      "title": "Optimized Supply Network Cooperation",
+      "description": "Facilitates better cooperation and efficiency in supply chain distribution, benefiting businesses and consumers through reduced costs and improved service.",
+      "context": "()",
+      "source": "Análisis cooperativo de cadenas de distribución, 2007.0"
+    }
+  },
+  {
+    "to_embed": "Efficient Resource Allocation via Diameter Games",
+    "metadata": {
+      "id": "b64",
+      "title": "Improved Resource Management",
+      "description": "Leads to more efficient resource management and sharing across network structures, benefiting communities and organizations with limited resources.",
+      "context": "()",
+      "source": "Análisis cooperativo de cadenas de distribución, 2007.0"
+    }
+  },
+  {
+    "to_embed": "Optimal Multidimensional Assignment Games",
+    "metadata": {
+      "id": "b65",
+      "title": "Enhanced Resource Optimization",
+      "description": "Optimizes the distribution of resources across multiple dimensions, leading to improved overall efficiency and satisfaction for stakeholders.",
+      "context": "()",
+      "source": "Análisis cooperativo de cadenas de distribución, 2007.0"
+    }
+  },
+  {
+    "to_embed": "BB-SR for Self-Reflection in Problem Solving",
+    "metadata": {
+      "id": "b66",
+      "title": "Enhanced Problem Solving",
+      "description": "Enables more sophisticated and powerful problem-solving by integrating self-reflection capabilities within a combined blackboard and knowledge base system.",
+      "context": "()",
+      "source": "The BB-SR system, 1987.0"
+    }
+  },
+  {
+    "to_embed": "Improved HMI Reliability via Error/Interruption Analysis",
+    "metadata": {
+      "id": "b67",
+      "title": "Enhanced System Safety",
+      "description": "By explicitly addressing errors and interruptions during the design phase, the system's overall safety and reliability are improved, reducing the potential for accidents in critical applications.",
+      "context": "()",
+      "source": "Erreurs et interruptions du point de vue de l'ingénierie de l'interaction homme-machine. (Errors and Interruptions in Computer Human Interaction from the Software Engineering Perspective), 1996.0"
+    }
+  },
+  {
+    "to_embed": "Improved HMI Reliability via Error/Interruption Analysis",
+    "metadata": {
+      "id": "b68",
+      "title": "Reduced Human Error Impact",
+      "description": "Understanding and modeling human error allows for proactive mitigation strategies, minimizing the negative consequences of errors during system operation, especially in safety-critical environments.",
+      "context": "()",
+      "source": "Erreurs et interruptions du point de vue de l'ingénierie de l'interaction homme-machine. (Errors and Interruptions in Computer Human Interaction from the Software Engineering Perspective), 1996.0"
+    }
+  },
+  {
+    "to_embed": "AI for Knowledge Operations Analysis",
+    "metadata": {
+      "id": "b69",
+      "title": "Enhanced Strategic Decision-Making",
+      "description": "By understanding the ways and means by which meaning is assigned, derived, and shared, AI enhances the quality and effectiveness of strategic decision-making in Defence.",
+      "context": "()",
+      "source": "Knowledge Operations: above and beyond Information Operations, nan"
+    }
+  },
+  {
+    "to_embed": "Human Error Simulation for HCI Design",
+    "metadata": {
+      "id": "b70",
+      "title": "Improved System Safety",
+      "description": "Identifying potential human errors through simulation allows for proactive design of defenses, leading to safer and more reliable critical systems in various fields by minimizing negative impact of human erroneous behaviours.",
+      "context": "()",
+      "source": "Human error simulation as an aid to HCI design for critical systems, 2006.0"
+    }
+  },
+  {
+    "to_embed": "Network Science Application in Military Scenario Analysis",
+    "metadata": {
+      "id": "b71",
+      "title": "Improved Problem Solving",
+      "description": "Network science provides a more unified view across social, information, and communication domains, leading to improved problem-solving in complex military scenarios compared to fragmented approaches.",
+      "context": "()",
+      "source": "Military scenarios and solutions from a network science perspective, 2009.0"
+    }
+  },
+  {
+    "to_embed": "MR Game for MCI Training and System Testing",
+    "metadata": {
+      "id": "b72",
+      "title": "Improved MCI Response Training",
+      "description": "First responders receive immersive training in virtual environments, improving their preparedness and response effectiveness in real-world mass casualty incidents.",
+      "context": "()",
+      "source": "MiRTE: Mixed Reality Triage and Evacuation game for Mass Casualty information systems design, testing and training, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Delphi Method for Aviation Safety",
+    "metadata": {
+      "id": "b73",
+      "title": "Improved Aviation Safety",
+      "description": "The updated Delphi method enables better identification and mitigation of aviation safety risks, leading to fewer accidents and increased passenger safety.",
+      "context": "()",
+      "source": "Knowledge Management in 2016, 2019.0"
+    }
+  },
+  {
+    "to_embed": "Enhanced Warfare through Information Technology",
+    "metadata": {
+      "id": "b74",
+      "title": "Increased Force Multiplier",
+      "description": "Information technology acts as a force multiplier by improving information integration and synthesis, leading to more effective targeting and resource allocation.",
+      "context": "()",
+      "source": "The Role of Information Warfare: Truth and Myths., 1996.0"
+    }
+  },
+  {
+    "to_embed": "Impact of IT on Mission Planning",
+    "metadata": {
+      "id": "b75",
+      "title": "Improved Decision-Making",
+      "description": "Enhanced information access and filtering can improve decision-making for operational commanders, enabling more informed and strategic choices during missions.",
+      "context": "()",
+      "source": "The Role of Information Warfare: Truth and Myths., 1996.0"
+    }
+  },
+  {
+    "to_embed": "AI Expert Systems enhance decision-making by providing automated, knowledge-based insights and recommendations.",
+    "metadata": {
+      "id": "b76",
+      "title": "Enhanced Decision-Making",
+      "description": "Expert systems enable informed decision-making through automated reasoning. This reduces human error and improves efficiency across applications.",
+      "context": "()",
+      "source": "Parallel Implementations 1, 1993.0"
+    }
+  },
+  {
+    "to_embed": "AI Deductive Databases improve data accuracy and consistency for more reliable data management.",
+    "metadata": {
+      "id": "b77",
+      "title": "Improved Data Reliability",
+      "description": "Deductive databases ensure accuracy through logical inference. This leads to more reliable data retrieval and reduced data inconsistencies.",
+      "context": "()",
+      "source": "Parallel Implementations 1, 1993.0"
+    }
+  },
+  {
+    "to_embed": "AI in CAM improves manufacturing efficiency through process optimization and automation.",
+    "metadata": {
+      "id": "b78",
+      "title": "Increased Efficiency",
+      "description": "AI in CAM optimizes resource allocation and automates processes. This results in increased production efficiency and lower costs.",
+      "context": "()",
+      "source": "Parallel Implementations 1, 1993.0"
+    }
+  },
+  {
+    "to_embed": "AI for Future Event Forecasting",
+    "metadata": {
+      "id": "b79",
+      "title": "Improved Decision Making",
+      "description": "Reduces uncertainty in analysis and forecasting, leading to better-informed policy decisions in complex and unpredictable environments, enhancing strategic planning and risk management.",
+      "context": "()",
+      "source": "Cognitive Science, Orientism Management (OM), and Intelligence Analysis, 2021.0"
+    }
+  },
+  {
+    "to_embed": "Enhanced Commander Vision through MDMP",
+    "metadata": {
+      "id": "b80",
+      "title": "Improved Decision Quality",
+      "description": "Facilitates better-informed decisions by presenting a comprehensive picture of the battlefield through structured information filtering and analysis, leading to more effective strategies.",
+      "context": "()",
+      "source": "The Staff Responsibility to Help the Commander Develop His Vision, 2000.0"
+    }
+  },
+  {
+    "to_embed": "CBR and TOC for Epidemic Problem Solving",
+    "metadata": {
+      "id": "b81",
+      "title": "Improved Crisis Management",
+      "description": "The application of CBR and TOC can lead to better decision-making and more effective strategies for controlling epidemics, reducing panic and improving public health outcomes.",
+      "context": "()",
+      "source": "EBOLA VIRUS DISEASE PREVENTION-A PROBLEM SOLVING STRATEGY BASED ON SARS CASE STUDY FROM TAIWAN, 2015.0"
+    }
+  },
+  {
+    "to_embed": "AI for Strategic Narrative Analysis",
+    "metadata": {
+      "id": "b82",
+      "title": "Improved Strategic Alignment",
+      "description": "Enhances strategic alignment by facilitating a better understanding of community desires and orienting the environment towards communal goals through narrative analysis.",
+      "context": "()",
+      "source": "Anatomy of Strategy: Fighting for the Future Through Narrative, Logic and Grammar, 2012.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Reflection of Feeling Analysis",
+    "metadata": {
+      "id": "b83",
+      "title": "Improved Communication",
+      "description": "Enhances communication by providing insights into the accuracy of reflected feelings, leading to better understanding and stronger interpersonal connections.",
+      "context": "()",
+      "source": "Close the Loop with Reflection of Feeling, 2013.0"
+    }
+  },
+  {
+    "to_embed": "Improved public understanding of science through AI-driven media analysis.",
+    "metadata": {
+      "id": "b84",
+      "title": "Enhanced Public Understanding",
+      "description": "AI analysis of media coverage reveals biases and inaccuracies, promoting a more informed public discourse on scientific and technological advancements, reducing misinformation.",
+      "context": "()",
+      "source": "Media, risk, and science, 2002.0"
+    }
+  },
+  {
+    "to_embed": "Enhanced Decision-Making via Mobile PIT",
+    "metadata": {
+      "id": "b85",
+      "title": "Improved Communication",
+      "description": "Facilitates improved real-time communication and information flow between strategic and tactical levels, leading to faster responses.",
+      "context": "()",
+      "source": "The Use of Personal Information Technology in Military Area of Operations, 2013.0"
+    }
+  },
+  {
+    "to_embed": "Ethics Integration in Education",
+    "metadata": {
+      "id": "b86",
+      "title": "Enhanced Ethical Awareness",
+      "description": "Promotes heightened awareness of ethical dimensions in business, management, and computing, fostering responsible decision-making among students and practitioners.",
+      "context": "()",
+      "source": "Dilemmas of ambulance professionals in attending an emergency within eight minutes: the ethics of target setting, 2011.0"
+    }
+  },
+  {
+    "to_embed": "AI for Adaptive Problem-Solving Skill Acquisition",
+    "metadata": {
+      "id": "b87",
+      "title": "Enhanced Self-Reliance",
+      "description": "It promotes the ability to solve problems independently, reducing reliance on external resources and fostering self-sufficiency in problem-solving scenarios.",
+      "context": "()",
+      "source": "Nourishing Problem Solving Skills by Performing HCI Tasks - Relationships between the Methods of Problem Solving (Retrieval, Discovery, or Search) and the Kinds of Acquired Problem Solving Skills, 2018.0"
+    }
+  },
+  {
+    "to_embed": "AI Coalition Formation for Disaster Relief",
+    "metadata": {
+      "id": "b88",
+      "title": "Improved Coordination",
+      "description": "Enhances coordination among disaster relief agents by providing a shared understanding of the situation and facilitating collaborative planning and execution.",
+      "context": "()",
+      "source": "I-Rescue : A Coalition-Based Approach to Support Disaster Relief Operations, 2003.0"
+    }
+  },
+  {
+    "to_embed": "AI Coalition Formation for Disaster Relief",
+    "metadata": {
+      "id": "b89",
+      "title": "Enhanced Knowledge Sharing",
+      "description": "Facilitates knowledge sharing between different levels and types of agents, leading to better-informed decision-making during disaster response.",
+      "context": "()",
+      "source": "I-Rescue : A Coalition-Based Approach to Support Disaster Relief Operations, 2003.0"
+    }
+  },
+  {
+    "to_embed": "GSS for Military Decision-Making",
+    "metadata": {
+      "id": "b90",
+      "title": "Faster Decision Cycles",
+      "description": "The GSS aims to speed up the commander's decision-action cycle, potentially leading to a tactical advantage in military operations.",
+      "context": "()",
+      "source": "Improving operational situational awareness with collaborative technologies, 2000.0"
+    }
+  },
+  {
+    "to_embed": "Unified Programming Education",
+    "metadata": {
+      "id": "b91",
+      "title": "Enhanced Understanding",
+      "description": "The unified approach promotes deeper understanding of programming concepts and relationships between paradigms, fostering more effective problem-solving skills and adaptability.",
+      "context": "()",
+      "source": "General Computation Models, 2004.0"
+    }
+  },
+  {
+    "to_embed": "Cloud Case Management for Customer Service",
+    "metadata": {
+      "id": "b92",
+      "title": "Improved Customer Retention",
+      "description": "Collaborative case management enhances customer service and facilitates dispute resolution, leading to improved customer retention rates.",
+      "context": "()",
+      "source": "Jadu launches Case Management in the cloud to enable collaborative customer service and retention on the web, 2015.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Urban Security Platform",
+    "metadata": {
+      "id": "b93",
+      "title": "Improved Public Safety",
+      "description": "Real-time monitoring and automated alerts lead to faster response times by emergency services, enhancing public safety and reducing crime rates in cities.",
+      "context": "()",
+      "source": "Plataforma abierta de gestión de cámaras IP y aplicaciones móviles para la seguridad civil ciudadana, 2016.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Urban Security Platform",
+    "metadata": {
+      "id": "b94",
+      "title": "Enhanced Efficiency",
+      "description": "Automated video analysis reduces the burden on human operators, improving the efficiency of monitoring centers and allowing for broader surveillance coverage.",
+      "context": "()",
+      "source": "Plataforma abierta de gestión de cámaras IP y aplicaciones móviles para la seguridad civil ciudadana, 2016.0"
+    }
+  },
+  {
+    "to_embed": "Collective Intelligence for SI/TIC Client Needs",
+    "metadata": {
+      "id": "b95",
+      "title": "Improved Need Interpretation",
+      "description": "Better interpretation of client needs by SI/TIC firms, leading to more relevant and effective solutions and increased client satisfaction through collective intelligence.",
+      "context": "()",
+      "source": "L'intelligence collective comme dispositif d'aide à l'interprétation des besoins : démarche et système de médiation., 2012.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Dynamic Encounters in Online Games",
+    "metadata": {
+      "id": "b96",
+      "title": "Enhanced Player Engagement",
+      "description": "Personalized encounters enhance player engagement by providing unique, adaptable gameplay scenarios tailored to individual player characteristics and preferences, increasing satisfaction and retention.",
+      "context": "()",
+      "source": "System and method for self-evident multiuser content, 2009.0"
+    }
+  },
+  {
+    "to_embed": "AI for Adaptability Training in Defense",
+    "metadata": {
+      "id": "b97",
+      "title": "Improved Readiness",
+      "description": "Enhances the readiness of defense personnel by equipping them with adaptable skills to effectively respond to altered situations and future threats. This leads to improved mission success and survivability.",
+      "context": "()",
+      "source": "Developing an Adaptability Training Strategy and Policy for the DoD, 2008.0"
+    }
+  },
+  {
+    "to_embed": "Enhanced Training via COTS and HPC Games",
+    "metadata": {
+      "id": "b98",
+      "title": "Improved Skill Development",
+      "description": "By integrating COTS games and HPC, training becomes more engaging and effective, leading to enhanced skill development and knowledge acquisition for individuals and organizations.",
+      "context": "()",
+      "source": "Overview of Military Wargaming, 2008.0"
+    }
+  },
+  {
+    "to_embed": "AI in Education for Industry 4.0",
+    "metadata": {
+      "id": "b99",
+      "title": "Enhanced Skill Development",
+      "description": "Promotes the development of crucial skills like creativity, innovation, and entrepreneurship, enabling individuals to thrive in a rapidly changing technological landscape and contribute effectively to the economy.",
+      "context": "()",
+      "source": "Asesmen Complex Problem Solving: Apa dan Bagaimana?, 2019.0"
+    }
+  },
+  {
+    "to_embed": "AI for Traffic Offender Sentencing Support",
+    "metadata": {
+      "id": "b100",
+      "title": "Consistent Sentencing",
+      "description": "The AI system promotes fair and consistent sentencing by providing data-driven recommendations based on past records, reducing potential bias.",
+      "context": "()",
+      "source": "Legal and Negotiation Decision Support Systems (LDSS 2009), 2009.0"
+    }
+  },
+  {
+    "to_embed": "AI for Traffic Offender Sentencing Support",
+    "metadata": {
+      "id": "b101",
+      "title": "Efficiency Improvement",
+      "description": "The system helps to improve efficiency in courts by speeding up sentencing decisions with quick evaluations and reducing time spent on case reviews.",
+      "context": "()",
+      "source": "Legal and Negotiation Decision Support Systems (LDSS 2009), 2009.0"
+    }
+  },
+  {
+    "to_embed": "Technology Collaboration Conference",
+    "metadata": {
+      "id": "b102",
+      "title": "Increased Innovation",
+      "description": "Collaboration between KLA, KAECT, and KASL leads to increased innovation and development in technology and science.",
+      "context": "()",
+      "source": "Online Tutorials: Just in Case, Just in Time, 2005.0"
+    }
+  },
+  {
+    "to_embed": "AI for Multi-Agent Information Fusion",
+    "metadata": {
+      "id": "b103",
+      "title": "Enhanced Collective Intelligence",
+      "description": "Improved information fusion enhances collective intelligence in multi-agent systems, leading to more robust and reliable decision-making in complex environments.",
+      "context": "()",
+      "source": "Bases de conocimiento en sistemas multi-agente, 2008.0"
+    }
+  },
+  {
+    "to_embed": "Strategic Intelligence improves project design by understanding information needs and emerging trends.",
+    "metadata": {
+      "id": "b104",
+      "title": "Improved Project Design",
+      "description": "By understanding information needs and emerging trends through strategic intelligence, transmedia project design is improved, leading to more effective and relevant project outcomes.",
+      "context": "()",
+      "source": "Informe de vigilancia e inteligencia estratégica - Maestría y especialización en transmedia, 2020.0"
+    }
+  },
+  {
+    "to_embed": "Copyright protection ensures ICC's control over its publications, supporting quality and incentivizing further development.",
+    "metadata": {
+      "id": "b105",
+      "title": "Ensuring Publication Quality",
+      "description": "Copyright protection allows the ICC to control the integrity and quality of its publications. This incentivizes investment in future development and accuracy.",
+      "context": "()",
+      "source": "INTERNATIONAL CODE COUNCIL, 2009.0"
+    }
+  },
+  {
+    "to_embed": "AI in Counterinsurgency War Strategy",
+    "metadata": {
+      "id": "b106",
+      "title": "Improved Strategic Planning",
+      "description": "AI can provide more comprehensive analysis of complex factors, leading to better-informed decisions and improved strategic planning in counterinsurgency operations. Reduces reliance on subjective human analysis.",
+      "context": "()",
+      "source": "A Working Theory of Operational Art in Modern War, 1989.0"
+    }
+  },
+  {
+    "to_embed": "AI for Intel in Low-Intensity Conflict",
+    "metadata": {
+      "id": "b107",
+      "title": "Improved Situational Awareness",
+      "description": "AI-driven analysis of HUMINT data enhances situational awareness for light infantry divisions, allowing for more effective planning and execution of operations in low-intensity conflicts.",
+      "context": "()",
+      "source": "LIGHT Divisional Cavalry and Low-Intensity Conflict Reconnaissance, 1991.0"
+    }
+  },
+  {
+    "to_embed": "RMA/NCW for Information Dominance",
+    "metadata": {
+      "id": "b108",
+      "title": "Enhanced Strategic Advantage",
+      "description": "Achieving Information Dominance provides a strategic advantage by enabling faster, more synchronized operations and limiting the enemy's options.",
+      "context": "()",
+      "source": "Can We Get There From Here? RMAs, Network-Centric Warfare and the Process of Transformation, 1999.0"
+    }
+  },
+  {
+    "to_embed": "Hardware Defect Avoidance and Processor Reset",
+    "metadata": {
+      "id": "b109",
+      "title": "Improved System Reliability",
+      "description": "By detecting and avoiding defects, the system enhances overall reliability and reduces the likelihood of system failures, leading to more stable operation.",
+      "context": "()",
+      "source": "Avoid dealing with defective computer processor hardware event trigger in a predetermined sequence, 2013.0"
+    }
+  },
+  {
+    "to_embed": "AI for Malicious Download Detection",
+    "metadata": {
+      "id": "b110",
+      "title": "Enhanced Online Safety",
+      "description": "Users benefit from increased protection against viruses and malware, resulting in safer and more secure online experiences and reducing the risk of data loss or system compromise.",
+      "context": "()",
+      "source": "How To Talk With People A Program For Preventing Troubles That Come When People Talk Together, 2016.0"
+    }
+  },
+  {
+    "to_embed": "Predictive Battlespace Awareness",
+    "metadata": {
+      "id": "b111",
+      "title": "Improved Decision-Making",
+      "description": "Enables planners to predict the impact of operations, stay ahead of the enemy's decision cycle, and dynamically adapt plans, leading to better outcomes.",
+      "context": "()",
+      "source": "Visualization of the Battlespace: A Cornerstone of Modeling for Anticipatory Behavior, 2006.0"
+    }
+  },
+  {
+    "to_embed": "Incentivized Societal Design through Technology",
+    "metadata": {
+      "id": "b112",
+      "title": "Enhanced Societal Well-being",
+      "description": "It benefits society by aligning individual actions with desired outcomes, leading to optimized value distribution and increased overall well-being through technologically enabled co-creation.",
+      "context": "()",
+      "source": "Purpose and goals, 2015.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Wargaming for Strategic Decision-Making",
+    "metadata": {
+      "id": "b113",
+      "title": "Improved Strategic Accuracy",
+      "description": "Explicitly modeling human factors and system effects increases the accuracy of strategic forecasts, leading to better-informed decisions.",
+      "context": "()",
+      "source": "The road ahead for wargaming: the why and how of achieving the next generation of wargaming, 2004.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Wargaming for Strategic Decision-Making",
+    "metadata": {
+      "id": "b114",
+      "title": "Faster Decision-Making",
+      "description": "Enhanced user interfaces, greater deployability, and built-in reach back enable faster strategic decision-making processes.",
+      "context": "()",
+      "source": "The road ahead for wargaming: the why and how of achieving the next generation of wargaming, 2004.0"
+    }
+  },
+  {
+    "to_embed": "Digital Book Distribution Platform",
+    "metadata": {
+      "id": "b115",
+      "title": "Enhanced Accessibility",
+      "description": "Wider audience reach through online access and multiple downloadable formats (pdf, kindle, word, etc.) facilitates broader dissemination of 'The Outline of Sanity'.",
+      "context": "()",
+      "source": "The Outline of Sanity, nan"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Emergency Response with Location Data",
+    "metadata": {
+      "id": "b116",
+      "title": "Faster Emergency Response",
+      "description": "Providing precise location data enables emergency services to respond more quickly and efficiently, potentially saving lives and reducing the severity of injuries.",
+      "context": "()",
+      "source": "Method for transmission of non-voice information to improve the efficiency of rescue centers., 2005.0"
+    }
+  },
+  {
+    "to_embed": "System Analysis for Management",
+    "metadata": {
+      "id": "b117",
+      "title": "Improved Decision-Making",
+      "description": "Facilitates better decision-making by considering the interconnectedness of organizational units, avoiding unintended negative consequences on the entire system.",
+      "context": "()",
+      "source": "APPLICATION OF SYSTEM ANALYSIS METHODS FOR EFFECTIVE MANAGEMENT OF INFORMATION SECURITY OF AN ECONOMIC ENTITY, 2023.0"
+    }
+  },
+  {
+    "to_embed": "AI-Powered Disaster Relief Management",
+    "metadata": {
+      "id": "b118",
+      "title": "Efficient Resource Allocation",
+      "description": "Ensures donations reach those most in need by identifying vulnerable populations and optimizing ration distribution, reducing disparities and improving aid effectiveness.",
+      "context": "(State, Non-governmental and Media organizations in Sri Lanka initiate much needed relief to people affected by floods and landslides across the country by organizing donation campaigns.)",
+      "source": "Donate.lk: A Smart Donation Handling System, 2018.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced War Simulations",
+    "metadata": {
+      "id": "b119",
+      "title": "Improved Strategic Decisions",
+      "description": "AI-enhanced simulations lead to better-informed strategic decisions, potentially reducing conflict escalation and improving resource allocation in military operations.",
+      "context": "()",
+      "source": "Entropy-Based Warfare: Modeling the Revolution in Military Affairs (Joint Force Quarterly, Autumn/Winter, 1998-1999), 1999.0"
+    }
+  },
+  {
+    "to_embed": "AI-Optimized C4ISR",
+    "metadata": {
+      "id": "b120",
+      "title": "Enhanced Situation Awareness",
+      "description": "Improved situation awareness through AI-optimized C4ISR leads to more effective resource allocation, faster response times, and reduced casualties in military operations.",
+      "context": "()",
+      "source": "Entropy-Based Warfare: Modeling the Revolution in Military Affairs (Joint Force Quarterly, Autumn/Winter, 1998-1999), 1999.0"
+    }
+  },
+  {
+    "to_embed": "AI for Military-Industrial Problem Solving",
+    "metadata": {
+      "id": "b121",
+      "title": "Enhanced Defense Capabilities",
+      "description": "AI-driven solutions can lead to more effective defense strategies, improved resource allocation, and faster response times in critical situations.",
+      "context": "()",
+      "source": "OR Forum - The Keynote Speech, 1989.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Military Intelligence",
+    "metadata": {
+      "id": "b122",
+      "title": "Reduced Casualties",
+      "description": "Improved intelligence and precision targeting through AI can lead to reduced friendly losses in military engagements, as suggested by the Gulf War example.",
+      "context": "()",
+      "source": "Inside risks: Computers as substitute soldiers?, 1995.0"
+    }
+  },
+  {
+    "to_embed": "Crisis Action Executive Training System",
+    "metadata": {
+      "id": "b123",
+      "title": "Improved Decision-Making Skills",
+      "description": "PACEXTRA provides a simulated environment for trainees to develop and refine decision-making skills through practical experience, which may lead to better crisis management.",
+      "context": "()",
+      "source": "PACEXTRA: Pacific Air Forces Crisis Action System Executive Training System, 1992.0"
+    }
+  },
+  {
+    "to_embed": "Problem-Type Driven IS Design",
+    "metadata": {
+      "id": "b124",
+      "title": "Improved System Alignment",
+      "description": "Ensures information systems are tailored to the specific problem types, leading to more effective solutions and improved organizational performance.",
+      "context": "()",
+      "source": "Why we Need to Distinguish between Problem Solving Types in Information Systems Design, 1999.0"
+    }
+  },
+  {
+    "to_embed": "AI for Intelligence Analysis",
+    "metadata": {
+      "id": "b125",
+      "title": "Enhanced Policy Making",
+      "description": "AI-driven analysis improves the quality and timeliness of intelligence, which enables more informed and effective decision-making in national security and foreign policy.",
+      "context": "()",
+      "source": "About the Contributors, 2008.0"
+    }
+  },
+  {
+    "to_embed": "AI for Reflective Equilibrium in Moral Reasoning",
+    "metadata": {
+      "id": "b126",
+      "title": "Improved Moral Decisions",
+      "description": "Enhances moral decision-making by providing a more comprehensive and balanced approach through the integration of multiple constraints and perspectives.",
+      "context": "()",
+      "source": "Notes on practical reasoning, 2011.0"
+    }
+  },
+  {
+    "to_embed": "AI for Unconscious Reasoning Analysis",
+    "metadata": {
+      "id": "b127",
+      "title": "Deeper Self-Understanding",
+      "description": "Provides insights into hidden biases and influences affecting decision-making, leading to greater self-awareness and improved personal choices.",
+      "context": "()",
+      "source": "Notes on practical reasoning, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Knowledge Evaluation in VirtualECare Group Decision Support System",
+    "metadata": {
+      "id": "b128",
+      "title": "Responsible Healthcare Decisions",
+      "description": "It benefits society by enabling more responsible and timely decisions in online healthcare services, even when dealing with incomplete or uncertain knowledge, thereby reducing the risk of negative health outcomes.",
+      "context": "()",
+      "source": "Quality of Knowledge in Group Decision Support Systems, 2009.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Communication Media Classifier",
+    "metadata": {
+      "id": "b245",
+      "title": "Enhanced Project Coordination",
+      "description": "Improved coordination in projects, leading to better efficiency and reduced errors, by facilitating a more structured understanding of communication methods.",
+      "context": "()",
+      "source": "Means of Coordination, nan"
+    }
+  },
+  {
+    "to_embed": "AI for WASH in Fragile States",
+    "metadata": {
+      "id": "b246",
+      "title": "Improved WASH Programming",
+      "description": "Enables better-informed decisions for WASH programming in data-scarce environments, leading to more effective resource allocation and improved public health outcomes.",
+      "context": "(Least income Fragile and Conflict Affected States in Africa currently remain the areas of most concern.)",
+      "source": "Research alternatives for the knowledge gap, 2017.0"
+    }
+  },
+  {
+    "to_embed": "IRIS: Global Blindness Research Information Service",
+    "metadata": {
+      "id": "b247",
+      "title": "Accelerated Research Progress",
+      "description": "IRIS will accelerate the progress of blindness research by facilitating faster exchange of ideas and experiences, leading to more effective research outcomes and improved treatments.",
+      "context": "()",
+      "source": "A New Attack on an Old Problem, 1963.0"
+    }
+  },
+  {
+    "to_embed": "AI for Military Strategic Analysis",
+    "metadata": {
+      "id": "b248",
+      "title": "Improved Strategic Understanding",
+      "description": "The AI-driven analysis will offer more nuanced and accurate understandings of operational environments, potentially leading to better strategic decisions and outcomes in military operations.",
+      "context": "()",
+      "source": "The Operational Calculus: It's Not Art, 2012.0"
+    }
+  },
+  {
+    "to_embed": "Real-time Intrusion Detection with Intent Encapsulation",
+    "metadata": {
+      "id": "b249",
+      "title": "Faster Incident Response",
+      "description": "Enables quicker detection and response to intrusions, minimizing damage and accelerating service restoration, thus improving system resilience.",
+      "context": "()",
+      "source": "An Analytical Framework for Reasoning About Intrusions 1, 2001.0"
+    }
+  },
+  {
+    "to_embed": "Accountable Multiagent System Design",
+    "metadata": {
+      "id": "b250",
+      "title": "Improved System Transparency",
+      "description": "Explicit representation of accountability and responsibility enhances system transparency, allowing for easier understanding and debugging of complex multiagent interactions.",
+      "context": "()",
+      "source": "Computational Accountability and Responsibility in the MAS Domain, 2018.0"
+    }
+  },
+  {
+    "to_embed": "Drone-based Disaster Response System",
+    "metadata": {
+      "id": "b251",
+      "title": "Faster Rescue Operations",
+      "description": "Enables faster location of trapped individuals, leading to quicker rescue operations and potentially saving more lives in disaster-affected areas.",
+      "context": "()",
+      "source": "A multi-agent framework for cloud-based management of collaborative robots, 2018.0"
+    }
+  },
+  {
+    "to_embed": "Drone-based Disaster Response System",
+    "metadata": {
+      "id": "b252",
+      "title": "Efficient Resource Allocation",
+      "description": "Optimizes resource allocation for rescue efforts, ensuring that resources are deployed effectively to maximize the impact of rescue operations based on real-time data.",
+      "context": "()",
+      "source": "A multi-agent framework for cloud-based management of collaborative robots, 2018.0"
+    }
+  },
+  {
+    "to_embed": "AI-Powered Book Recommendation & Borrowing System",
+    "metadata": {
+      "id": "b253",
+      "title": "Increased Access to Knowledge",
+      "description": "The system ensures access to more books, fostering a love of reading, learning, and community engagement without requiring individual purchases.",
+      "context": "()",
+      "source": "Wife Battering: A Systems Theory Approach, 1984.0"
+    }
+  },
+  {
+    "to_embed": "AI Book Recommendation System",
+    "metadata": {
+      "id": "b254",
+      "title": "Enhanced Learning",
+      "description": "Provides users with access to a broader range of relevant books, fostering a deeper understanding and expanded knowledge base.",
+      "context": "()",
+      "source": "Toward a unity of knowledge, 1969.0"
+    }
+  },
+  {
+    "to_embed": "AI for Knowledgebase Integrity in Defence",
+    "metadata": {
+      "id": "b255",
+      "title": "Improved Knowledge Quality",
+      "description": "Ensures the reliability and accuracy of knowledge within expert systems used by the Ministry of Defence, leading to better decision-making and improved operational effectiveness.",
+      "context": "()",
+      "source": "Kwaliteit van Expertsystemen: Algoritmen voor Integriteits-Controle (Quality of Expert Systems: Algorithms for Integrity Control), 1990.0"
+    }
+  },
+  {
+    "to_embed": "AI in Knowledge-Centered Service (KCS)",
+    "metadata": {
+      "id": "b256",
+      "title": "Improved Customer Service",
+      "description": "AI-driven KCS enhances customer service by providing faster, more accurate, and consistent responses to IT-related issues in higher education institutions.",
+      "context": "()",
+      "source": "Solve and Evolve: Practical Applications for Knowledge-Centered Service, 2019.0"
+    }
+  },
+  {
+    "to_embed": "AI in Knowledge-Centered Service (KCS)",
+    "metadata": {
+      "id": "b257",
+      "title": "Enhanced Collaboration",
+      "description": "AI-enabled KCS improves collaboration among IT teams by facilitating knowledge sharing and breaking down silos, leading to more efficient problem-solving.",
+      "context": "()",
+      "source": "Solve and Evolve: Practical Applications for Knowledge-Centered Service, 2019.0"
+    }
+  },
+  {
+    "to_embed": "AI-Powered Human Resource Allocation Optimization",
+    "metadata": {
+      "id": "b258",
+      "title": "Improved Efficiency",
+      "description": "The dichotomous algorithm significantly reduces computation time compared to exhaustive approaches, speeding up the allocation process.",
+      "context": "()",
+      "source": "UNE APPROCHE DE GESTION DES RESSOURCES HUMAINES GUIDEE PAR LES COMPETENCES, 2003.0"
+    }
+  },
+  {
+    "to_embed": "AI-Powered Human Resource Allocation Optimization",
+    "metadata": {
+      "id": "b259",
+      "title": "Optimized Performance",
+      "description": "The AI ensures effective use of employee skills, leading to better satisfaction of performance objectives for the company.",
+      "context": "()",
+      "source": "UNE APPROCHE DE GESTION DES RESSOURCES HUMAINES GUIDEE PAR LES COMPETENCES, 2003.0"
+    }
+  },
+  {
+    "to_embed": "AI's role in Information Warfare Defense enhances national security, safeguarding critical military operations.",
+    "metadata": {
+      "id": "b260",
+      "title": "Enhanced National Security",
+      "description": "AI strengthens national security by enabling proactive defense against information attacks, protecting critical military operations and infrastructure from disruption or compromise.",
+      "context": "()",
+      "source": "Building a Basis for Information Warfare Rules of Engagement., 1997.0"
+    }
+  },
+  {
+    "to_embed": "AI for Healthcare Resource Optimization",
+    "metadata": {
+      "id": "b261",
+      "title": "Improved Resource Efficiency",
+      "description": "AI-driven resource optimization can lead to more efficient use of existing resources, reducing waste and improving access to care for patients in strained healthcare systems.",
+      "context": "()",
+      "source": "Resolving the care crisis: technology in action, 2008.0"
+    }
+  },
+  {
+    "to_embed": "Stuxnet-informed Cybersecurity Design",
+    "metadata": {
+      "id": "b262",
+      "title": "Improved Infrastructure Resilience",
+      "description": "By incorporating Stuxnet lessons, infrastructure becomes more resilient against cyberattacks, minimizing disruptions to essential services like power and water, thus maintaining public safety and stability.",
+      "context": "()",
+      "source": "Internet Science Risk , Risk Perception , and Cyberwar, 2013.0"
+    }
+  },
+  {
+    "to_embed": "AI for Social Domain Analysis in Military Intelligence",
+    "metadata": {
+      "id": "b263",
+      "title": "Improved Understanding",
+      "description": "Enhances understanding of social dynamics, interpersonal communications, and shared information within military operations to prevent intelligence failures and improve strategic decision-making.",
+      "context": "()",
+      "source": "A Historic Failure in the Social Domain, 2005.0"
+    }
+  },
+  {
+    "to_embed": "Coordination Analysis via Communication Dimensions",
+    "metadata": {
+      "id": "b264",
+      "title": "Improved Understanding",
+      "description": "Provides a framework for understanding and comparing different coordination methods, enhancing collaboration in complex environments like shipping and software development.",
+      "context": "()",
+      "source": "1 Dimensions of Coordination, 2000.0"
+    }
+  },
+  {
+    "to_embed": "Social Procedure Verification via Formal Frameworks",
+    "metadata": {
+      "id": "b265",
+      "title": "Improved Social Procedure Design",
+      "description": "Enables systematic design and analysis of social procedures, leading to more robust and efficient social systems, like voting or resource allocation.",
+      "context": "()",
+      "source": "Topics in social software: information in strategic situations, 2005.0"
+    }
+  },
+  {
+    "to_embed": "Crowd Simulation for Military Mission Planning",
+    "metadata": {
+      "id": "b266",
+      "title": "Improved Mission Outcome Prediction",
+      "description": "By simulating crowd behaviors, military planners can better predict mission outcomes, especially in urban environments with civilian presence, leading to more effective strategies.",
+      "context": "(recreated to some extent a portion of the Blackhawk Down incident in Mogadishu, Somalia)",
+      "source": "Mogadishu Terrain Generation and Correlation for Crowd Modeling, 2004.0"
+    }
+  },
+  {
+    "to_embed": "AI for Crime Pattern Analysis",
+    "metadata": {
+      "id": "b267",
+      "title": "Enhanced Public Safety",
+      "description": "AI-driven crime analysis leads to more efficient resource allocation, targeted interventions, and ultimately, safer communities with reduced criminal activity.",
+      "context": "()",
+      "source": "Mapping and analysing crime data, 2001.0"
+    }
+  },
+  {
+    "to_embed": "Predictive Failure Analysis",
+    "metadata": {
+      "id": "b268",
+      "title": "Improved foresight",
+      "description": "By identifying weaknesses early, AI can help organizations anticipate and prevent failures, leading to greater stability and success.",
+      "context": "()",
+      "source": "A sad story with a fairytale ending, 1990.0"
+    }
+  },
+  {
+    "to_embed": "MOUT Sensor Deployment Envisioning",
+    "metadata": {
+      "id": "b269",
+      "title": "Improved Urban Warfare Planning",
+      "description": "Enables better planning and resource allocation in urban warfare scenarios by providing insights into complexities and difficulties inherent in MOUT operations.",
+      "context": "()",
+      "source": "Scenarios As A Tool For Collaborative Envisioning : Using The Case of New Sensor Technologies for Military Urban Operations, 2005.0"
+    }
+  },
+  {
+    "to_embed": "Network Warfare Human Factors Analysis via Go*Team",
+    "metadata": {
+      "id": "b270",
+      "title": "Enhanced Team Coordination",
+      "description": "Go*Team facilitates research into collaboration and cooperation between team members, potentially leading to improved strategies and training for network warfare teams, enhancing their effectiveness.",
+      "context": "()",
+      "source": "Technical Description of the Go*Team User Interface, 2009.0"
+    }
+  },
+  {
+    "to_embed": "ALOHA Software for Emergency Response Planning",
+    "metadata": {
+      "id": "b271",
+      "title": "Improved Emergency Response",
+      "description": "Enables decision-makers to quickly and accurately determine affected areas, leading to efficient evacuation strategies and effective on-spot emergency response, reducing casualties and damage.",
+      "context": "()",
+      "source": "Application of ALOHA in Emergency Response for Hazardous Chemicals Accidents, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Combat Strategy Simulation",
+    "metadata": {
+      "id": "b272",
+      "title": "Improved Strategy Planning",
+      "description": "Enables better preparation and decision-making in combat situations, improving military resource allocation and strategic effectiveness.",
+      "context": "()",
+      "source": "Models of conflict, with explicit representation of command and control capabilities and vulnerabilities, 1981.0"
+    }
+  },
+  {
+    "to_embed": "Uncertainty Management in Social Systems",
+    "metadata": {
+      "id": "b273",
+      "title": "Improved System Understanding",
+      "description": "Enables a better understanding of social system dynamics and potential future states under conditions of uncertainty.",
+      "context": "()",
+      "source": "COMMON - SENSE LOGIC FOR MANAGING UNCERTAINTY, 2004.0"
+    }
+  },
+  {
+    "to_embed": "Intelligent Disaster Prevention System",
+    "metadata": {
+      "id": "b274",
+      "title": "Enhanced Safety",
+      "description": "Provides enhanced safety by detecting anomalies such as unusual movement or temperature, triggering alerts to protect life and property.",
+      "context": "()",
+      "source": "Life and property intelligent disaster-preventing protection hedging care management system, 2012.0"
+    }
+  },
+  {
+    "to_embed": "Ethical Implications of Facial Recognition & Contact Tracing",
+    "metadata": {
+      "id": "b275",
+      "title": "Increased Accountability",
+      "description": "Ethical discussions lead to increased accountability for tech corporations, tech workers, and academics in science and technology regarding the development and deployment of these technologies.",
+      "context": "()",
+      "source": "Collective Organizing and Social Responsibility at CSCW, 2020.0"
+    }
+  },
+  {
+    "to_embed": "Info Warfare & Assurance Analysis",
+    "metadata": {
+      "id": "b276",
+      "title": "Improved Understanding",
+      "description": "Enhances understanding of the evolving landscape of information warfare and assurance, aiding in the development of effective defense strategies and policies at national and international levels.",
+      "context": "()",
+      "source": "Survey of Information Warfare, Information Operations and Information Assurance, 1999.0"
+    }
+  },
+  {
+    "to_embed": "AI for Population Density Management",
+    "metadata": {
+      "id": "b277",
+      "title": "Improved resource allocation.",
+      "description": "AI-driven systems can optimize resource allocation, improving efficiency and reducing waste in densely populated areas, leading to better living conditions.",
+      "context": "()",
+      "source": "New in Degree, But Not in Kind, 2016.0"
+    }
+  },
+  {
+    "to_embed": "AI for Enhanced Legislative Responsiveness",
+    "metadata": {
+      "id": "b278",
+      "title": "Improved Policy Advocacy",
+      "description": "AI-driven insights lead to more effective policy advocacy for occupational therapists, resulting in improved services and outcomes for their consumers.",
+      "context": "()",
+      "source": "Collaborating for political action., 1991.0"
+    }
+  },
+  {
+    "to_embed": "AI-driven Wargaming Simulation",
+    "metadata": {
+      "id": "b279",
+      "title": "Realistic Conflict Modeling",
+      "description": "The 'leaky bucket' model allows for the simulation of time-dependent behaviors seen in real conflicts, providing a more realistic and nuanced understanding of conflict dynamics.",
+      "context": "()",
+      "source": "Models of defeat, 2002.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Information Warfare",
+    "metadata": {
+      "id": "b280",
+      "title": "Improved Strategic Advantage",
+      "description": "Improved strategic advantage by leveraging AI to more effectively influence adversary decision-making, potentially leading to quicker conflict resolution or deterrence.",
+      "context": "()",
+      "source": "Information Warfare: Cyberattacks on Sony, 2015.0"
+    }
+  },
+  {
+    "to_embed": "Multi-agent Training for Disaster Incident Command",
+    "metadata": {
+      "id": "b281",
+      "title": "Enhanced Incident Response",
+      "description": "Improved training leading to better decision-making and coordination among incident commanders during large-scale disasters, ultimately enhancing the effectiveness of emergency response efforts.",
+      "context": "()",
+      "source": "Using multiagent teams to improve the training of incident commanders, 2006.0"
+    }
+  },
+  {
+    "to_embed": "AI for Efficient IP Arbitration",
+    "metadata": {
+      "id": "b282",
+      "title": "Faster Dispute Resolution",
+      "description": "AI-driven arbitration offers quicker resolution of IP disputes, reducing costs and uncertainty for businesses and rights holders seeking enforcement or defense of their rights.",
+      "context": "()",
+      "source": "Arbitraje y propiedad intelectual: consideraciones procesales y desafíos para un arbitraje eficiente, 2018.0"
+    }
+  },
+  {
+    "to_embed": "AI for Improved Conflict Intelligence",
+    "metadata": {
+      "id": "b283",
+      "title": "Better Decision Making",
+      "description": "Improved intelligence communication enables commanders to make better-informed decisions, enhancing strategic effectiveness and reducing potential miscalculations in conflict situations.",
+      "context": "(That officer serves as a conduit to the commander, and is his source of information about the enemy.)",
+      "source": "Pitfalls in the Use of Imperfect Information, 1988.0"
+    }
+  },
+  {
+    "to_embed": "Cloud Computing Integrated Strategy",
+    "metadata": {
+      "id": "b284",
+      "title": "Scalable Services",
+      "description": "Enables the delivery of scalable services to meet the computing needs of organizations, providing a cost-effective and efficient IT environment.",
+      "context": "()",
+      "source": "Integrated Solving Strategy for Cloud Computing, 2010.0"
+    }
+  },
+  {
+    "to_embed": "Forecasting Displacement with Agent-Based Social Simulation",
+    "metadata": {
+      "id": "b285",
+      "title": "Improved Humanitarian Response",
+      "description": "Enables better preparedness and resource allocation for humanitarian organizations responding to forced migration crises, potentially saving lives and reducing suffering.",
+      "context": "Humanitarian, Humanitarian crisis(With over 79 million people forcibly displaced, forced human migration becomes a common issue in the modern world and a serious challenge for the global community.)",
+      "source": "P-Flee: An Efficient Parallel Algorithm for Simulating Human Migration, 2021.0"
+    }
+  },
+  {
+    "to_embed": "IT Investment & Skills Development",
+    "metadata": {
+      "id": "b286",
+      "title": "Improved Collaboration",
+      "description": "Investing in IT and developing relevant skills allows for better collaboration between members and increases overall organizational effectiveness.",
+      "context": "()",
+      "source": "IT-satsing - kompetanseutvikling i framtiden, 2006.0"
+    }
+  },
+  {
+    "to_embed": "AI for Collaborative Problem Solving Enhancement",
+    "metadata": {
+      "id": "b287",
+      "title": "Improved Group Efficiency",
+      "description": "AI-driven collaboration tools can streamline group problem-solving, ensuring that participants adhere to effective practices and meet minimum participation standards.",
+      "context": "()",
+      "source": "On Being Responsible, 1992.0"
+    }
+  },
+  {
+    "to_embed": "Improved Understanding",
+    "metadata": {
+      "id": "b288",
+      "title": "Enhanced Understanding",
+      "description": "Enables better understanding of causal relationships which can improve social interaction and decision-making.",
+      "context": "()",
+      "source": "The Explanation of Social Action, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Authority & Experience Data Analysis",
+    "metadata": {
+      "id": "b289",
+      "title": "Knowledge Reliability",
+      "description": "Increases the reliability of information by cross-referencing diverse sources like expert knowledge and experiential data, mitigating biases.",
+      "context": "()",
+      "source": "The Explanation of Social Action, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Perceptual Bias Analysis",
+    "metadata": {
+      "id": "b290",
+      "title": "Fair Representation",
+      "description": "Promotes fairer representation of different perspectives by identifying and mitigating perceptual biases in data and decision-making systems.",
+      "context": "()",
+      "source": "The Explanation of Social Action, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Action-World Interaction Analysis",
+    "metadata": {
+      "id": "b291",
+      "title": "Predictive Capacity",
+      "description": "Enhances the ability to predict the consequences of actions in various contexts, improving planning and risk management capabilities.",
+      "context": "()",
+      "source": "The Explanation of Social Action, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Social Aesthetics Framework Generation",
+    "metadata": {
+      "id": "b292",
+      "title": "Cultural Insight",
+      "description": "Offers deeper insight into cultural norms and shared values, enabling better-informed social policies and community engagement strategies.",
+      "context": "()",
+      "source": "The Explanation of Social Action, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Valence & Habit Analysis",
+    "metadata": {
+      "id": "b293",
+      "title": "Behavioral Understanding",
+      "description": "Provides better understanding of human behavior and choices through the analysis of valence and habit formation, aiding in personalized interventions and support.",
+      "context": "()",
+      "source": "The Explanation of Social Action, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Social Field & Game Modeling",
+    "metadata": {
+      "id": "b294",
+      "title": "Strategic Insight",
+      "description": "Offers strategic insight into complex social dynamics by modeling social fields and strategic games, supporting better decision-making in competitive environments.",
+      "context": "()",
+      "source": "The Explanation of Social Action, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Emergency Response Virtual Environment (ERVE)",
+    "metadata": {
+      "id": "b295",
+      "title": "Improved Disaster Preparedness",
+      "description": "ERVE enables better disaster preparedness through virtual simulations and training, allowing responders to anticipate challenges and refine strategies before real-world events.",
+      "context": "()",
+      "source": "The Application and Impact of Data Conversion Research and Analysis Techniques in Support of Homeland Security, 2007.0"
+    }
+  },
+  {
+    "to_embed": "Emergency Response Virtual Environment (ERVE)",
+    "metadata": {
+      "id": "b296",
+      "title": "Enhanced Collaboration",
+      "description": "ERVE facilitates collaborative management of emergency events across different levels of government, improving coordination and resource allocation during crises.",
+      "context": "()",
+      "source": "The Application and Impact of Data Conversion Research and Analysis Techniques in Support of Homeland Security, 2007.0"
+    }
+  },
+  {
+    "to_embed": "Ethical IT Management & Security",
+    "metadata": {
+      "id": "b297",
+      "title": "Enhanced Security",
+      "description": "Protects critical infrastructure from information warfare, ensuring the availability and integrity of essential services.",
+      "context": "()",
+      "source": "Current Security Management & Ethical Issues of Information Technology, 2003.0"
+    }
+  },
+  {
+    "to_embed": "Ethical IT Management & Security",
+    "metadata": {
+      "id": "b298",
+      "title": "Improved Awareness",
+      "description": "Increases user education and awareness of security risks, fostering a more security-conscious user base.",
+      "context": "()",
+      "source": "Current Security Management & Ethical Issues of Information Technology, 2003.0"
+    }
+  },
+  {
+    "to_embed": "Ethical IT Management & Security",
+    "metadata": {
+      "id": "b299",
+      "title": "Global Understanding",
+      "description": "Promotes understanding of social responsibility in technology across different regions, including Latin America, the US, and the Arab world.",
+      "context": "()",
+      "source": "Current Security Management & Ethical Issues of Information Technology, 2003.0"
+    }
+  },
+  {
+    "to_embed": "Robotics in Urban Search and Rescue",
+    "metadata": {
+      "id": "b300",
+      "title": "Enhanced Situational Awareness",
+      "description": "Improved situational awareness through communication analysis allows for better understanding of the search and rescue environment and improved search strategies.",
+      "context": "()",
+      "source": "Moonlight in Miami: Field Study of Human-Robot Interaction in the Context of an Urban Search and Rescue Disaster Response Training Exercise, 2004.0"
+    }
+  },
+  {
+    "to_embed": "Robust Game Theory Solutions",
+    "metadata": {
+      "id": "b301",
+      "title": "Improved Decision Making",
+      "description": "Enables more reliable decision-making in complex scenarios by accounting for real-world factors like unexpected behavior and computational limitations neglected by Nash equilibrium.",
+      "context": "()",
+      "source": "Beyond nash equilibrium: solution concepts for the 21st century, 2008.0"
+    }
+  },
+  {
+    "to_embed": "Simulation for Military Decision-Making",
+    "metadata": {
+      "id": "b302",
+      "title": "Improved Decision Quality",
+      "description": "Enhances the quality of military decisions by providing a framework that acknowledges and addresses the uncertainty and complexity inherent in warfare.",
+      "context": "()",
+      "source": "A simulation study of organizational decision making under conditions of uncertainty and ambiguity ., 1983.0"
+    }
+  },
+  {
+    "to_embed": "AI Book Recommendation System",
+    "metadata": {
+      "id": "b303",
+      "title": "Personalized Learning",
+      "description": "Tailored book suggestions help individuals discover relevant content for personal and professional development, enhancing their learning journey and expanding knowledge.",
+      "context": "()",
+      "source": "The New Improved Big6 Workshop Handbook. Professional Growth Series., 1999.0"
+    }
+  },
+  {
+    "to_embed": "AI for Medication Prescribing Communication Analysis",
+    "metadata": {
+      "id": "b304",
+      "title": "Reduced Medication Errors",
+      "description": "Improved communication through linguistic analysis can lead to fewer medication errors, reducing patient injury or death.",
+      "context": "()",
+      "source": "A Language Based Model for Analysis of Communication Intensive Processes in Health Care, 2016.0"
+    }
+  },
+  {
+    "to_embed": "Ethical Technology Management Education",
+    "metadata": {
+      "id": "b305",
+      "title": "Improved Ethical Decision-Making",
+      "description": "Enhances ability to analyze and resolve ethical dilemmas in technology development, promoting responsible innovation and minimizing negative social impacts through education.",
+      "context": "()",
+      "source": "Ethics and Engineering: 1. Introduction to Ethics and Engineering, 2012.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Dynamic SCM Collaboration",
+    "metadata": {
+      "id": "b306",
+      "title": "Increased System Stability",
+      "description": "By understanding and controlling the dynamics within the supply chain, AI enhances system stability, making it more resilient to disruptions and reducing delays through ubiquitous computing.",
+      "context": "()",
+      "source": "Dynamic collaboration from Scientists' Eyes, 2004.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Dynamic SCM Collaboration",
+    "metadata": {
+      "id": "b307",
+      "title": "Enhanced Responsiveness",
+      "description": "Ubiquitous computing enables quick sensing and reaction, suppressing internal system delays and allowing for faster adaptation to changing conditions within the supply chain.",
+      "context": "()",
+      "source": "Dynamic collaboration from Scientists' Eyes, 2004.0"
+    }
+  },
+  {
+    "to_embed": "Human Factors for Enhanced Homeland Security",
+    "metadata": {
+      "id": "b308",
+      "title": "Improved Security Procedures",
+      "description": "User-centered design and human performance metrics lead to more effective and efficient security procedures, enhancing overall homeland security.",
+      "context": "()",
+      "source": "Human Factors of Homeland Security, 2007.0"
+    }
+  },
+  {
+    "to_embed": "AI for Infantry Squad Leader Support",
+    "metadata": {
+      "id": "b309",
+      "title": "Improved Battlefield Awareness",
+      "description": "Enhances the squad leader's awareness of enemy activity, environmental conditions, and population dynamics leading to more informed decisions.",
+      "context": "()",
+      "source": "CRITICAL COMBAT PERFORMANCES, KNOWLEDGES, AND SKILLS REQUIRED OF THE INFANTRY RIFLE SQUAD LEADER: OBSERVATION, COMBAT INTELLIGENCE AND REPORTING, 1968.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Personalized Learning",
+    "metadata": {
+      "id": "b310",
+      "title": "Improved Skills",
+      "description": "Enhances individual skills and abilities by providing tailored learning materials, leading to improved performance in both personal and professional life.",
+      "context": "()",
+      "source": "The dynamics of prejudice., 1982.0"
+    }
+  },
+  {
+    "to_embed": "AI for Enhanced Inter-Team Communication",
+    "metadata": {
+      "id": "b311",
+      "title": "Improved Collaboration",
+      "description": "Improved inter-team collaboration through enhanced communication leads to better understanding of diverse perspectives, efficient decision-making, and optimized resource allocation, ultimately enhancing mission success.",
+      "context": "()",
+      "source": "Communicating Medical Needs to Non-Medical Managers, 2004.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Problem-Solving Education",
+    "metadata": {
+      "id": "b312",
+      "title": "Improved Skills",
+      "description": "AI-enhanced education fosters improved problem-solving skills, empowering individuals to address challenges confidently and effectively in various aspects of life and work.",
+      "context": "()",
+      "source": "Solving Complex Problems Requires Good People, Good Processes, 1992.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Veteran IS Program Recruitment",
+    "metadata": {
+      "id": "b313",
+      "title": "Enhanced Career Opportunities",
+      "description": "AI-driven recruitment ensures veterans leverage their skills for successful IS careers, translating military experience into valuable professional expertise and better job placement.",
+      "context": "()",
+      "source": "The Challenges and Opportunities of IS Programs in Addressing Societal Challenge of Military Veteran Undergraduate Education & Integration, 2020.0"
+    }
+  },
+  {
+    "to_embed": "Adaptive Cooperative Engineering Applications",
+    "metadata": {
+      "id": "b314",
+      "title": "Improved Task Efficiency",
+      "description": "Enhances efficiency in cooperative task execution through optimized coordination mechanisms in workflow and CSCW environments, leveraging intelligent network functionalities.",
+      "context": "()",
+      "source": "Des mecanismes du support adaptatif pour l'ingenierie cooperative : une approche basee sur les systemes multi-agents, 1996.0"
+    }
+  },
+  {
+    "to_embed": "AI for Human-Centric Product Design",
+    "metadata": {
+      "id": "b315",
+      "title": "Improved Accessibility",
+      "description": "Human-centric design informed by AI leads to more accessible products, empowering individuals with diverse abilities and needs, enhancing their quality of life.",
+      "context": "()",
+      "source": "Regulars columnist: Back story, 2021.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Military Decision-Making",
+    "metadata": {
+      "id": "b316",
+      "title": "Improved Strategy",
+      "description": "Enhances strategic planning and resource allocation, leading to more effective military operations and potentially reducing casualties.",
+      "context": "()",
+      "source": "Methods and techniques most usually applied as aids in decision-making and researches in military organization systems, 1997.0"
+    }
+  },
+  {
+    "to_embed": "Web-Based Helpdesk for IT Support Improvement",
+    "metadata": {
+      "id": "b317",
+      "title": "Faster Problem Resolution",
+      "description": "Employees can quickly submit IT problems through the web-based system, enabling faster resolution by the EDP/IT division.",
+      "context": "()",
+      "source": "Helpdesk System At PT Himalaya Everest Jaya Jakarta, 2019.0"
+    }
+  },
+  {
+    "to_embed": "Web-Based Helpdesk for IT Support Improvement",
+    "metadata": {
+      "id": "b318",
+      "title": "Improved Data Security",
+      "description": "Digital records reduce the risk of lost or damaged paper records, ensuring better data security and accessibility.",
+      "context": "()",
+      "source": "Helpdesk System At PT Himalaya Everest Jaya Jakarta, 2019.0"
+    }
+  },
+  {
+    "to_embed": "AI for Social System Awareness & Participation",
+    "metadata": {
+      "id": "b319",
+      "title": "Enhanced Conscious Participation",
+      "description": "Individuals gain enhanced self-awareness and are empowered to make deliberate choices in their interactions within social systems, leading to more meaningful engagement.",
+      "context": "()",
+      "source": "Awareness and Social Systems, 2001.0"
+    }
+  },
+  {
+    "to_embed": "Charter-based Legal Reasoning AI",
+    "metadata": {
+      "id": "b320",
+      "title": "Improved Legal Understanding",
+      "description": "AI enhances understanding of the Canadian Charter of Rights and Freedoms, leading to more informed legal arguments and decisions. This benefits the legal system and society.",
+      "context": "()",
+      "source": "Reasoning with the Charter, 1992.0"
+    }
+  },
+  {
+    "to_embed": "Land Rehabilitation via Machinery",
+    "metadata": {
+      "id": "b321",
+      "title": "Improved soil quality",
+      "description": "Prepares soil for seeding by working dead plant litter into the soil, creating a more fertile environment for new vegetation growth.",
+      "context": "(Two people stood in the midst of what looked like a war zone.)",
+      "source": "Range management and image., 1992.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Novel Recommendation and Safe Downloads",
+    "metadata": {
+      "id": "b322",
+      "title": "Reduced Malware Risk",
+      "description": "Users are protected from downloading harmful files, preserving their device security and personal data integrity. This enhances user trust and promotes safer online experiences.",
+      "context": "()",
+      "source": "A Bone to Pick, 1999.0"
+    }
+  },
+  {
+    "to_embed": "AI Understanding Creative Experience",
+    "metadata": {
+      "id": "b323",
+      "title": "Enhanced Creativity",
+      "description": "AI insights foster environments conducive to innovation, accelerating problem-solving and artistic expression across societal sectors.",
+      "context": "()",
+      "source": "On the Troublesome \"X\", 1937.0"
+    }
+  },
+  {
+    "to_embed": "Safe Online Book Access",
+    "metadata": {
+      "id": "b324",
+      "title": "Reduced Virus Risk",
+      "description": "Users benefit from a reduced risk of harmful viruses infecting their devices, ensuring a safer and more reliable reading experience.",
+      "context": "()",
+      "source": "Power Of Reinforcement The, 2016.0"
+    }
+  },
+  {
+    "to_embed": "Insurgency Reporting Mobile App",
+    "metadata": {
+      "id": "b325",
+      "title": "Improved Intelligence",
+      "description": "Enables more efficient and timely intelligence gathering on insurgency activities, aiding security forces in responding effectively and protecting civilians.",
+      "context": "(Insurgency has bedeviled our national economy and human peaceful existence in Nigeria.)",
+      "source": "Tackling Boko Haram insurgency through intelligent reporting system, 2020.0"
+    }
+  },
+  {
+    "to_embed": "Insurgency Reporting Mobile App",
+    "metadata": {
+      "id": "b326",
+      "title": "Increased Citizen Safety",
+      "description": "Empowers citizens to report suspicious activities safely, contributing to a safer environment by facilitating quicker responses to potential threats.",
+      "context": "(Insurgency has bedeviled our national economy and human peaceful existence in Nigeria.)",
+      "source": "Tackling Boko Haram insurgency through intelligent reporting system, 2020.0"
+    }
+  },
+  {
+    "to_embed": "CBR-Argumentation for Organ Transplant Decisions",
+    "metadata": {
+      "id": "b327",
+      "title": "Improved Decision Quality",
+      "description": "The ProCLAIM model enhances the quality of decisions in organ transplantation by providing a structured approach for evaluating arguments and resolving conflicts, leading to more informed and justified outcomes.",
+      "context": "()",
+      "source": "CBR and Argument Schemes for Collaborative Decision Making, 2006.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Education for African Development",
+    "metadata": {
+      "id": "b328",
+      "title": "Enhanced Leadership",
+      "description": "AI-enhanced education promotes critical thinking and problem-solving, fostering effective leaders capable of addressing complex challenges in Africa.",
+      "context": "()",
+      "source": "Images and Imagination in the Actualization of Potentials., 2008.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Education for African Development",
+    "metadata": {
+      "id": "b329",
+      "title": "Improved Cognition",
+      "description": "AI-driven methods can improve cognitive understanding, enabling individuals to manipulate images and concepts more effectively, enhancing their grasp of vital information.",
+      "context": "()",
+      "source": "Images and Imagination in the Actualization of Potentials., 2008.0"
+    }
+  },
+  {
+    "to_embed": "AI-Assisted Website Development for Nonprofits",
+    "metadata": {
+      "id": "b330",
+      "title": "Community Empowerment",
+      "description": "AI-assisted website development empowers local nonprofits and communities by providing them with an online platform to share information, connect with stakeholders, and increase their visibility and impact.",
+      "context": "()",
+      "source": "LIBRARIE$ + NONPROFIT$ = Add Up to Profitable COMMUNITY PARTNERSHIP$, 2005.0"
+    }
+  },
+  {
+    "to_embed": "AI for Crisis Communication Education",
+    "metadata": {
+      "id": "b331",
+      "title": "Improved Crisis Response",
+      "description": "Enhances cooperation between government and defense during crises through better-trained professionals and improved info-communication systems, leading to more effective disaster response.",
+      "context": "()",
+      "source": "Analysis of Possibilities in Postgraduate Specialisation Programmes Summarising Government Aimed Info-communication Systems and Services: Fundaments of theTraining, Abilities, and Requirements, 2019.0"
+    }
+  },
+  {
+    "to_embed": "File Maintenance and Updating Programs",
+    "metadata": {
+      "id": "b332",
+      "title": "Improved Data Accuracy",
+      "description": "Ensures accurate and up-to-date file information by facilitating efficient maintenance and updating of data, regardless of data card count.",
+      "context": "()",
+      "source": "File maintenance using a line editor, 1979.0"
+    }
+  },
+  {
+    "to_embed": "Analyzing Glass Ceiling Effects on Teacher Empowerment",
+    "metadata": {
+      "id": "b333",
+      "title": "Improved Understanding of Workplace Dynamics",
+      "description": "The analysis offers insights into the relationship between perceived barriers ('glass ceiling') and teacher empowerment, potentially informing policies to improve work environments and teacher well-being.",
+      "context": "()",
+      "source": "Kariyer Engeli Olarak Cam Tavanin Okullarda Personel Güçlendirmeye Etkisi, 2021.0"
+    }
+  },
+  {
+    "to_embed": "Decision Making Noise Reduction",
+    "metadata": {
+      "id": "b334",
+      "title": "Improved Judgement Accuracy",
+      "description": "Reduces variability in judgments, leading to more accurate and consistent decisions within organizations. This enhances overall organizational effectiveness.",
+      "context": "()",
+      "source": "Reducing Noise in Decision Making: Interaction, 2016.0"
+    }
+  },
+  {
+    "to_embed": "Web-Based Insurance Data Processing Automation",
+    "metadata": {
+      "id": "b335",
+      "title": "Improved Resource Allocation",
+      "description": "Effective allocation of human resources through a centralized system for the complex task of operating the FPHLM.",
+      "context": "()",
+      "source": "A web-based task-tracking collaboration system for the Florida Public Hurricane Loss Model, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Web-Based Insurance Data Processing Automation",
+    "metadata": {
+      "id": "b336",
+      "title": "Streamlined Data Tracking",
+      "description": "Tracking the different stages of data processing, ensuring better accountability and efficiency in the workflow.",
+      "context": "()",
+      "source": "A web-based task-tracking collaboration system for the Florida Public Hurricane Loss Model, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Web-Based Insurance Data Processing Automation",
+    "metadata": {
+      "id": "b337",
+      "title": "Enhanced Communication",
+      "description": "Improved information exchange among team members and between the modeler and the clients, fostering better collaboration.",
+      "context": "()",
+      "source": "A web-based task-tracking collaboration system for the Florida Public Hurricane Loss Model, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Mobile-Enterprise Data Synchronization and Conflict Resolution",
+    "metadata": {
+      "id": "b338",
+      "title": "Data Consistency",
+      "description": "Ensures data consistency between mobile devices and enterprise data sources, reducing errors and improving data reliability for business operations.",
+      "context": "()",
+      "source": "Systeme et procede de mise a jour de logiciel et de donnees mobiles, 2004.0"
+    }
+  },
+  {
+    "to_embed": "AI for Information Management",
+    "metadata": {
+      "id": "b339",
+      "title": "Enhanced Information Access",
+      "description": "AI improves access to relevant information, enabling better decision-making and knowledge utilization for information professionals and the organizations they serve.",
+      "context": "()",
+      "source": "The Onus of Explanation, 2021.0"
+    }
+  },
+  {
+    "to_embed": "Digital Library for Philosophy Books",
+    "metadata": {
+      "id": "b340",
+      "title": "Enhanced Accessibility",
+      "description": "Providing universally compatible access to philosophy books anytime, anywhere, fostering intellectual growth and convenient learning.",
+      "context": "()",
+      "source": "Philosophy A Beginner S Guide, 2016.0"
+    }
+  },
+  {
+    "to_embed": "Crowdsourced Infrastructure Assessment WebGIS",
+    "metadata": {
+      "id": "b341",
+      "title": "Improved Emergency Response",
+      "description": "Facilitates rapid damage assessment and efficient route planning, enabling faster emergency response and resource allocation in disaster-stricken areas, improving aid delivery.",
+      "context": "()",
+      "source": "GOOGLE MAPS FOR CROWDSOURCED EMERGENCY ROUTING, 2012.0"
+    }
+  },
+  {
+    "to_embed": "AI for Conceptual Framework Analysis",
+    "metadata": {
+      "id": "b342",
+      "title": "Improved Problem Solving",
+      "description": "By identifying inadequate conceptual frameworks, AI facilitates the adoption of more effective frameworks, leading to improved problem-solving in various domains.",
+      "context": "()",
+      "source": "Kan Gud existera, 2006.0"
+    }
+  },
+  {
+    "to_embed": "Bayesian Model for Pandemic Cause Analysis",
+    "metadata": {
+      "id": "b343",
+      "title": "Improved Understanding",
+      "description": "A better understanding of the causes of the pandemic can improve public health response and prevention strategies in the future.",
+      "context": "()",
+      "source": "What Would Say to the Reverend Thomas Bayes About the Emergence of the Epidemic-2020?, 2020.0"
+    }
+  },
+  {
+    "to_embed": "Improved C2 Synchronization: Enhances strategic effectiveness through robust system design and disturbance handling.",
+    "metadata": {
+      "id": "b344",
+      "title": "Enhanced Strategic Effectiveness",
+      "description": "The living system model's robust design and improved C2 synchronization enhance strategic effectiveness by better handling disturbances and adapting to dynamic environments, leading to improved outcomes.",
+      "context": "()",
+      "source": "Effects-Based Operations at the Operational Level of War: Exploring the Living System Alternative, 2008.0"
+    }
+  },
+  {
+    "to_embed": "Automatic Clutch Emergency Control System",
+    "metadata": {
+      "id": "b345",
+      "title": "Enhanced Safety",
+      "description": "The system enhances vehicle safety by preventing engine over-speeding and maintaining controlled clutch engagement, reducing the risk of accidents due to mechanical failure or driver error.",
+      "context": "()",
+      "source": "Control very particular control device for an automatic clutch, 1997.0"
+    }
+  },
+  {
+    "to_embed": "Online Conversation Monitoring and Management System",
+    "metadata": {
+      "id": "b346",
+      "title": "Improved Brand Reputation",
+      "description": "By tracking online conversations, entities can proactively address negative feedback and enhance their brand reputation, leading to increased customer trust and loyalty.",
+      "context": "()",
+      "source": "Systems and methods for measuring and managing distributed online conversations, 2009.0"
+    }
+  },
+  {
+    "to_embed": "Argument Maps for ATM Liability Assessment",
+    "metadata": {
+      "id": "b347",
+      "title": "Improved Legal Understanding",
+      "description": "Argument maps facilitate understanding of legal concepts and norms related to Air Traffic Management (ATM) liability for both lawyers and non-legal technical staff.",
+      "context": "()",
+      "source": "Assessing Liability with Argumentation Maps: An Application in Aviation Law, 2013.0"
+    }
+  },
+  {
+    "to_embed": "Enhancing CS Curricula with CSG-Ed Integration",
+    "metadata": {
+      "id": "b348",
+      "title": "Improved Curriculum Relevance",
+      "description": "CSG-Ed integration ensures curricula are more relevant to societal needs, better preparing students for ethical and socially responsible computing careers.",
+      "context": "()",
+      "source": "Community Input into CS2023 Addendum Article on Computing for Social Good Education, 2022.0"
+    }
+  },
+  {
+    "to_embed": "Data Analysis Environment Management improves data analysis by enabling review and verification of results.",
+    "metadata": {
+      "id": "b349",
+      "title": "Enhanced Analysis Accuracy",
+      "description": "Saving and restoring analysis states enables analysts to review previous results and verify the accuracy of the analysis, leading to more reliable outcomes.",
+      "context": "()",
+      "source": "Role of environments in managing data analysis, 1984.0"
+    }
+  },
+  {
+    "to_embed": "AI for Psychology Student Problem-Solving Analysis",
+    "metadata": {
+      "id": "b350",
+      "title": "Enhanced Learning",
+      "description": "AI analysis enables tailored learning interventions, improving students' cognitive and sociocognitive problem-solving skills and overall academic performance by identifying specific areas needing development.",
+      "context": "()",
+      "source": "LA SOLUCIÓN DE PROBLEMAS COGNITIVOS EN ESTUDIANTES DE PSICOLOGÍA, 2011.0"
+    }
+  },
+  {
+    "to_embed": "Insurance Data Management System",
+    "metadata": {
+      "id": "b351",
+      "title": "Improved Data Accessibility",
+      "description": "Enables straightforward access to data for application programs via high-level languages, enhancing efficiency and productivity for developers.",
+      "context": "()",
+      "source": "OMNIBUS: a large data base management system, 1899.0"
+    }
+  },
+  {
+    "to_embed": "Insurance Data Management System",
+    "metadata": {
+      "id": "b352",
+      "title": "Efficient Data Storage",
+      "description": "Significantly reduces data storage requirements by consolidating multiple magnetic tapes into a single data cell drive, minimizing physical storage space.",
+      "context": "()",
+      "source": "OMNIBUS: a large data base management system, 1899.0"
+    }
+  },
+  {
+    "to_embed": "Insurance Data Management System",
+    "metadata": {
+      "id": "b353",
+      "title": "Swift Data Retrieval",
+      "description": "Maintains rapid response times to inquiries from remote terminals, improving customer service and operational efficiency.",
+      "context": "()",
+      "source": "OMNIBUS: a large data base management system, 1899.0"
+    }
+  },
+  {
+    "to_embed": "Insurance Data Management System",
+    "metadata": {
+      "id": "b354",
+      "title": "Enhanced Data Integrity",
+      "description": "Implements multiple layers of protection against unauthorized alterations, incorrect updates, and system failures, ensuring data accuracy and reliability.",
+      "context": "()",
+      "source": "OMNIBUS: a large data base management system, 1899.0"
+    }
+  },
+  {
+    "to_embed": "AI for Public Security Rapid Response Enhancement",
+    "metadata": {
+      "id": "b355",
+      "title": "Improved Social Safeguard",
+      "description": "Enhances public safety and security by optimizing response times and effectiveness through efficient resource allocation and proactive threat detection.",
+      "context": "()",
+      "source": "Constructing Public Security Organs' Rapid Response Mechanism, 2010.0"
+    }
+  },
+  {
+    "to_embed": "Communication Process Modeling Software",
+    "metadata": {
+      "id": "b356",
+      "title": "Accelerated Research",
+      "description": "The software accelerates research by providing a tool for modeling and simulating communication processes, facilitating the study and adaptation of these models to real-world scenarios more quickly.",
+      "context": "()",
+      "source": "Информационные равновесия в коммуникационных системах, 2009.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Emergency Device Control",
+    "metadata": {
+      "id": "b357",
+      "title": "Enhanced User Safety",
+      "description": "Improved safety and responsiveness of electronic devices in emergencies, adapting device functions based on real-time data and user needs, potentially minimizing harm or aiding in rescue.",
+      "context": "()",
+      "source": "ETERN DEGREE OF EVERGENCY, 2017.0"
+    }
+  },
+  {
+    "to_embed": "AI for Event Planning & Logistics",
+    "metadata": {
+      "id": "b358",
+      "title": "Improved Efficiency",
+      "description": "AI-driven planning improves efficiency in resource allocation, reducing costs and maximizing the impact of events organized by Logevent S.A.S.",
+      "context": "()",
+      "source": "Logevent S.A.S, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Restbus Simulation Framework for Vehicle Networks",
+    "metadata": {
+      "id": "b359",
+      "title": "Efficient Vehicle Network Development",
+      "description": "Facilitates faster and more efficient development and testing of vehicle network communication systems by providing a flexible and extensible simulation environment.",
+      "context": "()",
+      "source": "Erstellung eines intelligenten Systems zur Generierung von Komponenten für formal beschriebene Fahrzeug-Netzwerke, 2011.0"
+    }
+  },
+  {
+    "to_embed": "AI-Powered Decision Support System",
+    "metadata": {
+      "id": "b360",
+      "title": "Increased Efficiency",
+      "description": "Automated model and solver selection and parameter matching reduces user effort and time, improving the productivity of institutional model-solving tasks.",
+      "context": "()",
+      "source": "의사결정지원시스템에서 직관적이고 사용자 친숙한 모델 해결을 위한 모델과 솔버의 유연한 통합에 대한 연구, 2005.0"
+    }
+  },
+  {
+    "to_embed": "Robots for Disaster Assessment and Recovery",
+    "metadata": {
+      "id": "b361",
+      "title": "Improved situational awareness",
+      "description": "Real-time data and extensive video footage enhance understanding of the disaster area, improving the efficiency and effectiveness of rescue and recovery operations.",
+      "context": "()",
+      "source": "Spatial hearing issues in sound reproduction, 2012.0"
+    }
+  },
+  {
+    "to_embed": "Robots for Disaster Assessment and Recovery",
+    "metadata": {
+      "id": "b362",
+      "title": "Reduced risk to rescuers",
+      "description": "Remote operation of robots minimizes the exposure of human rescuers to hazardous environments, such as radiation zones or unstable debris fields, preserving their safety.",
+      "context": "()",
+      "source": "Spatial hearing issues in sound reproduction, 2012.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced E-commerce Personalization",
+    "metadata": {
+      "id": "b363",
+      "title": "Increased Consumer Empowerment",
+      "description": "Consumers gain access to more information and choices, leading to empowerment and better purchasing decisions in the e-commerce environment.",
+      "context": "()",
+      "source": "YEM BİN YILA GİRERKEN TİCARETİN DEĞİŞEN YÜZÜ: E-TİCARET, 2001.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Problem-Oriented Patient Records",
+    "metadata": {
+      "id": "b364",
+      "title": "Improved Care Continuity",
+      "description": "AI facilitates better continuity of patient care by removing redundant information, and enabling easy overview of and access to relevant patient data for physicians.",
+      "context": "()",
+      "source": "A problem-oriented, knowledge-based patient record system., 2002.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Problem-Oriented Patient Records",
+    "metadata": {
+      "id": "b365",
+      "title": "Reduced Redundancy",
+      "description": "AI removes redundant and confusing information within patient records, enabling physicians to more efficiently access the most pertinent information, leading to better decision-making.",
+      "context": "()",
+      "source": "A problem-oriented, knowledge-based patient record system., 2002.0"
+    }
+  },
+  {
+    "to_embed": "AI-powered Cybersecurity Operations Center Deployment",
+    "metadata": {
+      "id": "b366",
+      "title": "Enhanced Cyber Investment Protection",
+      "description": "Better situational awareness leads to improved protection, detection, response, and recovery of organizational and national cyber investments, reducing the impact of cyber threats.",
+      "context": "()",
+      "source": "Security operations centre: Situation awareness, threat intelligence and cybercrime, 2017.0"
+    }
+  },
+  {
+    "to_embed": "Case-Mix Management Software",
+    "metadata": {
+      "id": "b367",
+      "title": "Improved Efficiency",
+      "description": "Enhances the efficiency of medical record services, allowing professionals to manage case mixes more effectively and improve overall workflow.",
+      "context": "()",
+      "source": "Software reference guide: case-mix management., 1987.0"
+    }
+  },
+  {
+    "to_embed": "STPA-Sec for Cyber Security Risk Analysis",
+    "metadata": {
+      "id": "b368",
+      "title": "Improved System Security",
+      "description": "STPA-Sec proactively identifies and mitigates vulnerabilities in complex systems, enhancing overall system security and resilience against cyber disruptions and potential losses.",
+      "context": "()",
+      "source": "Systems thinking for safety and security, 2013.0"
+    }
+  },
+  {
+    "to_embed": "AI-driven Epidemic Data Integration",
+    "metadata": {
+      "id": "b369",
+      "title": "Enhanced Preparedness",
+      "description": "Integrating data sources via AI enables better prediction, resource allocation, and response strategies for future epidemics, enhancing public health preparedness.",
+      "context": "()",
+      "source": "Digital Transformation of the Health Sector During the Covid-19 Pandemic in Saudi Arabia, 2022.0"
+    }
+  },
+  {
+    "to_embed": "Digital Health Platform Proliferation",
+    "metadata": {
+      "id": "b370",
+      "title": "Improved Access",
+      "description": "Digital platforms enhance access to healthcare information, services, and support for a wider population, particularly during crises like the COVID-19 pandemic.",
+      "context": "()",
+      "source": "Digital Transformation of the Health Sector During the Covid-19 Pandemic in Saudi Arabia, 2022.0"
+    }
+  },
+  {
+    "to_embed": "Special Tool for Nut/Gasket Assembly",
+    "metadata": {
+      "id": "b371",
+      "title": "Reduced Labor",
+      "description": "The tool effectively reduces the labor intensity involved in assembling and disassembling nuts and gaskets in narrow spaces, minimizing physical strain on workers.",
+      "context": "()",
+      "source": "Special tool for assembling and disassembling nut and gasket in depth of slit, 2009.0"
+    }
+  },
+  {
+    "to_embed": "Special Tool for Nut/Gasket Assembly",
+    "metadata": {
+      "id": "b372",
+      "title": "Improved Efficiency",
+      "description": "The specialized tool improves the assembly and disassembly efficiency of nuts and gaskets in confined areas, leading to quicker task completion and increased productivity.",
+      "context": "()",
+      "source": "Special tool for assembling and disassembling nut and gasket in depth of slit, 2009.0"
+    }
+  },
+  {
+    "to_embed": "AI-Driven Curriculum Personalization",
+    "metadata": {
+      "id": "b373",
+      "title": "Enhanced Student Preparedness",
+      "description": "Prepares students for the future workforce by aligning curriculum with future trends, promoting adaptability and competence in a changing world, contributing to societal progress.",
+      "context": "()",
+      "source": "and Design : Prec . sors and Futures . Proceedings of the Annual North American Meeting of the Society for General Systems, 2007.0"
+    }
+  },
+  {
+    "to_embed": "Automated Translation Post-Editing",
+    "metadata": {
+      "id": "b374",
+      "title": "Improved Communication",
+      "description": "Improved quality of translated text leads to more accurate and effective communication across language barriers, benefiting international collaborations and understanding.",
+      "context": "()",
+      "source": "Post-Editing in the Current Translation Work Flow Information, 2017.0"
+    }
+  },
+  {
+    "to_embed": "Copyright Infringement Detection",
+    "metadata": {
+      "id": "b375",
+      "title": "Protecting Authors' Rights",
+      "description": "AI-driven detection protects authors' copyright and moral rights, ensuring proper attribution and preventing unauthorized use of their work. This promotes academic integrity and fair compensation.",
+      "context": "()",
+      "source": "AgentcitiesUK.net Challenge Day 2: e-Government and e-Democracy, 2005.0"
+    }
+  },
+  {
+    "to_embed": "Predictive Enemy Behavior Analysis",
+    "metadata": {
+      "id": "b376",
+      "title": "Improved Operational Planning",
+      "description": "Unit commanders receive credible information for identifying potential threats and risks, allowing for more effective operational planning and resource allocation.",
+      "context": "()",
+      "source": "DETERMINATION OF THREATS AND RISKS IN CONDITIONS OF COMBAT OPER-ATIONS BY USING GEOSPATIAL ANALYSIS AND TIME ANALYSIS, 2019.0"
+    }
+  },
+  {
+    "to_embed": "AI for Intelligence Analysis & Dissemination",
+    "metadata": {
+      "id": "b377",
+      "title": "Improved Decision-Making",
+      "description": "Timely and usable intelligence enables better-informed and faster decision-making by national and tactical leaders, improving responses to diverse threats.",
+      "context": "()",
+      "source": "Transforming the Intelligence Community, 2002.0"
+    }
+  },
+  {
+    "to_embed": "AI for Intelligence Reorganization",
+    "metadata": {
+      "id": "b378",
+      "title": "Enhanced Efficiency",
+      "description": "AI optimizes intelligence processes, leading to more efficient prioritization, analysis, and dissemination of information, streamlining operations and resource allocation.",
+      "context": "()",
+      "source": "Transforming the Intelligence Community, 2002.0"
+    }
+  },
+  {
+    "to_embed": "AI for Cultural Interaction Analysis",
+    "metadata": {
+      "id": "b379",
+      "title": "Informed Policy Making",
+      "description": "Better understanding of interaction dynamics enables policymakers to craft informed policies that prevent or mitigate negative outcomes.",
+      "context": "()",
+      "source": "Micro Essays [From the Editor], 2010.0"
+    }
+  },
+  {
+    "to_embed": "AI-Enhanced Distance Learning for Social Sciences",
+    "metadata": {
+      "id": "b380",
+      "title": "Competence Formation",
+      "description": "Enables development of professional competencies in social humanitarian disciplines through innovative distance learning methods and digital educational platforms.",
+      "context": "()",
+      "source": "On the issue of practice-oriented education in distance learning, 2021.0"
+    }
+  },
+  {
+    "to_embed": "Open Learning for Professionals",
+    "metadata": {
+      "id": "b381",
+      "title": "Knowledge Acquisition",
+      "description": "Open learning, especially through collaborative debates and reification, optimizes knowledge acquisition and personal development for professionals.",
+      "context": "()",
+      "source": "The process of knowledge reification in human-human interaction, 1992.0"
+    }
+  },
+  {
+    "to_embed": "Information Ethics in Reverse Engineering Conflicts",
+    "metadata": {
+      "id": "b382",
+      "title": "Ethical Corporate Conduct",
+      "description": "Promotes ethical corporate behavior by addressing information ethics challenges, contributing to fairer practices and increased accountability in digital environments.",
+      "context": "()",
+      "source": "The Conflict in the Reverse Engineering of Software: Corporations and Information Ethics, 2006.0"
+    }
+  },
+  {
+    "to_embed": "Distributed Situation Detection with SCENE",
+    "metadata": {
+      "id": "b383",
+      "title": "Improved Scalability",
+      "description": "Distribution allows the system to scale more effectively by distributing the processing load across multiple rule engines, improving performance and responsiveness.",
+      "context": "()",
+      "source": "An infrastructure for distributed rule-based situation management, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Distributed Situation Detection with SCENE",
+    "metadata": {
+      "id": "b384",
+      "title": "Increased Flexibility",
+      "description": "The system accommodates a variety of distribution strategies and rule engine configurations, enabling developers to tailor the situation detection to specific requirements with little effort.",
+      "context": "()",
+      "source": "An infrastructure for distributed rule-based situation management, 2014.0"
+    }
+  },
+  {
+    "to_embed": "Aramis's Benefit: Potential for enhanced public transit efficiency, accessibility and convenience.",
+    "metadata": {
+      "id": "b385",
+      "title": "Improved Transit Efficiency",
+      "description": "Aramis aimed to provide more efficient, accessible, and convenient public transportation options, potentially reducing congestion and improving the overall commuting experience for citizens.",
+      "context": "()",
+      "source": "Aramis, or the Love of Technology, 1993.0"
+    }
+  },
+  {
+    "to_embed": "Object Relations Analysis for Trauma Sense-Making",
+    "metadata": {
+      "id": "b386",
+      "title": "Deeper Trauma Understanding",
+      "description": "Facilitates deeper understanding of psychological trauma by analyzing object relations, promoting emotional processing and sense-making for individuals affected by trauma.",
+      "context": "()",
+      "source": "Les objets de relation, 2002.0"
+    }
+  },
+  {
+    "to_embed": "Linear Amplifier Design with Logarithmic Compensation",
+    "metadata": {
+      "id": "b387",
+      "title": "Improved Accuracy",
+      "description": "The logarithmic compensation ensures more accurate signal amplification and processing, reducing distortion and improving overall performance of electronic devices.",
+      "context": "()",
+      "source": "The Need for Psychology in Research on Computer Supported Cooperative Work, 1998.0"
+    }
+  },
+  {
+    "to_embed": "Schematic Mapping for Incident Reporting",
+    "metadata": {
+      "id": "b388",
+      "title": "Enhanced Safety",
+      "description": "Improved incident reports lead to better identification of system failures, enabling focused remedial actions and reducing future accidents, thereby enhancing overall safety.",
+      "context": "()",
+      "source": "THE USE OF SCHEMATIC AIDS TO FACILITATE THE INCIDENT REPORTING OF CRITICAL EVENTS, 2004.0"
+    }
+  },
+  {
+    "to_embed": "Automated Container Sorting: Reduces damage to containers, especially glass bottles, improving resource utilization.",
+    "metadata": {
+      "id": "b389",
+      "title": "Reduced Container Damage",
+      "description": "Careful removal of containers, especially glass bottles, avoids damage, allowing for reuse after washing, refilling, or processing in different stations, conserving resources.",
+      "context": "()",
+      "source": "E.JECTOR MECHANISM AND CONTROL DEVICE, 2017.0"
+    }
+  },
+  {
+    "to_embed": "Game Day Education for Multiagent Systems",
+    "metadata": {
+      "id": "b390",
+      "title": "Enhanced Learning",
+      "description": "Students gain deeper understanding of multiagent systems through active participation and role-playing, rather than passive learning.",
+      "context": "()",
+      "source": "Teaching a Multiagent Systems Class with Game Days: Designs and Lessons Learned, 2003.0"
+    }
+  },
+  {
+    "to_embed": "Game Day Education for Multiagent Systems",
+    "metadata": {
+      "id": "b391",
+      "title": "Increased Motivation",
+      "description": "The competitive nature of Game Days motivates students to engage with the material and explore complex concepts more actively.",
+      "context": "()",
+      "source": "Teaching a Multiagent Systems Class with Game Days: Designs and Lessons Learned, 2003.0"
+    }
+  },
+  {
+    "to_embed": "AI for Malicious Download Detection",
+    "metadata": {
+      "id": "b392",
+      "title": "Enhanced Cybersecurity",
+      "description": "The AI application enhances cybersecurity by identifying and preventing malicious downloads, thus protecting users from potential data breaches and system compromises.",
+      "context": "()",
+      "source": "Evaluating Psychological Information Sharpening Your Critical Thinking Skills, 2016.0"
+    }
+  },
+  {
+    "to_embed": "AI-powered Library Policy Exchange",
+    "metadata": {
+      "id": "b393",
+      "title": "Enhanced Policy Development",
+      "description": "Improved national library policies through shared knowledge and practices, leading to better resource allocation and service delivery for library users.",
+      "context": "()",
+      "source": "News, 1896.0"
+    }
+  },
+  {
+    "to_embed": "Online Community Building via Autoethnography",
+    "metadata": {
+      "id": "b394",
+      "title": "Enhanced Professional Support",
+      "description": "Online communities provide a platform for peer support, knowledge sharing, and professional development, benefiting social workers and academics.",
+      "context": "()",
+      "source": "Creating #team turner: an autoethnography of connection within social work education, 2014.0"
+    }
+  }
+]
