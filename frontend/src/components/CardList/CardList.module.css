@@ -1,5 +1,6 @@
 .cardList {
   margin-top: 2rem;
+  width: 100%;
 }
 
 .resultsTitle {
@@ -11,10 +12,16 @@
   border-bottom: 1px solid #222;
 }
 
-.cards {
+.cardGrid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.cardWrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .emptyState {
@@ -38,8 +45,21 @@
   margin: 0 auto;
 }
 
+/* Responsive grid layout */
+@media (min-width: 640px) {
+  .cardGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 @media (min-width: 1024px) {
-  .cards {
-    grid-template-columns: 1fr;
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .cardGrid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

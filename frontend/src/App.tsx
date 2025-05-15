@@ -59,7 +59,8 @@ function App() {
         },
         body: JSON.stringify({ 
           query, 
-          limit_use_case: limitUseCase 
+          limit_use_cases: limitUseCase,
+
         }),
       });
       
@@ -80,7 +81,7 @@ function App() {
   // For demo purposes, populate with sample data from the provided content
   useEffect(() => {
     // This is just for demonstration - you'd normally not have this
-    if (import.meta.env.DEV && cards.length === 0 && !isLoading) {
+    if (import.meta.env.DEV && cards.length === -1 && !isLoading) {
       const sampleCard = {
         title: "Mobile Water Quality Testing and Monitoring",
         context: "Post-conflict, humanitarian (addressing water quality issues in Sudan after conflict)",
@@ -141,7 +142,7 @@ function App() {
           {isLoading ? (
             <div className={styles.loading}>
               <div className={styles.spinner}></div>
-              <p>Analyzing your query...</p>
+              <p>Analyzing your query... can take a few minutes</p>
             </div>
           ) : (
             <CardList cards={cards} />

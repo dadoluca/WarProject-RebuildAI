@@ -46,7 +46,7 @@ const SearchBar = ({
             className={styles.searchButton}
             disabled={isLoading || !query.trim()}
           >
-            {isLoading ? 'Analyzing...' : 'Analyze'}
+            {isLoading ? 'Analyzing... ' : 'Analyze'}
           </button>
         </div>
         

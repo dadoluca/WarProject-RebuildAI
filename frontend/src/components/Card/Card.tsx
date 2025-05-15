@@ -26,7 +26,7 @@ const Card = ({ card }: CardProps) => {
     <div className={styles.card}>
       <div className={styles.header}>
         <div className={styles.titleArea}>
-          <h3 className={styles.title}>{card.title}</h3>
+          <h4 className={styles.title}>{card.title}</h4>
           <div className={`${styles.badge} ${getBadgeColor()}`}>
             {(card.relevance_score * 100).toFixed(0)}%
           </div>

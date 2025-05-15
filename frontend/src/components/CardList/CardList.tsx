@@ -21,9 +21,11 @@ const CardList = ({ cards }: CardListProps) => {
       <h2 className={styles.resultsTitle}>
         {cards.length} {cards.length === 1 ? 'Solution' : 'Solutions'} Found
       </h2>
-      <div className={styles.cards}>
+      <div className={styles.cardGrid}>
         {cards.map((card, index) => (
-          <Card key={`${card.title}-${index}`} card={card} />
+          <div className={styles.cardWrapper} key={`${card.title}-${index}`}>
+            <Card card={card} />
+          </div>
         ))}
       </div>
     </div>

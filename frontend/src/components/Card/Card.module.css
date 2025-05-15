@@ -36,10 +36,11 @@
   margin: 0;
   color: white;
   flex: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal; /* permette il wrapping */
+  overflow: visible;   /* mostra tutto il testo */
+  text-overflow: unset; /* disattiva i puntini di overflow */
 }
+
 
 .badge {
   display: flex;

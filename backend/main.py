@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from db.VectorDBManager import VectorDBManager
 import json
 from flask import Flask, request, Response, jsonify
+from flask_cors import CORS
 
 # Load environment variables
 load_dotenv()
@@ -560,6 +561,9 @@ class WarUseCaseAnalyzer:
 
 app = Flask(__name__)
 
+#cors management allowing all origins
+CORS(app, resources={r"/*": {"origins": "*"}})
+
 analyzer = WarUseCaseAnalyzer()
 
 @app.route('/analyze', methods=['POST'])
@@ -569,9 +573,9 @@ def analyze_endpoint():
         
         query = data.get('query', '')
         limit_use_cases = data.get('limit_use_cases', 1)
-        limit_risks = data.get('limit_risks', 1)
-        limit_benefits = data.get('limit_benefits', 1)
-        limit_mitigations = data.get('limit_mitigations', 1)
+        limit_risks = data.get('limit_risks', 5)
+        limit_benefits = data.get('limit_benefits', 5)
+        limit_mitigations = data.get('limit_mitigations', 10)
         top_k_retrieve = data.get('top_k_retrieve', 5)
         
         result = analyzer.analyze(
