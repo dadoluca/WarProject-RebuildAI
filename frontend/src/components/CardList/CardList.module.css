@@ -3,19 +3,61 @@
   width: 100%;
 }
 
-.resultsTitle {
-  font-size: 1.5rem;
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 1.5rem;
-  color: white;
-  font-weight: 600;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #222;
+}
+
+.resultsTitle {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 600;
+  margin: 0;
+}
+
+.viewToggle {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.viewButton {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #999;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.viewButton:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.activeView {
+  background-color: rgba(255, 36, 122, 0.2);
+  color: #ff247a;
+  font-weight: 500;
 }
 
 .cardGrid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1.5rem;
+  width: 100%;
+}
+
+.expandedCardGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   width: 100%;
 }
 
@@ -61,5 +103,22 @@
 @media (min-width: 1440px) {
   .cardGrid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .listHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .viewToggle {
+    width: 100%;
+  }
+  
+  .viewButton {
+    flex: 1;
+    text-align: center;
   }
 }
