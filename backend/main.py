@@ -7,6 +7,7 @@ from db.VectorDBManager import VectorDBManager
 import json
 from flask import Flask, request, Response, jsonify
 from flask_cors import CORS
+from rules import style_guide
 
 # Load environment variables
 load_dotenv()
@@ -18,6 +19,7 @@ class UseCase(BaseModel):
     context: str = Field(description="Context where the use case applies")
     relevance_score: float = Field(description="Relevance score to the query (0-1)")
     source: Optional[str] = Field(description="Source of the use case information")
+    steps_to_implementation: Optional[str] = Field(description="Steps to implement the use case")
 
 class RiskModel(BaseModel):
     title: str = Field(description="Title of the risk")
@@ -58,6 +60,7 @@ class UseCaseCard(BaseModel):
         description="List of benefits with title, description, context, and source"
     )
     relevance_score: float = Field(description="Relevance score to the query (0-1)")
+    steps_to_implementation: Optional[str] = Field(description="Steps to implement the use case")
     
 class CardResponse(BaseModel):
     query: str = Field(description="Original query that initiated the analysis")
@@ -201,7 +204,8 @@ class WarUseCaseAnalyzer:
              f"Generate tailored use cases that are highly relevant to this specific query. Use the retrieved information "
              f"as inspiration but create use cases that directly address the query. For each use case, assign a relevance score "
              f"to the query on a scale of 0-1, where 1 is highly relevant. Structure the information according to the provided model."
-             f" Generate exactly {limit_use_cases} use cases."}
+             f" Generate exactly {limit_use_cases} use cases."
+             f" Follow the rues of the style guide: {style_guide}"}
         ]
         
         # Define the structure for multiple use cases
@@ -281,19 +285,33 @@ class WarUseCaseAnalyzer:
         
         # Prepare prompt for risks generation
         risk_messages = [
-            {"role": "system", "content": 
-             "You are an expert in risk assessment for technologies used in post-conflict and humanitarian contexts. "
-             "Using the retrieved information as inspiration, generate tailored risks that are specifically relevant "
-             "to the given use case and query context. Be creative but realistic in identifying potential risks."},
-            {"role": "user", "content": 
-             f"Original Query: {query}\n\n"
-             f"Use Case: {use_case.title}\n\nDescription: {use_case.description}\n\n"
-             f"Retrieved risks:\n\n{risk_context}\n\n"
-             f"Generate tailored risks that are specific to this use case in the context of the original query. "
-             f"Use the retrieved information as inspiration, but create risks that directly address the specific use case "
-             f"and query context. Structure according to the provided model. Generate exactly {limit_risks} risks."}
+            {
+                "role": "system",
+                "content": (
+                    "You are a risk analyst focused on technologies used in humanitarian and post-conflict settings. "
+                    "Your task is to generate **realistic, specific, and concrete risks** relevant to the provided use case. "
+                    "Start by **reusing or adapting risks retrieved from the knowledge base**. Only invent new risks if the retrieved ones are insufficient "
+                    "to fully cover the scenario. Your analysis must include both **strategic/systemic risks** (e.g., cultural misalignment, supply chain issues) "
+                    "and **basic, physical risks** (e.g., fire hazards, sanitation, structural failure, overcrowding, weather exposure). "
+                    "All risks must be practical and grounded in common sense and field experience. Avoid generic or overly abstract risks."
+                )
+            },
+            {
+                "role": "user",
+                "content": (
+                    f"Query: {query}\n\n"
+                    f"Use Case Title: {use_case.title}\n\n"
+                    f"Use Case Description: {use_case.description}\n\n"
+                    f"Retrieved Risks from the knowledge base:\n{risk_context}\n\n"
+                    f"Using the retrieved risks as your primary source, generate exactly {limit_risks} risks that are clearly tied to this use case. "
+                    f"Adapt or reuse existing risks where possible. Create new risks **only if necessary** to ensure coverage, especially for common operational concerns. "
+                    f"Make sure to include at least some **basic day-to-day risks** (e.g., hygiene, safety, fire, overcrowding, poor ventilation, etc.). "
+                    f"Use clear and accessible language. Format the risks according to the provided structure and follow the style guide: {style_guide}"
+                )
+            }
         ]
-        
+
+
         # Prepare prompt for benefits generation
         benefit_messages = [
             {"role": "system", "content": 
@@ -306,7 +324,8 @@ class WarUseCaseAnalyzer:
              f"Retrieved benefits:\n\n{benefit_context}\n\n"
              f"Generate tailored benefits that are specific to this use case in the context of the original query. "
              f"Use the retrieved information as inspiration, but create benefits that directly address the specific use case "
-             f"and query context. Structure according to the provided model. Generate exactly {limit_benefits} benefits."}
+             f"and query context. Structure according to the provided model. Generate exactly {limit_benefits} benefits."
+             f" Follow the rues of the style guide: {style_guide}"}
         ]
         
         # Define the structure for multiple risks and benefits
@@ -390,7 +409,8 @@ class WarUseCaseAnalyzer:
              f"Generate tailored mitigation strategies that are specific to this risk in the context of the use case and "
              f"original query. Use the retrieved information as inspiration, but create mitigations that directly address "
              f"the specific risk, use case, and query context. Structure according to the provided model. "
-             f"Generate exactly {limit_mitigations} mitigations."}
+             f"Generate exactly {limit_mitigations} mitigations."
+             f"Follow the rues of the style guide: {style_guide}"}
         ]
         
         # Define the structure for multiple mitigations
@@ -468,7 +488,8 @@ class WarUseCaseAnalyzer:
                 risks_mitigations=risks_mitigations,
                 benefits=benefit_objects,
                 relevance_score=use_case.relevance_score,
-                source=use_case.source
+                source=use_case.source,
+                steps_to_implementation=use_case.steps_to_implementation
             )
             
             cards.append(card)
@@ -572,11 +593,11 @@ def analyze_endpoint():
         data = request.json
         
         query = data.get('query', '')
-        limit_use_cases = data.get('limit_use_cases', 1)
-        limit_risks = data.get('limit_risks', 5)
-        limit_benefits = data.get('limit_benefits', 5)
+        limit_use_cases = 1
+        limit_risks = 3
+        limit_benefits = 0
         limit_mitigations = data.get('limit_mitigations', 10)
-        top_k_retrieve = data.get('top_k_retrieve', 5)
+        top_k_retrieve = 10
         
         result = analyzer.analyze(
             query=query,
