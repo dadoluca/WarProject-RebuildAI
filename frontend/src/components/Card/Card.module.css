@@ -295,3 +295,30 @@
     max-height: 300px;
   }
 }
+
+
+.stepsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.step {
+  padding: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid #ff247a;
+  border-radius: 8px;
+}
+
+.stepNumber {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #ff247a;
+  margin-bottom: 0.25rem;
+}
+
+.stepText {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #ddd;
+}

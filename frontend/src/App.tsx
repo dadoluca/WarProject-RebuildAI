@@ -32,6 +32,7 @@ export interface Card {
   relevance_score: number;
   benefits: Benefit[];
   risks_mitigations: RiskMitigation[];
+  steps_to_implementation: string[];
 }
 
 export interface QueryResponse {

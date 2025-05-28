@@ -272,3 +272,24 @@
     margin-left: 0.75rem;
   }
 }
+
+.stepsSection {
+  margin-top: 1rem;
+}
+
+.stepsTitle {
+  font-weight: bold;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.stepsList {
+  list-style-type: disc;
+  margin-left: 1.25rem;
+  color: #ddd;
+  font-size: 0.85rem;
+}
+
+.step {
+  margin-bottom: 0.4rem;
+}

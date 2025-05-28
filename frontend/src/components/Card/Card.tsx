@@ -7,7 +7,7 @@ interface CardProps {
 }
 
 const Card = ({ card }: CardProps) => {
-  const [activeTab, setActiveTab] = useState<'overview' | 'benefits' | 'risks'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'benefits' | 'steps' | 'risks'>('overview');
   const [expandedRiskIndex, setExpandedRiskIndex] = useState<number | null>(null);
 
   const handleToggleRisk = (index: number) => {
@@ -42,6 +42,12 @@ const Card = ({ card }: CardProps) => {
           Overview
         </button>
         <button
+          className={`${styles.tab} ${activeTab === 'steps' ? styles.activeTab : ''}`}
+          onClick={() => setActiveTab('steps')}
+        >
+          Steps
+        </button>
+        <button
           className={`${styles.tab} ${activeTab === 'benefits' ? styles.activeTab : ''}`}
           onClick={() => setActiveTab('benefits')}
         >
@@ -60,6 +66,17 @@ const Card = ({ card }: CardProps) => {
           <div className={styles.overview}>
             <p className={styles.description}>{card.description}</p>
             <div className={styles.source}>Source: {card.source}</div>
+          </div>
+        )}
+
+        {activeTab === 'steps' && card.steps_to_implementation &&(
+          <div className={styles.stepsList}>
+            {card.steps_to_implementation.map((step, index) => (
+              <div key={index} className={styles.step}>
+                <div className={styles.stepNumber}>Step {index + 1}</div>
+                <p className={styles.stepText}>{step}</p>
+              </div>
+            ))}
           </div>
         )}
 
@@ -82,7 +99,7 @@ const Card = ({ card }: CardProps) => {
           <div className={styles.risksList}>
             {card.risks_mitigations.map((risk, index) => (
               <div key={index} className={styles.risk}>
-                <div 
+                <div
                   className={styles.riskHeader}
                   onClick={() => handleToggleRisk(index)}
                 >
@@ -91,13 +108,13 @@ const Card = ({ card }: CardProps) => {
                     {expandedRiskIndex === index ? '−' : '+'}
                   </span>
                 </div>
-                
+
                 <div className={styles.riskContent}>
                   <div className={styles.riskContext}>{risk.risk_context}</div>
                   <p className={styles.riskDescription}>{risk.risk_description}</p>
                   <div className={styles.source}>Source: {risk.risk_source}</div>
                 </div>
-                
+
                 {expandedRiskIndex === index && (
                   <div className={styles.mitigation}>
                     <div className={styles.mitigationHeader}>
