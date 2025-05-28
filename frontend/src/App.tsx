@@ -84,7 +84,7 @@ function App() {
     if (import.meta.env.DEV && cards.length === 0 && !isLoading) {
       // Use the imported sample data
       if (sampleData && sampleData.cards && sampleData.cards.length > 0) {
-        setCards(sampleData.cards as Card[]); // Type assertion to help TypeScript
+        setCards(sampleData.cards as Card[]);
       }
     }
   }, [cards.length, isLoading]);
