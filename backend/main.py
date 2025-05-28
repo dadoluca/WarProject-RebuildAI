@@ -18,26 +18,26 @@ class UseCase(BaseModel):
     description: str = Field(description="Detailed description of the use case")
     context: str = Field(description="Context where the use case applies")
     relevance_score: float = Field(description="Relevance score to the query (0-1)")
-    source: Optional[str] = Field(description="Source of the use case information")
-    steps_to_implementation: Optional[str] = Field(description="Steps to implement the use case")
+    source: str = Field(description="Source of the use case information")
+    steps_to_implementation: Optional[List[str]] = Field(description="List of steps to implement the use case. Be realistic and practical. ")
 
 class RiskModel(BaseModel):
     title: str = Field(description="Title of the risk")
     description: str = Field(description="Detailed description of the risk")
     context: Optional[str] = Field(description="Context where this risk applies")
-    source: Optional[str] = Field(description="Source of the risk information, from the retrived file. Write th name of paper if possible")
+    source: str = Field(description="Source of the risk information, from the retrived file. Write th name of paper if possible")
 
 class MitigationModel(BaseModel):
     title: str = Field(description="Title of the mitigation strategy")
     description: str = Field(description="Detailed description of the mitigation strategy")
     context: Optional[str] = Field(description="Context where this mitigation applies")
-    source: Optional[str] = Field(description="Source of the mitigation information, from the retrived file. Write th name of paper if possible")
+    source: str = Field(description="Source of the mitigation information, from the retrived file. Write th name of paper if possible")
 
 class BenefitModel(BaseModel):
     title: str = Field(description="Title of the benefit")
     description: str = Field(description="Detailed description of the benefit")
     context: Optional[str] = Field(description="Context where this benefit applies")
-    source: Optional[str] = Field(description="Source of the benefit information, from the retrived file. Write the name of paper if possible")
+    source: str = Field(description="Source of the benefit information, from the retrived file. Write the name of paper if possible")
 
 # New models for JSON card output
 class RiskMitigationCard(BaseModel):
@@ -60,7 +60,7 @@ class UseCaseCard(BaseModel):
         description="List of benefits with title, description, context, and source"
     )
     relevance_score: float = Field(description="Relevance score to the query (0-1)")
-    steps_to_implementation: Optional[str] = Field(description="Steps to implement the use case")
+    steps_to_implementation: Optional[List[str]] = Field(description="List of steps to implement the use case. Be realistic and practical. ")
     
 class CardResponse(BaseModel):
     query: str = Field(description="Original query that initiated the analysis")
@@ -195,9 +195,9 @@ class WarUseCaseAnalyzer:
         # Prepare prompt for LLM
         messages = [
             {"role": "system", "content": 
-             "You are an expert in analyzing technology use cases for post-conflict and humanitarian contexts. "
+             "You are an expert in analyzing technology/AI use cases for post-conflict and humanitarian contexts. "
              "Based on the retrieved use cases and the user's query, generate tailored use cases that are specifically relevant "
-             "to the query context. Don't just analyze the retrieved use cases - use them as inspiration to generate "
+             "to the query context. Don't just analyze the retrieved use cases - use them as inspiration to generate."
              "highly relevant use cases that would be most applicable to the specific query. Be creative but practical."},
             {"role": "user", "content": 
              f"Query: {query}\n\nRetrieved use cases:\n\n{context_text}\n\n"
@@ -593,9 +593,9 @@ def analyze_endpoint():
         data = request.json
         
         query = data.get('query', '')
-        limit_use_cases = 1
+        limit_use_cases = 3
         limit_risks = 3
-        limit_benefits = 0
+        limit_benefits = 3
         limit_mitigations = data.get('limit_mitigations', 10)
         top_k_retrieve = 10
         
