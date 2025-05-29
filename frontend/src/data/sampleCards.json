@@ -1,397 +1,211 @@
+
+
+
+
+
+
+
+
+
 {
-  "cards": [
-    {
-      "benefits": [
+    "cards": [
         {
-          "context": "Post-conflict, humanitarian (remote healthcare access in Afghanistan)",
-          "description": "Telemedicine platforms can significantly expand the reach of healthcare services to remote and underserved populations in Afghanistan, ensuring that individuals in isolated areas receive timely medical consultations and follow-up care without the need for travel.",
-          "source": "Adapted from digital health initiatives in conflict zones.",
-          "title": "Expanded Healthcare Reach"
+            "benefits": [
+                {
+                    "context": "Post-conflict, humanitarian (minefield clearance)",
+                    "description": "Drones equipped with ground-penetrating radar can identify minefields without putting human lives at risk. This technology allows clearance teams to operate in dangerous areas with greater confidence, reducing the likelihood of injuries or fatalities during mine clearance operations.",
+                    "source": "Drone-Assisted Minefield Detection: A New Approach to Humanitarian Safety, 2023",
+                    "title": "Increased Safety for Clearance Teams"
+                },
+                {
+                    "context": "Post-conflict, humanitarian (area assessment)",
+                    "description": "Drones can quickly survey large areas, providing real-time data on minefield locations. This rapid assessment enables humanitarian organizations and military units to prioritize clearance efforts, ensuring that the most critical areas are addressed first, thus accelerating the recovery process in post-conflict zones.",
+                    "source": "Drone-Assisted Minefield Detection: A New Approach to Humanitarian Safety, 2023",
+                    "title": "Rapid Area Assessment"
+                },
+                {
+                    "context": "Post-conflict, humanitarian (resource allocation)",
+                    "description": "Using drones for minefield detection reduces the need for extensive ground surveys and manual detection methods, which can be costly and time-consuming. This efficiency allows organizations to allocate resources more effectively, maximizing the impact of their operations in post-conflict recovery efforts.",
+                    "source": "Drone-Assisted Minefield Detection: A New Approach to Humanitarian Safety, 2023",
+                    "title": "Cost-Effective Operations"
+                }
+            ],
+            "context": "Post-conflict, humanitarian (minefield detection in conflict zones)",
+            "description": "Drones equipped with ground-penetrating radar and advanced imaging technology can survey post-conflict areas to detect and map minefields. This technology allows for rapid assessment of large areas, providing real-time data to humanitarian organizations and military units for safe clearance operations. The drones can also be programmed to operate autonomously, reducing risks to human life during the detection phase.",
+            "relevance_score": 0.95,
+            "risks_mitigations": [
+                {
+                    "mitigation_context": "Drone-Assisted Minefield Detection",
+                    "mitigation_description": "Develop and implement protocols that allow drones to adapt to changing environmental conditions. This includes adjusting flight paths based on real-time weather data and terrain analysis to minimize operational failures.",
+                    "mitigation_source": "Adaptation Strategies for Unmanned Aerial Vehicles in Harsh Environments, 2023.",
+                    "mitigation_title": "Environmental Adaptation Protocols",
+                    "risk_context": "Drone-assisted minefield detection in post-conflict zones",
+                    "risk_description": "Drones may malfunction or fail during operations due to harsh environmental conditions, such as extreme weather or interference from terrain. This could delay minefield detection and clearance efforts, putting lives at risk and hindering humanitarian aid.",
+                    "risk_source": "Adapted from Spatial hearing issues in sound reproduction, 2012.",
+                    "risk_title": "Operational Failure of Drones"
+                },
+                {
+                    "mitigation_context": "Post-conflict zones",
+                    "mitigation_description": "Develop programs that actively involve local communities in the planning and implementation of drone-assisted minefield detection. This can include workshops, demonstrations, and open forums to address concerns and build trust.",
+                    "mitigation_source": "Adapted from community engagement strategies in humanitarian contexts.",
+                    "mitigation_title": "Community Engagement Initiatives",
+                    "risk_context": "Post-conflict, humanitarian (general risk in conflict zones)",
+                    "risk_description": "Communities may distrust drones due to their military applications, leading to resistance against their use in humanitarian efforts. This mistrust can hinder cooperation with local populations and reduce the effectiveness of minefield detection operations.",
+                    "risk_source": "Adapted from White Paper by Blank et al., Nov 2024.",
+                    "risk_title": "Public Mistrust in Drone Technology"
+                },
+                {
+                    "mitigation_context": "Drone-Assisted Minefield Detection",
+                    "mitigation_description": "Establish panels of experts in minefield detection and data interpretation to review drone-collected data. These panels should include geospatial analysts, demining specialists, and local knowledge holders to ensure a comprehensive understanding of the data and its implications.",
+                    "mitigation_source": "DETERMINATION OF THREATS AND RISKS IN CONDITIONS OF COMBAT OPERATIONS BY USING GEOSPATIAL ANALYSIS AND TIME ANALYSIS, 2019.",
+                    "mitigation_title": "Expert Review Panels",
+                    "risk_context": "Drone-assisted minefield detection in post-conflict zones",
+                    "risk_description": "Misinterpretation of data collected by drones could lead to inaccurate mapping of minefields. This risk could result in unsafe clearance operations, endangering the lives of demining teams and civilians.",
+                    "risk_source": "Adapted from Spatial hearing issues in sound reproduction, 2012.",
+                    "risk_title": "Data Interpretation Bias in Minefield Mapping"
+                }
+            ],
+            "source": "Inspired by advancements in drone technology and remote sensing applications in conflict zones.",
+            "steps_to_implementation": [
+                "Acquire drones equipped with ground-penetrating radar.",
+                "Train personnel on drone operation and data analysis.",
+                "Conduct initial test flights to calibrate equipment and refine detection methods.",
+                "Deploy drones in targeted areas to map minefields and share data with clearance teams."
+            ],
+            "title": "Drone-Assisted Minefield Detection"
         },
         {
-          "context": "Post-conflict, humanitarian (chronic care management in remote areas)",
-          "description": "By utilizing telemedicine, healthcare providers can maintain continuity of care for patients with chronic conditions or those recovering from trauma, allowing for regular check-ins and adjustments to treatment plans without the barriers of distance or security risks.",
-          "source": "Adapted from best practices in telehealth.",
-          "title": "Continuity of Care"
+            "benefits": [
+                {
+                    "context": "General context",
+                    "description": "AI-driven mine clearance robots operate in dangerous areas, significantly reducing the risk of injury or death for human personnel. By taking on the hazardous task of detecting and neutralizing mines, these robots protect soldiers and civilians alike, allowing for safer operations in post-conflict zones.",
+                    "source": "AI-Driven Mine Clearance Robotics, 2023.",
+                    "title": "Increased Safety for Ground Personnel"
+                },
+                {
+                    "context": "General context",
+                    "description": "Robotic systems equipped with AI can process information and make decisions quickly, leading to faster mine clearance operations. This efficiency helps to expedite the return of displaced populations to their homes and allows for the timely rebuilding of infrastructure in affected areas.",
+                    "source": "AI-Driven Mine Clearance Robotics, 2023.",
+                    "title": "Faster Clearance Operations"
+                },
+                {
+                    "context": "General context",
+                    "description": "Machine learning capabilities enable mine clearance robots to adapt to various terrains and types of explosive devices. This adaptability improves their effectiveness over time, ensuring that they can handle the unique challenges presented by different post-conflict environments.",
+                    "source": "AI-Driven Mine Clearance Robotics, 2023.",
+                    "title": "Adaptive Learning for Diverse Environments"
+                }
+            ],
+            "context": "Post-conflict, security (mine clearance operations)",
+            "description": "Robotic systems powered by artificial intelligence can be deployed in post-conflict zones to safely clear mines. These robots can navigate complex terrains, identify explosive devices, and neutralize them without human intervention. By using machine learning, these systems can improve their effectiveness over time, adapting to different environments and types of mines encountered.",
+            "relevance_score": 0.93,
+            "risks_mitigations": [
+                {
+                    "mitigation_context": "General context",
+                    "mitigation_description": "Establish regular maintenance schedules for robotic systems to ensure all components are functioning correctly. This includes routine checks for wear and tear, software updates, and calibration of sensors to adapt to changing environmental conditions.",
+                    "mitigation_source": "Spatial hearing issues in sound reproduction, 2012.",
+                    "mitigation_title": "Robust Maintenance Protocols",
+                    "risk_context": "General context",
+                    "risk_description": "Robotic systems may malfunction in unpredictable post-conflict environments, leading to delays in mine clearance operations. Such failures could result from harsh weather, rough terrain, or technical issues, potentially leaving dangerous areas uncleared and putting lives at risk.",
+                    "risk_source": "Spatial hearing issues in sound reproduction, 2012.0",
+                    "risk_title": "Operational Failure Risk"
+                },
+                {
+                    "mitigation_context": "General context",
+                    "mitigation_description": "Establish a robust data validation framework that includes multiple layers of checks. This should involve cross-referencing sensor data with historical minefield data and expert assessments to ensure accuracy before any clearance operation begins.",
+                    "mitigation_source": "DETERMINATION OF THREATS AND RISKS IN CONDITIONS OF COMBAT OPERATIONS BY USING GEOSPATIAL ANALYSIS AND TIME ANALYSIS, 2019.",
+                    "mitigation_title": "Comprehensive Data Validation",
+                    "risk_context": "General context",
+                    "risk_description": "Misinterpretation of sensor data from AI-driven robots could lead to incorrect assessments of minefield locations or types of explosives. This could result in ineffective clearance strategies, endangering both operators and civilians in the area.",
+                    "risk_source": "Spatial hearing issues in sound reproduction, 2012.0",
+                    "risk_title": "Data Interpretation Bias"
+                },
+                {
+                    "mitigation_context": "AI-Driven Mine Clearance Robotics in post-conflict zones",
+                    "mitigation_description": "Create and enforce strict hygiene protocols for all personnel involved in mine clearance operations. This includes regular handwashing, use of sanitizers, and proper disposal of waste to prevent disease spread.",
+                    "mitigation_source": "Adapted from general health and safety practices.",
+                    "mitigation_title": "Establish Hygiene Protocols",
+                    "risk_context": "General context",
+                    "risk_description": "Deployment of robotic systems in post-conflict zones may lead to inadequate sanitation and hygiene practices among human operators. Poor hygiene can result in health risks, including the spread of disease, especially in crowded or makeshift living conditions.",
+                    "risk_source": "Common operational concerns in humanitarian settings.",
+                    "risk_title": "Hygiene and Safety Risks"
+                }
+            ],
+            "source": "Inspired by the use of robotics in military operations and advancements in AI technology.",
+            "steps_to_implementation": [
+                "Research and select appropriate robotic systems for mine clearance.",
+                "Develop AI algorithms for mine detection and neutralization.",
+                "Conduct field tests to ensure reliability and safety of robots in various terrains.",
+                "Train operators on the use and maintenance of robotic systems.",
+                "Deploy robots in mine-affected areas, monitoring their performance and effectiveness."
+            ],
+            "title": "AI-Driven Mine Clearance Robotics"
         },
         {
-          "context": "Post-conflict, humanitarian (economic efficiency in healthcare)",
-          "description": "Telemedicine reduces the costs associated with patient travel and in-person consultations, making healthcare delivery more cost-effective for both patients and healthcare systems, which is crucial in resource-strapped environments.",
-          "source": "Adapted from economic analyses of telemedicine.",
-          "title": "Cost-Effective Healthcare Delivery"
-        },
-        {
-          "context": "Post-conflict, humanitarian (emergency medical response)",
-          "description": "Telemedicine can facilitate rapid response to medical emergencies by allowing healthcare professionals to assess and triage patients remotely, ensuring that critical cases receive immediate attention and resources are allocated efficiently.",
-          "source": "Adapted from emergency telehealth frameworks.",
-          "title": "Enhanced Emergency Response"
-        },
-        {
-          "context": "Post-conflict, humanitarian (public health monitoring)",
-          "description": "Telemedicine platforms can integrate health data collection tools, enabling better tracking of health trends and outcomes in remote populations, which is vital for public health planning and response in post-conflict settings.",
-          "source": "Adapted from health information systems in crisis contexts.",
-          "title": "Improved Health Data Collection"
-        },
-        {
-          "context": "Post-conflict, humanitarian (community health development)",
-          "description": "Telemedicine can foster stronger connections between local healthcare workers and specialized medical professionals, enhancing the capacity of community health networks to provide comprehensive care and support in remote areas.",
-          "source": "Adapted from community health initiatives leveraging technology.",
-          "title": "Strengthened Community Health Networks"
+            "benefits": [
+                {
+                    "context": "General context",
+                    "description": "AI-driven mine clearance robots operate in dangerous areas, significantly reducing the risk of injury or death for human personnel. By taking on the hazardous task of detecting and neutralizing mines, these robots protect soldiers and civilians alike, allowing for safer operations in post-conflict zones.",
+                    "source": "AI-Driven Mine Clearance Robotics, 2023.",
+                    "title": "Increased Safety for Ground Personnel"
+                },
+                {
+                    "context": "General context",
+                    "description": "Robotic systems equipped with AI can process information and make decisions quickly, leading to faster mine clearance operations. This efficiency helps to expedite the return of displaced populations to their homes and allows for the timely rebuilding of infrastructure in affected areas.",
+                    "source": "AI-Driven Mine Clearance Robotics, 2023.",
+                    "title": "Faster Clearance Operations"
+                },
+                {
+                    "context": "General context",
+                    "description": "Machine learning capabilities enable mine clearance robots to adapt to various terrains and types of explosive devices. This adaptability improves their effectiveness over time, ensuring that they can handle the unique challenges presented by different post-conflict environments.",
+                    "source": "AI-Driven Mine Clearance Robotics, 2023.",
+                    "title": "Adaptive Learning for Diverse Environments"
+                }
+            ],
+            "context": "Post-conflict, security (mine clearance operations)",
+            "description": "Robotic systems powered by artificial intelligence can be deployed in post-conflict zones to safely clear mines. These robots can navigate complex terrains, identify explosive devices, and neutralize them without human intervention. By using machine learning, these systems can improve their effectiveness over time, adapting to different environments and types of mines encountered.",
+            "relevance_score": 0.93,
+            "risks_mitigations": [
+                {
+                    "mitigation_context": "General context",
+                    "mitigation_description": "Establish regular maintenance schedules for robotic systems to ensure all components are functioning correctly. This includes routine checks for wear and tear, software updates, and calibration of sensors to adapt to changing environmental conditions.",
+                    "mitigation_source": "Spatial hearing issues in sound reproduction, 2012.",
+                    "mitigation_title": "Robust Maintenance Protocols",
+                    "risk_context": "General context",
+                    "risk_description": "Robotic systems may malfunction in unpredictable post-conflict environments, leading to delays in mine clearance operations. Such failures could result from harsh weather, rough terrain, or technical issues, potentially leaving dangerous areas uncleared and putting lives at risk.",
+                    "risk_source": "Spatial hearing issues in sound reproduction, 2012.0",
+                    "risk_title": "Operational Failure Risk"
+                },
+                {
+                    "mitigation_context": "General context",
+                    "mitigation_description": "Establish a robust data validation framework that includes multiple layers of checks. This should involve cross-referencing sensor data with historical minefield data and expert assessments to ensure accuracy before any clearance operation begins.",
+                    "mitigation_source": "DETERMINATION OF THREATS AND RISKS IN CONDITIONS OF COMBAT OPERATIONS BY USING GEOSPATIAL ANALYSIS AND TIME ANALYSIS, 2019.",
+                    "mitigation_title": "Comprehensive Data Validation",
+                    "risk_context": "General context",
+                    "risk_description": "Misinterpretation of sensor data from AI-driven robots could lead to incorrect assessments of minefield locations or types of explosives. This could result in ineffective clearance strategies, endangering both operators and civilians in the area.",
+                    "risk_source": "Spatial hearing issues in sound reproduction, 2012.0",
+                    "risk_title": "Data Interpretation Bias"
+                },
+                {
+                    "mitigation_context": "AI-Driven Mine Clearance Robotics in post-conflict zones",
+                    "mitigation_description": "Create and enforce strict hygiene protocols for all personnel involved in mine clearance operations. This includes regular handwashing, use of sanitizers, and proper disposal of waste to prevent disease spread.",
+                    "mitigation_source": "Adapted from general health and safety practices.",
+                    "mitigation_title": "Establish Hygiene Protocols",
+                    "risk_context": "General context",
+                    "risk_description": "Deployment of robotic systems in post-conflict zones may lead to inadequate sanitation and hygiene practices among human operators. Poor hygiene can result in health risks, including the spread of disease, especially in crowded or makeshift living conditions.",
+                    "risk_source": "Common operational concerns in humanitarian settings.",
+                    "risk_title": "Hygiene and Safety Risks"
+                }
+            ],
+            "source": "Inspired by the use of robotics in military operations and advancements in AI technology.",
+            "steps_to_implementation": [
+                "Research and select appropriate robotic systems for mine clearance.",
+                "Develop AI algorithms for mine detection and neutralization.",
+                "Conduct field tests to ensure reliability and safety of robots in various terrains.",
+                "Train operators on the use and maintenance of robotic systems.",
+                "Deploy robots in mine-affected areas, monitoring their performance and effectiveness."
+            ],
+            "title": "AI-Driven Mine Clearance Robotics"
         }
-      ],
-      "context": "Post-conflict, humanitarian (healthcare access in remote areas of Afghanistan)",
-      "description": "Implementing telemedicine platforms to connect healthcare providers with patients in remote areas of Afghanistan, facilitating consultations, follow-ups, and continuous care without the need for physical travel, which may be hindered by security or infrastructure issues.",
-      "relevance_score": 0.95,
-      "risks_mitigations": [
-        {
-          "mitigation_context": "Telemedicine for Remote Healthcare Access",
-          "mitigation_description": "Establish community-driven initiatives to create local internet access points, such as community Wi-Fi networks, utilizing satellite technology or mesh networks to improve connectivity in remote areas. This can be supported by local NGOs and community leaders to ensure sustainability and local ownership.",
-          "mitigation_source": "Inspired by infrastructure investment strategies.",
-          "mitigation_title": "Community-Based Internet Solutions",
-          "risk_context": "Telemedicine implementation in remote healthcare access",
-          "risk_description": "Many remote areas in Afghanistan may lack reliable internet connectivity, which could severely limit the effectiveness of telemedicine platforms and hinder access to healthcare services for patients who need them most.",
-          "risk_source": "Expert analysis on telemedicine in conflict zones",
-          "risk_title": "Limited Internet Access in Remote Areas"
-        },
-        {
-          "mitigation_context": "Telemedicine for Remote Healthcare Access in Afghanistan",
-          "mitigation_description": "Organize workshops in local communities to engage with residents about telemedicine, addressing their concerns and misconceptions while highlighting the benefits of remote healthcare access. Involve local leaders to foster trust and acceptance.",
-          "mitigation_source": "Adapted from cultural sensitivity training concepts.",
-          "mitigation_title": "Cultural Engagement Workshops",
-          "risk_context": "Telemedicine implementation in remote healthcare access",
-          "risk_description": "Cultural beliefs and practices may lead to resistance against telemedicine solutions, as some communities may prefer traditional in-person consultations or distrust digital healthcare solutions, impacting overall adoption rates.",
-          "risk_source": "Cultural insights on healthcare practices in Afghanistan",
-          "risk_title": "Cultural Barriers to Technology Adoption"
-        },
-        {
-          "mitigation_context": "Telemedicine for Remote Healthcare Access in Afghanistan",
-          "mitigation_description": "Develop and implement a comprehensive training program for healthcare providers focusing on the use of telemedicine platforms. This program should include hands-on training, tutorials, and user manuals that cover all functionalities of the platform, ensuring providers are well-equipped to deliver care remotely.",
-          "mitigation_source": "Adapted from practical training principles in technology management.",
-          "mitigation_title": "Comprehensive Telemedicine Training Program",
-          "risk_context": "Telemedicine implementation in remote healthcare access",
-          "risk_description": "Healthcare providers may not receive sufficient training on how to effectively use telemedicine platforms, leading to suboptimal patient care and potential misdiagnoses during remote consultations.",
-          "risk_source": "Training assessments in telehealth initiatives",
-          "risk_title": "Inadequate Training for Healthcare Providers"
-        },
-        {
-          "mitigation_context": "Telemedicine for Remote Healthcare Access in Afghanistan",
-          "mitigation_description": "Implement end-to-end encryption for all patient data transmitted through telemedicine platforms, ensuring that data is secure both in transit and at rest. This will protect sensitive patient information from unauthorized access and cyber threats.",
-          "mitigation_source": "Inspired by multiple sources on encryption and data protection.",
-          "mitigation_title": "Comprehensive Data Encryption",
-          "risk_context": "Telemedicine implementation in remote healthcare access",
-          "risk_description": "Telemedicine platforms may be vulnerable to cyberattacks, risking the exposure of sensitive patient information and undermining trust in the healthcare system, especially in a post-conflict environment.",
-          "risk_source": "Cybersecurity analysis in healthcare technology",
-          "risk_title": "Security Risks of Patient Data"
-        },
-        {
-          "mitigation_context": "Telemedicine for Remote Healthcare Access in Afghanistan",
-          "mitigation_description": "Provide specialized training for healthcare providers on effective communication techniques tailored for telemedicine, focusing on active listening, empathy, and clarification strategies to minimize miscommunication with patients.",
-          "mitigation_source": "Inspired by principles of effective communication in healthcare.",
-          "mitigation_title": "Enhanced Communication Training",
-          "risk_context": "Telemedicine implementation in remote healthcare access",
-          "risk_description": "The lack of face-to-face interaction in telemedicine can lead to miscommunication between patients and healthcare providers, resulting in misunderstandings about symptoms, treatment plans, or medication adherence.",
-          "risk_source": "Communication studies in telehealth",
-          "risk_title": "Potential for Miscommunication"
-        },
-        {
-          "mitigation_context": "Telemedicine for Remote Healthcare Access in Afghanistan",
-          "mitigation_description": "Implement community-based digital literacy training programs that focus on teaching patients how to use smartphones and telemedicine platforms effectively. These programs should be tailored to different age groups and educational backgrounds to ensure inclusivity.",
-          "mitigation_source": "Creating #team turner: an autoethnography of connection within social work education, 2014.0",
-          "mitigation_title": "Digital Literacy Training Programs",
-          "risk_context": "Telemedicine implementation in remote healthcare access",
-          "risk_description": "Patients may have varying levels of access to technology (smartphones, computers) and digital literacy, creating disparities in who can effectively utilize telemedicine services, potentially leaving the most vulnerable without care.",
-          "risk_source": "Equity assessments in digital health initiatives",
-          "risk_title": "Technological Disparities Among Patients"
-        }
-      ],
-      "source": null,
-      "title": "Telemedicine for Remote Healthcare Access"
-    },
-    {
-      "benefits": [
-        {
-          "context": "Post-conflict, humanitarian (healthcare access in Afghanistan)",
-          "description": "Mobile health clinics can reach remote and underserved populations in Afghanistan, providing essential medical services such as vaccinations, maternal care, and chronic disease management, thereby improving overall health outcomes in these areas.",
-          "source": "Tailored Benefit Assessment for Mobile Health Clinics, 2024",
-          "title": "Increased Healthcare Access for Remote Communities"
-        },
-        {
-          "context": "Post-conflict, humanitarian (vaccination in Afghanistan)",
-          "description": "By utilizing mobile clinics, healthcare providers can conduct timely vaccination campaigns in hard-to-reach areas, significantly reducing the risk of outbreaks and improving community immunity.",
-          "source": "Tailored Benefit Assessment for Mobile Health Clinics, 2024",
-          "title": "Timely Vaccination Campaigns"
-        },
-        {
-          "context": "Post-conflict, humanitarian (maternal health in Afghanistan)",
-          "description": "Mobile clinics can offer targeted maternal and child health services, including prenatal check-ups and postnatal care, addressing the high rates of maternal and infant mortality in Afghanistan.",
-          "source": "Tailored Benefit Assessment for Mobile Health Clinics, 2024",
-          "title": "Enhanced Maternal and Child Health Services"
-        },
-        {
-          "context": "Post-conflict, humanitarian (health education in Afghanistan)",
-          "description": "Mobile health clinics can serve as platforms for health education, raising awareness about preventive care, nutrition, and hygiene practices, which are crucial for improving public health in post-conflict settings.",
-          "source": "Tailored Benefit Assessment for Mobile Health Clinics, 2024",
-          "title": "Community Health Education and Awareness"
-        },
-        {
-          "context": "Post-conflict, humanitarian (chronic disease management in Afghanistan)",
-          "description": "Mobile clinics can provide ongoing management for chronic diseases such as diabetes and hypertension, ensuring continuity of care for patients who may otherwise lack access to regular healthcare services.",
-          "source": "Tailored Benefit Assessment for Mobile Health Clinics, 2024",
-          "title": "Integration of Chronic Disease Management"
-        },
-        {
-          "context": "Post-conflict, humanitarian (healthcare workforce development in Afghanistan)",
-          "description": "By employing local healthcare professionals in mobile clinics, the initiative can help strengthen the local healthcare workforce, providing training and experience that contributes to long-term healthcare system rebuilding.",
-          "source": "Tailored Benefit Assessment for Mobile Health Clinics, 2024",
-          "title": "Strengthened Local Healthcare Workforce"
-        }
-      ],
-      "context": "Post-conflict, humanitarian (community health outreach in Afghanistan)",
-      "description": "Deploying mobile health clinics equipped with essential medical supplies and staffed by healthcare professionals to reach underserved populations in Afghanistan, addressing immediate healthcare needs and providing vaccinations, maternal care, and chronic disease management.",
-      "relevance_score": 0.92,
-      "risks_mitigations": [
-        {
-          "mitigation_context": "Mobile Health Clinics for Community Outreach in Afghanistan",
-          "mitigation_description": "Implement secure communication channels for mobile health clinic teams, utilizing encrypted messaging apps and satellite phones to ensure that all communications regarding clinic locations and patient information are protected from interception by hostile groups.",
-          "mitigation_source": "Inspired by robust security measures for data protection.",
-          "mitigation_title": "Establish Secure Communication Protocols",
-          "risk_context": "Post-conflict, humanitarian (mobile health clinics in Afghanistan)",
-          "risk_description": "Mobile health clinics may face security threats from insurgent groups or local militias, leading to potential harm to healthcare workers and patients, and disrupting healthcare delivery.",
-          "risk_source": "Expert analysis on healthcare delivery in conflict zones.",
-          "risk_title": "Security Risks for Mobile Health Clinics"
-        },
-        {
-          "mitigation_context": "Mobile Health Clinics for Community Outreach in Afghanistan",
-          "mitigation_description": "Establish ongoing dialogue with community leaders and members to understand their healthcare needs and cultural beliefs. Involve them in the planning and implementation of mobile health clinics to foster trust and acceptance.",
-          "mitigation_source": "N/A",
-          "mitigation_title": "Community Engagement Initiatives",
-          "risk_context": "Post-conflict, humanitarian (community outreach in Afghanistan)",
-          "risk_description": "Mobile health clinics may not be culturally accepted in certain communities, leading to resistance from local populations and reduced effectiveness of healthcare interventions.",
-          "risk_source": "Cultural assessments in humanitarian aid contexts.",
-          "risk_title": "Cultural Sensitivity and Acceptance"
-        },
-        {
-          "mitigation_context": "Mobile Health Clinics for Community Outreach in Afghanistan",
-          "mitigation_description": "Conduct detailed assessments of the terrain and infrastructure in target areas before deployment. Utilize satellite imagery and local knowledge to create accurate maps that identify potential obstacles and optimal routes for mobile health clinics.",
-          "mitigation_source": "Adaptation from logistical planning strategies.",
-          "mitigation_title": "Terrain Assessment and Mapping",
-          "risk_context": "Post-conflict, humanitarian (logistics in Afghanistan)",
-          "risk_description": "Deploying mobile health clinics in remote or mountainous regions of Afghanistan may face logistical challenges such as difficult terrain, lack of infrastructure, and limited access to essential supplies.",
-          "risk_source": "Logistics and supply chain studies in humanitarian contexts.",
-          "risk_title": "Logistical Challenges in Remote Areas"
-        },
-        {
-          "mitigation_context": "Mobile Health Clinics for Community Outreach in Afghanistan",
-          "mitigation_description": "Develop and implement comprehensive training modules specifically designed for healthcare workers in post-conflict settings. These modules should include practical exercises, case studies, and simulations that reflect the unique challenges faced in Afghanistan, ensuring that healthcare professionals are well-prepared to deliver quality care in mobile health clinics.",
-          "mitigation_source": "Adapted from Targeted Training Programs, 2019.",
-          "mitigation_title": "Comprehensive Training Modules",
-          "risk_context": "Post-conflict, humanitarian (staffing in mobile health clinics)",
-          "risk_description": "Healthcare professionals may lack adequate training to operate in post-conflict settings, leading to suboptimal care delivery and potential harm to patients.",
-          "risk_source": "Training needs assessments in conflict-affected areas.",
-          "risk_title": "Inadequate Training for Healthcare Workers"
-        },
-        {
-          "mitigation_context": "Mobile health clinics in Afghanistan",
-          "mitigation_description": "Implement a transparent resource allocation framework that clearly outlines how medical supplies and personnel are distributed among communities. This framework should be accessible to local stakeholders to foster trust and accountability.",
-          "mitigation_source": "Adapted from Transparency and Auditing, 2007.",
-          "mitigation_title": "Resource Allocation Transparency",
-          "risk_context": "Post-conflict, humanitarian (resource distribution in Afghanistan)",
-          "risk_description": "Limited resources may lead to misallocation of medical supplies and personnel, resulting in some communities receiving inadequate care while others are over-served.",
-          "risk_source": "Resource allocation studies in humanitarian operations.",
-          "risk_title": "Potential for Resource Misallocation"
-        },
-        {
-          "mitigation_context": "Mobile health clinics in Afghanistan",
-          "mitigation_description": "Form partnerships with local NGOs, community leaders, and health organizations to create a network of support that can provide real-time updates on political conditions and facilitate operations despite instability.",
-          "mitigation_source": "Adapted from general community engagement strategies.",
-          "mitigation_title": "Establish Local Partnerships",
-          "risk_context": "Post-conflict, humanitarian (political context in Afghanistan)",
-          "risk_description": "Political instability in Afghanistan may hinder the operations of mobile health clinics, affecting their ability to provide consistent healthcare services and putting staff at risk.",
-          "risk_source": "Political risk assessments in humanitarian aid.",
-          "risk_title": "Impact of Political Instability on Operations"
-        }
-      ],
-      "source": null,
-      "title": "Mobile Health Clinics for Community Outreach"
-    },
-    {
-      "benefits": [
-        {
-          "context": "Post-conflict healthcare system rebuilding in Afghanistan",
-          "description": "AI can analyze health data from various sources, including hospitals and community health workers, to identify emerging health trends and potential outbreaks in real-time, allowing for timely interventions and resource allocation.",
-          "source": "Adapted from 'Improved Humanitarian Response via Data Analysis,' CHI ’25, April 26–May 01, 2025",
-          "title": "Enhanced Disease Surveillance"
-        },
-        {
-          "context": "Post-conflict healthcare system rebuilding in Afghanistan",
-          "description": "By predicting healthcare demands based on historical data and current trends, AI can help healthcare facilities in Afghanistan allocate resources more effectively, ensuring that critical supplies and personnel are directed where they are most needed.",
-          "source": "Adapted from 'Improved Resource Efficiency,' 2008.0",
-          "title": "Optimized Resource Allocation"
-        },
-        {
-          "context": "Post-conflict healthcare system rebuilding in Afghanistan",
-          "description": "AI-driven insights can support policymakers in Afghanistan by providing data-driven recommendations for healthcare reforms and resource distribution, enhancing the overall effectiveness of the healthcare system.",
-          "source": "Adapted from 'Enhanced Policy Making,' 2008.0",
-          "title": "Informed Policy Development"
-        },
-        {
-          "context": "Post-conflict healthcare system rebuilding in Afghanistan",
-          "description": "By streamlining patient data management and reducing redundancy, AI can enhance the quality of care provided to patients, leading to better health outcomes in a recovering healthcare system.",
-          "source": "Adapted from 'Improved Care Continuity,' 2002.0",
-          "title": "Improved Patient Outcomes"
-        },
-        {
-          "context": "Post-conflict healthcare system rebuilding in Afghanistan",
-          "description": "AI can facilitate quicker responses to health emergencies by analyzing data to predict spikes in disease incidence, enabling healthcare providers to mobilize resources and personnel swiftly.",
-          "source": "Adapted from 'Faster Emergency Response,' 2005.0",
-          "title": "Rapid Response to Health Crises"
-        },
-        {
-          "context": "Post-conflict healthcare system rebuilding in Afghanistan",
-          "description": "Utilizing AI for continuous monitoring and analysis of health data can help build a more resilient healthcare system in Afghanistan, better equipped to handle future crises and adapt to changing health needs.",
-          "source": "Adapted from 'Enhanced Preparedness,' 2022.0",
-          "title": "Strengthened Health System Resilience"
-        }
-      ],
-      "context": "Post-conflict, humanitarian (health data management and outbreak prediction in Afghanistan)",
-      "description": "Utilizing AI to analyze health data collected from various sources in Afghanistan to identify trends, predict outbreaks, and optimize resource allocation in healthcare facilities, ensuring that healthcare providers can respond effectively to the needs of the population.",
-      "relevance_score": 0.9,
-      "risks_mitigations": [
-        {
-          "mitigation_context": "AI-Enhanced Health Data Management in post-conflict Afghanistan",
-          "mitigation_description": "Establish a routine for continuously refining AI models with the latest health data and expert feedback to enhance accuracy in trend predictions. This includes integrating real-time data from healthcare facilities and community health workers to ensure models reflect current conditions.",
-          "mitigation_source": "Adapted from 'Refine Models Continuously', 1985.",
-          "mitigation_title": "Continuous Model Refinement",
-          "risk_context": "AI-Enhanced Health Data Management in post-conflict settings",
-          "risk_description": "AI models may misinterpret health data trends due to incomplete or inaccurate data inputs, leading to misguided public health responses and resource allocation that do not address the actual needs of the population.",
-          "risk_source": "Adapted from general AI risks in healthcare data analysis.",
-          "risk_title": "Inaccurate Health Trend Predictions"
-        },
-        {
-          "mitigation_context": "AI-Enhanced Health Data Management in post-conflict Afghanistan",
-          "mitigation_description": "Implement robust encryption protocols for all health data collected and ensure strict access controls are in place. Only authorized personnel should have access to sensitive data, reducing the risk of it being exploited by non-state actors.",
-          "mitigation_source": "Adapted from Current Security Management & Ethical Issues of Information Technology, 2003.",
-          "mitigation_title": "Data Encryption and Access Control",
-          "risk_context": "Post-conflict Afghanistan",
-          "risk_description": "The sensitive health data collected and analyzed by AI could be targeted by non-state actors, who may exploit this information for malicious purposes, such as targeting vulnerable populations or healthcare facilities.",
-          "risk_source": "Adapted from privacy and ethical risks in humanitarian data analysis.",
-          "risk_title": "Misuse of Health Data by Non-State Actors"
-        },
-        {
-          "mitigation_context": "AI-Enhanced Health Data Management in Afghanistan",
-          "mitigation_description": "Provide training for AI developers and data scientists on local cultural practices, beliefs, and healthcare norms in Afghanistan. This will help ensure that AI insights are designed and interpreted with cultural context in mind, reducing the risk of misunderstandings and resistance from healthcare providers and communities.",
-          "mitigation_source": "Not specified",
-          "mitigation_title": "Cultural Sensitivity Training for AI Developers",
-          "risk_context": "AI-Enhanced Health Data Management in Afghanistan",
-          "risk_description": "AI-generated insights may not align with local cultural practices or beliefs, leading to resistance from healthcare providers and communities, which could undermine the effectiveness of health interventions.",
-          "risk_source": "Adapted from risks of bias in data analysis.",
-          "risk_title": "Cultural Misunderstanding of AI Insights"
-        },
-        {
-          "mitigation_context": "AI-Enhanced Health Data Management in Afghanistan",
-          "mitigation_description": "Incorporate diverse health data from various regions and demographics beyond Afghanistan to train the AI models. This will help prevent overfitting to local data and ensure that the AI can generalize better to broader health trends and outbreaks.",
-          "mitigation_source": "Adapted from Diverse Data & Ethical Guidelines, 2017.",
-          "mitigation_title": "Diverse Dataset Integration",
-          "risk_context": "AI-Enhanced Health Data Management",
-          "risk_description": "AI systems may become overly tailored to local data sets, resulting in models that do not generalize well to broader health trends or outbreaks, potentially missing critical health threats.",
-          "risk_source": "Adapted from data bias risks in AI.",
-          "risk_title": "Overfitting to Local Data"
-        },
-        {
-          "mitigation_context": "AI-Enhanced Health Data Management in Afghanistan",
-          "mitigation_description": "Develop training programs tailored for local healthcare professionals and data analysts to enhance their understanding of AI technologies and their applications in health data management. This will empower them to effectively implement and maintain AI systems, ensuring sustainability and local ownership of the technology.",
-          "mitigation_source": "Adapted from various training and capacity building frameworks.",
-          "mitigation_title": "Local Capacity Building",
-          "risk_context": "Post-conflict healthcare system rebuilding",
-          "risk_description": "The reliance on AI technology without adequate local expertise may lead to improper implementation and maintenance of AI systems, resulting in ineffective health data management and analysis.",
-          "risk_source": "Adapted from risks of over-reliance on technology.",
-          "risk_title": "Lack of Local Expertise in AI Implementation"
-        },
-        {
-          "mitigation_context": "AI-Enhanced Health Data Management in post-conflict Afghanistan",
-          "mitigation_description": "Develop a comprehensive framework for data integration that standardizes formats and protocols across diverse health data sources. This framework should include guidelines for data collection, storage, and sharing to ensure compatibility and facilitate seamless integration.",
-          "mitigation_source": "Inspired by best practices in data management.",
-          "mitigation_title": "Comprehensive Data Integration Framework",
-          "risk_context": "AI-Enhanced Health Data Management in Afghanistan",
-          "risk_description": "The integration of diverse health data sources may face challenges due to fragmentation, leading to incomplete datasets that hinder the AI's ability to provide accurate analyses and predictions.",
-          "risk_source": "Adapted from general data privacy risks.",
-          "risk_title": "Data Fragmentation and Integration Challenges"
-        }
-      ],
-      "source": null,
-      "title": "AI-Enhanced Health Data Management"
-    },
-    {
-      "benefits": [
-        {
-          "context": "Afghanistan's healthcare system post-conflict",
-          "description": "Training programs for local healthcare workers will build a sustainable healthcare workforce capable of addressing community health needs, reducing reliance on foreign aid and improving local health outcomes.",
-          "source": "Tailored Benefits for Healthcare Training Programs, 2023.",
-          "title": "Strengthened Local Capacity"
-        },
-        {
-          "context": "Emergency care in post-conflict settings",
-          "description": "Local healthcare workers trained in emergency care will be better equipped to respond effectively to crises, reducing mortality and morbidity during health emergencies and natural disasters.",
-          "source": "Tailored Benefits for Healthcare Training Programs, 2023.",
-          "title": "Enhanced Emergency Response Skills"
-        },
-        {
-          "context": "Maternal health in post-conflict Afghanistan",
-          "description": "Specialized training in maternal health will lead to better prenatal and postnatal care, significantly reducing maternal and infant mortality rates in Afghanistan's vulnerable populations.",
-          "source": "Tailored Benefits for Healthcare Training Programs, 2023.",
-          "title": "Improved Maternal and Child Health"
-        },
-        {
-          "context": "Chronic disease prevalence in Afghanistan",
-          "description": "Training programs will equip healthcare workers with the skills to manage chronic diseases effectively, addressing the growing burden of non-communicable diseases in the region and improving overall health outcomes.",
-          "source": "Tailored Benefits for Healthcare Training Programs, 2023.",
-          "title": "Chronic Disease Management Expertise"
-        },
-        {
-          "context": "Community health in Afghanistan",
-          "description": "Trained healthcare workers can lead community health education initiatives, promoting awareness and prevention of diseases, which will foster healthier communities and reduce healthcare costs.",
-          "source": "Tailored Benefits for Healthcare Training Programs, 2023.",
-          "title": "Community Health Education Initiatives"
-        },
-        {
-          "context": "Healthcare collaboration in post-conflict environments",
-          "description": "Training programs will facilitate collaboration among healthcare workers, enhancing knowledge sharing and best practices, which will improve the overall quality of care in the healthcare system.",
-          "source": "Tailored Benefits for Healthcare Training Programs, 2023.",
-          "title": "Increased Collaboration and Knowledge Sharing"
-        }
-      ],
-      "context": "Post-conflict, humanitarian (healthcare workforce development in Afghanistan)",
-      "description": "Establishing training programs for local healthcare workers in Afghanistan to enhance their skills in emergency care, maternal health, and chronic disease management, ensuring that the healthcare system can operate sustainably and effectively in the long term.",
-      "relevance_score": 0.88,
-      "risks_mitigations": [
-        {
-          "mitigation_context": "Training Programs for Local Healthcare Workers in Afghanistan",
-          "mitigation_description": "Establish partnerships with international healthcare organizations and universities to provide qualified trainers and educational resources. This collaboration can ensure that local healthcare workers receive high-quality training and access to updated medical practices.",
-          "mitigation_source": "Analysis of Possibilities in Postgraduate Specialisation Programmes Summarising Government Aimed Info-communication Systems and Services: Fundaments of the Training, Abilities, and Requirements, 2019.",
-          "mitigation_title": "Collaborative Training Partnerships",
-          "risk_context": "Training Programs for Local Healthcare Workers in Afghanistan",
-          "risk_description": "Training programs may lack sufficient resources, such as qualified trainers, educational materials, and practical training opportunities, leading to poorly equipped healthcare workers who cannot effectively respond to emergencies or manage chronic diseases.",
-          "risk_source": "Custom Risk Assessment",
-          "risk_title": "Inadequate Training Resources"
-        },
-        {
-          "mitigation_context": "Training Programs for Local Healthcare Workers in Afghanistan",
-          "mitigation_description": "Develop training materials that are specifically tailored to the cultural context of Afghanistan. This involves collaborating with local healthcare professionals and community leaders to ensure that the content respects and incorporates local beliefs, practices, and languages, thereby increasing acceptance and effectiveness.",
-          "mitigation_source": "N/A",
-          "mitigation_title": "Culturally Adapted Training Materials",
-          "risk_context": "Training Programs for Local Healthcare Workers in Afghanistan",
-          "risk_description": "Training materials and methodologies may not align with local cultural practices and beliefs, resulting in resistance from healthcare workers and communities, ultimately undermining the effectiveness of the training programs.",
-          "risk_source": "Custom Risk Assessment",
-          "risk_title": "Cultural Misalignment of Training Content"
-        },
-        {
-          "mitigation_context": "Training Programs for Local Healthcare Workers in Afghanistan",
-          "mitigation_description": "Deploy mobile units equipped with educational resources and trainers to remote areas, providing ongoing education and skill refreshers to healthcare workers in their local communities. This approach ensures continuous learning opportunities without the need for extensive travel or internet access.",
-          "mitigation_source": "Adapted from targeted training initiatives.",
-          "mitigation_title": "Establish Mobile Learning Units",
-          "risk_context": "Training Programs for Local Healthcare Workers"
-        }
-      ]
-    }
-  ]
+    ],
+    "query": "Minefield detection and clearance in post-conflict zones"
 }

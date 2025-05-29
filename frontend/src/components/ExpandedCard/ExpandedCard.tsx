@@ -30,6 +30,16 @@ const ExpandedCard = ({ card }: ExpandedCardProps) => {
         <div className={styles.overview}>
           <h5 className={styles.sectionTitle}>Overview</h5>
           <p className={styles.description}>{card.description}</p>
+          {card.steps_to_implementation && card.steps_to_implementation && (
+            <div className={styles.stepsSection}>
+              <p className={styles.stepsTitle}>Actionable Steps To Reach Solution</p>
+              <ul className={styles.stepsList}>
+                {card.steps_to_implementation.map((step, index) => (
+                  <li key={index} className={styles.step}>{step}</li>
+                ))}
+              </ul>
+            </div>
+          )}
           {card.source && <div className={styles.source}>Source: {card.source}</div>}
         </div>
 
