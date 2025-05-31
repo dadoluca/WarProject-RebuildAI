@@ -24,21 +24,6 @@ The War Use Case Analyzer is a full-stack application consisting of three main c
 - OpenAI API key
 - Pinecone API key and index
 
-### Dependencies
-The dependencies in our platform can be installed via pip:
-```
-pip install -U pydantic
-pip install --upgrade openai
-pip install --upgrade python-dotenv
-pip install --upgrade pinecone
-pip install --upgrade flask 
-pip install flask-cors
-```
-
-If you also want to install all the dependencies:
-```
-pip install -r requirements.txt
-```
 ### Installation & Setup
 
  **Set up each component**:
@@ -59,7 +44,7 @@ pip install -r requirements.txt
    ```
 ### Expected outputs 
 This the main page after run the program,User input the post-war problem. Click 'Analyse' button,then generate the relative solutions for the problem.
-<img src="https://github.com/Fang-M-Xu/WarProject-RebuildAI/blob/main/static/platform.png" height="300" width="1020">
+<img src="./static/platform.png" height="300" width="1020">
 
 Our platform will give you s set of decision support cards.
 - Overview: Describes AI application method and the advantages of its imimplement.
@@ -68,4 +53,4 @@ Our platform will give you s set of decision support cards.
 - Risks: The risks of this solution may cause in terms of ethics, operation, or society dangers.
 - Mitigations: Measures to reduce or eliminate above risks.
 
-<img src="https://github.com/Fang-M-Xu/WarProject-RebuildAI/blob/main/static/cards.png" height="300" width="1020">
+<img src="./static/cards.png" height="300" width="1020">
