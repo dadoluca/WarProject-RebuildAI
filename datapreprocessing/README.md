@@ -17,12 +17,7 @@ This section processes academic paper data to extract and analyze information ab
 pip install google-generativeai
 ```
 
-### File Structure
-```
-datapreprocessing/
-├── CleanCSV.py               # Data cleaning script    
-└── CSVToJson-Semantic.py     # AI processing script
-```
+
 ### Setup Instructions
 #### 1. Data Preparation
 Create datasource dir and place your raw CSV files in:
@@ -123,3 +118,14 @@ Each processed record generates JSON objects with the following structure:
   }
 ]
 ```
+
+After the extraction process is completed, four output files will be generated:
+
+- UC.json, which contains the list of solutions
+- R.json, which contains the list of risks
+- B.json, which contains the list of benefits
+- M.json, which contains the list of mitigations
+
+Once these files are available, the UploaderData module must be executed to upload the data into the vector database.
+
+We chose to keep the files separate so that in the future, if new data needs to be added to the vector database, it won't be necessary to rerun the entire pipeline—only the data upload module will need to be executed.
