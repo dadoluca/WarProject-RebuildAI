@@ -128,4 +128,4 @@ After the extraction process is completed, four output files will be generated:
 
 Once these files are available, the UploaderData module must be executed to upload the data into the vector database.
 
-We chose to keep the files separate so that in the future, if new data needs to be added to the vector database, it won't be necessary to rerun the entire pipeline—only the data upload module will need to be executed.
+We chose to keep the files separate so that in the future, if new data needs to be added to the vector database, it won't be necessary to rerun the entire pipeline—only the data upload module will need to be executed. Now, to upload the file

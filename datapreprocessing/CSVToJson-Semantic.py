@@ -3,6 +3,7 @@ import pandas as pd
 import json
 import re
 import os
+from UploaderData import UploaderData
 
 # Configuration
 client = genai.Client(api_key="AIzaSyAd_u59ZRpDOKHwzWa3nogCseYsFOgdfDc")
@@ -183,14 +184,20 @@ for csv_file in csv_files:
         process_row(row, idx)
 
 # Save data into 4 separate lists
-with open(os.path.join(output_dir, "UC.json"), "w", encoding="utf-8") as f:
+with open(os.path.join(output_dir, "output_dir/UC.json"), "w", encoding="utf-8") as f:
     json.dump(uc_data, f, ensure_ascii=False, indent=2)
 
-with open(os.path.join(output_dir, "B.json"), "w", encoding="utf-8") as f:
+with open(os.path.join(output_dir, "output_dir/B.json"), "w", encoding="utf-8") as f:
     json.dump(b_data, f, ensure_ascii=False, indent=2)
 
-with open(os.path.join(output_dir, "R.json"), "w", encoding="utf-8") as f:
+with open(os.path.join(output_dir, "output_dir/R.json"), "w", encoding="utf-8") as f:
     json.dump(r_data, f, ensure_ascii=False, indent=2)
 
-with open(os.path.join(output_dir, "M.json"), "w", encoding="utf-8") as f:
+with open(os.path.join(output_dir, "output_dir/M.json"), "w", encoding="utf-8") as f:
     json.dump(m_data, f, ensure_ascii=False, indent=2)
+
+
+uploader = UploaderData()
+    
+uploader.load_from_json_files("output_dir")
+    
