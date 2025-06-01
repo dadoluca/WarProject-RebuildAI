@@ -31,7 +31,7 @@ Output a JSON object with these fields:
   "type": "use",
   "description": "[A 10-50 word summary describing application area (country/region/field) + implementation method (framework/algorithm/tool)]",
   "context_is_post_war": true/false,
-  "context_ keywords_areas": "Keyword1,Keyword2",
+  "context_keywords_areas": "Keyword1,Keyword2",
   "context_evidence_excerpt": "Direct text excerpt supporting post-war status"
 }}
  “context_is_post_war” should be true if any of the following apply: 
@@ -49,7 +49,7 @@ For each benefit, output a JSON object with these fields:
   "type": "benefit",	
   "description": "[A 10-50 word summary of how it benefits (e.g., human rights, privacy, society, etc.)]",
   "context_is_post_war": true/false,
-  "context_ keywords_areas": "Keyword1,Keyword2",
+  "context_keywords_areas": "Keyword1,Keyword2",
   "context_evidence_excerpt": "Direct text excerpt supporting post-war status"
 }}
 (same context judgment as Step 1)
@@ -62,7 +62,7 @@ For each risk, output a JSON object with these fields:
   "type": "risk",
   "description": "[A 10-50 word summary of the risk and how it causes harm (e.g., human rights, privacy, social impact)]",
   "context_is_post_war": true/false,
-  "context_ keywords_areas": "Keyword1,Keyword2",
+  "context_keywords_areas": "Keyword1,Keyword2",
   "context_evidence_excerpt": "Direct text excerpt supporting post-war status"
 }}
 (same context judgment as Step 1)
@@ -75,7 +75,7 @@ For each mitigation, output a JSON object with these fields:
   "type": "mitigate",
   "description": "[A 10-50 word summary of how the mitigation reduces or prevents the risk]",
   "context_is_post_war": true/false,
-  "context_ keywords_areas": "Keyword1,Keyword2",
+  "context_keywords_areas": "Keyword1,Keyword2",
   "context_evidence_excerpt": "Direct text excerpt supporting post-war status"
  }}
 (same context judgment as Step 1)
@@ -92,7 +92,7 @@ For each mitigation, output a JSON object with these fields:
   "to_embed": "Drones deliver medical supplies like blood to wounded people in conflict zones, as tested in Rwanda.",
   "description": "Drones deliver medical supplies, such as blood to wounded individuals, in conflict zones, as demonstrated in Rwanda, improving access to critical care in areas where traditional logistics are disrupted.",
   "context_is_post_war": true,
-  "context_ keywords_areas": "Post-war, Infrastructure",
+  "context_keywords_areas": "Post-war, Infrastructure",
   "context_evidence_excerpt":"anti-trafficking in Moldova, Ukraine crisis"
 }}
 """
