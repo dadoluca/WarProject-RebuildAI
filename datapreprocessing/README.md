@@ -1,4 +1,4 @@
-# Data process and format
+# Rebuild AI - Abstract processing pipeline
 This section processes academic paper data to extract and analyze information about AI applications in post-war contexts. The system cleans CSV data of research papers list, then uses Google's Gemini AI to generate structured insights about AI applications, their benefits, risks, and mitigation strategies - with a focus on post-conflict scenarios.
 
 ### Key Features

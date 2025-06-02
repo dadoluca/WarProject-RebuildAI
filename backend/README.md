@@ -1,4 +1,4 @@
-# War Use Case Analyzer
+# Rebuild AI - Pipeline and Backend
 
 A Flask-based API service that analyzes war-related and post-conflict technology solution using Retrieval-Augmented Generation (RAG) and Large Language Models (LLMs). From a query of a problem, the system generates structured JSON Decision Support Cards containing solution with associated risks, mitigations, steps and benefits for humanitarian and post-conflict scenarios.
 
@@ -130,4 +130,15 @@ The system uses:
     }
   ]
 }
+```
+
+
+### Modifying Output Parameter Settings
+To modify the number of output parameters, you need to update the following variables:
+
+```python
+top_k_retrieve = 10 # number of row retrived per query
+limit_use_cases = 3 # number of solution returned by the pipeline
+limit_risks = 3 # number of risks for each solution
+limit_benefits = 3 # number of benefits for each solution
 ```

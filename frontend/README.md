@@ -1,4 +1,4 @@
-# War Use Case Analyzer - Frontend
+# Rebuild AI - Frontend
 
 A React-based frontend application for the War Use Case Analyzer API. This interface allows users to query post-conflict and humanitarian technology solutions, displaying structured analysis cards with risks, benefits, and mitigation strategies.
 
