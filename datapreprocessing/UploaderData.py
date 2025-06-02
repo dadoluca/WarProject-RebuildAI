@@ -252,3 +252,9 @@ class UploaderData:
         self.populate_mitigations_data(combined_mitigations)
         self.populate_benefits_data(combined_benefits)
 
+
+if __name__ == "__main__":
+    uploader = UploaderData()
+    
+    uploader.load_from_json_files("output_dir") # put here the path to your folder that contains the JSON files
+    

@@ -195,9 +195,3 @@ with open(os.path.join(output_dir, "output_dir/R.json"), "w", encoding="utf-8") 
 
 with open(os.path.join(output_dir, "output_dir/M.json"), "w", encoding="utf-8") as f:
     json.dump(m_data, f, ensure_ascii=False, indent=2)
-
-
-uploader = UploaderData()
-    
-uploader.load_from_json_files("output_dir")
-    
