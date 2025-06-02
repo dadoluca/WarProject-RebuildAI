@@ -47,7 +47,7 @@ The system uses:
 2. **Install dependencies**:
 
    ```bash
-   pip install flask flask-cors openai pinecone-client pydantic python-dotenv
+   pip install -r requirements.txt
    ```
 
 3. **Set up environment variables**:
