@@ -1,4 +1,4 @@
-<h1>Data process and format</h1>
+# Rebuild AI - Abstract processing pipeline
 This section processes academic paper data to extract and analyze information about AI applications in post-war contexts. The system cleans CSV data of research papers list, then uses Google's Gemini AI to generate structured insights about AI applications, their benefits, risks, and mitigation strategies - with a focus on post-conflict scenarios.
 
 ### Key Features
@@ -10,19 +10,35 @@ This section processes academic paper data to extract and analyze information ab
 ### Prerequisites
 - Python 3.8+
 - Google Gemini API key
+- OpenAI API key
+- Pinecone API key
 - Required Python packages:
+
+### Clone the repository and select correct path
+
+Clone the repository:
+   ```bash
+   git clone https://github.com/dadoluca/WarProject-RebuildAI.git
+   cd war-use-case-analyzer/datapreprocessing
+   ```
+
 
 ### Dependencies
 ```
-pip install google-generativeai
+pip install google-generativeai openai pinecone-client pydantic python-dotenv
 ```
 
-### File Structure
-```
-datapreprocessing/
-├── CleanCSV.py               # Data cleaning script    
-└── CSVToJson-Semantic.py     # AI processing script
-```
+### Envirorment
+Set up environment variables:
+   Create a `.env` file in the project root with:
+   ```env
+   OPENAI_API_KEY=your_openai_api_key_here
+   PINECONE_API_KEY=your_pinecone_api_key_here
+   PINECONE_INDEX_NAME=war-use-cases
+   EMBEDDING_MODEL=text-embedding-ada-002
+   ```
+
+
 ### Setup Instructions
 #### 1. Data Preparation
 Create datasource dir and place your raw CSV files in:
@@ -123,3 +139,24 @@ Each processed record generates JSON objects with the following structure:
   }
 ]
 ```
+
+After the extraction process is completed, four output files will be generated:
+
+- UC.json, which contains the list of solutions
+- R.json, which contains the list of risks
+- B.json, which contains the list of benefits
+- M.json, which contains the list of mitigations
+
+#### 6. Run the UploaderData Class
+
+As the final step, you need to upload the JSON files into the vector database. The `UploaderData` class includes a function called `load_from_json_files(path_to_your_input_source)`, which is invoked in the class’s main method to load JSON files from a specified folder.
+
+The folder must contain the following four files: `UC.json`, `R.json`, `B.json`, and `M.json`.
+
+To run the upload script, use the following command:
+
+```
+python UploaderData.py
+```
+Once the process is complete, a confirmation message will appear in the folder, indicating that everything was successfully uploaded. At this point, the elements will be available in the vector database, under the appropriate namespace.
+

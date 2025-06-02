@@ -1,13 +1,13 @@
-# War Use Case Analyzer
+# Rebuild AI - Pipeline and Backend
 
-A Flask-based API service that analyzes war-related and post-conflict technology use cases using Retrieval-Augmented Generation (RAG) and Large Language Models (LLMs). The system generates structured JSON cards containing use cases with associated risks, mitigations, steps and benefits for humanitarian and post-conflict scenarios.
+A Flask-based API service that analyzes war-related and post-conflict technology solution using Retrieval-Augmented Generation (RAG) and Large Language Models (LLMs). From a query of a problem, the system generates structured JSON Decision Support Cards containing solution with associated risks, mitigations, steps and benefits for humanitarian and post-conflict scenarios.
 
 ## Overview
 
-The War Use Case Analyzer consists of two main components:
+The folder contains two main component:
 
-1. **WarUseCaseAnalyzer Class**: Core analysis engine that processes queries through a RAG pipeline
-2. **Flask API**: REST API endpoint that exposes the analyzer functionality
+1. **WarUseCaseAnalyzer Class**: Core analysis engine that processes queries through a RAG pipeline. The input of the system is a query with a problem and the output is a list of Support Decision Cards.
+2. **Flask API**: REST API endpoint that exposes the analyzer functionality. It is the backend part of the application
 
 ## Features
 
@@ -42,11 +42,6 @@ The system uses:
 
 2. **Install required packages**:
    ```bash
-   pip install -r requirements.txt
-   ```
-
-   Or, manually:
-   ```bash
    pip install flask flask-cors openai pinecone-client pydantic python-dotenv
    ```
 
@@ -57,22 +52,9 @@ The system uses:
    PINECONE_API_KEY=your_pinecone_api_key_here
    PINECONE_INDEX_NAME=war-use-cases
    LLM_MODEL=gpt-4o-mini
+   EMBEDDING_MODEL=text-embedding-ada-002
    ```
 
-## Project Structure
-
-```
-project/
-├── main.py                    # Flask API server
-├── WarUseCaseAnalyzer.py     # Core analyzer class
-├── db/
-│   └── VectorDBManager.py    # Vector database management
-├── model/
-│   └── Model.py              # Pydantic data models
-├── writingrules.py           # Style guide for content generation
-├── .env                      # Environment variables
-└── requirements.txt          # Python dependencies
-```
 
 ## Configuration
 
@@ -82,14 +64,6 @@ project/
 - `PINECONE_API_KEY`: Your Pinecone API key
 - `PINECONE_INDEX_NAME`: Name of your Pinecone index (default: "war-use-cases")
 - `LLM_MODEL`: OpenAI model to use (default: "gpt-4o-mini")
-
-### Vector Database Namespaces
-
-The system expects the following namespaces in your Pinecone index:
-- `use_cases`: Contains technology use case examples
-- `risks`: Contains risk scenarios and descriptions
-- `benefits`: Contains benefit descriptions and outcomes
-- `mitigations`: Contains mitigation strategies and solutions
 
 ## Usage
 
@@ -158,14 +132,13 @@ The system expects the following namespaces in your Pinecone index:
 }
 ```
 
-## Analysis Pipeline
 
-The analyzer follows a 7-step process:
+### Modifying Output Parameter Settings
+To modify the number of output parameters, you need to update the following variables:
 
-1. **Retrieve Use Cases**: Search vector DB for relevant use cases
-2. **Generate Use Cases**: Create tailored use cases based on query
-3. **Retrieve Risks & Benefits**: Find associated risks and benefits
-4. **Generate Risks & Benefits**: Create context-specific risks and benefits
-5. **Retrieve Mitigations**: Search for relevant mitigation strategies
-6. **Generate Mitigations**: Create tailored mitigation approaches
-7. **Create Cards**: Structure all information into JSON response cards
+```python
+top_k_retrieve = 10 # number of row retrived per query
+limit_use_cases = 3 # number of solution returned by the pipeline
+limit_risks = 3 # number of risks for each solution
+limit_benefits = 3 # number of benefits for each solution
+```
