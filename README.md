@@ -1,5 +1,4 @@
-# War Use Case Analyzer
-
+# Rebuild AI
 The use of technology for post-conflict recovery is very important because it offers a meaningful way to support human well-being and ensure that innovation contributes to rebuilding lives rather than causing harm. However, despite its potential, technology remains underutilized in post-conflict contexts. 
 In tackling this problem, related work failed in providing accessible tools that help identify actionable and responsible uses of technology in post-conflict settings. Existing efforts are often limited by disciplinary silos, lack of integration with past knowledge, and the high effort required to navigate scattered academic literature barriers that prevent practitioners from designing informed interventions.
 To address these challenges, we make three contributions.
@@ -44,7 +43,7 @@ The War Use Case Analyzer is a full-stack application consisting of three main c
    ```
 ### Expected outputs 
 This the main page after run the program,User input the post-war problem. Click 'Analyse' button,then generate the relative solutions for the problem.
-<img src="./static/platform.png" height="300" width="1020">
+<img src="./static/platform.png">
 
 Our platform will give you s set of decision support cards.
 - Overview: Describes AI application method and the advantages of its imimplement.
