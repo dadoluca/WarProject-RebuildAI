@@ -1,70 +1,96 @@
-# Rebuild AI - Abstract processing pipeline
-This section processes academic paper data to extract and analyze information about AI applications in post-war contexts. The system cleans CSV data of research papers list, then uses Google's Gemini AI to generate structured insights about AI applications, their benefits, risks, and mitigation strategies - with a focus on post-conflict scenarios.
+# Rebuild AI - Abstract Processing Pipeline
+
+This pipeline processes academic paper data to extract and analyze insights about AI applications in post-war and conflict recovery scenarios. It cleans CSV data containing lists of research papers, then uses Google's Gemini AI to generate structured insights about AI applications, focusing on their benefits, risks, and mitigation strategies.
+
+---
 
 ### Key Features
-- Data Cleaning: Filters and prepares academic paper data
-- AI-Powered Analysis: Uses Google Gemini to extract insights from paper abstracts
-- Structured Output: Generates JSON files with categorized information
-- Post-War Focus: Identifies applications relevant to conflict recovery and humanitarian efforts
+
+✅ **Data Cleaning**: Filters and prepares academic paper data
+✅ **AI-Powered Analysis**: Uses Gemini to extract insights from paper abstracts
+✅ **Structured Output**: Generates JSON files with categorized information
+✅ **Post-War Focus**: Identifies applications relevant to conflict recovery and humanitarian efforts
+
+---
 
 ### Prerequisites
-- Python 3.8+
-- Google Gemini API key
-- OpenAI API key
-- Pinecone API key
-- Required Python packages:
 
-### Clone the repository and select correct path
+* Python 3.8+
+* Google Gemini API key
+* OpenAI API key
+* Pinecone API key
 
-Clone the repository:
-   ```bash
-   git clone https://github.com/dadoluca/WarProject-RebuildAI.git
-   cd war-use-case-analyzer/datapreprocessing
-   ```
+---
 
+### Installation & Setup
 
-### Dependencies
+#### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/dadoluca/WarProject-RebuildAI.git
+cd war-use-case-analyzer/datapreprocessing
 ```
+
+#### 2️⃣ Install Dependencies
+
+```bash
 pip install google-generativeai openai pinecone-client pydantic python-dotenv
 ```
 
-### Envirorment
-Set up environment variables:
-   Create a `.env` file in the project root with:
-   ```env
-   OPENAI_API_KEY=your_openai_api_key_here
-   PINECONE_API_KEY=your_pinecone_api_key_here
-   PINECONE_INDEX_NAME=war-use-cases
-   EMBEDDING_MODEL=text-embedding-ada-002
-   ```
+#### 3️⃣ Set Up Environment Variables
 
+Create a `.env` file in the project root with the following content:
 
-### Setup Instructions
-#### 1. Data Preparation
-Create datasource dir and place your raw CSV files in:
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+PINECONE_API_KEY=your_pinecone_api_key_here
+PINECONE_INDEX_NAME=war-use-cases
+EMBEDDING_MODEL=text-embedding-ada-002
+```
+
+---
+
+### Workflow
+
+#### 1️⃣ Data Preparation
+
+Place your raw CSV files in:
+
 ```
 datasource/
 ```
-#### 2. Configuration
-Update file paths in CleanCSV.py:
-```
+
+#### 2️⃣ Configuration
+
+Edit `CleanCSV.py` to update the file paths:
+
+```python
 input_file = "datasource/raw_paper.csv"
 output_file = "cleaned/clean_paper.csv"
 ```
-#### 3. Data Cleaning
+
+#### 3️⃣ Data Cleaning
+
 Run the cleaning script:
-```
+
+```bash
 python CleanCSV.py
 ```
-##### Cleaning Process:
+
+✅ **Cleaning Steps**:
+
 1. Removes abstracts shorter than 100 characters
 2. Filters out abstracts with invalid characters
-3. Removes abstracts not in English letters
-4. Saves cleaned data to output directory
+3. Keeps only English-language abstracts
+4. Saves cleaned data to the output directory
 
-#### 4. AI Processing Configuration
-Update CSVToJson-Semantic.py:
-```
+---
+
+#### 4️⃣ AI Processing Configuration
+
+Edit `CSVToJson-Semantic.py` to set up your Gemini API key and file paths:
+
+```python
 # Gemini API configuration
 client = genai.Client(api_key="YOUR_API_KEY_HERE")
 
@@ -72,9 +98,10 @@ client = genai.Client(api_key="YOUR_API_KEY_HERE")
 input_dir = "cleaned/clean_paper.csv"
 output_dir = "result/json_paper.csv"
 ```
-##### Processing Prompt
-The system uses a detailed prompt to guide Gemini's analysis:
-```
+
+The processing prompt:
+
+```python
 PROCESSING_PROMPT = """
 You are an AI application analysis specialist. Strictly follow these rules when processing Input text:
 
@@ -84,25 +111,33 @@ STEP 3: Generate risks for each solution...
 STEP 4: Generate mitigations for each risk...
 """
 ```
-#### 5. Run AI Analysis
-Execute the processing script:
-```
+
+#### 5️⃣ Run AI Analysis
+
+```bash
 python CSVToJson-Semantic.py
 ```
-##### Processing Workflow:
-1. Reads cleaned CSV files
-2. Sends abstracts to Gemini API with specialized prompt
-3. Parses JSON response
-4. Generates structured output with:
-    - Solutions
-    - Benefits
-    - Risks
-    - Mitigation strategies
-5. Saves JSON files to output directory
 
-#### Expected Output JSON Structure
-Each processed record generates JSON objects with the following structure:
-```
+✅ **Workflow**:
+
+1. Reads cleaned CSV files
+2. Sends abstracts to Gemini API with the specialized prompt
+3. Parses JSON responses
+4. Outputs structured data with:
+
+   * Solutions
+   * Benefits
+   * Risks
+   * Mitigation strategies
+5. Saves JSON files to the output directory
+
+---
+
+#### 6️⃣ Expected Output JSON Structure
+
+Each processed record will generate JSON objects like:
+
+```json
 {
   "to_embed": "Core summary (10-20 words)",
   "metadata": {
@@ -114,8 +149,10 @@ Each processed record generates JSON objects with the following structure:
   }
 }
 ```
-##### Output Example
-```
+
+Example output:
+
+```json
 [
   {
     "to_embed": "Drones deliver medical supplies to wounded in conflict zones",
@@ -140,23 +177,25 @@ Each processed record generates JSON objects with the following structure:
 ]
 ```
 
-After the extraction process is completed, four output files will be generated:
+The extraction process will generate four output JSON files:
 
-- UC.json, which contains the list of solutions
-- R.json, which contains the list of risks
-- B.json, which contains the list of benefits
-- M.json, which contains the list of mitigations
+* `UC.json`: List of solutions
+* `R.json`: List of risks
+* `B.json`: List of benefits
+* `M.json`: List of mitigations
 
-#### 6. Run the UploaderData Class
+---
 
-As the final step, you need to upload the JSON files into the vector database. The `UploaderData` class includes a function called `load_from_json_files(path_to_your_input_source)`, which is invoked in the class’s main method to load JSON files from a specified folder.
+#### 7️⃣ Uploading Data to Pinecone
 
-The folder must contain the following four files: `UC.json`, `R.json`, `B.json`, and `M.json`.
+The final step involves uploading the JSON files to your vector database.
 
-To run the upload script, use the following command:
+Run:
 
-```
+```bash
 python UploaderData.py
 ```
-Once the process is complete, a confirmation message will appear in the folder, indicating that everything was successfully uploaded. At this point, the elements will be available in the vector database, under the appropriate namespace.
 
+The script’s `UploaderData` class uses the `load_from_json_files(path_to_your_input_source)` method to read the JSON files (`UC.json`, `R.json`, `B.json`, and `M.json`) from the specified folder and upload them to Pinecone.
+
+✅ Once done, you’ll see a confirmation message, and your data will be available in the vector database under the appropriate namespace.
