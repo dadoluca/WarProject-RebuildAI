@@ -257,3 +257,4 @@ if __name__ == "__main__":
     
     uploader.load_from_json_files("./data_sources/output")
     
+    print("JSON uploaded correctly")

@@ -10,7 +10,7 @@ The frontend is built with React and TypeScript, providing an intuitive interfac
 
 - **Interactive Search**: Query input with configurable use case limits
 - **Real-time Analysis**: Direct integration with the backend API
-- **Structured Display**: Cards showing solutions, risks, mitigations, and benefits
+- **Structured Display**: Cards showing solutions, steps, risks, mitigations, and benefits
 
 ## Technology Stack
 
