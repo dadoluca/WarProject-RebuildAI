@@ -49,7 +49,7 @@
 
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   width: 100%;
 }
@@ -90,13 +90,13 @@
 /* Responsive grid layout */
 @media (min-width: 640px) {
   .cardGrid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
   .cardGrid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -106,7 +106,11 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 639px) {
+  .cardGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
   .listHeader {
     flex-direction: column;
     align-items: flex-start;

@@ -27,8 +27,8 @@ def analyze_endpoint():
         
         query = data.get('query', '')
         limit_use_cases = 3
-        limit_risks = 3
-        limit_benefits = 3
+        limit_risks = 5
+        limit_benefits = 5
         limit_mitigations = 1
         top_k_retrieve = 10
         

@@ -81,7 +81,7 @@ function App() {
 
   // Load sample data in development mode
   useEffect(() => {
-    if (import.meta.env.DEV && cards.length === 0 && !isLoading) {
+    if (import.meta.env.DEV && cards.length === -1 && !isLoading) {
       // Use the imported sample data
       if (sampleData && sampleData.cards && sampleData.cards.length > 0) {
         setCards(sampleData.cards as Card[]);
