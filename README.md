@@ -2,7 +2,7 @@
 
 [![Click to watch the demo on YouTube](https://img.youtube.com/vi/bfkX8oyPAlY/0.jpg)](https://youtu.be/bfkX8oyPAlY)
 
-🎥 **Click the preview above to watch the YouTube video!**
+[![Watch the video](https://img.shields.io/badge/%20Watch%20on%20YouTube-red?logo=youtube&style=for-the-badge)](https://youtu.be/bfkX8oyPAlY)
 
 ---
 
