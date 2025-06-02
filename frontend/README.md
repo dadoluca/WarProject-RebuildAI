@@ -1,66 +1,72 @@
 # Rebuild AI - Frontend
 
-A React-based frontend application for the War Use Case Analyzer API. This interface allows users to query post-conflict and humanitarian technology solutions, displaying structured analysis cards with risks, benefits, and mitigation strategies.
+A **React-based frontend** for the War Use Case Analyzer API. This web interface allows users to explore post-conflict and humanitarian technology solutions, displaying **structured analysis cards** with associated risks, benefits, and mitigation strategies.
 
-## Overview
+## 🖥️ Overview
 
-The frontend is built with React and TypeScript, providing an intuitive interface to interact with the War Use Case Analyzer backend API. It features a clean, responsive design optimized for displaying complex analytical data in an accessible format.
+The frontend is built with **React** and **TypeScript**, providing a clean, responsive interface to interact with the backend API. It’s optimized for displaying complex data in an accessible, user-friendly way.
 
-## Features
+## ✨ Features
 
-- **Interactive Search**: Query input with configurable use case limits
-- **Real-time Analysis**: Direct integration with the backend API
-- **Structured Display**: Cards showing solutions, steps, risks, mitigations, and benefits
+* 🔎 **Interactive Search**: Configurable query input and result limits
+* ⚡ **Real-time Analysis**: Direct API integration for up-to-date results
+* 📊 **Structured Display**: Solutions, steps, risks, mitigations, and benefits
 
-## Technology Stack
+## ⚙️ Technology Stack
 
-- **React 18+** with TypeScript
-- **CSS Modules** for component styling
-- **Vite** for development and building
-- **Modern JavaScript** (ES6+) with async/await
+* **React 18+** (TypeScript)
+* **CSS Modules** for modular styling
+* **Vite** for fast builds and development
+* **Modern JavaScript** (ES6+) with async/await
 
-## Prerequisites
+## 🛠️ Prerequisites
 
-- Node.js 16+ and npm/yarn
-- Running War Use Case Analyzer backend API (see backend README)
+* **Node.js 16+**
+* **NPM** or **Yarn**
+* **Backend API** (see backend README for setup)
 
-## Installation
+## 🚀 Installation
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/dadoluca/WarProject-RebuildAI.git
    cd war-use-case-analyzer/frontend
    ```
 
 2. **Install dependencies**:
+
    ```bash
    npm install
    ```
 
 3. **Start the development server**:
+
    ```bash
    npm run dev
    ```
 
-4. **Open in browser**:
-   Navigate to `http://localhost:5173` 
+4. **Open in your browser**:
+   [http://localhost:5173](http://localhost:5173)
 
-## Configuration
+## 🔧 Configuration
 
-### Backend API Connection
+The frontend connects to the backend API by default at `http://127.0.0.1:5000`.
+If needed, you can update this endpoint in the frontend source code.
 
-The frontend connects to the backend API at `http://127.0.0.1:5000` by default. 
+## 📝 Usage
 
+1. **Enter your query** about post-conflict technology solutions
+2. **Set the number of solutions** (1–10)
+3. **Click "Analyze"** to get results
+4. **Review** the generated decision support cards, including:
 
-## Usage
-
-### Basic Workflow
-
-1. **Enter Query**: Type your question about post-conflict technology solutions
-2. **Set Limits**: Adjust the number of solutions to generate (1-10)
-3. **Search**: Click "Analyze" to send the query to the backend
-4. **Review Results**: Browse through the generated cards with solutions, risks, and benefits
+   * Solutions and implementation steps
+   * Risks and mitigations
+   * Benefits
 
 ### Example Query
 
-- "Lack of clean water after sudan conflict"
+> *"Lack of clean water after Sudan conflict"*
+
+
