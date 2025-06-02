@@ -1,6 +1,8 @@
 # RebuildAI: Transforming Post-Conflict Recovery with AI-Driven Solutions
 
-[![🎥 Watch the demo](https://img.youtube.com/vi/bfkX8oyPAlY/0.jpg)](https://youtu.be/bfkX8oyPAlY)
+[![Click to watch the demo on YouTube](https://img.youtube.com/vi/bfkX8oyPAlY/0.jpg)](https://youtu.be/bfkX8oyPAlY)
+
+🎥 **Click the preview above to watch the YouTube video!**
 
 ---
 
