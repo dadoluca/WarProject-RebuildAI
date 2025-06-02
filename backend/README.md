@@ -1,52 +1,58 @@
 # Rebuild AI - Pipeline and Backend
 
-A Flask-based API service that analyzes war-related and post-conflict technology solution using Retrieval-Augmented Generation (RAG) and Large Language Models (LLMs). From a query of a problem, the system generates structured JSON Decision Support Cards containing solution with associated risks, mitigations, steps and benefits for humanitarian and post-conflict scenarios.
+A **Flask-based API service** that analyzes war-related and post-conflict technology solutions using **Retrieval-Augmented Generation (RAG)** and **Large Language Models (LLMs)**. From a problem query, the system generates structured **JSON Decision Support Cards** with solutions, risks, mitigation strategies, steps, and benefits.
 
-## Overview
+## 🌍 Overview
 
-The folder contains two main component:
+This folder contains two main components:
 
-1. **WarUseCaseAnalyzer Class**: Core analysis engine that processes queries through a RAG pipeline. The input of the system is a query with a problem and the output is a list of Support Decision Cards.
-2. **Flask API**: REST API endpoint that exposes the analyzer functionality. It is the backend part of the application
+1. **`WarUseCaseAnalyzer` Class**
+   Core analysis engine that processes queries through a RAG pipeline. Input: a problem query. Output: structured decision support cards.
+2. **Flask API**
+   REST API exposing the analyzer functionality, forming the backend of the application.
 
-## Features
+## ✨ Features
 
-- **RAG-based Analysis**: Retrieves relevant information from vector databases containing use cases, risks, benefits, and mitigations
-- **LLM-powered Generation**: Uses OpenAI's GPT models to generate tailored content based on retrieved information
-- **Structured Output**: Returns JSON cards with standardized format for easy integration
-- **Multi-dimensional Analysis**: Covers use cases, risks, benefits, and mitigation strategies
-- **Configurable Parameters**: Adjustable limits for generated content and retrieval depth
+* 📚 **RAG-based Analysis**: Retrieves relevant information from vector databases
+* 🤖 **LLM-powered Generation**: Uses OpenAI’s GPT models to generate tailored insights
+* 📦 **Structured Output**: Returns JSON cards in a standardized format
+* 🛡️ **Multi-dimensional Analysis**: Solutions, risks, mitigations, and benefits
+* ⚙️ **Configurable Parameters**: Adjustable limits for generated content and retrieval
 
-## Architecture
+## 🏗️ Architecture
 
 The system uses:
-- **Vector Databases** (Pinecone): Store and retrieve relevant use cases, risks, benefits, and mitigations
-- **OpenAI API**: Generate contextually relevant content using GPT models
-- **Pydantic Models**: Ensure structured and validated output
-- **Flask**: Provide REST API interface
 
-## Prerequisites
+* **Vector Databases** (Pinecone) for use case and risk/benefit retrieval
+* **OpenAI API** for contextual generation
+* **Pydantic Models** for validated, structured output
+* **Flask** for the REST API interface
 
-- Python 3.8+
-- OpenAI API key
-- Pinecone API key and index
-- Required Python packages (see installation)
+## 🛠️ Prerequisites
 
-## Installation
+* **Python 3.8+**
+* **OpenAI API Key**
+* **Pinecone API Key and Index**
+* Required Python packages (see below)
+
+## 🚀 Installation
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/dadoluca/WarProject-RebuildAI.git
    cd war-use-case-analyzer
    ```
 
-2. **Install required packages**:
+2. **Install dependencies**:
+
    ```bash
    pip install flask flask-cors openai pinecone-client pydantic python-dotenv
    ```
 
 3. **Set up environment variables**:
    Create a `.env` file in the project root with:
+
    ```env
    OPENAI_API_KEY=your_openai_api_key_here
    PINECONE_API_KEY=your_pinecone_api_key_here
@@ -55,29 +61,29 @@ The system uses:
    EMBEDDING_MODEL=text-embedding-ada-002
    ```
 
-
-## Configuration
+## 🔧 Configuration
 
 ### Environment Variables
 
-- `OPENAI_API_KEY`: Your OpenAI API key
-- `PINECONE_API_KEY`: Your Pinecone API key
-- `PINECONE_INDEX_NAME`: Name of your Pinecone index (default: "war-use-cases")
-- `LLM_MODEL`: OpenAI model to use (default: "gpt-4o-mini")
+* `OPENAI_API_KEY`: Your OpenAI API key
+* `PINECONE_API_KEY`: Your Pinecone API key
+* `PINECONE_INDEX_NAME`: Pinecone index name (default: `war-use-cases`)
+* `LLM_MODEL`: OpenAI model to use (default: `gpt-4o-mini`)
 
-## Usage
+## ⚡ Usage
 
 ### Starting the Application
 
-1. **Start the Flask server**:
+1. **Run the Flask server**:
+
    ```bash
    python main.py
    ```
-   
-   The server will start on `http://0.0.0.0:5000` by default.
 
-2. **Verify the server is running**:
-   Check the console output for:
+   By default, it will run at `http://0.0.0.0:5000`.
+
+2. **Check the server status**:
+
    ```
    * Running on all addresses.
    * Running on http://127.0.0.1:5000/
@@ -88,7 +94,8 @@ The system uses:
 
 **POST** `/analyze`
 
-**Request Body**:
+**Request Example**:
+
 ```json
 {
   "query": "How can AI be used to help refugees in post-conflict zones?"
@@ -96,6 +103,7 @@ The system uses:
 ```
 
 **Response Format**:
+
 ```json
 {
   "query": "How can AI be used to help refugees in post-conflict zones?",
@@ -132,13 +140,13 @@ The system uses:
 }
 ```
 
+### ⚙️ Modifying Output Parameters
 
-### Modifying Output Parameter Settings
-To modify the number of output parameters, you need to update the following variables:
+You can tweak the output by adjusting these variables in the Python code:
 
 ```python
-top_k_retrieve = 10 # number of row retrived per query
-limit_use_cases = 3 # number of solution returned by the pipeline
-limit_risks = 3 # number of risks for each solution
-limit_benefits = 3 # number of benefits for each solution
+top_k_retrieve = 10  # Number of rows retrieved per query
+limit_use_cases = 3  # Number of solutions returned
+limit_risks = 5      # Number of risks per solution
+limit_benefits = 5   # Number of benefits per solution
 ```
